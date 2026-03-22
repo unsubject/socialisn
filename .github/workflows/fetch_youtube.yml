@@ -27,12 +27,12 @@ jobs:
           cache: "pip"
 
       - name: Install dependencies
-        run: pip install -r /YouTube Fetch/requirements.txt
+        run: pip install -r /youTube/requirements.txt
 
       - name: Run YouTube fetcher
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
-        run: python scripts/YouTube Fetch/fetch_youtube.py
+        run: python scripts/youtube/fetch_youtube.py
 
       - name: Run data cleanup (30-day rolloff)
         # Only run cleanup on the midnight UTC run to save Actions minutes
