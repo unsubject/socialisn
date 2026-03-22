@@ -1,0 +1,24 @@
+# YouTube Channels to Monitor
+# Add or remove channels here. The fetcher reads this file on every run.
+#
+# Fields:
+#   id       — YouTube channel ID (starts with UC...). Find it at:
+#              youtube.com/@channelname/about → View Page Source → search "channelId"
+#   name     — Display name (used in output JSON and dashboard, not sent to API)
+#   language — Primary language hint for transcript preference (zh-TW, zh-CN, en, etc.)
+#   tags     — Optional labels for grouping in the dashboard (e.g. politics, economics)
+
+channels:
+  - id: UCxxxxxxxxxxxxxxxxxxxxxxxx
+    name: "Example Channel (Traditional Chinese)"
+    language: zh-TW
+    tags:
+      - politics
+      - hongkong
+
+  - id: UCyyyyyyyyyyyyyyyyyyyyyyyy
+    name: "Example Channel (English)"
+    language: en
+    tags:
+      - economics
+      - global
