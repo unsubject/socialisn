@@ -9,16 +9,16 @@
 #   tags     — Optional labels for grouping in the dashboard (e.g. politics, economics)
 
 channels:
-  - id: UCxxxxxxxxxxxxxxxxxxxxxxxx
-    name: "Example Channel (Traditional Chinese)"
+  - id: UCVZTkv6LM-_xWUM9t-jS5JA
+    name: CC News 新聞.政評
     language: zh-TW
     tags:
       - politics
       - hongkong
 
-  - id: UCyyyyyyyyyyyyyyyyyyyyyyyy
-    name: "Example Channel (English)"
+  - id: UCm4NHRafzs1BtpjWiop8vmQ
+    name: Hong Kong Uncensored 香港冇格仔
     language: en
     tags:
-      - economics
-      - global
+      - politics
+      - hongkong
