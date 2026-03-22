@@ -32,7 +32,7 @@ jobs:
       - name: Run YouTube fetcher
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
-        run: python scripts fetch_youtube.py
+        run: python scripts/fetch_youtube.py
 
       - name: Run data cleanup (30-day rolloff)
         # Only run cleanup on the midnight UTC run to save Actions minutes
