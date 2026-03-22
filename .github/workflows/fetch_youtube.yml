@@ -27,7 +27,7 @@ jobs:
           cache: "pip"
 
       - name: Install dependencies
-        run: pip install -r /youTube/requirements.txt
+        run: pip install -r /youtube/requirements.txt
 
       - name: Run YouTube fetcher
         env:
