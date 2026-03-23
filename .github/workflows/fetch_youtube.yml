@@ -5,7 +5,6 @@ on:
     # Twice daily: 00:00 and 12:00 UTC
     - cron: "0 0,12 * * *"
   workflow_dispatch:
-    # Allow manual trigger from GitHub Actions UI for testing
 
 jobs:
   fetch:
@@ -28,21 +27,29 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      # --- YouTube ---
+      # --- Fetch ---
       - name: Fetch YouTube data
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python scripts/fetch_youtube.py
 
-      # --- News ---
       - name: Fetch news data
         run: python scripts/fetch_news.py
 
-      # --- Haiku processing (YouTube + News) ---
+      # --- Haiku processing ---
       - name: Process all sources with Haiku
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/process_with_haiku.py --source all
+
+      # --- Sonnet briefing + email ---
+      - name: Generate briefing and send email
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GMAIL_CREDENTIALS: ${{ secrets.GMAIL_CREDENTIALS }}
+          GMAIL_TOKEN: ${{ secrets.GMAIL_TOKEN }}
+          RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+        run: python scripts/generate_briefing.py
 
       # --- Cleanup ---
       - name: Run data cleanup (30-day rolloff)
@@ -55,5 +62,5 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/
-          git diff --cached --quiet || git commit -m "chore: fetch + process $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          git diff --cached --quiet || git commit -m "chore: fetch + process + briefing $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
           git push
