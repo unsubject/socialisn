@@ -2,15 +2,16 @@
 process_with_haiku.py
 Module 3: Haiku Processing Layer
 
-Reads today's raw YouTube data, sends each video's title + description +
-transcript (if available) to Claude Haiku, and generates:
+Reads today's raw data for all source types (YouTube, news) and generates:
   - summary_zh: 1–2 sentence Traditional Chinese summary (headline style)
-  - keywords_zh: 5–8 Traditional Chinese keywords
+  - keywords_zh: 5–8 Traditional Chinese keywords (from title only)
 
-Output: data/youtube/processed/YYYY-MM-DD.json
-        (full raw record + summary_zh + keywords_zh + processed_at)
+Outputs:
+  data/youtube/processed/YYYY-MM-DD.json
+  data/news/processed/YYYY-MM-DD.json
 
-Run:    python scripts/process_with_haiku.py
+Run:    python scripts/process_with_haiku.py [--source youtube|news|all]
+        Default: all
 Env:    ANTHROPIC_API_KEY — Anthropic API key (set as GitHub Secret)
 """
 
@@ -29,9 +30,25 @@ import anthropic
 # Config
 # ---------------------------------------------------------------------------
 
+import argparse
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
-RAW_DATA_DIR = REPO_ROOT / "data" / "youtube" / "raw"
-PROCESSED_DATA_DIR = REPO_ROOT / "data" / "youtube" / "processed"
+
+# Source configurations: maps source name -> (raw_dir, processed_dir, text_field, title_field)
+SOURCES = {
+    "youtube": {
+        "raw_dir": REPO_ROOT / "data" / "youtube" / "raw",
+        "processed_dir": REPO_ROOT / "data" / "youtube" / "processed",
+        "title_field": "title",
+        "text_fields": ["description", "transcript.text"],
+    },
+    "news": {
+        "raw_dir": REPO_ROOT / "data" / "news" / "raw",
+        "processed_dir": REPO_ROOT / "data" / "news" / "processed",
+        "title_field": "headline",
+        "text_fields": ["excerpt", "full_text"],
+    },
+}
 
 MODEL = "claude-haiku-4-5-20251001"
 MAX_TOKENS = 256
@@ -105,30 +122,38 @@ def clean_description(text: str) -> str:
 # Prompt building
 # ---------------------------------------------------------------------------
 
-def build_prompt(video: dict) -> str:
-    """Build the prompt text for a single video."""
-    title = video.get("title", "").strip()
-    description = clean_description((video.get("description", "") or ""))
-    transcript_data = video.get("transcript", {}) or {}
-    transcript_text = (transcript_data.get("text") or "").strip()
+def get_nested(record: dict, field_path: str) -> str:
+    """Get a value from a record using dot notation (e.g. 'transcript.text')."""
+    parts = field_path.split(".")
+    val = record
+    for part in parts:
+        if not isinstance(val, dict):
+            return ""
+        val = val.get(part) or ""
+    return str(val).strip() if val else ""
 
-    # Truncate cleaned description at 600 chars
-    if len(description) > 600:
-        description = description[:600] + "..."
 
-    # Transcript can be long — cap at 2000 chars
-    if len(transcript_text) > 2000:
-        transcript_text = transcript_text[:2000] + "..."
+def build_prompt(record: dict, title_field: str = "title",
+                 text_fields: list[str] | None = None) -> str:
+    """Build the Haiku prompt for any source type."""
+    if text_fields is None:
+        text_fields = ["description"]
 
-    parts = [f"標題：{title}"]
+    title = record.get(title_field, "").strip()
 
-    if description:
-        parts.append(f"簡介：{description}")
+    # Collect and clean supporting text
+    text_parts = []
+    for field in text_fields:
+        raw = get_nested(record, field)
+        if not raw:
+            continue
+        cleaned = clean_description(raw)
+        if len(cleaned) > 600:
+            cleaned = cleaned[:600] + "..."
+        if cleaned:
+            text_parts.append(cleaned)
 
-    if transcript_text:
-        parts.append(f"字幕節錄：{transcript_text}")
-
-    content = "\n\n".join(parts)
+    content = "\n\n".join(text_parts)
 
     return f"""你是一位香港時事分析助手。請根據以下YouTube影片資料，用繁體中文完成兩項任務：
 
@@ -196,8 +221,8 @@ def call_haiku(client: anthropic.Anthropic, prompt: str) -> dict:
 # Data persistence
 # ---------------------------------------------------------------------------
 
-def load_raw(date_str: str) -> list[dict]:
-    path = RAW_DATA_DIR / f"{date_str}.json"
+def load_raw(date_str: str, raw_dir: Path) -> list[dict]:
+    path = raw_dir / f"{date_str}.json"
     if not path.exists():
         log.warning(f"Raw file not found: {path}")
         return []
@@ -205,9 +230,9 @@ def load_raw(date_str: str) -> list[dict]:
         return json.load(f)
 
 
-def save_processed(date_str: str, records: list[dict]) -> None:
-    PROCESSED_DATA_DIR.mkdir(parents=True, exist_ok=True)
-    path = PROCESSED_DATA_DIR / f"{date_str}.json"
+def save_processed(date_str: str, records: list[dict], processed_dir: Path) -> None:
+    processed_dir.mkdir(parents=True, exist_ok=True)
+    path = processed_dir / f"{date_str}.json"
     with open(path, "w", encoding="utf-8") as f:
         json.dump(records, f, ensure_ascii=False, indent=2)
     log.info(f"Saved {len(records)} processed records to {path}")
@@ -217,39 +242,34 @@ def save_processed(date_str: str, records: list[dict]) -> None:
 # Main
 # ---------------------------------------------------------------------------
 
-def main():
-    api_key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
-    if not api_key:
-        log.error("ANTHROPIC_API_KEY environment variable is not set.")
-        sys.exit(1)
+def process_source(source_name: str, client: anthropic.Anthropic,
+                   date_str: str, processed_at: str) -> None:
+    """Process all raw records for a given source type."""
+    cfg = SOURCES[source_name]
+    raw_dir = cfg["raw_dir"]
+    processed_dir = cfg["processed_dir"]
+    title_field = cfg["title_field"]
+    text_fields = cfg["text_fields"]
 
-    client = anthropic.Anthropic(api_key=api_key)
-
-    now_utc = datetime.now(timezone.utc)
-    date_str = now_utc.strftime("%Y-%m-%d")
-    processed_at = now_utc.strftime("%Y-%m-%dT%H:%M:%SZ")
-
-    log.info(f"Processing raw YouTube data for {date_str}")
-
-    raw_records = load_raw(date_str)
+    log.info(f"Processing {source_name} data for {date_str}")
+    raw_records = load_raw(date_str, raw_dir)
     if not raw_records:
-        log.info("No raw records to process. Exiting.")
+        log.info(f"No raw records found for {source_name}. Skipping.")
         return
 
-    log.info(f"Found {len(raw_records)} video(s) to process.")
-
+    log.info(f"Found {len(raw_records)} record(s) to process.")
     processed_records = []
 
-    for i, video in enumerate(raw_records):
-        video_id = video.get("video_id", "unknown")
-        title = video.get("title", "")
-        log.info(f"  [{i+1}/{len(raw_records)}] Processing: {video_id} — {title[:60]}")
+    for i, record in enumerate(raw_records):
+        item_id = record.get("video_id") or record.get("article_id", "unknown")
+        title = record.get(title_field, "")
+        log.info(f"  [{i+1}/{len(raw_records)}] {item_id} — {title[:60]}")
 
-        prompt = build_prompt(video)
+        prompt = build_prompt(record, title_field=title_field, text_fields=text_fields)
         result = call_haiku(client, prompt)
 
         enriched = {
-            **video,
+            **record,
             "summary_zh": result.get("summary_zh"),
             "keywords_zh": result.get("keywords_zh", []),
             "processed_at": processed_at,
@@ -262,8 +282,34 @@ def main():
         if i < len(raw_records) - 1:
             time.sleep(RATE_LIMIT_DELAY)
 
-    save_processed(date_str, processed_records)
-    log.info(f"Done. {len(processed_records)} video(s) processed.")
+    save_processed(date_str, processed_records, processed_dir)
+    log.info(f"Done. {len(processed_records)} {source_name} record(s) processed.")
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Process raw data with Claude Haiku.")
+    parser.add_argument(
+        "--source",
+        choices=["youtube", "news", "all"],
+        default="all",
+        help="Which source type to process (default: all)",
+    )
+    args = parser.parse_args()
+
+    api_key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
+    if not api_key:
+        log.error("ANTHROPIC_API_KEY environment variable is not set.")
+        sys.exit(1)
+
+    client = anthropic.Anthropic(api_key=api_key)
+    now_utc = datetime.now(timezone.utc)
+    date_str = now_utc.strftime("%Y-%m-%d")
+    processed_at = now_utc.strftime("%Y-%m-%dT%H:%M:%SZ")
+
+    sources_to_run = list(SOURCES.keys()) if args.source == "all" else [args.source]
+
+    for source_name in sources_to_run:
+        process_source(source_name, client, date_str, processed_at)
 
 
 if __name__ == "__main__":
