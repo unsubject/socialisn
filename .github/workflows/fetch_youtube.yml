@@ -6,6 +6,11 @@ on:
     - cron: "0 0,12 * * *"
   workflow_dispatch:
 
+# Prevent concurrent runs — if a run is in progress, cancel it and start fresh
+concurrency:
+  group: intelligence-pipeline
+  cancel-in-progress: true
+
 jobs:
   fetch:
     runs-on: ubuntu-latest
@@ -73,5 +78,4 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/ docs/
           git diff --cached --quiet || git commit -m "chore: fetch + process + briefing + dashboard $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
-          git pull --rebase origin main
-          git push
+          git push origin main
