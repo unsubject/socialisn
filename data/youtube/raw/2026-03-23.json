@@ -2130,5 +2130,33 @@
       "text": null
     },
     "fetched_at": "2026-03-23T13:14:25Z"
+  },
+  {
+    "video_id": "uK1WJ8B2Q3Q",
+    "channel_id": "UC0zUmHNpkviI6UZ0uqCYrww",
+    "channel_name": "城寨",
+    "channel_tags": [
+      "canada",
+      "hongkong"
+    ],
+    "title": "城寨 Singjai is live",
+    "description": "",
+    "published_at": "2026-03-23T04:52:06Z",
+    "duration_seconds": 0,
+    "view_count": 0,
+    "like_count": 3,
+    "comment_count": 0,
+    "tags": [
+      "Singjai",
+      "城寨"
+    ],
+    "thumbnail_url": "https://i.ytimg.com/vi/uK1WJ8B2Q3Q/hqdefault_live.jpg",
+    "transcript": {
+      "available": false,
+      "language": null,
+      "source": null,
+      "text": null
+    },
+    "fetched_at": "2026-03-23T13:30:40Z"
   }
 ]
