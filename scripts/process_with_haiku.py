@@ -17,6 +17,7 @@ Env:    ANTHROPIC_API_KEY — Anthropic API key (set as GitHub Secret)
 import json
 import logging
 import os
+import re
 import sys
 import time
 from datetime import datetime, timezone
@@ -46,28 +47,74 @@ log = logging.getLogger(__name__)
 
 
 # ---------------------------------------------------------------------------
-# Helpers
+# Description cleaning
 # ---------------------------------------------------------------------------
 
-def get_api_key() -> str:
-    key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
-    if not key:
-        log.error("ANTHROPIC_API_KEY environment variable is not set.")
-        sys.exit(1)
-    return key
+def clean_description(text: str) -> str:
+    """
+    Strip noise from YouTube descriptions before sending to Haiku:
+    - URLs (http/https)
+    - Hashtags (#tag)
+    - Common sponsor/boilerplate patterns (Patreon, NordVPN, etc.)
+    - Repeated blank lines
+    Preserves genuine editorial content.
+    """
+    # Remove URLs
+    text = re.sub(r"https?://\S+", "", text)
 
+    # Remove hashtags
+    text = re.sub(r"#\S+", "", text)
+
+    # Remove common boilerplate trigger phrases and rest of that line
+    boilerplate_patterns = [
+        r"patreon.*",
+        r"buymeacoffee.*",
+        r"buy me a coffee.*",
+        r"nordvpn.*",
+        r"coffee support.*",
+        r"課金支持.*",
+        r"支持.*頻道.*",
+        r"訂閱.*頻道.*",
+        r"成為.*會員.*",
+        r"追踪.*動向.*",
+        r"優惠碼.*",
+        r"discount code.*",
+        r"promo code.*",
+        r"affiliate.*",
+        r"請我.*咖啡.*",
+        r"ig:.*",
+        r"fb:.*",
+        r"twitter:.*",
+        r"mewe:.*",
+        r"telegram:.*",
+    ]
+    for pattern in boilerplate_patterns:
+        text = re.sub(pattern, "", text, flags=re.IGNORECASE)
+
+    # Collapse multiple blank lines
+    text = re.sub(r"\n{3,}", "\n\n", text)
+
+    # Strip each line; drop lines that are just punctuation or very short
+    lines = [line.strip() for line in text.splitlines()]
+    lines = [l for l in lines if len(l) > 2]
+
+    return "\n".join(lines).strip()
+
+
+# ---------------------------------------------------------------------------
+# Prompt building
+# ---------------------------------------------------------------------------
 
 def build_prompt(video: dict) -> str:
     """Build the prompt text for a single video."""
     title = video.get("title", "").strip()
-    description = (video.get("description", "") or "").strip()
+    description = clean_description((video.get("description", "") or ""))
     transcript_data = video.get("transcript", {}) or {}
     transcript_text = (transcript_data.get("text") or "").strip()
 
-    # Truncate description to avoid excessive token usage
-    # Descriptions often contain boilerplate links — cut at 800 chars
-    if len(description) > 800:
-        description = description[:800] + "..."
+    # Truncate cleaned description at 600 chars
+    if len(description) > 600:
+        description = description[:600] + "..."
 
     # Transcript can be long — cap at 2000 chars
     if len(transcript_text) > 2000:
@@ -97,6 +144,10 @@ def build_prompt(video: dict) -> str:
 影片資料：
 {content}"""
 
+
+# ---------------------------------------------------------------------------
+# Haiku API call
+# ---------------------------------------------------------------------------
 
 def call_haiku(client: anthropic.Anthropic, prompt: str) -> dict:
     """
@@ -165,7 +216,11 @@ def save_processed(date_str: str, records: list[dict]) -> None:
 # ---------------------------------------------------------------------------
 
 def main():
-    api_key = get_api_key()
+    api_key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
+    if not api_key:
+        log.error("ANTHROPIC_API_KEY environment variable is not set.")
+        sys.exit(1)
+
     client = anthropic.Anthropic(api_key=api_key)
 
     now_utc = datetime.now(timezone.utc)
@@ -191,7 +246,6 @@ def main():
         prompt = build_prompt(video)
         result = call_haiku(client, prompt)
 
-        # Merge raw record with Haiku output
         enriched = {
             **video,
             "summary_zh": result.get("summary_zh"),
@@ -203,7 +257,6 @@ def main():
 
         processed_records.append(enriched)
 
-        # Rate limit courtesy delay
         if i < len(raw_records) - 1:
             time.sleep(RATE_LIMIT_DELAY)
 
