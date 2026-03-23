@@ -1,4 +1,4 @@
-name: Fetch YouTube Data
+name: Fetch and Process Intelligence
 
 on:
   schedule:
@@ -11,13 +11,12 @@ jobs:
   fetch:
     runs-on: ubuntu-latest
     permissions:
-      contents: write   # Needed to commit data files back to the repo
+      contents: write
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          # Fetch full history so git push works correctly
           fetch-depth: 1
 
       - name: Set up Python
@@ -29,26 +28,32 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run YouTube fetcher
+      # --- YouTube ---
+      - name: Fetch YouTube data
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python scripts/fetch_youtube.py
 
-      - name: Process with Haiku
+      # --- News ---
+      - name: Fetch news data
+        run: python scripts/fetch_news.py
+
+      # --- Haiku processing (YouTube + News) ---
+      - name: Process all sources with Haiku
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python scripts/process_with_haiku.py
+        run: python scripts/process_with_haiku.py --source all
 
+      # --- Cleanup ---
       - name: Run data cleanup (30-day rolloff)
-        # Only run cleanup on the midnight UTC run to save Actions minutes
         if: ${{ github.event.schedule == '0 0 * * *' || github.event_name == 'workflow_dispatch' }}
         run: python scripts/cleanup_old_data.py
 
+      # --- Commit ---
       - name: Commit and push data
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/
-          # Only commit if there are actual changes
-          git diff --cached --quiet || git commit -m "chore: youtube fetch + haiku process $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          git diff --cached --quiet || git commit -m "chore: fetch + process $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
           git push
