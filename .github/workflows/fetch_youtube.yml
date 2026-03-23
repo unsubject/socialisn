@@ -51,6 +51,16 @@ jobs:
           RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
         run: python scripts/generate_briefing.py
 
+      # --- RSS feed ---
+      - name: Generate RSS feed
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python scripts/generate_rss.py
+
+      # --- Dashboard ---
+      - name: Generate dashboard
+        run: python scripts/generate_dashboard.py
+
       # --- Cleanup ---
       - name: Run data cleanup (30-day rolloff)
         if: ${{ github.event.schedule == '0 0 * * *' || github.event_name == 'workflow_dispatch' }}
@@ -61,6 +71,6 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/
-          git diff --cached --quiet || git commit -m "chore: fetch + process + briefing $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          git add data/ docs/
+          git diff --cached --quiet || git commit -m "chore: fetch + process + briefing + dashboard $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
           git push
