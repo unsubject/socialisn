@@ -1069,5 +1069,22 @@
       "politics",
       "chinese"
     ]
+  },
+  {
+    "article_id": "f6cd4779ac8aef9d",
+    "source_name": "RTHK 財經新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1848403-20260323.htm",
+    "headline": "滬指半日跌逾2%　貴金屬及保險股受壓",
+    "excerpt": "滬深股市半日跌逾2%，貴金屬股大跌，赤峰黃金A股跌停板；豬肉、旅遊、保險等股份下跌。煤炭、油氣、太空光伏等股份逆市上升。\n\n上證綜合指數失守3900點，上午收市報3858點，跌98點，跌幅2.5%。\n\n深證成份指數報13515點，跌351點，跌幅2.53%。\n\n創業板指數報3270點，跌81點，跌幅2.44%。\n\n\n\n編輯：李意琴",
+    "full_text": null,
+    "published_at": "Mon, 23 Mar 2026 11:45:58 +0800",
+    "fetched_at": "2026-03-23T03:56:07Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "economics",
+      "chinese"
+    ]
   }
 ]
