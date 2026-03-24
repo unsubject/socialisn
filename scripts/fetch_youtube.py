@@ -70,29 +70,72 @@ def load_channels() -> list[dict]:
     return channels
 
 
-def search_recent_videos(channel_id: str, api_key: str, published_after: str) -> list[str]:
-    """Return list of video IDs published after published_after (ISO 8601 string)."""
-    url = f"{YOUTUBE_API_BASE}/search"
+def channel_id_to_playlist_id(channel_id: str) -> str:
+    """
+    Convert a channel ID to its uploads playlist ID.
+    Every YouTube channel has an auto-generated uploads playlist.
+    The playlist ID is the channel ID with the 2nd character changed
+    from 'C' to 'U': UCxxxxxx -> UUxxxxxx
+    Cost: 0 extra API calls — derived mathematically.
+    """
+    return "UU" + channel_id[2:]
+
+
+def fetch_recent_videos_from_playlist(
+    channel_id: str, api_key: str, published_after: str
+) -> list[str]:
+    """
+    Return list of video IDs published after published_after by reading
+    the channel's uploads playlist.
+
+    Cost: 1 unit per page (vs 100 units per search call).
+    We fetch pages until we hit a video older than published_after,
+    capping at 5 pages (250 videos) to avoid runaway calls.
+    """
+    playlist_id = channel_id_to_playlist_id(channel_id)
+    url = f"{YOUTUBE_API_BASE}/playlistItems"
     params = {
         "key": api_key,
-        "channelId": channel_id,
-        "part": "id",
-        "type": "video",
-        "order": "date",
-        "publishedAfter": published_after,
+        "playlistId": playlist_id,
+        "part": "contentDetails",
         "maxResults": 50,
     }
     video_ids = []
-    while True:
+    pages_fetched = 0
+    max_pages = 5
+
+    while pages_fetched < max_pages:
         resp = requests.get(url, params=params, timeout=15)
         resp.raise_for_status()
         data = resp.json()
-        for item in data.get("items", []):
-            video_ids.append(item["id"]["videoId"])
+        pages_fetched += 1
+
+        items = data.get("items", [])
+        if not items:
+            break
+
+        stop = False
+        for item in items:
+            details = item.get("contentDetails", {})
+            video_id = details.get("videoId", "")
+            video_published = details.get("videoPublishedAt", "")
+
+            # Stop paginating once we hit videos older than our window
+            if video_published and video_published < published_after:
+                stop = True
+                break
+
+            if video_id:
+                video_ids.append(video_id)
+
+        if stop:
+            break
+
         next_page = data.get("nextPageToken")
         if not next_page:
             break
         params["pageToken"] = next_page
+
     return video_ids
 
 
@@ -249,13 +292,13 @@ def main():
         log.info(f"Processing channel: {channel_name} ({channel_id})")
 
         try:
-            video_ids = search_recent_videos(channel_id, api_key, published_after)
+            video_ids = fetch_recent_videos_from_playlist(channel_id, api_key, published_after)
         except Exception as e:
-            log.error(f"  Search failed for {channel_id}: {e}")
+            log.error(f"  Playlist fetch failed for {channel_id}: {e}")
             continue
 
         if not video_ids:
-            log.info(f"  No new videos found.")
+            log.info(f"  No new videos in lookback window.")
             continue
 
         log.info(f"  Found {len(video_ids)} video(s). Fetching metadata...")
