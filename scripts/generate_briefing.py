@@ -100,6 +100,11 @@ def format_news_item(item: dict) -> str:
     )
 
 
+def is_priority(item: dict) -> bool:
+    """Return True if item is from the highest-priority podcast-pipeline feed."""
+    return "Podcast Pipeline" in item.get("source_name", "")
+
+
 def build_prompt(youtube_items: list[dict], news_items: list[dict],
                  slot: str, date_str: str) -> str:
     """Build the Sonnet briefing prompt."""
@@ -110,10 +115,22 @@ def build_prompt(youtube_items: list[dict], news_items: list[dict],
     # Sort YouTube by view count descending for prominence
     youtube_sorted = sorted(youtube_items, key=lambda x: x.get("view_count", 0), reverse=True)
 
+    # Separate podcast-pipeline items from regular news
+    podcast_items = [i for i in news_items if is_priority(i)]
+    regular_news = [i for i in news_items if not is_priority(i)]
+
     youtube_block = "\n\n".join(format_youtube_item(i) for i in youtube_sorted) if youtube_sorted else "（今日無YouTube資料）"
-    news_block = "\n\n".join(format_news_item(i) for i in news_items) if news_items else "（今日無新聞資料）"
+    news_block = "\n\n".join(format_news_item(i) for i in regular_news) if regular_news else "（今日無新聞資料）"
+    podcast_block = "\n\n".join(format_news_item(i) for i in podcast_items) if podcast_items else "（今日無Podcast Pipeline資料）"
 
     total_items = len(youtube_items) + len(news_items)
+
+    podcast_section = f"""## 🎙 Podcast Pipeline（最優先）
+以下是來自Podcast Pipeline的最新內容，請務必在簡報中獨立呈現，不要與其他新聞混合：
+
+{podcast_block}
+
+---""" if podcast_items else ""
 
     return f"""你是利世民的個人情報助理。請根據以下今日收集的資料，用繁體中文撰寫一份{slot_label}簡報。
 
@@ -126,14 +143,16 @@ def build_prompt(youtube_items: list[dict], news_items: list[dict],
 
 # {hkt_date} {slot_label}
 
+{podcast_section}
+
 ## 頭條故事
-列出今日最重要的3至5個故事。重要性綜合考慮：觀看數字、議題敏感度、時效性。每條頭條包括：
+列出今日最重要的 10 個故事。重要性綜合考慮：觀看數字、議題敏感度、時效性。每條頭條包括：
 - 一句話標題
 - 2至3句分析
 - 來源及連結
 
 ## 主題分析
-將所有項目歸納為3至5個主題（例如：香港政局、中國經濟、國際局勢、社會民生等）。
+將所有項目歸納為 7 個主題（例如：香港政局、中國經濟、國際局勢、社會民生等）。
 每個主題下：
 - 主題標題
 - 2至3句概括該主題今日動態
@@ -151,6 +170,9 @@ def build_prompt(youtube_items: list[dict], news_items: list[dict],
 ---
 
 以下是今日所有資料：
+
+### 🎙 Podcast Pipeline（最優先，獨立成節）
+{podcast_block}
 
 ### YouTube影片
 {youtube_block}
