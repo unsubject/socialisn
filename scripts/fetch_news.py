@@ -169,7 +169,18 @@ def fetch_rss_source(source: dict, fetched_at: str) -> list[dict]:
         full_text = extract_full_text(article_url)
         time.sleep(REQUEST_DELAY)
 
-        records.append({
+        # Extract Google Trends-specific fields if present
+        approx_traffic = entry.get("ht_approx_traffic", None)
+        news_items = []
+        for ni in entry.get("ht_news_item", []):
+            if isinstance(ni, dict):
+                news_items.append({
+                    "title": ni.get("ht_news_item_title", ""),
+                    "url": ni.get("ht_news_item_url", ""),
+                    "source": ni.get("ht_news_item_source", ""),
+                })
+
+        record = {
             "article_id": make_article_id(article_url),
             "source_name": name,
             "source_type": "rss",
@@ -181,7 +192,13 @@ def fetch_rss_source(source: dict, fetched_at: str) -> list[dict]:
             "fetched_at": fetched_at,
             "language": language,
             "tags": tags,
-        })
+        }
+        if approx_traffic:
+            record["approx_traffic"] = approx_traffic
+        if news_items:
+            record["related_news"] = news_items
+
+        records.append(record)
 
     log.info(f"  Found {len(records)} article(s) within lookback window.")
     return records
