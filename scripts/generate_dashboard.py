@@ -190,8 +190,6 @@ def generate_dashboard(youtube: list, news: list):
 <title>情報簡報 Dashboard</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
-<script src="https://unpkg.com/react-is@18.2.0/umd/react-is.production.min.js"></script>
-<script src="https://unpkg.com/recharts@2.12.0/umd/Recharts.min.js"></script>
 <style>
   *, *::before, *::after {{ box-sizing: border-box; margin: 0; padding: 0; }}
   body {{
@@ -273,20 +271,29 @@ function KeywordCloud({{ keywords }}) {{
 
 function ChannelChart({{ channels }}) {{
   if (!channels.length) return React.createElement("p", {{ style: {{ color: "#999" }} }}, "暫無數據");
-  return React.createElement(ResponsiveContainer, {{ width: "100%", height: 220 }},
-    React.createElement(BarChart, {{
-      data: channels, layout: "vertical",
-      margin: {{ top: 0, right: 16, bottom: 0, left: 8 }}
-    }},
-      React.createElement(XAxis, {{ type: "number", tick: {{ fontSize: 11 }}, allowDecimals: false }}),
-      React.createElement(YAxis, {{
-        type: "category", dataKey: "channel", width: 120,
-        tick: {{ fontSize: 10 }}, tickFormatter: v => v.length > 12 ? v.slice(0,12)+"…" : v
-      }}),
-      React.createElement(Tooltip, {{ formatter: (v) => [`${{v}} 條影片`, "影片數"] }}),
-      React.createElement(Bar, {{ dataKey: "count", radius: [0,4,4,0] }},
-        channels.map((_, i) =>
-          React.createElement(Cell, {{ key: i, fill: COLORS[i % COLORS.length] }})
+  const max = Math.max(...channels.map(c => c.count));
+  return React.createElement("div", {{ style: {{ display: "flex", flexDirection: "column", gap: "8px" }} }},
+    channels.map((c, i) =>
+      React.createElement("div", {{ key: i, style: {{ display: "flex", alignItems: "center", gap: "8px" }} }},
+        React.createElement("div", {{
+          style: {{ width: "120px", fontSize: "11px", textAlign: "right",
+                    color: "#555", flexShrink: 0,
+                    overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}
+        }}, c.channel),
+        React.createElement("div", {{
+          style: {{ flex: 1, background: "#f0f0f0", borderRadius: "3px", height: "20px", position: "relative" }}
+        }},
+          React.createElement("div", {{
+            style: {{
+              width: `${{Math.round((c.count / max) * 100)}}%`,
+              background: COLORS[i % COLORS.length],
+              height: "100%", borderRadius: "3px",
+              display: "flex", alignItems: "center", paddingLeft: "6px",
+              minWidth: "24px",
+            }}
+          }},
+            React.createElement("span", {{ style: {{ fontSize: "10px", color: "#fff", fontWeight: 600 }} }}, c.count)
+          )
         )
       )
     )
