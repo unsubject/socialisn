@@ -454,18 +454,18 @@ function App() {{
 }}
 
 // Error boundary for debugging
-class ErrorBoundary extends React.Component {
-  constructor(props) { super(props); this.state = { error: null }; }
-  static getDerivedStateFromError(e) { return { error: e }; }
-  render() {
-    if (this.state.error) {
-      return React.createElement("div", {
-        style: { padding: "32px", fontFamily: "monospace", color: "red" }
-      }, "React error: " + this.state.error.toString());
-    }
+class ErrorBoundary extends React.Component {{
+  constructor(props) {{ super(props); this.state = {{ error: null }}; }}
+  static getDerivedStateFromError(e) {{ return {{ error: e }}; }}
+  render() {{
+    if (this.state.error) {{
+      return React.createElement("div", {{
+        style: {{ padding: "32px", fontFamily: "monospace", color: "red" }}
+      }}, "React error: " + this.state.error.toString());
+    }}
     return this.props.children;
-  }
-}
+  }}
+}}
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   React.createElement(ErrorBoundary, null, React.createElement(App))
