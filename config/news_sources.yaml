@@ -11,6 +11,21 @@
 
 sources:
 
+
+  # ---------------------------------------------------------------------------
+  # Trending / Social Signal
+  # ---------------------------------------------------------------------------
+
+  - name: "Google Trends 香港熱搜"
+    type: rss
+    url: "https://trends.google.com/trending/rss?geo=HK"
+    language: zh-TW
+    tags:
+      - hongkong
+      - trending
+      - social-signal
+      - chinese
+
   # ---------------------------------------------------------------------------
   # English — International / HK
   # ---------------------------------------------------------------------------
