@@ -23,17 +23,17 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "柯文哲貪腐案被判17年，與黎智英案作比較；一拳書館被捕事件引發香港書店業危機反思。",
+    "summary_zh": "台灣前台北市長柯文哲因貪腐案被判17年，香港書店「一拳書館」被捕引發連鎖反應，引起對香港言論自由和出版業前景的關注。",
     "keywords_zh": [
       "柯文哲",
       "貪腐案",
-      "黎智英案",
+      "黎智英",
       "一拳書館",
-      "被捕",
       "香港書店",
-      "連鎖反應"
+      "言論自由",
+      "捕捉事件"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "jZl6aYCCjfY",
@@ -127,18 +127,18 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "泡泡瑪特純利勁升3倍惟股價暴跌，美團反彈與外賣大戰結束相關；另中國經濟面臨萎縮，香港國安法新規及一拳書館事件引關注。",
+    "summary_zh": "泡泡瑪特純利升3倍但股價暴跌，美團反彈與外賣大戰結束相關；中國經濟面臨萎縮，國安法新規對拒交手機者判刑一年，一拳書館四人被捕。",
     "keywords_zh": [
       "泡泡瑪特",
       "美團",
       "中國經濟",
       "國安法",
       "一拳書館",
-      "外賣大戰",
       "股價",
-      "新規"
+      "外賣大戰",
+      "華爾街日報"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "ojvMe03gVT0",
@@ -164,16 +164,17 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "廣東茂名信宜爆發千人抗爭，民眾因火葬場建設引發大規模民怨，甚至有年長居民以激烈方式表達反對。",
+    "summary_zh": "茂名信宜因興建火葬場引發千人抗爭，民眾包括老年人在內以激烈方式表達反對，反映當地民怨沸騰。",
     "keywords_zh": [
       "茂名",
       "信宜",
-      "千人抗爭",
       "火葬場",
+      "抗爭",
       "民怨",
-      "抗命"
+      "千人",
+      "白髮婆婆"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "S4hreESTY6o",
@@ -199,18 +200,18 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "伊朗據報違反與中國的約定，習近平五月訪京計劃受影響，中國敦促伊朗在四月中前結束衝突並禁止對以色列的暗殺行動，同時俄羅斯被指向伊朗提供自殺式無人機支援。",
+    "summary_zh": "伊朗與以色列衝突升級，習近平五月訪京期間力促四月中前結束衝突，中國勸伊朗談判，俄羅斯被指向伊朗提供自殺式無人機。",
     "keywords_zh": [
       "伊朗",
+      "以色列",
       "習近平",
       "中國",
-      "以色列",
       "俄羅斯",
       "無人機",
       "談判",
-      "訪京"
+      "軍援"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "zse1ACzqnpI",
@@ -236,16 +237,17 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "施紀賢在英國國會就伊朗戰爭議題進行辯論，柏丹娜對英國的脆弱地位提出尖銳批評，認為英國在G20中應對伊朗衝突的能力最弱。",
+    "summary_zh": "施紀賢在英國國會辯論中就伊朗戰爭議題與柏丹娜交鋒，指英國在G20中面臨最脆弱的局面。",
     "keywords_zh": [
       "英國",
       "施紀賢",
       "柏丹娜",
       "國會辯論",
       "伊朗戰爭",
-      "G20"
+      "G20",
+      "脆弱"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "61STi3lbq98",
@@ -271,16 +273,15 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "岸伯因法援被拒而自修憲法自行辯護，並因信件寄不出而提出絕食抗爭，涉及觸犯紅線問題。",
+    "summary_zh": "香港2A案被告岸伯法援申請被拒，自行研習憲法進行自辯；獄中信件受阻，提出絕食抗爭觸發紅線。",
     "keywords_zh": [
       "香港2A",
       "岸伯",
       "法援被拒",
       "自辯",
-      "絕食抗爭",
-      "紅線"
+      "絕食抗爭"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "UOqWHMslY3c",
@@ -306,17 +307,18 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "香港書店負責人龐一鳴因手機電腦被扣接受調查，一拳書館決定擇日重開；保安局局長鄧炳強就禁書紅線問題罕有收斂態度，駁斥英美國安法論述。",
+    "summary_zh": "香港時事評論指龐一鳴手機電腦被扣調查，一拳書館擇日重開；保安局局長鄧炳強罕有收斂對禁書紅線的評論，並就國安法議題作出回應。",
     "keywords_zh": [
       "龐一鳴",
       "一拳書館",
-      "手機電腦被扣",
       "鄧炳強",
       "禁書",
       "國安法",
-      "香港"
+      "香港",
+      "調查",
+      "紅線"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "QUpLyWPxy_k",
@@ -342,17 +344,16 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "台灣政治人物柯文哲遭重判17年，引發支持者崩潰，預計將提早出局2028年大選競逐。",
+    "summary_zh": "台灣前總統柯文哲遭重判17年，引發支持者「小草」崩潰，預示其2028年大選提前出局。",
     "keywords_zh": [
-      "台灣",
       "柯文哲",
-      "重判",
-      "17年",
+      "17年重判",
+      "小草",
       "2028大選",
-      "出局",
-      "小草"
+      "台灣",
+      "出局"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "HaQrxJ-i7Zs",
@@ -378,18 +379,17 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "宏福1B合安四月召開業主大會，競委會懷疑可能存在多個集團圍標情況，並等待警隊廉署調查結果。",
+    "summary_zh": "宏福1B業主大會將於四月召開討論合安項目，競委會懷疑多個集團圍標，同時等待警方及廉署調查結果。",
     "keywords_zh": [
       "宏福1B",
       "合安",
       "業主大會",
-      "四月",
       "競委會",
       "圍標",
       "警隊",
       "廉署"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "vxWYQm4seMI",
@@ -415,18 +415,18 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "宏福聽證會上黃碧嬌因處理長者授權書及火災後代表問題遭街坊質疑，涉嫌弄權並控告法權主席。",
+    "summary_zh": "宏福聴證會上，黃碧嬌因涉及長者授權簽署、大火後代表問題等事宜成為眾矢之的，被指弄權且與法權主席產生紛爭。",
     "keywords_zh": [
-      "宏福聽證",
+      "宏福",
+      "聴證",
       "黃碧嬌",
-      "長者授權書",
+      "長者簽授權書",
       "大火",
-      "打手",
+      "代表",
       "政府對話",
-      "弄權",
       "法權主席"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "jWfLzZFxbzE",
@@ -452,7 +452,7 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "涵蓋多項時事議題，包括法援申請被拒、國會辯論風波、中東局勢升溫及內地抗爭事件。",
+    "summary_zh": "涵蓋多個時事議題：岸伯法援被拒、施紀賢國會辯論身體不適、以色列行刺伊朗領袖計劃、茂名千人抗爭事件。",
     "keywords_zh": [
       "岸伯",
       "法援被拒",
@@ -461,9 +461,9 @@
       "以色列",
       "伊朗領袖",
       "茂名",
-      "千人抗爭"
+      "抗爭"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "KhJM15FG8Dg",
@@ -489,17 +489,18 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "黃碧嬌遭圍攻爆料多宗事件，街坊指災後遭打手滋擾；鄧炳強拒應一拳書館事件，柯文哲重判17年。",
+    "summary_zh": "黃碧嬌遭圍攻引發多宗風波，街坊投訴災後遭打手騷擾；鄧炳強迴避一拳書館事件，柯文哲被重判17年。",
     "keywords_zh": [
       "黃碧嬌",
-      "鄧炳強",
-      "一拳書館",
-      "柯文哲",
-      "打手",
       "圍攻",
-      "災後滋擾"
+      "打手",
+      "鄧炳強",
+      "一拳書館事件",
+      "柯文哲",
+      "重判17年",
+      "災後"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "1K6ePgCY-d4",
@@ -525,18 +526,18 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "龐一鳴獲釋，國際社會對其被捕事件關注度高；港府未公布禁書清單，實質推行自我審查制度。",
+    "summary_zh": "龐一鳴獲釋，惟國際社會對其被捕事件關注度高；港府未設禁書清單，實質促使港人自我審查。",
     "keywords_zh": [
       "龐一鳴",
       "獲釋",
       "王岸然",
       "國際社會",
       "被捕",
-      "禁書清單",
-      "自我審查",
-      "香港"
+      "香港",
+      "禁書",
+      "自我審查"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "QWDi1cmwxDc",
@@ -562,7 +563,7 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "迪士尼撤資Sora項目，OpenAI被迫縮減規模，背後或受伊朗戰爭等國際局勢影響。",
+    "summary_zh": "迪士尼撤資Sora項目，OpenAI被迫做出重大決定，背後可能與伊朗戰爭局勢升級有關。",
     "keywords_zh": [
       "迪士尼",
       "撤資",
@@ -571,7 +572,7 @@
       "伊朗戰爭",
       "國際局勢"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "W2pQkK2wdTM",
@@ -597,17 +598,18 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "伊朗威脅釋放報復，針對以色列提出五點要求包括霍爾木茲海峽治權，特朗普同時要求中東國家分擔五萬億戰爭費用，各方立場對立。",
+    "summary_zh": "伊朗威脅釋放「地獄之火」並提出五點要求，包括爭取霍爾木茲海峽治權；特朗普要求中東國家分擔五萬億戰爭費，而伊朗則要求溫和的以色列撤兵條件。",
     "keywords_zh": [
       "伊朗",
-      "以色列",
+      "地獄之火",
       "霍爾木茲海峽",
       "特朗普",
+      "以色列",
       "中東",
-      "戰爭費用",
-      "撤兵"
+      "撤兵",
+      "戰爭費"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "98bb3mRrJSw",
@@ -639,17 +641,16 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "美國向伊朗提出停火條件，伊朗接受等同投降；伊朗轟擊不停，戰爭進入關鍵時刻。",
+    "summary_zh": "美國對伊朗提出停火條件，伊朗實質上被迫接受投降式協議，戰爭局勢進入關鍵時刻。",
     "keywords_zh": [
       "美國",
       "伊朗",
       "停火",
-      "轟擊",
       "投降",
-      "戰爭",
-      "條件"
+      "轟擊",
+      "戰爭"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "JaLQMcEZzHI",
@@ -681,17 +682,18 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "香港警方因銷售《黎智英傳》逮捕書店主等四人，反映中國香港的文字獄現象，當局對出版、印刷、售書者等全面打擊。",
+    "summary_zh": "香港警方因販售黎智英傳記逮捕書店主四人，反映中國香港文字獄現象，當局對作者、印刷商、售書者等全面打擊。",
     "keywords_zh": [
       "黎智英傳",
       "書店主",
-      "逮捕",
       "文字獄",
       "香港",
-      "出版",
-      "銷售"
+      "中國",
+      "販售",
+      "逮捕",
+      "言論自由"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "xg9E7HxyIrg",
@@ -718,18 +720,18 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "政府下月起將長者兩元乘車優惠改為「兩蚊兩折」，預計每年節省5.5億元，但此舉引發質疑，批評向200萬長者「開刀」所得甚微，恐重演「安全帶之亂」。",
+    "summary_zh": "政府下月起將長者兩元乘車優惠改為「兩蚊兩折」，預計年省5.5億元，惟此舉被批評形同向200萬長者伸手，節省金額相對於公務員加薪等開支微不足道。",
     "keywords_zh": [
-      "長者優惠",
+      "長者乘車優惠",
       "兩蚊兩折",
-      "乘車優惠",
       "200萬長者",
-      "5.5億元",
-      "資源優化",
+      "年省5.5億元",
       "公務員加薪",
+      "資源優化",
+      "政府開支",
       "安全帶之亂"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "ltKgDdKnhok",
@@ -760,7 +762,7 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "節目報道Blackpink成員Jennie在香港機場冷淡待粉絲、陳慧琳高情商處理無理要求，以及五月天加場綵排引起阿信真唱爭議等娛樂新聞。",
+    "summary_zh": "綜合娛樂圈動態，Blackpink成員Jennie在香港機場冷淡對粉絲引關注，對比陳慧琳高情商應對粉絲無理要求，五月天阿信真唱引爭議。",
     "keywords_zh": [
       "Blackpink",
       "Jennie",
@@ -769,9 +771,9 @@
       "五月天",
       "阿信",
       "粉絲",
-      "綵排"
+      "綵排加場"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "1zg-RKy5n2o",
@@ -802,7 +804,7 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "富士山火山爆發風險升高，東京可能遭受30厘米火山灰覆蓋；聯合國大會通過決議，將跨大西洋奴隸貿易定性為最嚴重的反人類罪行。",
+    "summary_zh": "富士山火山爆發風險增加，東京可能被火山灰覆蓋；聯合國大會通過決議，將跨大西洋奴隸貿易定性為最嚴重反人類罪。",
     "keywords_zh": [
       "富士山",
       "火山爆發",
@@ -812,7 +814,7 @@
       "奴隸貿易",
       "反人類罪"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "6XhlHxz9hyE",
@@ -843,7 +845,7 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "港交所前首席經濟學家巴曙松涉巨額非法集資失蹤；宏福苑五級火事件揭露圍標黑幕，政府研究刑事化措施應對民眾憤怒。",
+    "summary_zh": "港交所前首席經濟學家巴曙松涉嫌巨額非法集資失蹤，宏福苑五級火災揭露圍標黑幕，政府研究刑事化以回應民憤。",
     "keywords_zh": [
       "港交所",
       "巴曙松",
@@ -853,7 +855,7 @@
       "圍標",
       "刑事化"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "x9Hc5BSUtrM",
@@ -884,16 +886,16 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "前台北市長柯文哲因多項案件於今日被一審判處17年徒刑，引發關注其如何陷入多案纏身的困境。",
+    "summary_zh": "前台北市長柯文哲因多起案件於今日一審被判刑17年，分析其如何因涉及多案而走向衰落。",
     "keywords_zh": [
       "柯文哲",
       "台北市長",
       "一審宣判",
       "17年",
-      "多案纏身",
-      "蕭若元"
+      "刑事案件",
+      "多案纏身"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "CydGRp3beio",
@@ -924,18 +926,17 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "OpenAI與台積電合作研發晶片估值達8,500億，NASA計劃2028年前穩定佔領月球以制衡中共太空勢力。",
+    "summary_zh": "OpenAI與台積電合作研發晶片估值達八千五百億美元；NASA計劃2028年前在月球建立據點，冀與中共在太空競爭中佔優。",
     "keywords_zh": [
       "OpenAI",
       "台積電",
       "晶片",
-      "估值",
       "NASA",
       "月球",
       "中共",
-      "太空"
+      "太空霸權"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "d3NZmpI_8g8",
@@ -966,16 +967,16 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "南韓股市跌幅超越台灣及日本，受中東石油危機造成的系統性經濟衝擊影響。",
+    "summary_zh": "南韓股市跌幅超越台灣、日本，受中東石油危機衝擊導致系統性經濟打擊。",
     "keywords_zh": [
       "南韓股市",
       "台灣",
       "日本",
       "中東石油危機",
-      "系統性打擊",
+      "經濟衝擊",
       "蕭若元"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "mgTDyfFEqoM",
@@ -1006,7 +1007,7 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "美國陪審團裁定Meta和YouTube對青少年成癮需要負責並賠償600萬美金；同時Sora上線半年後突然關閉，迪士尼10億美金投資亦暫時凍結。",
+    "summary_zh": "陪審團裁定Meta及YouTube須為青少年成癮案賠償600萬美金；Sora上線半年後突然關閉，迪士尼10億美金投資計劃受阻。",
     "keywords_zh": [
       "陪審團",
       "Meta",
@@ -1014,10 +1015,9 @@
       "青少年成癮",
       "賠償",
       "Sora",
-      "迪士尼",
-      "投資"
+      "迪士尼"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "r75_Dz1grW8",
@@ -1048,16 +1048,18 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "OpenAI因虧損或法律風險而關閉Sora功能，其市場地位被Anthropic等競爭者蠶食，從上市希望跌落神壇。",
+    "summary_zh": "OpenAI突然關閉Sora功能，可能因虧損或面臨訴訟風險，公司股價從高峰跌落；Anthropic則趁機追趕，試圖搶佔市場。",
     "keywords_zh": [
       "OpenAI",
       "Sora",
       "Anthropic",
-      "AI",
+      "虧損",
+      "訴訟",
       "上市",
-      "競爭"
+      "AI",
+      "蕭若元"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "VnbiKpKpSY0",
@@ -1088,17 +1090,16 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "節目分析港版國安法第43條的法律風險，提醒市民警惕相關法律條文的適用範圍。",
+    "summary_zh": "節目警示港版國安法第43條的法律風險，提醒市民避免觸犯相關條款。",
     "keywords_zh": [
       "港版國安法",
       "第43條",
       "法律風險",
-      "2026年3月27日",
-      "周五直播",
+      "香港",
       "蕭若元",
-      "香港"
+      "直播"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "OkDO67ujCvU",
@@ -1129,18 +1130,18 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "歐洲企業對華投資跌至新低，中企卻在歐洲逆勢在地化；中共對台進行假消息宣傳戰。",
+    "summary_zh": "歐洲企業對華投資跌至新低，同時中企在歐進行在地化經營；中共對台進行輿論戰並散布假消息。",
     "keywords_zh": [
       "歐企",
       "對華投資",
-      "駐歐中企",
+      "新低",
+      "中企",
       "在地化",
       "中共",
       "台灣",
-      "假消息",
-      "洗腦戰"
+      "假消息"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "PPuJfI6zcuY",
@@ -1171,16 +1172,16 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "193人參加葉劉淑儀見面會並送上自家冷衫，引發「姐姐」貼堂的相關討論。",
+    "summary_zh": "193人參加葉劉淑儀見面會並送上自家冷衫，引發被「姐姐」貼堂的討論。",
     "keywords_zh": [
+      "193人",
       "葉劉淑儀",
       "見面會",
       "冷衫",
-      "193人",
-      "蕭定一",
-      "開心事"
+      "貼堂",
+      "蕭定一"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "9Wif7JveYhY",
@@ -1211,7 +1212,7 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "大陸AI動畫《流金谷恩仇錄》影射美伊戰爭，被指用新興技術洗腦挑撥民族情緒。",
+    "summary_zh": "大陸AI動畫「流金谷恩仇錄」影射美伊戰爭，被指為洗腦工具意圖挑撥民族情緒。",
     "keywords_zh": [
       "流金谷恩仇錄",
       "AI動畫",
@@ -1221,7 +1222,7 @@
       "洗腦",
       "蕭若元"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "zfA__Fxt34o",
@@ -1292,7 +1293,7 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "美伊就停戰和談各執一詞，美軍增兵中東部署；Meta和Google因網癮訴訟被判賠償，全球氣溫創11年新高。",
+    "summary_zh": "美伊就停戰談判各執一詞，美軍同時在中東集結部署；科技巨頭Meta、Google因網癮訴訟被判賠償，全球氣溫創11年新高。",
     "keywords_zh": [
       "美伊和談",
       "中東",
@@ -1303,7 +1304,7 @@
       "Google",
       "地球氣溫"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "pQtK7DIxGAc",
@@ -1337,17 +1338,18 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "宏福苑聽證會第四日，居民作供指民建聯黃碧嬌及政黨過度介入屋苑事務，質疑其參與法團訴訟及收取授權票的動機。",
+    "summary_zh": "宏福苑聽證會第四日，多名居民作供指黃碧嬌及政黨過度介入屋苑事務，包括插手法團訴訟及收取授權票。",
     "keywords_zh": [
       "宏福苑",
       "聽證會",
       "黃碧嬌",
       "民建聯",
       "法團訴訟",
-      "政黨干預",
-      "居民"
+      "居民",
+      "政黨介入",
+      "屋苑事務"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "pX72PkACWgk",
@@ -1372,18 +1374,18 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "探討比薩門陰謀論十周年，回顧從Podesta電郵到愛潑斯坦名單等權力網絡黑幕，分析其真實性與證據。",
+    "summary_zh": "影片回顧比薩門陰謀論十周年，深入探討從Podesta電郵、戀童符號到愛潑斯坦名單等涉及權力階層的相關證據。",
     "keywords_zh": [
       "比薩門",
       "Pizzagate",
       "Podesta",
       "愛潑斯坦",
-      "民主黨",
       "陰謀論",
-      "權力網絡",
-      "戀童符號"
+      "民主黨",
+      "戀童符號",
+      "權力網絡"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "UkZb6xZ4Ksw",
@@ -1409,18 +1411,18 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "特朗普的MAGA運動如同照妖鏡，Operation Epic Fury則是現形水，將各方牛鬼蛇神的真面目暴露無遺，揭示現實中的荒誕現象。",
+    "summary_zh": "特朗普MAGA運動如照妖鏡揭露各方勢力的虛偽面目，Operation Epic Fury行動則如現形水將隱藏的真相暴露於眾；香港黃絲KOLs與建制派人物立場矛盾，國際局勢亦呈現荒誕現象。",
     "keywords_zh": [
       "特朗普",
       "MAGA",
       "Operation Epic Fury",
       "照妖鏡",
       "現形水",
-      "反革命運動",
-      "2026年3月",
-      "時事分析"
+      "黃絲",
+      "伊朗",
+      "美國"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "_qo15NmtDAw",
@@ -1445,18 +1447,18 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "影片拆解一宗涉及以色列特務、中國商人的英倫間諜案，揭露跨國滲透網絡，退休警司與律師聯手追查失蹤人士，並指稱神秘人物提議消滅證人。",
+    "summary_zh": "影片拆解英倫間諜案涉及以色列特務、跨國滲透網絡，揭露中國神祕富商與「赵豹」等人物涉嫌策劃證人滅口案件。",
     "keywords_zh": [
       "英倫間諜案",
       "以色列特務",
-      "中國富商",
       "跨國滲透",
-      "證人",
+      "中國富商",
       "赵豹",
+      "證人滅口",
       "退休警司",
       "律師"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "N_tdv7A30Jg",
@@ -1481,18 +1483,18 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "香港駐倫敦經貿辦涉嫌成為特務基地，袁松彪被指收指令追蹤移英港人；另一邊鄺文琪首次開腔指老闆被軟禁、1.6億資金離奇消失。",
+    "summary_zh": "香港駐倫敦經貿辦涉嫌成為特務基地，袁松彪被指接收指令追蹤移英港人；同時鄺文琪首次發聲揭露老闆被軟禁及1.6億資金離奇消失。",
     "keywords_zh": [
       "香港",
-      "倫敦",
-      "經貿辦",
+      "倫敦經貿辦",
       "袁松彪",
-      "特務基地",
+      "特務",
       "移英港人",
       "鄺文琪",
+      "軟禁",
       "資金消失"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "zwB3Y8O1XtE",
@@ -1517,18 +1519,17 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "英國倫敦經貿辦涉及監視海外港人醜聞曝光，相關人士袁松彪、鄺文琪等牽涉其中，引發諜報滲透大地震。",
+    "summary_zh": "英國倫敦經貿辦被揭涉滲透黑幕，袁松彪疑受命監視海外港人，鄺文琪爆料1.6億資產轉移真相。",
     "keywords_zh": [
       "英倫",
       "倫敦經貿辦",
       "袁松彪",
       "鄺文琪",
-      "諜報",
-      "監視",
-      "海外港人",
+      "滲透",
+      "監視港人",
       "資產轉移"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "0pvBSQ__xWw",
@@ -1573,17 +1574,17 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "巴基斯坦證實美國與伊朗進行談判，惟伊朗未同意美方方案，局勢升級在即；白宮發布神秘影片引發關注，國際社會對談判前景趨於悲觀。",
+    "summary_zh": "巴基斯坦證實美國與伊朗進行談判，伊朗未同意美國方案，白宮發布相關影片，伊朗傾向軍事行動而對談判興趣減弱。",
     "keywords_zh": [
       "巴基斯坦",
       "美國",
       "伊朗",
       "談判",
       "白宮",
-      "軍控",
-      "攻擊"
+      "軍控制",
+      "方案"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "LTX0tcA5tLc",
@@ -1612,7 +1613,7 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "桑普走訪美國德州達拉斯，實地拍攝CPAC保守派政治行動會議開幕前的主會場場景。",
+    "summary_zh": "桑普實地遊歷美國德州達拉斯，探訪CPAC保守派政治行動會議開幕前的主會場設施。",
     "keywords_zh": [
       "桑普",
       "美國",
@@ -1623,7 +1624,7 @@
       "政治行動會議",
       "主會場"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "FtGXxAzNyYM",
@@ -1663,16 +1664,16 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "中國知名網紅張雪峰突然猝死，引發關注；他曾因涉及台灣議題及慈善捐款等言論備受爭議，其身故留下多項待解疑問。",
+    "summary_zh": "知名中國網紅張雪峰突然去世，引發關注。他曾因承諾捐款5000萬支持台灣而備受爭議，其離世引發對其言行及遺產的反思。",
     "keywords_zh": [
       "張雪峰",
       "中國網紅",
       "猝死",
-      "台灣",
       "捐款",
+      "台灣",
       "爭議"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "5cTGN-4yyuQ",
@@ -1698,18 +1699,18 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "美國在全球能源爭霸戰中完全勝出，中國因軍事實力落後、缺乏替代能源且無法控制麻六甲海峽，已基本宣告在地緣與能源爭霸中失敗。",
+    "summary_zh": "分析全球能源爭霸格局中美國的優勢地位，指出中國在軍事、能源及地緣政治上面臨劣勢，未來美國可能透過聯合亞太盟友控制麻六甲海峽，改寫全球能源秩序。",
     "keywords_zh": [
       "全球能源爭霸",
       "美國",
       "中國",
       "地緣政治",
       "麻六甲海峽",
+      "亞太地區",
       "軍事實力",
-      "亞太部署",
-      "石油資源"
+      "能源格局"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "oP8dzUuXw0c",
@@ -1771,17 +1772,18 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "特朗普急於訪華見習近平商討中東局勢，伊朗透過控制霍爾木茲海峽作為談判籌碼，中東戰爭升級致美國軍事資源分散，連帶打擊烏克蘭局勢。",
+    "summary_zh": "特朗普急於訪華見習近平與伊朗宣布不全面封閉霍爾木茲海峽背後，反映中東戰爭升級正重塑美國戰略部署，並連鎖影響烏克蘭局勢。",
     "keywords_zh": [
       "特朗普",
       "習近平",
-      "中東戰爭",
       "伊朗",
+      "中東戰爭",
       "霍爾木茲海峽",
+      "烏克蘭",
       "俄烏戰爭",
-      "美國軍事部署"
+      "美國"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "9NZVj_KE_sg",
@@ -1812,18 +1814,18 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "伊朗作為全球主要尿素出口國，其局勢升溫導致化肥供應受阻，加上厄爾尼諾現象引發乾旱，全球糧食危機風險上升，影響大豆、大米等農產品價格。",
+    "summary_zh": "中東局勢升溫引發全球糧食危機，伊朗作為主要尿素出口國，通過控制荷姆茲海峽影響化肥供應，導致大豆、大米等農產品價格面臨衝擊。",
     "keywords_zh": [
-      "伊朗局勢",
+      "伊朗",
       "糧食危機",
-      "尿素出口",
-      "化肥供應",
+      "尿素",
+      "荷姆茲海峽",
+      "化肥",
       "大豆",
       "大米",
-      "厄爾尼諾",
-      "地緣政治"
+      "中東局勢"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "N67bAmXEV6U",
@@ -1854,18 +1856,18 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "某不良內容網站擁有者病逝，該平台年交易額達72億美元超越科技巨頭，引發對創作者經濟道德性的深層思考。",
+    "summary_zh": "某以不良內容起家的網站擁有者Radvinsky病逝，該平台年交易額達72億美元超越輝達，引發關於創作者經濟與道德爭議的討論。",
     "keywords_zh": [
-      "網站擁有者",
-      "Radvinsky",
-      "病逝",
-      "72億美元",
-      "創作者經濟",
-      "罪惡稅",
+      "擁有者病逝",
       "不良網站",
-      "馮智政"
+      "72億美元",
+      "輝達",
+      "罪惡稅",
+      "創作者經濟",
+      "道德爭議",
+      "Radvinsky"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "NsDE2CUfIzo",
@@ -1891,17 +1893,17 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "分析台灣柯文哲貪腐案17年重判與黎智英案的比較，並討論一拳書館被捕事件對香港書店業的衝擊與出路。",
+    "summary_zh": "分析台灣柯文哲貪腐案被判17年與黎智英案的比較，以及一拳書館被捕事件對香港書店業的衝擊和前景。",
     "keywords_zh": [
       "柯文哲",
       "貪腐案",
-      "17年重判",
+      "17年",
       "黎智英案",
       "一拳書館",
-      "香港書店",
-      "被捕"
+      "被捕",
+      "香港書店"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "_AQXlWNDuy8",
@@ -1942,17 +1944,18 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "香港獨立書店面臨生存危機，一拳書館被捕事件反映出當局對「煽動刊物」的模糊紅線，引發業界對前景的擔憂。",
+    "summary_zh": "香港獨立書店面臨生存危機，一拳書館遭捕事件反映出版品審查紅線模糊不清，引發業界對言論自由空間進一步收縮的憂慮。",
     "keywords_zh": [
       "香港",
       "獨立書店",
       "一拳書館",
-      "被捕",
       "煽動刊物",
-      "《黎智英傳》",
-      "出路"
+      "黎智英傳",
+      "出版審查",
+      "言論自由",
+      "停業"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "srf9cA2Prvc",
@@ -1981,18 +1984,18 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "美軍特種部隊集結中東，參謀聯席主席凱恩因擊潰伊斯蘭國成名，準備對伊朗實施特別軍事行動。",
+    "summary_zh": "美軍特種部隊在中東集結，參謀聯席主席凱恩以特種作戰專長領導，瞄準伊朗執行特別軍事行動。",
     "keywords_zh": [
       "美軍特種部隊",
       "中東",
-      "伊朗",
+      "參謀聯席主席凱恩",
       "伊斯蘭國",
-      "凱恩",
-      "參謀聯席主席",
-      "特別軍事行動",
-      "三角洲"
+      "特種作戰",
+      "伊朗",
+      "三角洲部隊",
+      "海豹突擊隊"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "jpotoQgZ4tU",
@@ -2021,18 +2024,18 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "新任議員履職能力受質疑，柯文哲受賄案被判刑；中東局勢升溫，伊朗尋求停戰、以色列擊殺伊朗高級軍官，巴基斯坦居中調停。",
+    "summary_zh": "本期節目評論新任議員表現不佳、柯文哲貪污案判刑、伊朗與以色列地區衝突升溫，及巴基斯坦擔任中東談判中間人等多項時事。",
     "keywords_zh": [
       "新任議員",
       "柯文哲",
       "受賄案",
       "伊朗",
-      "停戰",
       "以色列",
       "巴基斯坦",
-      "革命衛隊"
+      "革命衛隊",
+      "停戰談判"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "nl0sOcIldkU",
@@ -2061,18 +2064,18 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "伊朗向林肯號航母發射101枚導彈全數被擊落，美伊局勢緊張；JD掌舵談判預計週末在巴基斯坦或土耳其舉行，中方部署光纖無人機應對美軍電子干擾，陸戰隊新式防空系統強化多層防禦。",
+    "summary_zh": "伊朗向林肯號航母發射101枚導彈被全數擊落，美伊談判將於週末在巴基斯坦或土耳其舉行；伊朗研發光纖線控無人機對抗美軍電子干擾，並部署陸戰隊雷射微波炮形成多層防空網。",
     "keywords_zh": [
       "伊朗",
       "林肯號",
       "導彈",
-      "美軍",
-      "JD談判",
+      "談判",
       "巴基斯坦",
       "土耳其",
-      "無人機"
+      "無人機",
+      "防空網"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "GMvl8oYD0dQ",
@@ -2101,17 +2104,18 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "港產007演員袁松彪於法庭認承充當北京追數案中間人；同時過去三年逾28萬大陸人才以各類計劃來港，美國法庭首次判科技平台賠償網絡騷擾受害少女。",
+    "summary_zh": "港產007演員袁松彪在法庭承認參與北京追數案並擔任中間人角色，同時過去三年逾28萬大陸人以人才計劃來港，美國法院判令平台科技企業賠償網絡騷擾受害少女300萬美元。",
     "keywords_zh": [
       "袁松彪",
       "港產007",
       "北京追數案",
       "中間人",
-      "大陸人才計劃",
-      "美國法庭",
-      "平台科技企業"
+      "人才計劃",
+      "大陸人來港",
+      "科技平台",
+      "網絡騷擾"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "Kx4P4cgRTMo",
@@ -2137,17 +2141,16 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "一拳書館4人獲保釋，手機電腦遭拘留，保安局就「煽動」定義作出回應，引發關於言論自由邊界的討論。",
+    "summary_zh": "一拳書館4人獲准保釋，手機電腦被扣押調查，保安局解釋煽動罪需視乎目的和上文下理作判斷。",
     "keywords_zh": [
       "一拳書館",
       "保釋",
       "手機電腦",
-      "拘留",
       "保安局",
-      "煽動",
-      "言論自由"
+      "煽動罪",
+      "上文下理"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "k1sPRapwFcs",
@@ -2173,7 +2176,7 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "宏福聆訊中前法團司庫作供揭露涉及黃碧嬌的早年往事，引發居民對真相的期待。",
+    "summary_zh": "宏福聆訊中前法團司庫作供揭露涉及黃碧嬌的早年疑團，引起居民關注真相。",
     "keywords_zh": [
       "宏福",
       "聆訊",
@@ -2183,7 +2186,7 @@
       "居民",
       "真相"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
   },
   {
     "video_id": "7KFCWSjTcGY",
@@ -2209,15 +2212,1244 @@
       "text": null
     },
     "fetched_at": "2026-03-27T02:38:47Z",
-    "summary_zh": "特朗普宣布五月中訪華，分析其與伊朗戰爭局勢的關聯，以及是否重演尼克遜外交政策的歷史路線。",
+    "summary_zh": "特朗普宣布五月中訪華，分析其在伊朗戰爭未完之際急於訪華的動機，並探討其是否重蹈尼克遜外交政策的覆轍。",
     "keywords_zh": [
       "特朗普",
-      "伊朗戰爭",
       "訪華",
+      "伊朗戰爭",
       "五月中",
       "尼克遜",
       "外交政策"
     ],
-    "processed_at": "2026-03-27T02:43:34Z"
+    "processed_at": "2026-03-27T13:18:16Z"
+  },
+  {
+    "video_id": "ucxG6M_bvx8",
+    "channel_id": "UCm4NHRafzs1BtpjWiop8vmQ",
+    "channel_name": "Hong Kong Uncensored 香港冇格仔",
+    "channel_tags": [
+      "uk",
+      "hongkong"
+    ],
+    "title": "【聲如洪鍾2.0之一】大圍跳軌男觸電重創；英國發香港半年報告，立法會反駁隊抄功課批英！宏福苑四月下旬回家收拾，張堅庭質疑大維修目的！27/3/26",
+    "description": "課金支持: https://www.patreon.com/hkuncensored\n請我地飲杯咖啡：https://www.buymeacoffee.com/hongkonguncensored\n網友特惠虛擬NordVPN 虛擬私人網絡：https://nordvpn.com/hkuncensored\n優惠碼：hkuncensored",
+    "published_at": "2026-03-27T11:50:17Z",
+    "duration_seconds": 3673,
+    "view_count": 918,
+    "like_count": 123,
+    "comment_count": 0,
+    "tags": [],
+    "thumbnail_url": "https://i.ytimg.com/vi/ucxG6M_bvx8/hqdefault_live.jpg",
+    "transcript": {
+      "available": false,
+      "language": null,
+      "source": null,
+      "text": null
+    },
+    "fetched_at": "2026-03-27T13:13:11Z",
+    "summary_zh": "大圍發生跳軌觸電事故；英國發表香港半年報告引發立法會反駁；宏福苑大維修計劃引起質疑。",
+    "keywords_zh": [
+      "大圍",
+      "跳軌",
+      "觸電",
+      "英國",
+      "香港報告",
+      "立法會",
+      "宏福苑",
+      "大維修"
+    ],
+    "processed_at": "2026-03-27T13:18:16Z"
+  },
+  {
+    "video_id": "fQVkfP3iwG8",
+    "channel_id": "UCCVFgDdTfiGxQ695BxMBMUg",
+    "channel_name": "風雲谷 Whirling Clouds Valley",
+    "channel_tags": [
+      "uk",
+      "hongkong"
+    ],
+    "title": "Ch. 1698：又延期十日 讓位以色列狂炸 川普狂人性格行政心理剖析 ｜風雲谷｜2026/03/27",
+    "description": "內容有價，加入風雲會！每月最低HK$80，支持我們的成長！\n請即支持《風雲谷》團隊 : https://linktr.ee/wcvalley\n\n《風雲谷》跟你約定，逢星期一至六晚香港時間10點，就當前局勢為你作出分析！\n\n不問翻牆，但求越界，笑看古今善惡，深究人情百態。湖海再遇，網絡重逢，《風雲谷》約定你！\n\n有你的支持，我們攜手走得更遠：\n陶傑披藏: https://patreon.com/tokitchannel\n聰心直說: https://patreon.com/gutsfeel",
+    "published_at": "2026-03-27T07:44:13Z",
+    "duration_seconds": 0,
+    "view_count": 0,
+    "like_count": 64,
+    "comment_count": 4,
+    "tags": [
+      "風雲谷",
+      "陶傑",
+      "鮑偉聰",
+      "光明頂",
+      "聰心直說"
+    ],
+    "thumbnail_url": "https://i.ytimg.com/vi/fQVkfP3iwG8/hqdefault.jpg",
+    "transcript": {
+      "available": false,
+      "language": null,
+      "source": null,
+      "text": null
+    },
+    "fetched_at": "2026-03-27T13:13:11Z",
+    "summary_zh": "以色列延期軍事行動，美國總統川普因其性格特質在國際局勢中的影響力受到分析。",
+    "keywords_zh": [
+      "以色列",
+      "川普",
+      "延期",
+      "狂炸",
+      "狂人性格",
+      "美國",
+      "行政決策"
+    ],
+    "processed_at": "2026-03-27T13:18:16Z"
+  },
+  {
+    "video_id": "OLpkPizh-yA",
+    "channel_id": "UCCVFgDdTfiGxQ695BxMBMUg",
+    "channel_name": "風雲谷 Whirling Clouds Valley",
+    "channel_tags": [
+      "uk",
+      "hongkong"
+    ],
+    "title": "Ch. 1697：中國AI才俊想借道新加坡通美國 Manus 「國安化」中共限制出境｜風雲快訊｜2026/03/27",
+    "description": "內容有價，加入風雲會！每月最低HK$80，支持我們的成長！\n請即支持《風雲谷》團隊 : https://linktr.ee/wcvalley\n\n《風雲谷》跟你約定，逢星期一至六晚香港時間10點，就當前局勢為你作出分析！\n\n不問翻牆，但求越界，笑看古今善惡，深究人情百態。湖海再遇，網絡重逢，《風雲谷》約定你！\n\n有你的支持，我們攜手走得更遠：\n陶傑披藏: https://patreon.com/tokitchannel\n聰心直說: https://patreon.com/gutsfeel",
+    "published_at": "2026-03-27T04:30:06Z",
+    "duration_seconds": 2154,
+    "view_count": 75934,
+    "like_count": 4971,
+    "comment_count": 150,
+    "tags": [
+      "風雲谷",
+      "陶傑",
+      "鮑偉聰",
+      "光明頂",
+      "聰心直說"
+    ],
+    "thumbnail_url": "https://i.ytimg.com/vi/OLpkPizh-yA/hqdefault.jpg",
+    "transcript": {
+      "available": false,
+      "language": null,
+      "source": null,
+      "text": null
+    },
+    "fetched_at": "2026-03-27T13:13:11Z",
+    "summary_zh": "中國AI人才試圖通過新加坡途徑赴美，惟中共因國安考慮限制出境；Manus因應措施被「國安化」。",
+    "keywords_zh": [
+      "中國",
+      "AI人才",
+      "新加坡",
+      "美國",
+      "中共",
+      "國安",
+      "出境限制",
+      "Manus"
+    ],
+    "processed_at": "2026-03-27T13:18:16Z"
+  },
+  {
+    "video_id": "Ss1P9gR5MuM",
+    "channel_id": "UCwkVGGhBqOY7DSybymuvX5w",
+    "channel_name": "財經拆局",
+    "channel_tags": [
+      "uk",
+      "finance",
+      "hongkong"
+    ],
+    "title": "《燃油附加費變提款機？國泰燃油費失控，政府還在「關注」？》",
+    "description": "國泰航空近期大幅調高燃油附加費，其做法引起了市場廣泛關注。國泰不僅大幅上調費用，更將燃油附加費的調整機制由原本的每月一次縮短為每兩星期一次。根據最新數據，客運燃油附加費的加幅高達 1.7 倍，而貨運附加費的加幅更達 3 倍，遠超同期國際油價的升幅。\n\n更令公眾質疑的是，特區政府對燃油附加費的監管顯得軟弱無力。自 2018 年政府完全放寬加價機制後，航空公司似乎將燃油附加費視作向旅客收取的「提款機」，整個監管制度已嚴重失衡。目前政府僅表示會「關注」升幅，這反映出當局缺乏有效機制來制衡航空公司隨意加價。諷刺的是，國泰航空最近才在全球最佳航空公司評選中重返第二名，但其定價策略卻引發極大爭議。",
+    "published_at": "2026-03-27T12:02:19Z",
+    "duration_seconds": 723,
+    "view_count": 1229,
+    "like_count": 247,
+    "comment_count": 5,
+    "tags": [],
+    "thumbnail_url": "https://i.ytimg.com/vi/Ss1P9gR5MuM/hqdefault.jpg",
+    "transcript": {
+      "available": false,
+      "language": null,
+      "source": null,
+      "text": null
+    },
+    "fetched_at": "2026-03-27T13:13:11Z",
+    "summary_zh": "國泰航空大幅調高燃油附加費至1.7至3倍，遠超油價升幅，政府監管缺失引發市場質疑。",
+    "keywords_zh": [
+      "國泰航空",
+      "燃油附加費",
+      "提款機",
+      "政府監管",
+      "加價機制",
+      "客運",
+      "貨運",
+      "香港"
+    ],
+    "processed_at": "2026-03-27T13:18:16Z"
+  },
+  {
+    "video_id": "mp05j6pgdm0",
+    "channel_id": "UCu_YquoQYKR3GpP82TO-zRw",
+    "channel_name": "《謎米香港》",
+    "channel_tags": [
+      "taiwan",
+      "hongkong"
+    ],
+    "title": "英航乘客離世仍照飛倫敦13小時｜芬蘭國會議員因反同言論遭判煽動仇恨罪 2026-03-27《香港新聞連線》",
+    "description": "訂購蕭若元最新作品 《蕭若元說明史 -- 明成祖朱棣 暴君？雄主？》\nhttps://shiumeowmeow.co/product/887\n\n用謎米香港優惠連結，購買NordVPN兩年計劃，原本額外再送4個月\nhttp://nordvpn.com/memehk\n🐱俏貓貓超市網站由此入：https://qfoodsmall.com/\n香港元宇宙youtube 頻道：https://www.youtube.com/channel/UCWRsW1dEw9hob0mSIv_P5pw\n💥你爆料我來講Email，歡迎來信爆料：connectionhknews@gmail.com\n🐱蕭貓貓辦館最新團購上線！歡迎來逛逛：https://shiumeowmeow.co\n關注🇭🇰《香港新聞連線》追蹤最需要知道的消息\n網址：https://news.hongkongmetas.com/\n➡️【如何將香港新聞連線加入首頁？】影片連結：https://youtu.be/f0pAlXYrgCQ\n關注：Twitter: @hkStephenSYY / IG: hkStephenSYY\n加入我們的patreon：https://www.patreon.com/mrshiu",
+    "published_at": "2026-03-27T13:01:03Z",
+    "duration_seconds": 755,
+    "view_count": 87,
+    "like_count": 10,
+    "comment_count": 0,
+    "tags": [
+      "謎米香港",
+      "memehk",
+      "yt:cc=on",
+      "蕭若元"
+    ],
+    "thumbnail_url": "https://i.ytimg.com/vi/mp05j6pgdm0/hqdefault.jpg",
+    "transcript": {
+      "available": false,
+      "language": null,
+      "source": null,
+      "text": null
+    },
+    "fetched_at": "2026-03-27T13:13:11Z",
+    "summary_zh": "英國航空公司乘客在飛行途中離世後仍繼續飛行13小時；芬蘭國會議員因反同性戀言論被判煽動仇恨罪。",
+    "keywords_zh": [
+      "英航",
+      "乘客離世",
+      "倫敦",
+      "13小時",
+      "芬蘭",
+      "國會議員",
+      "反同言論",
+      "煽動仇恨罪"
+    ],
+    "processed_at": "2026-03-27T13:18:16Z"
+  },
+  {
+    "video_id": "F4iEzytXiRA",
+    "channel_id": "UCu_YquoQYKR3GpP82TO-zRw",
+    "channel_name": "《謎米香港》",
+    "channel_tags": [
+      "taiwan",
+      "hongkong"
+    ],
+    "title": "港府研充公黎智英財產  周達權轉控方證人獲撤銷控罪｜查密碼法貽笑國際 香港形象毀於一旦 2026-03-27《香港新聞連線》",
+    "description": "訂購蕭若元最新作品 《蕭若元說明史 -- 明成祖朱棣 暴君？雄主？》\nhttps://shiumeowmeow.co/product/887\n\n用謎米香港優惠連結，購買NordVPN兩年計劃，原本額外再送4個月\nhttp://nordvpn.com/memehk\n🐱俏貓貓超市網站由此入：https://qfoodsmall.com/\n香港元宇宙youtube 頻道：https://www.youtube.com/channel/UCWRsW1dEw9hob0mSIv_P5pw\n💥你爆料我來講Email，歡迎來信爆料：connectionhknews@gmail.com\n🐱蕭貓貓辦館最新團購上線！歡迎來逛逛：https://shiumeowmeow.co\n關注🇭🇰《香港新聞連線》追蹤最需要知道的消息\n網址：https://news.hongkongmetas.com/\n➡️【如何將香港新聞連線加入首頁？】影片連結：https://youtu.be/f0pAlXYrgCQ\n關注：Twitter: @hkStephenSYY / IG: hkStephenSYY\n加入我們的patreon：https://www.patreon.com/mrshiu",
+    "published_at": "2026-03-27T11:30:20Z",
+    "duration_seconds": 539,
+    "view_count": 531,
+    "like_count": 59,
+    "comment_count": 1,
+    "tags": [
+      "謎米香港",
+      "memehk",
+      "yt:cc=on",
+      "蕭若元"
+    ],
+    "thumbnail_url": "https://i.ytimg.com/vi/F4iEzytXiRA/hqdefault.jpg",
+    "transcript": {
+      "available": false,
+      "language": null,
+      "source": null,
+      "text": null
+    },
+    "fetched_at": "2026-03-27T13:13:11Z",
+    "summary_zh": "港府研究充公黎智英財產，周達權轉控方證人並獲撤銷控罪；專家指查密碼法做法貽笑國際，重創香港國際形象。",
+    "keywords_zh": [
+      "港府",
+      "充公財產",
+      "黎智英",
+      "周達權",
+      "控方證人",
+      "查密碼法",
+      "香港形象"
+    ],
+    "processed_at": "2026-03-27T13:18:16Z"
+  },
+  {
+    "video_id": "8wz3r07AfQs",
+    "channel_id": "UCu_YquoQYKR3GpP82TO-zRw",
+    "channel_name": "《謎米香港》",
+    "channel_tags": [
+      "taiwan",
+      "hongkong"
+    ],
+    "title": "(AI中英字幕)國安法新修例無法無天！英美都發出激烈警告！其中有哪「四類人」最危險？港人該如何自保？《蕭若元：蕭氏新聞台》2026-03-27",
+    "description": "訂購蕭若元最新作品 《蕭若元說明史 -- 明成祖朱棣 暴君？雄主？》\nhttps://shiumeowmeow.co/product/887\n\n用謎米香港優惠連結，購買NordVPN兩年計劃，原本額外再送4個月\nhttp://nordvpn.com/memehk\n🐱俏貓貓超市網站由此入：https://qfoodsmall.com/\n香港元宇宙youtube 頻道：https://www.youtube.com/channel/UCWRsW1dEw9hob0mSIv_P5pw\n💥你爆料我來講Email，歡迎來信爆料：connectionhknews@gmail.com\n🐱蕭貓貓辦館最新團購上線！歡迎來逛逛：https://shiumeowmeow.co\n關注🇭🇰《香港新聞連線》追蹤最需要知道的消息\n網址：https://news.hongkongmetas.com/\n➡️【如何將香港新聞連線加入首頁？】影片連結：https://youtu.be/f0pAlXYrgCQ\n關注：Twitter: @hkStephenSYY / IG: hkStephenSYY\n加入我們的patreon：https://www.patreon.com/mrshiu",
+    "published_at": "2026-03-27T11:00:13Z",
+    "duration_seconds": 1371,
+    "view_count": 7625,
+    "like_count": 691,
+    "comment_count": 21,
+    "tags": [
+      "謎米香港",
+      "memehk",
+      "yt:cc=on",
+      "蕭若元"
+    ],
+    "thumbnail_url": "https://i.ytimg.com/vi/8wz3r07AfQs/hqdefault.jpg",
+    "transcript": {
+      "available": false,
+      "language": null,
+      "source": null,
+      "text": null
+    },
+    "fetched_at": "2026-03-27T13:13:11Z",
+    "summary_zh": "香港國安法新修例引發英美激烈警告，分析修例危害及四類高風險人群，提醒港人自保方法。",
+    "keywords_zh": [
+      "國安法",
+      "新修例",
+      "英美警告",
+      "四類人",
+      "港人自保",
+      "香港",
+      "蕭若元"
+    ],
+    "processed_at": "2026-03-27T13:18:16Z"
+  },
+  {
+    "video_id": "tbfbe990xwE",
+    "channel_id": "UCu_YquoQYKR3GpP82TO-zRw",
+    "channel_name": "《謎米香港》",
+    "channel_tags": [
+      "taiwan",
+      "hongkong"
+    ],
+    "title": "美軍一萬地面部隊準備登陸 侵侵加壓伊朗和談｜ 柯文哲一審判17年總統夢碎 2026-03-27《香港新聞連線》",
+    "description": "訂購蕭若元最新作品 《蕭若元說明史 -- 明成祖朱棣 暴君？雄主？》\nhttps://shiumeowmeow.co/product/887\n\n用謎米香港優惠連結，購買NordVPN兩年計劃，原本額外再送4個月\nhttp://nordvpn.com/memehk\n🐱俏貓貓超市網站由此入：https://qfoodsmall.com/\n香港元宇宙youtube 頻道：https://www.youtube.com/channel/UCWRsW1dEw9hob0mSIv_P5pw\n💥你爆料我來講Email，歡迎來信爆料：connectionhknews@gmail.com\n🐱蕭貓貓辦館最新團購上線！歡迎來逛逛：https://shiumeowmeow.co\n關注🇭🇰《香港新聞連線》追蹤最需要知道的消息\n網址：https://news.hongkongmetas.com/\n➡️【如何將香港新聞連線加入首頁？】影片連結：https://youtu.be/f0pAlXYrgCQ\n關注：Twitter: @hkStephenSYY / IG: hkStephenSYY\n加入我們的patreon：https://www.patreon.com/mrshiu",
+    "published_at": "2026-03-27T09:23:23Z",
+    "duration_seconds": 756,
+    "view_count": 3282,
+    "like_count": 242,
+    "comment_count": 6,
+    "tags": [
+      "謎米香港",
+      "memehk",
+      "yt:cc=on",
+      "蕭若元"
+    ],
+    "thumbnail_url": "https://i.ytimg.com/vi/tbfbe990xwE/hqdefault.jpg",
+    "transcript": {
+      "available": false,
+      "language": null,
+      "source": null,
+      "text": null
+    },
+    "fetched_at": "2026-03-27T13:13:11Z",
+    "summary_zh": "美軍地面部隊準備登陸並對伊朗施壓談判，台灣前總統候選人柯文哲一審被判17年監禁。",
+    "keywords_zh": [
+      "美軍",
+      "地面部隊",
+      "登陸",
+      "伊朗",
+      "和談",
+      "柯文哲",
+      "一審判",
+      "總統"
+    ],
+    "processed_at": "2026-03-27T13:18:16Z"
+  },
+  {
+    "video_id": "NRflBDzO1cw",
+    "channel_id": "UCu_YquoQYKR3GpP82TO-zRw",
+    "channel_name": "《謎米香港》",
+    "channel_tags": [
+      "taiwan",
+      "hongkong"
+    ],
+    "title": "(AI中英字幕)美國股市又大跌！伊朗反提「五條件」無意講和？特朗普延後打擊行動十日！解釋背後關鍵訊號！《蕭若元：蕭氏新聞台》2026-03-27",
+    "description": "訂購蕭若元最新作品 《蕭若元說明史 -- 明成祖朱棣 暴君？雄主？》\nhttps://shiumeowmeow.co/product/887\n\n用謎米香港優惠連結，購買NordVPN兩年計劃，原本額外再送4個月\nhttp://nordvpn.com/memehk\n🐱俏貓貓超市網站由此入：https://qfoodsmall.com/\n香港元宇宙youtube 頻道：https://www.youtube.com/channel/UCWRsW1dEw9hob0mSIv_P5pw\n💥你爆料我來講Email，歡迎來信爆料：connectionhknews@gmail.com\n🐱蕭貓貓辦館最新團購上線！歡迎來逛逛：https://shiumeowmeow.co\n關注🇭🇰《香港新聞連線》追蹤最需要知道的消息\n網址：https://news.hongkongmetas.com/\n➡️【如何將香港新聞連線加入首頁？】影片連結：https://youtu.be/f0pAlXYrgCQ\n關注：Twitter: @hkStephenSYY / IG: hkStephenSYY\n加入我們的patreon：https://www.patreon.com/mrshiu",
+    "published_at": "2026-03-27T08:45:04Z",
+    "duration_seconds": 1487,
+    "view_count": 20739,
+    "like_count": 1210,
+    "comment_count": 27,
+    "tags": [
+      "謎米香港",
+      "memehk",
+      "yt:cc=on",
+      "蕭若元"
+    ],
+    "thumbnail_url": "https://i.ytimg.com/vi/NRflBDzO1cw/hqdefault.jpg",
+    "transcript": {
+      "available": false,
+      "language": null,
+      "source": null,
+      "text": null
+    },
+    "fetched_at": "2026-03-27T13:13:11Z",
+    "summary_zh": "美國股市大幅下跌，伊朗提出五項和平條件態度強硬，特朗普決定延後對伊朗行動十日。",
+    "keywords_zh": [
+      "美國股市",
+      "伊朗",
+      "五條件",
+      "談判",
+      "特朗普",
+      "軍事行動",
+      "中東局勢"
+    ],
+    "processed_at": "2026-03-27T13:18:16Z"
+  },
+  {
+    "video_id": "kHTjs5Ifa-U",
+    "channel_id": "UCu_YquoQYKR3GpP82TO-zRw",
+    "channel_name": "《謎米香港》",
+    "channel_tags": [
+      "taiwan",
+      "hongkong"
+    ],
+    "title": "特朗普五月再會習大 暗示伊朗戰事快完？｜英工黨政府斥國安法又照撐在港英商 2026-03-27《香港新聞連線》",
+    "description": "訂購蕭若元最新作品 《蕭若元說明史 -- 明成祖朱棣 暴君？雄主？》\nhttps://shiumeowmeow.co/product/887\n\n用謎米香港優惠連結，購買NordVPN兩年計劃，原本額外再送4個月\nhttp://nordvpn.com/memehk\n🐱俏貓貓超市網站由此入：https://qfoodsmall.com/\n香港元宇宙youtube 頻道：https://www.youtube.com/channel/UCWRsW1dEw9hob0mSIv_P5pw\n💥你爆料我來講Email，歡迎來信爆料：connectionhknews@gmail.com\n🐱蕭貓貓辦館最新團購上線！歡迎來逛逛：https://shiumeowmeow.co\n關注🇭🇰《香港新聞連線》追蹤最需要知道的消息\n網址：https://news.hongkongmetas.com/\n➡️【如何將香港新聞連線加入首頁？】影片連結：https://youtu.be/f0pAlXYrgCQ\n關注：Twitter: @hkStephenSYY / IG: hkStephenSYY\n加入我們的patreon：https://www.patreon.com/mrshiu",
+    "published_at": "2026-03-27T07:48:35Z",
+    "duration_seconds": 560,
+    "view_count": 1605,
+    "like_count": 136,
+    "comment_count": 2,
+    "tags": [
+      "謎米香港",
+      "memehk",
+      "yt:cc=on",
+      "蕭若元"
+    ],
+    "thumbnail_url": "https://i.ytimg.com/vi/kHTjs5Ifa-U/hqdefault.jpg",
+    "transcript": {
+      "available": false,
+      "language": null,
+      "source": null,
+      "text": null
+    },
+    "fetched_at": "2026-03-27T13:13:11Z",
+    "summary_zh": "特朗普五月將再次會晤習近平，暗示伊朗戰事即將完結；英工黨政府雖斥責國安法，但仍支持在港英商發展。",
+    "keywords_zh": [
+      "特朗普",
+      "習近平",
+      "伊朗",
+      "英工黨",
+      "國安法",
+      "英商",
+      "香港"
+    ],
+    "processed_at": "2026-03-27T13:18:16Z"
+  },
+  {
+    "video_id": "1SP9gHQ9LDo",
+    "channel_id": "UCu_YquoQYKR3GpP82TO-zRw",
+    "channel_name": "《謎米香港》",
+    "channel_tags": [
+      "taiwan",
+      "hongkong"
+    ],
+    "title": "今個禮拜重點電影《末日聖母號》有人話似《interstellar》咁好睇？〈蕭定一：我究竟煲咗啲乜？〉2026-03-27",
+    "description": "訂購蕭若元最新作品 《蕭若元說明史 -- 明成祖朱棣 暴君？雄主？》\nhttps://shiumeowmeow.co/product/887\n\n用謎米香港優惠連結，購買NordVPN兩年計劃，原本額外再送4個月\nhttp://nordvpn.com/memehk\n🐱俏貓貓超市網站由此入：https://qfoodsmall.com/\n香港元宇宙youtube 頻道：https://www.youtube.com/channel/UCWRsW1dEw9hob0mSIv_P5pw\n💥你爆料我來講Email，歡迎來信爆料：connectionhknews@gmail.com\n🐱蕭貓貓辦館最新團購上線！歡迎來逛逛：https://shiumeowmeow.co\n關注🇭🇰《香港新聞連線》追蹤最需要知道的消息\n網址：https://news.hongkongmetas.com/\n➡️【如何將香港新聞連線加入首頁？】影片連結：https://youtu.be/f0pAlXYrgCQ\n關注：Twitter: @hkStephenSYY / IG: hkStephenSYY\n加入我們的patreon：https://www.patreon.com/mrshiu",
+    "published_at": "2026-03-27T05:00:01Z",
+    "duration_seconds": 186,
+    "view_count": 860,
+    "like_count": 41,
+    "comment_count": 2,
+    "tags": [
+      "謎米香港",
+      "memehk",
+      "yt:cc=on",
+      "蕭若元"
+    ],
+    "thumbnail_url": "https://i.ytimg.com/vi/1SP9gHQ9LDo/hqdefault.jpg",
+    "transcript": {
+      "available": false,
+      "language": null,
+      "source": null,
+      "text": null
+    },
+    "fetched_at": "2026-03-27T13:13:11Z",
+    "summary_zh": "影片評析本週重點電影《末日聖母號》，主持人蕭定一探討該片是否如《Interstellar》般精彩，並分享觀影感受。",
+    "keywords_zh": [
+      "末日聖母號",
+      "電影評析",
+      "Interstellar",
+      "蕭定一",
+      "2026年3月"
+    ],
+    "processed_at": "2026-03-27T13:18:16Z"
+  },
+  {
+    "video_id": "eI5KKOnVU1I",
+    "channel_id": "UCu_YquoQYKR3GpP82TO-zRw",
+    "channel_name": "《謎米香港》",
+    "channel_tags": [
+      "taiwan",
+      "hongkong"
+    ],
+    "title": "【周五直播】小心墮入港版國安法第43條法網 2026-03-27",
+    "description": "訂購蕭若元最新作品 《蕭若元說明史 -- 明成祖朱棣 暴君？雄主？》\nhttps://shiumeowmeow.co/product/887\n\n用謎米香港優惠連結，購買NordVPN兩年計劃，原本額外再送4個月\nhttp://nordvpn.com/memehk\n🐱俏貓貓超市網站由此入：https://qfoodsmall.com/\n香港元宇宙youtube 頻道：https://www.youtube.com/channel/UCWRsW1dEw9hob0mSIv_P5pw\n💥你爆料我來講Email，歡迎來信爆料：connectionhknews@gmail.com\n🐱蕭貓貓辦館最新團購上線！歡迎來逛逛：https://shiumeowmeow.co\n關注🇭🇰《香港新聞連線》追蹤最需要知道的消息\n網址：https://news.hongkongmetas.com/\n➡️【如何將香港新聞連線加入首頁？】影片連結：https://youtu.be/f0pAlXYrgCQ\n關注：Twitter: @hkStephenSYY / IG: hkStephenSYY\n加入我們的patreon：https://www.patreon.com/mrshiu",
+    "published_at": "2026-03-27T04:47:24Z",
+    "duration_seconds": 0,
+    "view_count": 0,
+    "like_count": 11,
+    "comment_count": 0,
+    "tags": [
+      "謎米香港",
+      "memehk",
+      "yt:cc=on",
+      "蕭若元"
+    ],
+    "thumbnail_url": "https://i.ytimg.com/vi/eI5KKOnVU1I/hqdefault_live.jpg",
+    "transcript": {
+      "available": false,
+      "language": null,
+      "source": null,
+      "text": null
+    },
+    "fetched_at": "2026-03-27T13:13:11Z",
+    "summary_zh": "節目警示市民應小心港版國安法第43條的法律風險，並於周五進行直播討論相關議題。",
+    "keywords_zh": [
+      "港版國安法",
+      "第43條",
+      "法網",
+      "直播",
+      "蕭若元",
+      "香港"
+    ],
+    "processed_at": "2026-03-27T13:18:16Z"
+  },
+  {
+    "video_id": "pGkKM-qA_xw",
+    "channel_id": "UCu_YquoQYKR3GpP82TO-zRw",
+    "channel_name": "《謎米香港》",
+    "channel_tags": [
+      "taiwan",
+      "hongkong"
+    ],
+    "title": "(AI中英字幕)共和黨內部分裂！反對特朗普王朝？中東戰爭帶來中期選舉危機？國會已經喪失煞車作用！《蕭若元：蕭氏新聞台》2026-03-27",
+    "description": "訂購蕭若元最新作品 《蕭若元說明史 -- 明成祖朱棣 暴君？雄主？》\nhttps://shiumeowmeow.co/product/887\n\n用謎米香港優惠連結，購買NordVPN兩年計劃，原本額外再送4個月\nhttp://nordvpn.com/memehk\n🐱俏貓貓超市網站由此入：https://qfoodsmall.com/\n香港元宇宙youtube 頻道：https://www.youtube.com/channel/UCWRsW1dEw9hob0mSIv_P5pw\n💥你爆料我來講Email，歡迎來信爆料：connectionhknews@gmail.com\n🐱蕭貓貓辦館最新團購上線！歡迎來逛逛：https://shiumeowmeow.co\n關注🇭🇰《香港新聞連線》追蹤最需要知道的消息\n網址：https://news.hongkongmetas.com/\n➡️【如何將香港新聞連線加入首頁？】影片連結：https://youtu.be/f0pAlXYrgCQ\n關注：Twitter: @hkStephenSYY / IG: hkStephenSYY\n加入我們的patreon：https://www.patreon.com/mrshiu",
+    "published_at": "2026-03-27T04:00:40Z",
+    "duration_seconds": 1023,
+    "view_count": 26990,
+    "like_count": 1254,
+    "comment_count": 16,
+    "tags": [
+      "謎米香港",
+      "memehk",
+      "yt:cc=on",
+      "蕭若元",
+      "特朗普",
+      "共和黨",
+      "伊朗",
+      "戰爭",
+      "中期選舉",
+      "國會",
+      "CPAC",
+      "MAGA",
+      "以色列",
+      "戰爭權力決議",
+      "戰爭權力法",
+      "眾議院",
+      "參議院",
+      "民主黨",
+      "中東",
+      "油價",
+      "燃油價格",
+      "選民",
+      "支持率",
+      "民調",
+      "保守派",
+      "美國優先",
+      "分裂",
+      "裂痕",
+      "制衡",
+      "憲法",
+      "軍事授權",
+      "空襲",
+      "地面部隊",
+      "海外戰爭",
+      "外交政策",
+      "經濟",
+      "通膨",
+      "生活成本",
+      "負擔能力",
+      "全球市場",
+      "政權更替",
+      "核武器",
+      "美以同盟",
+      "國安團隊",
+      "白宮",
+      "史蒂夫·班農",
+      "泰德·克魯茲",
+      "馬特·蓋茨",
+      "塔克·卡爾森",
+      "喬·肯特",
+      "麥克·約翰遜",
+      "海基姆·傑佛瑞斯",
+      "提姆·凱恩",
+      "湯瑪斯·馬西",
+      "羅·卡納",
+      "馬可·魯比歐",
+      "皮特·赫格塞斯",
+      "約翰·拉特克利夫",
+      "丹·凱恩",
+      "喬什·霍利",
+      "約翰·圖恩",
+      "JD·萬斯",
+      "南希·梅斯",
+      "馬特·施拉普",
+      "梅賽德斯·施拉普",
+      "富蘭克林·葛理翰",
+      "內塔尼亞胡",
+      "哈梅內伊",
+      "禮薩·巴列維",
+      "全國共和黨國會委員會",
+      "共和黨全國委員會",
+      "SAVE法案",
+      "投票限制",
+      "郵寄投票",
+      "公民身分證明",
+      "年輕保守派",
+      "年輕男性",
+      "反戰派",
+      "鷹派",
+      "反猶主義",
+      "特朗普家族",
+      "王朝",
+      "家族政治",
+      "拉拉·特朗普",
+      "小唐納·特朗普",
+      "艾瑞克·特朗普",
+      "伊凡卡·特朗普",
+      "賈瑞德·庫許納",
+      "特朗普組織"
+    ],
+    "thumbnail_url": "https://i.ytimg.com/vi/pGkKM-qA_xw/hqdefault.jpg",
+    "transcript": {
+      "available": false,
+      "language": null,
+      "source": null,
+      "text": null
+    },
+    "fetched_at": "2026-03-27T13:13:11Z",
+    "summary_zh": "美國共和黨內部因反對特朗普王朝而分裂，中東戰爭引發2026年中期選舉危機，國會制衡機制已失效。",
+    "keywords_zh": [
+      "共和黨",
+      "特朗普",
+      "王朝",
+      "分裂",
+      "中東戰爭",
+      "中期選舉",
+      "國會",
+      "危機"
+    ],
+    "processed_at": "2026-03-27T13:18:16Z"
+  },
+  {
+    "video_id": "af0BSVbh1sM",
+    "channel_id": "UCXKg0qPRz32bs5Z4mTGF3TQ",
+    "channel_name": "白兵",
+    "channel_tags": [
+      "hongkong"
+    ],
+    "title": "[白兵直播 EP308]宏福苑聽證會（二）｜日本情殺案揭深層問題｜香港真係無得搞美食馬拉松？｜",
+    "description": "三年老雞花膠湯\nhttps://nothing-happened.com/products/fishmawsoup\n\n大吟蠔：\nhttps://nothing-happened.com/products/sakeoyster\n\n湯有維：\nhttps://nothing-happened.com/pages/theforceindustries\n會員可享最少95折優惠！\n\n黃皮蜜糖、豬油：\nhttps://nothing-happened.com/pages/theforceindustries\n會員可享最少95折優惠！\n\n\n鼻通拿：\nhttps://nothing-happened.com/products/baytona\n會員可享最少95折優惠！\n－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－\n\n\n－－－－－－－－－－－－－－－－－－－－－－－－－－－\n\n\n－－－－－－－－－－－－－－－－－－－－－－－－－－－",
+    "published_at": "2026-03-27T11:22:08Z",
+    "duration_seconds": 0,
+    "view_count": 891,
+    "like_count": 115,
+    "comment_count": 0,
+    "tags": [],
+    "thumbnail_url": "https://i.ytimg.com/vi/af0BSVbh1sM/hqdefault_live.jpg",
+    "transcript": {
+      "available": false,
+      "language": null,
+      "source": null,
+      "text": null
+    },
+    "fetched_at": "2026-03-27T13:13:11Z",
+    "summary_zh": "白兵直播探討宏福苑聽證會進展、日本情殺案反映的深層社會問題，以及香港美食馬拉松的可行性議題。",
+    "keywords_zh": [
+      "白兵直播",
+      "宏福苑",
+      "聽證會",
+      "日本情殺案",
+      "香港",
+      "美食馬拉松"
+    ],
+    "processed_at": "2026-03-27T13:18:16Z"
+  },
+  {
+    "video_id": "3H_7fXsu24k",
+    "channel_id": "UCdgBHGdr74w-E6rRd6luaeQ",
+    "channel_name": "渾水",
+    "channel_tags": [
+      "hongkong"
+    ],
+    "title": "倫敦經貿辦案「黑食黑」荒謬內幕：特工變P圖大師？衛志樑涉嫌偽造銀行紀錄蒙騙前警司袁松彪，連已故被告 Trickett 拍片都穿崩？- 快閃拆解經濟【FDB Asset Management 特約贊助】",
+    "description": "Water Podcast 後YouTube精華：2026年投資新規則，美伊局勢升溫，AI時代的敘事如何在大市波動中精準收割？\nhttps://www.patreon.com/posts/154064927\n\n【加碼版】 170萬進階版信用卡財技：免息分期即時現金套現大法（截至2025年11月）\nhttps://www.patreon.com/posts/116796429\n\n🔮【渾水 x 少山命理 SHOZAN】紫微斗數・風水命理諮詢報名表\nhttps://forms.gle/Vo6mi5s78qd9GK1u9\n\n想無廣告不受打擾？所有 YouTube 零廣告兼第一身即時財金內容，不用等到晚上9:30，享受「搶先看」福利，零時差緊貼世界脈膊，儘在 Patreon。慘被 Patreon 打壓！大家都知道，我啲帖文一向爆好多權貴大鑊。我唔知最近得罪咗邊個勢力圈子，成個Patreon俾人連根拔起。為免同大家失去一切聯絡，請大家儘快、緊急、立刻前往我的 Patreon 副台「渾水財經Channel （經典閱讀筆記 - 渾水）」Patreon 繼續訂閱：https://www.patreon.com/c/muddywaterreadings\n\n好朋友 Brian（亦都是我的長期讀者），是我認識過最講義氣的兄弟之一，我有難的時候，他幫我渡過難關。Brian其中一門業務是資產管理及財富管理。如果大家有興趣對資產管理、退稅年金，又或者是自願醫保之類相關問題了解更多，不妨約佢他飲杯咖啡，尤其是稅季來了，更應該諮詢專業人士意見。填了 form，我還會送你一本渾水著作或精美皮革一個！\nhttps://forms.gle/cBdKZfG9iRMk4Yuz8\n\n【Fortune Insight Prime 黑會員】\n從開倉100萬開始，半年已升超過300%。加上背後有個強大的股票研究團隊，當中有多年家族辦公室及金融資產管理經驗，配合最新 AI 人工智能模型，自然更加如魚得水。\n1）渾水 - 港股美股期貨黃金及加密貨幣投資倉即時 Broadcast (神秘聊天室)\nhttps://prime.fortuneinsight.com/web/muddydirtywater-broadcast/\n2）渾水：金融經濟精神食糧\nhttps://prime.fortuneinsight.com/web/muddydirtywater/\n\n【90後投資經理阿言全權委托投資服務 x 美股AI趨勢交易全權委托投資服務】\n炒港股定美股？ Why not both？ 90後投資經理阿言利用港股投資策略，多次命中數倍股、十倍股，戰績輝煌。美股方面，90後投資經理阿言團隊聯乘AI趨勢交易團隊，全港首創美股AI趨勢交易全權委托投資服務！如果你有興趣搵90後投資經理阿言管理Portfolio，可以到以下連結填寫Google Form： https://docs.google.com/forms/d/e/1FAIpQLSf0EEY-0BQT-6L98CmavjuUYJGmNaxP6sk0fOgrC43ZcQu68g/viewform?usp=sf_link\n\nFI Prime 投資倉 - 90後投資經理— 阿言: 趨勢致富\nhttps://prime.fortuneinsight.com/web/trend-to-rich\n\n明德金融 - 低差價黃金交易，一世免佣，門欄低，安心交易，現在開戶即送50美元獎賞！開戶連結：https://mingtakfn.com/tc/page/open-account?ref=11168\n\n#梁振英 #ai #人工智能 #外幣 #移民 #香港生活 #舖位 #香港 #youtube #新加坡  #BTC #nvidia #股市 #選舉 #投資 #股票 #資產部署 #長線投資 #特朗普 #拜登 #外幣 #減息  #香港樓市 #李嘉誠 #長實 #實況 #舖位\n\nYouTube 會員專享節目（每月只需HK$80，瘋狂回答你的問題，問10條答10條，問100條答100條）\nhttps://youtube.com/playlist?list=UUMOdgBHGdr74w-E6rRd6luaeQ&si=3AMJcMFFbqbNsL75\n------------------------------------ \nTrader K： \nTrader K 的 NewbieTrade 由資深股票交易員及具投資銀行背景的團隊共同開發的AI引擎，通過深度學習及機器學習演算法，精準分辨出即將展開趨勢嘅股票。化繁為簡變成兩個箭嘴，為投資者做出更準確嘅預測同決策。如果你有興趣搵 Trader K 管理Portfolio，可以到以下連結填寫Google Form：https://forms.gle/nU4qxQg8tefns6gCA\n\n【渾水 X 90後投資經理阿言】新書眾籌\nhttps://event.fortuneinsight.com/web/muddydirtywateraryin2025book/\n\n想合法玩加密貨幣？首先要揀個持牌合法加密貨幣平台 Hashkey！\n快啲用我個優惠碼「sB52xR」開戶，無憂無慮玩 crypto !\n開戶網址：https://www.hashkey.com/en-US/register/invite?invite_code=sB52xR\n\n渾水 x 90後投資經理阿言——創造被動收入：專業財自投資課程\n【初心入門班：股票基本概念篇】\n課程錄影：https://prime.fortuneinsight.com/web/muddywater-yin-2023course001-class\n【進階操盤班：財技及莊家篇】\n課程錄影：https://prime.fortuneinsight.com/web/muddywater-yin-2023course002-class\n【大師深造班：股票策略篇】\n課程錄影：https://prime.fortuneinsight.com/web/muddywater-yin-2023course003-class\n\nReadingLab AI 閱讀筆記 YouTube：https://www.youtube.com/channel/UC6Oq_uficdUz10szEOw2haQ\n\nReadingLab AI 閱讀筆記 Patreon 專屬免費會員連結：patreon.com/readinglab",
+    "published_at": "2026-03-27T13:00:06Z",
+    "duration_seconds": 0,
+    "view_count": 16,
+    "like_count": 3,
+    "comment_count": 1,
+    "tags": [],
+    "thumbnail_url": "https://i.ytimg.com/vi/3H_7fXsu24k/hqdefault.jpg",
+    "transcript": {
+      "available": false,
+      "language": null,
+      "source": null,
+      "text": null
+    },
+    "fetched_at": "2026-03-27T13:13:11Z",
+    "summary_zh": "倫敦經貿辦涉及「黑食黑」案件，特工衛志樑涉嫌偽造銀行紀錄欺騙前警司袁松彪，更被揭P圖作假。",
+    "keywords_zh": [
+      "倫敦經貿辦",
+      "衛志樑",
+      "袁松彪",
+      "偽造銀行紀錄",
+      "特工",
+      "P圖",
+      "Trickett",
+      "黑食黑"
+    ],
+    "processed_at": "2026-03-27T13:18:16Z"
+  },
+  {
+    "video_id": "PvTdzXBlh-I",
+    "channel_id": "UCdgBHGdr74w-E6rRd6luaeQ",
+    "channel_name": "渾水",
+    "channel_tags": [
+      "hongkong"
+    ],
+    "title": "懶人包拆解跨國滲透大網竟牽涉以色列特務？揭秘「神秘富商、退休警、政府人員」聯手尋人，「趙豹」狠招「做掉」證人內幕全曝光｜快閃拆解經濟精華【FDB Asset Management 特約贊助】",
+    "description": "Water Podcast 後YouTube精華：解答讀者問題 - 混血肥仔 KOL 生涯是否已經正式玩完？打逆境波最叻真的是 Ming 仔嗎？再談談潘焯鴻案的真正核心法理概念\nhttps://www.patreon.com/posts/153498254\n\n【加碼版】 170萬進階版信用卡財技：免息分期即時現金套現大法（截至2025年11月）\nhttps://www.patreon.com/posts/116796429\n\n🔮【渾水 x 少山命理 SHOZAN】紫微斗數・風水命理諮詢報名表\nhttps://forms.gle/Vo6mi5s78qd9GK1u9\n\n想無廣告不受打擾？所有 YouTube 零廣告兼第一身即時財金內容，不用等到晚上9:30，享受「搶先看」福利，零時差緊貼世界脈膊，儘在 Patreon。慘被 Patreon 打壓！大家都知道，我啲帖文一向爆好多權貴大鑊。我唔知最近得罪咗邊個勢力圈子，成個Patreon俾人連根拔起。為免同大家失去一切聯絡，請大家儘快、緊急、立刻前往我的 Patreon 副台「渾水財經Channel （經典閱讀筆記 - 渾水）」Patreon 繼續訂閱：https://www.patreon.com/c/muddywaterreadings\n\n好朋友 Brian（亦都是我的長期讀者），是我認識過最講義氣的兄弟之一，我有難的時候，他幫我渡過難關。Brian其中一門業務是資產管理及財富管理。如果大家有興趣對資產管理、退稅年金，又或者是自願醫保之類相關問題了解更多，不妨約佢他飲杯咖啡，尤其是稅季來了，更應該諮詢專業人士意見。填了 form，我還會送你一本渾水著作或精美皮革一個！\nhttps://forms.gle/cBdKZfG9iRMk4Yuz8\n\n【Fortune Insight Prime 黑會員】\n從開倉100萬開始，半年已升超過300%。加上背後有個強大的股票研究團隊，當中有多年家族辦公室及金融資產管理經驗，配合最新 AI 人工智能模型，自然更加如魚得水。\n1）渾水 - 港股美股期貨黃金及加密貨幣投資倉即時 Broadcast (神秘聊天室)\nhttps://prime.fortuneinsight.com/web/muddydirtywater-broadcast/\n2）渾水：金融經濟精神食糧\nhttps://prime.fortuneinsight.com/web/muddydirtywater/\n\n【90後投資經理阿言全權委托投資服務 x 美股AI趨勢交易全權委托投資服務】\n炒港股定美股？ Why not both？ 90後投資經理阿言利用港股投資策略，多次命中數倍股、十倍股，戰績輝煌。美股方面，90後投資經理阿言團隊聯乘AI趨勢交易團隊，全港首創美股AI趨勢交易全權委托投資服務！如果你有興趣搵90後投資經理阿言管理Portfolio，可以到以下連結填寫Google Form： https://docs.google.com/forms/d/e/1FAIpQLSf0EEY-0BQT-6L98CmavjuUYJGmNaxP6sk0fOgrC43ZcQu68g/viewform?usp=sf_link\n\nFI Prime 投資倉 - 90後投資經理— 阿言: 趨勢致富\nhttps://prime.fortuneinsight.com/web/trend-to-rich\n\n明德金融 - 低差價黃金交易，一世免佣，門欄低，安心交易，現在開戶即送50美元獎賞！開戶連結：https://mingtakfn.com/tc/page/open-account?ref=11168\n\n#梁振英 #ai #人工智能 #外幣 #移民 #香港生活 #舖位 #香港 #youtube #新加坡  #BTC #nvidia #股市 #選舉 #投資 #股票 #資產部署 #長線投資 #特朗普 #拜登 #外幣 #減息  #香港樓市 #李嘉誠 #長實 #實況 #舖位\n\nYouTube 會員專享節目（每月只需HK$80，瘋狂回答你的問題，問10條答10條，問100條答100條）\nhttps://youtube.com/playlist?list=UUMOdgBHGdr74w-E6rRd6luaeQ&si=3AMJcMFFbqbNsL75\n------------------------------------ \nTrader K： \nTrader K 的 NewbieTrade 由資深股票交易員及具投資銀行背景的團隊共同開發的AI引擎，通過深度學習及機器學習演算法，精準分辨出即將展開趨勢嘅股票。化繁為簡變成兩個箭嘴，為投資者做出更準確嘅預測同決策。如果你有興趣搵 Trader K 管理Portfolio，可以到以下連結填寫Google Form：https://forms.gle/nU4qxQg8tefns6gCA\n\n【渾水 X 90後投資經理阿言】新書眾籌\nhttps://event.fortuneinsight.com/web/muddydirtywateraryin2025book/\n\n想合法玩加密貨幣？首先要揀個持牌合法加密貨幣平台 Hashkey！\n快啲用我個優惠碼「sB52xR」開戶，無憂無慮玩 crypto !\n開戶網址：https://www.hashkey.com/en-US/register/invite?invite_code=sB52xR\n\n渾水 x 90後投資經理阿言——創造被動收入：專業財自投資課程\n【初心入門班：股票基本概念篇】\n課程錄影：https://prime.fortuneinsight.com/web/muddywater-yin-2023course001-class\n【進階操盤班：財技及莊家篇】\n課程錄影：https://prime.fortuneinsight.com/web/muddywater-yin-2023course002-class\n【大師深造班：股票策略篇】\n課程錄影：https://prime.fortuneinsight.com/web/muddywater-yin-2023course003-class\n\nReadingLab AI 閱讀筆記 YouTube：https://www.youtube.com/channel/UC6Oq_uficdUz10szEOw2haQ\n\nReadingLab AI 閱讀筆記 Patreon 專屬免費會員連結：patreon.com/readinglab",
+    "published_at": "2026-03-27T09:00:06Z",
+    "duration_seconds": 1082,
+    "view_count": 254,
+    "like_count": 27,
+    "comment_count": 0,
+    "tags": [],
+    "thumbnail_url": "https://i.ytimg.com/vi/PvTdzXBlh-I/hqdefault.jpg",
+    "transcript": {
+      "available": false,
+      "language": null,
+      "source": null,
+      "text": null
+    },
+    "fetched_at": "2026-03-27T13:13:11Z",
+    "summary_zh": "揭露涉及以色列特務的跨國滲透網絡，牽涉神秘富商、退休警察及政府人員聯手尋人，並曝光「趙豹」消滅證人的內幕。",
+    "keywords_zh": [
+      "跨國滲透",
+      "以色列特務",
+      "神秘富商",
+      "退休警察",
+      "政府人員",
+      "趙豹",
+      "證人",
+      "尋人"
+    ],
+    "processed_at": "2026-03-27T13:18:16Z"
+  },
+  {
+    "video_id": "waI1DPNPisI",
+    "channel_id": "UCdgBHGdr74w-E6rRd6luaeQ",
+    "channel_name": "渾水",
+    "channel_tags": [
+      "hongkong"
+    ],
+    "title": "100毛賣盤真相，一片看清「賣殼」背後財技：套現離場還是換血重生？同場加映火燎森驚傳被老婆偷10億？由幣圈神話到身敗名裂內幕【水與金融 - 兩台聯播】（22-3-2026）",
+    "description": "水與金融後續精華：潘焯鴻案涉詐騙貸款被捕，點解「星X派系」報章會有獨家料？細心觀察，拆解傳媒餵料潛規則。潘焯鴻案背後的法理邏輯\nhttps://www.patreon.com/posts/153991516/\n\n【加碼版】 170萬進階版信用卡財技：免息分期即時現金套現大法（截至2025年11月）\nhttps://www.patreon.com/posts/116796429\n\n🔮【渾水 x 少山命理 SHOZAN】紫微斗數・風水命理諮詢報名表\nhttps://forms.gle/Vo6mi5s78qd9GK1u9\n\n想無廣告不受打擾？所有 YouTube 零廣告兼第一身即時財金內容，不用等到晚上9:30，享受「搶先看」福利，零時差緊貼世界脈膊，儘在 Patreon。慘被 Patreon 打壓！大家都知道，我啲帖文一向爆好多權貴大鑊。我唔知最近得罪咗邊個勢力圈子，成個Patreon俾人連根拔起。為免同大家失去一切聯絡，請大家儘快、緊急、立刻前往我的 Patreon 副台「渾水財經Channel （經典閱讀筆記 - 渾水）」Patreon 繼續訂閱：https://www.patreon.com/c/muddywaterreadings\n\n好朋友 Brian（亦都是我的長期讀者），是我認識過最講義氣的兄弟之一，我有難的時候，他幫我渡過難關。Brian其中一門業務是資產管理及財富管理。如果大家有興趣對資產管理、退稅年金，又或者是自願醫保之類相關問題了解更多，不妨約佢他飲杯咖啡，尤其是稅季來了，更應該諮詢專業人士意見。填了 form，我還會送你一本渾水著作或精美皮革一個！\nhttps://forms.gle/cBdKZfG9iRMk4Yuz8\n\n【Fortune Insight Prime 黑會員】\n從開倉100萬開始，半年已升超過300%。加上背後有個強大的股票研究團隊，當中有多年家族辦公室及金融資產管理經驗，配合最新 AI 人工智能模型，自然更加如魚得水。\n1）渾水 - 港股美股期貨黃金及加密貨幣投資倉即時 Broadcast (神秘聊天室)\nhttps://prime.fortuneinsight.com/web/muddydirtywater-broadcast/\n2）渾水：金融經濟精神食糧\nhttps://prime.fortuneinsight.com/web/muddydirtywater/\n\n【90後投資經理阿言全權委托投資服務 x 美股AI趨勢交易全權委托投資服務】\n炒港股定美股？ Why not both？ 90後投資經理阿言利用港股投資策略，多次命中數倍股、十倍股，戰績輝煌。美股方面，90後投資經理阿言團隊聯乘AI趨勢交易團隊，全港首創美股AI趨勢交易全權委托投資服務！如果你有興趣搵90後投資經理阿言管理Portfolio，可以到以下連結填寫Google Form： https://docs.google.com/forms/d/e/1FAIpQLSf0EEY-0BQT-6L98CmavjuUYJGmNaxP6sk0fOgrC43ZcQu68g/viewform?usp=sf_link\n\nFI Prime 投資倉 - 90後投資經理— 阿言: 趨勢致富\nhttps://prime.fortuneinsight.com/web/trend-to-rich\n\n明德金融 - 低差價黃金交易，一世免佣，門欄低，安心交易，現在開戶即送50美元獎賞！開戶連結：https://mingtakfn.com/tc/page/open-account?ref=11168\n\n#梁振英 #ai #人工智能 #外幣 #移民 #香港生活 #舖位 #香港 #youtube #新加坡  #BTC #nvidia #股市 #選舉 #投資 #股票 #資產部署 #長線投資 #特朗普 #拜登 #外幣 #減息  #香港樓市 #李嘉誠 #長實 #實況 #舖位\n\nYouTube 會員專享節目（每月只需HK$80，瘋狂回答你的問題，問10條答10條，問100條答100條）\nhttps://youtube.com/playlist?list=UUMOdgBHGdr74w-E6rRd6luaeQ&si=3AMJcMFFbqbNsL75\n------------------------------------ \nTrader K： \nTrader K 的 NewbieTrade 由資深股票交易員及具投資銀行背景的團隊共同開發的AI引擎，通過深度學習及機器學習演算法，精準分辨出即將展開趨勢嘅股票。化繁為簡變成兩個箭嘴，為投資者做出更準確嘅預測同決策。如果你有興趣搵 Trader K 管理Portfolio，可以到以下連結填寫Google Form：https://forms.gle/nU4qxQg8tefns6gCA\n\n【渾水 X 90後投資經理阿言】新書眾籌\nhttps://event.fortuneinsight.com/web/muddydirtywateraryin2025book/\n\n想合法玩加密貨幣？首先要揀個持牌合法加密貨幣平台 Hashkey！\n快啲用我個優惠碼「sB52xR」開戶，無憂無慮玩 crypto !\n開戶網址：https://www.hashkey.com/en-US/register/invite?invite_code=sB52xR\n\n渾水 x 90後投資經理阿言——創造被動收入：專業財自投資課程\n【初心入門班：股票基本概念篇】\n課程錄影：https://prime.fortuneinsight.com/web/muddywater-yin-2023course001-class\n【進階操盤班：財技及莊家篇】\n課程錄影：https://prime.fortuneinsight.com/web/muddywater-yin-2023course002-class\n【大師深造班：股票策略篇】\n課程錄影：https://prime.fortuneinsight.com/web/muddywater-yin-2023course003-class\n\nReadingLab AI 閱讀筆記 YouTube：https://www.youtube.com/channel/UC6Oq_uficdUz10szEOw2haQ\n\nReadingLab AI 閱讀筆記 Patreon 專屬免費會員連結：patreon.com/readinglab",
+    "published_at": "2026-03-27T07:18:52Z",
+    "duration_seconds": 0,
+    "view_count": 0,
+    "like_count": 0,
+    "comment_count": 1,
+    "tags": [],
+    "thumbnail_url": "https://i.ytimg.com/vi/waI1DPNPisI/hqdefault.jpg",
+    "transcript": {
+      "available": false,
+      "language": null,
+      "source": null,
+      "text": null
+    },
+    "fetched_at": "2026-03-27T13:13:11Z",
+    "summary_zh": "分析100毛賣盤背後的財技真相，探討是套現離場還是換血重生；同時揭露火燎森被指遭妻子偷竊10億的內幕，追蹤其從幣圈神話到身敗名裂的過程。",
+    "keywords_zh": [
+      "100毛",
+      "賣盤",
+      "賣殼",
+      "火燎森",
+      "財技",
+      "套現",
+      "換血",
+      "幣圈"
+    ],
+    "processed_at": "2026-03-27T13:18:16Z"
+  },
+  {
+    "video_id": "GkgP2OCEqyI",
+    "channel_id": "UCdgBHGdr74w-E6rRd6luaeQ",
+    "channel_name": "渾水",
+    "channel_tags": [
+      "hongkong"
+    ],
+    "title": "拆解經濟合集｜英倫諜報核彈比電影更黑暗！衛志樑兩頭蛇曝光，鄒田甜發狠連中國獵狐辦都幫手全球追緝鄺文琪，神祕人「趙豹」提議狠招「做掉」證人內幕全拆解【FDB Asset Management 特約贊助】",
+    "description": "水與金融後續精華：潘焯鴻案涉詐騙貸款被捕，點解「星X派系」報章會有獨家料？細心觀察，拆解傳媒餵料潛規則。潘焯鴻案背後的法理邏輯\nhttps://www.patreon.com/posts/153991516/\n\n【加碼版】 170萬進階版信用卡財技：免息分期即時現金套現大法（截至2025年11月）\nhttps://www.patreon.com/posts/116796429\n\n🔮【渾水 x 少山命理 SHOZAN】紫微斗數・風水命理諮詢報名表\nhttps://forms.gle/Vo6mi5s78qd9GK1u9\n\n想無廣告不受打擾？所有 YouTube 零廣告兼第一身即時財金內容，不用等到晚上9:30，享受「搶先看」福利，零時差緊貼世界脈膊，儘在 Patreon。慘被 Patreon 打壓！大家都知道，我啲帖文一向爆好多權貴大鑊。我唔知最近得罪咗邊個勢力圈子，成個Patreon俾人連根拔起。為免同大家失去一切聯絡，請大家儘快、緊急、立刻前往我的 Patreon 副台「渾水財經Channel （經典閱讀筆記 - 渾水）」Patreon 繼續訂閱：https://www.patreon.com/c/muddywaterreadings\n\n好朋友 Brian（亦都是我的長期讀者），是我認識過最講義氣的兄弟之一，我有難的時候，他幫我渡過難關。Brian其中一門業務是資產管理及財富管理。如果大家有興趣對資產管理、退稅年金，又或者是自願醫保之類相關問題了解更多，不妨約佢他飲杯咖啡，尤其是稅季來了，更應該諮詢專業人士意見。填了 form，我還會送你一本渾水著作或精美皮革一個！\nhttps://forms.gle/cBdKZfG9iRMk4Yuz8\n\n【Fortune Insight Prime 黑會員】\n從開倉100萬開始，半年已升超過300%。加上背後有個強大的股票研究團隊，當中有多年家族辦公室及金融資產管理經驗，配合最新 AI 人工智能模型，自然更加如魚得水。\n1）渾水 - 港股美股期貨黃金及加密貨幣投資倉即時 Broadcast (神秘聊天室)\nhttps://prime.fortuneinsight.com/web/muddydirtywater-broadcast/\n2）渾水：金融經濟精神食糧\nhttps://prime.fortuneinsight.com/web/muddydirtywater/\n\n【90後投資經理阿言全權委托投資服務 x 美股AI趨勢交易全權委托投資服務】\n炒港股定美股？ Why not both？ 90後投資經理阿言利用港股投資策略，多次命中數倍股、十倍股，戰績輝煌。美股方面，90後投資經理阿言團隊聯乘AI趨勢交易團隊，全港首創美股AI趨勢交易全權委托投資服務！如果你有興趣搵90後投資經理阿言管理Portfolio，可以到以下連結填寫Google Form： https://docs.google.com/forms/d/e/1FAIpQLSf0EEY-0BQT-6L98CmavjuUYJGmNaxP6sk0fOgrC43ZcQu68g/viewform?usp=sf_link\n\nFI Prime 投資倉 - 90後投資經理— 阿言: 趨勢致富\nhttps://prime.fortuneinsight.com/web/trend-to-rich\n\n明德金融 - 低差價黃金交易，一世免佣，門欄低，安心交易，現在開戶即送50美元獎賞！開戶連結：https://mingtakfn.com/tc/page/open-account?ref=11168\n\n#梁振英 #ai #人工智能 #外幣 #移民 #香港生活 #舖位 #香港 #youtube #新加坡  #BTC #nvidia #股市 #選舉 #投資 #股票 #資產部署 #長線投資 #特朗普 #拜登 #外幣 #減息  #香港樓市 #李嘉誠 #長實 #實況 #舖位\n\nYouTube 會員專享節目（每月只需HK$80，瘋狂回答你的問題，問10條答10條，問100條答100條）\nhttps://youtube.com/playlist?list=UUMOdgBHGdr74w-E6rRd6luaeQ&si=3AMJcMFFbqbNsL75\n------------------------------------ \nTrader K： \nTrader K 的 NewbieTrade 由資深股票交易員及具投資銀行背景的團隊共同開發的AI引擎，通過深度學習及機器學習演算法，精準分辨出即將展開趨勢嘅股票。化繁為簡變成兩個箭嘴，為投資者做出更準確嘅預測同決策。如果你有興趣搵 Trader K 管理Portfolio，可以到以下連結填寫Google Form：https://forms.gle/nU4qxQg8tefns6gCA\n\n【渾水 X 90後投資經理阿言】新書眾籌\nhttps://event.fortuneinsight.com/web/muddydirtywateraryin2025book/\n\n想合法玩加密貨幣？首先要揀個持牌合法加密貨幣平台 Hashkey！\n快啲用我個優惠碼「sB52xR」開戶，無憂無慮玩 crypto !\n開戶網址：https://www.hashkey.com/en-US/register/invite?invite_code=sB52xR\n\n渾水 x 90後投資經理阿言——創造被動收入：專業財自投資課程\n【初心入門班：股票基本概念篇】\n課程錄影：https://prime.fortuneinsight.com/web/muddywater-yin-2023course001-class\n【進階操盤班：財技及莊家篇】\n課程錄影：https://prime.fortuneinsight.com/web/muddywater-yin-2023course002-class\n【大師深造班：股票策略篇】\n課程錄影：https://prime.fortuneinsight.com/web/muddywater-yin-2023course003-class\n\nReadingLab AI 閱讀筆記 YouTube：https://www.youtube.com/channel/UC6Oq_uficdUz10szEOw2haQ\n\nReadingLab AI 閱讀筆記 Patreon 專屬免費會員連結：patreon.com/readinglab",
+    "published_at": "2026-03-27T05:27:33Z",
+    "duration_seconds": 0,
+    "view_count": 0,
+    "like_count": 0,
+    "comment_count": 0,
+    "tags": [],
+    "thumbnail_url": "https://i.ytimg.com/vi/GkgP2OCEqyI/hqdefault.jpg",
+    "transcript": {
+      "available": false,
+      "language": null,
+      "source": null,
+      "text": null
+    },
+    "fetched_at": "2026-03-27T13:13:11Z",
+    "summary_zh": "影片揭露涉及衛志樑、鄒田甜、鄺文琪等人物的諜報案件內幕，涉及詐騙、證人威脅等黑暗情節，並分析中國獵狐辦等機構參與全球追緝的過程。",
+    "keywords_zh": [
+      "衛志樑",
+      "鄒田甜",
+      "鄺文琪",
+      "趙豹",
+      "諜報",
+      "獵狐辦",
+      "英倫",
+      "證人"
+    ],
+    "processed_at": "2026-03-27T13:18:16Z"
+  },
+  {
+    "video_id": "G6nDNat5KG8",
+    "channel_id": "UCdgBHGdr74w-E6rRd6luaeQ",
+    "channel_name": "渾水",
+    "channel_tags": [
+      "hongkong"
+    ],
+    "title": "倫敦經貿辦全球追殺令？驚現「以色列影子」？起底中國富商與神秘人：天涯海角都要抓到妳！揭穿退休警司、獵狐辦聯手「做掉」證人恐怖真相｜快閃拆解經濟精華【FDB Asset Management 特約贊助】",
+    "description": "【加碼版】 170萬進階版信用卡財技：免息分期即時現金套現大法（截至2025年11月）\nhttps://www.patreon.com/posts/116796429\n\n🔮【渾水 x 少山命理 SHOZAN】紫微斗數・風水命理諮詢報名表\nhttps://forms.gle/Vo6mi5s78qd9GK1u9\n\n想無廣告不受打擾？所有 YouTube 零廣告兼第一身即時財金內容，不用等到晚上9:30，享受「搶先看」福利，零時差緊貼世界脈膊，儘在 Patreon。慘被 Patreon 打壓！大家都知道，我啲帖文一向爆好多權貴大鑊。我唔知最近得罪咗邊個勢力圈子，成個Patreon俾人連根拔起。為免同大家失去一切聯絡，請大家儘快、緊急、立刻前往我的 Patreon 副台「渾水財經Channel （經典閱讀筆記 - 渾水）」Patreon 繼續訂閱：https://www.patreon.com/c/muddywaterreadings\n\n好朋友 Brian（亦都是我的長期讀者），是我認識過最講義氣的兄弟之一，我有難的時候，他幫我渡過難關。Brian其中一門業務是資產管理及財富管理。如果大家有興趣對資產管理、退稅年金，又或者是自願醫保之類相關問題了解更多，不妨約佢他飲杯咖啡，尤其是稅季來了，更應該諮詢專業人士意見。填了 form，我還會送你一本渾水著作或精美皮革一個！\nhttps://forms.gle/cBdKZfG9iRMk4Yuz8\n\n【Fortune Insight Prime 黑會員】\n從開倉100萬開始，半年已升超過300%。加上背後有個強大的股票研究團隊，當中有多年家族辦公室及金融資產管理經驗，配合最新 AI 人工智能模型，自然更加如魚得水。\n1）渾水 - 港股美股期貨黃金及加密貨幣投資倉即時 Broadcast (神秘聊天室)\nhttps://prime.fortuneinsight.com/web/muddydirtywater-broadcast/\n2）渾水：金融經濟精神食糧\nhttps://prime.fortuneinsight.com/web/muddydirtywater/\n\n【90後投資經理阿言全權委托投資服務 x 美股AI趨勢交易全權委托投資服務】\n炒港股定美股？ Why not both？ 90後投資經理阿言利用港股投資策略，多次命中數倍股、十倍股，戰績輝煌。美股方面，90後投資經理阿言團隊聯乘AI趨勢交易團隊，全港首創美股AI趨勢交易全權委托投資服務！如果你有興趣搵90後投資經理阿言管理Portfolio，可以到以下連結填寫Google Form： https://docs.google.com/forms/d/e/1FAIpQLSf0EEY-0BQT-6L98CmavjuUYJGmNaxP6sk0fOgrC43ZcQu68g/viewform?usp=sf_link\n\nFI Prime 投資倉 - 90後投資經理— 阿言: 趨勢致富\nhttps://prime.fortuneinsight.com/web/trend-to-rich\n\n明德金融 - 低差價黃金交易，一世免佣，門欄低，安心交易，現在開戶即送50美元獎賞！開戶連結：https://mingtakfn.com/tc/page/open-account?ref=11168\n\n#梁振英 #ai #人工智能 #外幣 #移民 #香港生活 #舖位 #香港 #youtube #新加坡  #BTC #nvidia #股市 #選舉 #投資 #股票 #資產部署 #長線投資 #特朗普 #拜登 #外幣 #減息  #香港樓市 #李嘉誠 #長實 #實況 #舖位\n\nYouTube 會員專享節目（每月只需HK$80，瘋狂回答你的問題，問10條答10條，問100條答100條）\nhttps://youtube.com/playlist?list=UUMOdgBHGdr74w-E6rRd6luaeQ&si=3AMJcMFFbqbNsL75\n------------------------------------ \nTrader K： \nTrader K 的 NewbieTrade 由資深股票交易員及具投資銀行背景的團隊共同開發的AI引擎，通過深度學習及機器學習演算法，精準分辨出即將展開趨勢嘅股票。化繁為簡變成兩個箭嘴，為投資者做出更準確嘅預測同決策。如果你有興趣搵 Trader K 管理Portfolio，可以到以下連結填寫Google Form：https://forms.gle/nU4qxQg8tefns6gCA\n\n【渾水 X 90後投資經理阿言】新書眾籌\nhttps://event.fortuneinsight.com/web/muddydirtywateraryin2025book/\n\n想合法玩加密貨幣？首先要揀個持牌合法加密貨幣平台 Hashkey！\n快啲用我個優惠碼「sB52xR」開戶，無憂無慮玩 crypto !\n開戶網址：https://www.hashkey.com/en-US/register/invite?invite_code=sB52xR\n\n渾水 x 90後投資經理阿言——創造被動收入：專業財自投資課程\n【初心入門班：股票基本概念篇】\n課程錄影：https://prime.fortuneinsight.com/web/muddywater-yin-2023course001-class\n【進階操盤班：財技及莊家篇】\n課程錄影：https://prime.fortuneinsight.com/web/muddywater-yin-2023course002-class\n【大師深造班：股票策略篇】\n課程錄影：https://prime.fortuneinsight.com/web/muddywater-yin-2023course003-class\n\nReadingLab AI 閱讀筆記 YouTube：https://www.youtube.com/channel/UC6Oq_uficdUz10szEOw2haQ\n\nReadingLab AI 閱讀筆記 Patreon 專屬免費會員連結：patreon.com/readinglab",
+    "published_at": "2026-03-27T05:00:06Z",
+    "duration_seconds": 1176,
+    "view_count": 169,
+    "like_count": 9,
+    "comment_count": 0,
+    "tags": [],
+    "thumbnail_url": "https://i.ytimg.com/vi/G6nDNat5KG8/hqdefault.jpg",
+    "transcript": {
+      "available": false,
+      "language": null,
+      "source": null,
+      "text": null
+    },
+    "fetched_at": "2026-03-27T13:13:11Z",
+    "summary_zh": "揭露倫敦經貿辦涉嫌全球追殺證人，牽涉中國富商、退休警司與獵狐辦聯手構陷證人的黑幕真相。",
+    "keywords_zh": [
+      "倫敦經貿辦",
+      "追殺令",
+      "以色列",
+      "中國富商",
+      "證人",
+      "退休警司",
+      "獵狐辦",
+      "天涯海角"
+    ],
+    "processed_at": "2026-03-27T13:18:16Z"
+  },
+  {
+    "video_id": "RzDGbfkXUu4",
+    "channel_id": "UCC5ph0Dx4HcIp4ZH06extyA",
+    "channel_name": "桑普頻道",
+    "channel_tags": [
+      "hongkong",
+      "taiwan",
+      "china"
+    ],
+    "title": "CPAC會議直擊！射擊場上新嘗試！解放伊朗挺川普！中共企業擾伊州！保守派通道團結！遇章家敦黃教安！【桑普論政】",
+    "description": "#記得LikeShareComment和訂閱桑普頻道 #每日上片 #桑普論政\n\n#桑普 #國際新聞 #美國 #cpac #保守派 #政治行動 #會議 #牧師 #射擊場 #直擊 #伊朗 #巴勒維 #川普 #特朗普 #總統 #中國 #中共 #伊利諾州 #企業 #環境 #國家安全 #團結 #統一戰線 #章家敦 #黃教安 #南韓 #總理 #主持\n____________________________________\n\n| 追蹤桑普\n\n#記得LikeShareComment和訂閱桑普頻道\n\n➤ 歡迎追蹤桑普FB：https://www.facebook.com/sangpu2\n➤ 追蹤桑普FB專頁：https://www.facebook.com/桑普-106565950785551/\n➤ 台灣香港協會FB：https://www.facebook.com/TaiwanHongKongAssociation\n______________________________________\n\n| 支持桑普\n\n#歡迎訂閱 Patreon 幫助台灣香港協會，功德無量。\n\n免費支持：\n➤ 點擊並看完任何桑普頻道影片內的廣告\n➤ 踴躍留言+轉發出去+每條片按LIKE，讓更多人認識桑普頻道！\n\n付費支持：\n➤ 每月訂閱【桑普頻道】Patreon：https://www.patreon.com/sangpu",
+    "published_at": "2026-03-27T06:26:10Z",
+    "duration_seconds": 2053,
+    "view_count": 1376,
+    "like_count": 166,
+    "comment_count": 16,
+    "tags": [
+      "桑普",
+      "國際新聞",
+      "美國",
+      "CPAC",
+      "保守派",
+      "政治行動",
+      "會議",
+      "牧師",
+      "射擊場",
+      "直擊",
+      "伊朗",
+      "巴勒維",
+      "川普",
+      "特朗普",
+      "總統",
+      "中國",
+      "中共",
+      "伊利諾州",
+      "企業",
+      "環境",
+      "國家安全",
+      "團結",
+      "統一戰線",
+      "章家敦",
+      "黃教安",
+      "南韓",
+      "總理",
+      "主持"
+    ],
+    "thumbnail_url": "https://i.ytimg.com/vi/RzDGbfkXUu4/hqdefault.jpg",
+    "transcript": {
+      "available": false,
+      "language": null,
+      "source": null,
+      "text": null
+    },
+    "fetched_at": "2026-03-27T13:13:11Z",
+    "summary_zh": "時事評論員桑普參與CPAC保守派會議，現場體驗射擊、採訪支持川普的伊朗流亡人士，並探討中共企業在美國的影響及保守派團結等議題。",
+    "keywords_zh": [
+      "CPAC會議",
+      "川普",
+      "保守派",
+      "伊朗",
+      "射擊場",
+      "中共企業",
+      "伊州",
+      "章家敦",
+      "黃教安"
+    ],
+    "processed_at": "2026-03-27T13:18:16Z"
+  },
+  {
+    "video_id": "8zB2-qJl4dE",
+    "channel_id": "UC5q0HLxSC8SJE9O7Gw3YYWg",
+    "channel_name": "徐少驊",
+    "channel_tags": [
+      "uk",
+      "hongkong"
+    ],
+    "title": "【少驊珊派】速讀都市 - Pickleball 為何全球爆紅？｜香港人低估體重問題？｜養生旅遊的新趨勢？｜#Season 3 2026.03.26",
+    "description": "👀✨【護眼之選｜限時95折優惠｜優惠期至4月7日】\n\n【好立善】👀✨葉黃素 玉米黃素 複方護眼軟膠囊 (30粒/盒)\n8大超級成份護眼補充劑，每日一粒，每盒一個月份量：\n•花青素含量高 - 含藍莓，或稱山桑子生素\n•鋅 - 維持生長發育及核酸代謝\n•維他命A - 有助維持在暗處的視覺\n•維他命B2效果 - 有助於維持能量，正常代謝\n•維他命E - 抗氧化作用，減少自由基產生\n•維他命C - 抗氧化，增強體內結構組織\n•葉黃素 - 金盞花萃取，高效葉黃素成份\n•玉米黃搙 - 結合葉黃素，雙重保護眼睛\n\n【ARTech】👀✨Pellucid+ 全方位眼睛護理噴霧15ml\n•舒緩乾澀：即時補水，減少眼部乾燥不適\n•緩解疲勞：適合長時間使用電腦、手機後使用\n•抗藍光與修復：減少藍光傷害，促進眼部細胞修復\n•零化學成分：不含防腐劑、類固醇、荷爾蒙或重金屬\n\n🛒立即購買：https://www.xtaihangx.com/categories/eye95-jeff\n🗓️優惠期由3月24日至4月7日\n\n少驊珊派｜大夯官網落單 專享 Shopback 3% 現金回贈\nhttps://www.xtaihangx.com/categories/jeff-tsui\n本地及海外直送，記得訂閱頻道，搶先知道限時優惠！\nWhatsApp 查詢：+852-9011 1621（辦公時間內回覆）\n\n加入 Shopback：https://app.shopback.com/L476I4b04Qb\n#好立善 #葉黃素 #護眼 #花青素 #ARTech #Pellucid+ #眼睛護理噴霧 #舒緩乾澀 #即時補水 #緩解疲勞 #抗藍光 #少驊珊派推薦",
+    "published_at": "2026-03-27T03:47:11Z",
+    "duration_seconds": 3881,
+    "view_count": 1472,
+    "like_count": 77,
+    "comment_count": 2,
+    "tags": [
+      "生活",
+      "梁芷珊",
+      "Canny Leung",
+      "少驊珊派",
+      "徐時出來行",
+      "徐時出嚟行",
+      "Life Style",
+      "Health",
+      "健康",
+      "健康生活",
+      "趨勢",
+      "Trend",
+      "生活趨勢",
+      "日常生活",
+      "徐少驊",
+      "老徐",
+      "美好生活",
+      "心理學",
+      "人生",
+      "人生哲理",
+      "life philosophy",
+      "維生素E",
+      "health",
+      "healthy food",
+      "飲食文化",
+      "飲食健康",
+      "健康養生",
+      "健康飲食",
+      "健康好生活",
+      "healthy life",
+      "health and wellness",
+      "wellness",
+      "healthy eating",
+      "nmn",
+      "supplements",
+      "抗衰老",
+      "養生",
+      "養生之道",
+      "保健",
+      "保健食品",
+      "慢活",
+      "抗氧化作用",
+      "免疫球蛋白",
+      "咖啡",
+      "微塑膠",
+      "pickleball",
+      "肥胖",
+      "運動",
+      "健康運動"
+    ],
+    "thumbnail_url": "https://i.ytimg.com/vi/8zB2-qJl4dE/hqdefault.jpg",
+    "transcript": {
+      "available": false,
+      "language": null,
+      "source": null,
+      "text": null
+    },
+    "fetched_at": "2026-03-27T13:13:11Z",
+    "summary_zh": "節目速讀都市熱話，探討Pickleball運動全球爆紅現象、香港人體重管理問題，以及養生旅遊的新興趨勢。",
+    "keywords_zh": [
+      "少驊珊派",
+      "Pickleball",
+      "香港",
+      "體重問題",
+      "養生旅遊",
+      "都市",
+      "2026年"
+    ],
+    "processed_at": "2026-03-27T13:18:16Z"
+  },
+  {
+    "video_id": "XYGllmriAZA",
+    "channel_id": "UCXf8jlTSP9kp6g4ROCfgvbQ",
+    "channel_name": "堅離地球",
+    "channel_tags": [
+      "taiwan",
+      "hongkong"
+    ],
+    "title": "哲學20分・陶國璋 105｜品評文學家的風格   村上春樹穿透生活中的碎片   杜斯托也夫斯基救贖文學的典範   卡夫卡絕境中的衝擊   曹雪芹極至的情感描繪",
+    "description": "風格即命運，亦是創作者直面存在的姿態。\n\n村上春樹在冷酷異境中拾掇日常碎片，以輕盈的筆觸穿透現代都會的無力與虛無；杜斯托也夫斯基則如執刃的苦行僧，往靈魂最深邃的罪愆處挖掘，在神聖與瘋狂的邊緣，立下救贖的典範；當卡夫卡以荒誕的冷眼，直擊現代個體被無形體制與絕境傾軋的痛楚；曹雪芹卻在繁華落盡的灰燼中，留下了對人世癡嗔最極致、最悲憫的情感描摹。\n\n走入四種截然不同的文學向度。在這些深淺不一的文字裂谷裡，我們最終辨識出的，是生而為人的蒼涼與重量。\n\n#哲學 #文學 #村上春樹 #卡夫卡 #杜斯托也夫斯基 #曹雪芹 #紅樓夢 #經典文學 #深度解析 #文學評論 #陶國璋 #鄧小樺 #哲學20分\n＿＿＿＿＿＿＿＿＿＿\n堅離地校長室．最新影片：🇨🇳  學術期刊怎樣解讀習近平的權力基礎？「沉默」才是核心秘密【會員區加映：林和立博士：（二）如何學術理解習近平的「 被動式授權」？】\n\nhttps://youtu.be/uNempLkK0DA\n\n☝️ 成為「堅離地」頻道會員\nhttps://www.youtube.com/channel/UCXf8jlTSP9kp6g4ROCfgvbQ/join\n🖋️收看及訂閱 Sinic Analytica ▶\n⏺ Patreon:  https://www.patreon.com/cw/SinicAnalytica\n⏹ Website: https://www.sinicanalytica.com/\n🔼 Facebook:  https://shorturl.at/vnaTi\nℹ️ Instagram:  https://www.instagram.com/sinic_analytica/\n其他合作及查詢可以電郵至 simonpatreon@gmail.com (Alan)\n＿＿＿＿＿＿＿＿＿＿\n本台所有主持均為本頻道客席主持，本頻道各節目均由主持自訂題目、自主研究及編採自主的權利，各人的意見並不代表本台立場。\n所有客席主持及嘉賓提供的內容，已授權本頻道作內容的管理、編輯及發佈的決策權。\n影片及圖片素材來源：Envato、Wikimedia Commons、Artlist",
+    "published_at": "2026-03-27T04:30:06Z",
+    "duration_seconds": 1325,
+    "view_count": 760,
+    "like_count": 69,
+    "comment_count": 0,
+    "tags": [
+      "沈旭暉",
+      "堅離地球",
+      "馮智政",
+      "堅離地政經"
+    ],
+    "thumbnail_url": "https://i.ytimg.com/vi/XYGllmriAZA/hqdefault.jpg",
+    "transcript": {
+      "available": false,
+      "language": null,
+      "source": null,
+      "text": null
+    },
+    "fetched_at": "2026-03-27T13:13:11Z",
+    "summary_zh": "陶國璋分析四位文學巨匠的創作風格與人生姿態，透過村上春樹、杜斯托也夫斯基、卡夫卡、曹雪芹的作品，探討文學如何直面存在與救贖的終極意義。",
+    "keywords_zh": [
+      "陶國璋",
+      "村上春樹",
+      "杜斯托也夫斯基",
+      "卡夫卡",
+      "曹雪芹",
+      "文學風格",
+      "救贖",
+      "創作"
+    ],
+    "processed_at": "2026-03-27T13:18:16Z"
+  },
+  {
+    "video_id": "J-20LgvKTmc",
+    "channel_id": "UCYQPuQNS2b9yqsNGI8YHhzQ",
+    "channel_name": "傑斯",
+    "channel_tags": [
+      "canada",
+      "hongkong"
+    ],
+    "title": "【傑斯短打】專訪李蘭菊 - 89年留守北京，見証解放軍屠城一刻震撼一生！前學聯成員30年來背負的沉重，如何繼續薪火相傳下一代？|《六四20週年，香港人的情意結》足本版｜20260327",
+    "description": "你好，我係傑斯，請即訂閱全新《傑斯頻道》！ \n喺亂世同香港人同行，無忘初衷，繼續講真話！ \n記得 Comment、Like 同 Share！你的少少支持讓我繼續堅持！ \n---------------------------------------------------------------------------------------------------------------------------\n多得大家支持，傑斯頻道已經開通咗SuperChat同SuperThanks喇！\n如果大家都鍾意傑斯頻道嘅內容，歡迎大家善用呢兩個功能，繼續支持斯叔同一班幕後嘅團隊！多謝！\n\n傑斯 Patreon: \nhttps://www.patreon.com/channelGiggs\n\n傑斯 Spotify:\nhttps://open.spotify.com/show/3GeLWFuKfRQzI5PGBvjq0z\n\n#傑斯頻道 #傑斯 #Giggs #ChannelGiggs #香港人 #香港 #高市早苗 #iran #伊朗",
+    "published_at": "2026-03-27T11:00:06Z",
+    "duration_seconds": 4787,
+    "view_count": 621,
+    "like_count": 125,
+    "comment_count": 2,
+    "tags": [
+      "傑斯",
+      "傑斯頻道",
+      "香港",
+      "中國",
+      "政治",
+      "香港人",
+      "Giggs",
+      "Giggsy",
+      "Raga",
+      "Ragazine",
+      "D100",
+      "桑海神州",
+      "傑斯短打",
+      "D100radio"
+    ],
+    "thumbnail_url": "https://i.ytimg.com/vi/J-20LgvKTmc/hqdefault.jpg",
+    "transcript": {
+      "available": false,
+      "language": null,
+      "source": null,
+      "text": null
+    },
+    "fetched_at": "2026-03-27T13:13:11Z",
+    "summary_zh": "專訪前學聯成員李蘭菊，回顧其1989年留守北京親眼目睹解放軍屠城的經歷，探討30年來對香港民主運動的影響及薪火相傳的使命。",
+    "keywords_zh": [
+      "李蘭菊",
+      "1989年",
+      "北京",
+      "解放軍屠城",
+      "學聯",
+      "六四",
+      "香港",
+      "薪火相傳"
+    ],
+    "processed_at": "2026-03-27T13:18:16Z"
+  },
+  {
+    "video_id": "veIpyLpXCHE",
+    "channel_id": "UC0zUmHNpkviI6UZ0uqCYrww",
+    "channel_name": "城寨",
+    "channel_tags": [
+      "canada",
+      "hongkong"
+    ],
+    "title": "三不館 IV 27/3/26:侵爺宣佈押後死線到4月6號八點 戰爭部放料增兵一萬到中東準備裝甲師入侵伊朗 ￼擺姿態準備入侵伊朗油田 兩手準備談判破裂立即升級 伊朗發電廠並非純粹民用設施 ",
+    "description": "",
+    "published_at": "2026-03-27T05:54:02Z",
+    "duration_seconds": 2470,
+    "view_count": 44785,
+    "like_count": 4075,
+    "comment_count": 118,
+    "tags": [
+      "Singjai",
+      "城寨"
+    ],
+    "thumbnail_url": "https://i.ytimg.com/vi/veIpyLpXCHE/hqdefault.jpg",
+    "transcript": {
+      "available": false,
+      "language": null,
+      "source": null,
+      "text": null
+    },
+    "fetched_at": "2026-03-27T13:13:11Z",
+    "summary_zh": "美國延後對伊朗的最後期限至4月6日，同時增派兵力至中東並準備裝甲師入侵，擺出談判與軍事升級的雙重姿態。",
+    "keywords_zh": [
+      "伊朗",
+      "美國",
+      "死線",
+      "中東",
+      "入侵",
+      "談判",
+      "裝甲師",
+      "油田"
+    ],
+    "processed_at": "2026-03-27T13:18:16Z"
+  },
+  {
+    "video_id": "rKDValxmEGc",
+    "channel_id": "UC0zUmHNpkviI6UZ0uqCYrww",
+    "channel_name": "城寨",
+    "channel_tags": [
+      "canada",
+      "hongkong"
+    ],
+    "title": "三不館 III 27/3/26:世紀大火聽證會居民子黃碧嬌出蠱惑 出律師叫居民告法團 張堅庭屋企大維修受盡折磨申訴非人生活 全港樓宇維修行動製造龐大利益集團 居民未見其利先見其弊 建制利益癌症腫瘤",
+    "description": "",
+    "published_at": "2026-03-27T04:48:19Z",
+    "duration_seconds": 2101,
+    "view_count": 38066,
+    "like_count": 3720,
+    "comment_count": 207,
+    "tags": [
+      "Singjai",
+      "城寨"
+    ],
+    "thumbnail_url": "https://i.ytimg.com/vi/rKDValxmEGc/hqdefault.jpg",
+    "transcript": {
+      "available": false,
+      "language": null,
+      "source": null,
+      "text": null
+    },
+    "fetched_at": "2026-03-27T13:13:11Z",
+    "summary_zh": "節目討論香港樓宇維修問題，涉及世紀大火聽證會、律師動員居民訴訟及建制利益集團等議題，揭示維修行動中居民權益受損情況。",
+    "keywords_zh": [
+      "三不館",
+      "世紀大火",
+      "聽證會",
+      "黃碧嬌",
+      "張堅庭",
+      "樓宇維修",
+      "法團",
+      "建制利益"
+    ],
+    "processed_at": "2026-03-27T13:18:16Z"
+  },
+  {
+    "video_id": "KY5n0ikDGRU",
+    "channel_id": "UCAF3AZZj6urHbv4X9iGrFBQ",
+    "channel_name": "吳志森",
+    "channel_tags": [
+      "uk",
+      "hongkong"
+    ],
+    "title": "20260327*美股大跌，特朗普又TACO，炸伊朗核電廠再延後10日！侵侵話有伊朗人邀請佢出任最高精神領袖，佢拒絕咗，多謝晒！係咪有幻覺？",
+    "description": "請我飲杯咖啡\nhttps://buymeacoffee.com/samngx\n\n\nSaily App eSim 電子Sim 卡\n一個App通行世界200個國家及地區\nhttps://saily.com/ngsam\n八五折優惠\n\n\nNordVPN 虛擬私人網絡\nhttps://nordvpn.com/samngx\n二年合約 最平港幣32元/月\n一個月免費 \n\n\n《綠豆》頻道  敬請支持： \n《綠豆》2026年掛曆及全新紀念品，有得賣喇 \nhttps://shop.greenbean.media/\n▌支持綠豆：https://greenbean.media/%e6%94%af%e6%8c%81%e7%b6%a0%e8%b1%86/\n▌訂閱綠豆Youtube頻道：https://bit.ly/3AiuuWG\n▌讚好綠豆IG：https://bit.ly/3uelFcz\n\n支持《法庭線》\nhttps://thewitnesshk.com/subscription\nhttps://greenbean.media/支持綠豆/\n\n吳志森「森直口快」\n邁向10週年！\nsamngx123@gmail.com\n\nPatreon年費優惠計劃 92折 1年只收11個月會費 \n👉訂閱新收費平台 \nPatreon https://www.patreon.com/samngx\n\n\n支持@森直口快：\n*******************************************\n👉訂閱新收費平台 Patreon \nhttps://www.patreon.com/samngx\n\n********************************************\n感謝各位支持！",
+    "published_at": "2026-03-27T13:00:06Z",
+    "duration_seconds": 0,
+    "view_count": 216,
+    "like_count": 35,
+    "comment_count": 2,
+    "tags": [],
+    "thumbnail_url": "https://i.ytimg.com/vi/KY5n0ikDGRU/hqdefault.jpg",
+    "transcript": {
+      "available": false,
+      "language": null,
+      "source": null,
+      "text": null
+    },
+    "fetched_at": "2026-03-27T13:13:11Z",
+    "summary_zh": "美股大幅下跌，特朗普涉及TACO事件，伊朗核電廠轟炸行動再延後10日，特朗普聲稱伊朗邀請其出任最高精神領袖遭拒。",
+    "keywords_zh": [
+      "美股",
+      "特朗普",
+      "TACO",
+      "伊朗",
+      "核電廠",
+      "轟炸",
+      "精神領袖"
+    ],
+    "processed_at": "2026-03-27T13:18:16Z"
+  },
+  {
+    "video_id": "mw-d1GWacX0",
+    "channel_id": "UCAF3AZZj6urHbv4X9iGrFBQ",
+    "channel_name": "吳志森",
+    "channel_tags": [
+      "uk",
+      "hongkong"
+    ],
+    "title": "20260327*【宏福聽證會】千呼萬喚黃碧嬌：法團顧問、天價維修、授權票、出錢畀人打官司⋯愈爆愈多，街坊齊發聲期望嬌姐現身解畫！",
+    "description": "請我飲杯咖啡\nhttps://buymeacoffee.com/samngx\n\n\nSaily App eSim 電子Sim 卡\n一個App通行世界200個國家及地區\nhttps://saily.com/ngsam\n八五折優惠\n\n\nNordVPN 虛擬私人網絡\nhttps://nordvpn.com/samngx\n二年合約 最平港幣32元/月\n一個月免費 \n\n\n《綠豆》頻道  敬請支持： \n《綠豆》2026年掛曆及全新紀念品，有得賣喇 \nhttps://shop.greenbean.media/\n▌支持綠豆：https://greenbean.media/%e6%94%af%e6%8c%81%e7%b6%a0%e8%b1%86/\n▌訂閱綠豆Youtube頻道：https://bit.ly/3AiuuWG\n▌讚好綠豆IG：https://bit.ly/3uelFcz\n\n支持《法庭線》\nhttps://thewitnesshk.com/subscription\nhttps://greenbean.media/支持綠豆/\n\n吳志森「森直口快」\n邁向10週年！\nsamngx123@gmail.com\n\nPatreon年費優惠計劃 92折 1年只收11個月會費 \n👉訂閱新收費平台 \nPatreon https://www.patreon.com/samngx\n\n\n支持@森直口快：\n*******************************************\n👉訂閱新收費平台 Patreon \nhttps://www.patreon.com/samngx\n\n********************************************\n感謝各位支持！",
+    "published_at": "2026-03-27T12:00:07Z",
+    "duration_seconds": 1353,
+    "view_count": 1008,
+    "like_count": 172,
+    "comment_count": 15,
+    "tags": [],
+    "thumbnail_url": "https://i.ytimg.com/vi/mw-d1GWacX0/hqdefault.jpg",
+    "transcript": {
+      "available": false,
+      "language": null,
+      "source": null,
+      "text": null
+    },
+    "fetched_at": "2026-03-27T13:13:11Z",
+    "summary_zh": "宏福大廈法團聽證會召開，居民就法團顧問、天價維修費用、授權票及訴訟費用等問題提出質詢，要求黃碧嬌現身解釋。",
+    "keywords_zh": [
+      "宏福",
+      "聽證會",
+      "黃碧嬌",
+      "法團顧問",
+      "天價維修",
+      "授權票",
+      "打官司",
+      "街坊"
+    ],
+    "processed_at": "2026-03-27T13:18:16Z"
   }
 ]
