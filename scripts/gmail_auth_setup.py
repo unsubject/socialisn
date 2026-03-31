@@ -61,7 +61,7 @@ def main():
     print(token_str)
     print("=" * 60)
 
-    with open("credentials.json", "r") as f:
+    with open(creds_path, "r") as f:
         creds_content = f.read()
 
     print("\n" + "=" * 60)
