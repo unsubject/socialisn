@@ -32,7 +32,7 @@ YOUTUBE_PROCESSED_DIR = REPO_ROOT / "data" / "youtube" / "processed"
 NEWS_PROCESSED_DIR = REPO_ROOT / "data" / "news" / "processed"
 BRIEFINGS_DIR = REPO_ROOT / "data" / "briefings"
 
-MODEL = "claude-sonnet-4-6"
+MODEL = "claude-sonnet-4-5-20250514"
 MAX_TOKENS = 4096
 
 logging.basicConfig(
