@@ -15,7 +15,6 @@ Run:    python scripts/fetch_podcasts.py
 import hashlib
 import json
 import logging
-import re
 import time
 from datetime import datetime, timezone, timedelta
 from email.utils import parsedate_to_datetime
