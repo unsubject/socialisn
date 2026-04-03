@@ -20,16 +20,15 @@
       "finance",
       "ft"
     ],
-    "summary_zh": "節目探討伊朗戰爭如何引發全球能源危機，分析戰後能源供應恢復的時間表及市場前景。",
+    "summary_zh": "節目探討伊朗戰爭如何引發全球能源危機，以及戰後能源供應恢復正常的時間表。",
     "keywords_zh": [
       "能源危機",
-      "伊朗",
-      "戰爭",
+      "伊朗戰爭",
       "全球能源",
       "煤炭",
       "市場"
     ],
-    "processed_at": "2026-04-03T20:36:32Z"
+    "processed_at": "2026-04-03T23:05:52Z"
   },
   {
     "episode_id": "48f9948ddf9fe2d3",
@@ -52,18 +51,18 @@
       "economics",
       "ft"
     ],
-    "summary_zh": "節目探討經濟戰爭的歷史淵源與效能，分析制裁、關稅、封鎖等經濟武器對伊朗及俄羅斯等國的實際影響。",
+    "summary_zh": "經濟戰爭已有數百年歷史，制裁、關稅、封鎖等經濟手段是否真正有效？經濟學家馬克·哈里森分析歷史經驗對伊朗與俄羅斯等當代局勢的啟示。",
     "keywords_zh": [
       "經濟戰爭",
       "制裁",
       "關稅",
-      "封鎖",
+      "馬克·哈里森",
       "伊朗",
       "俄羅斯",
-      "馬克·哈里森",
-      "歷史教訓"
+      "經濟衝突",
+      "封鎖"
     ],
-    "processed_at": "2026-04-03T20:36:32Z"
+    "processed_at": "2026-04-03T23:05:52Z"
   },
   {
     "episode_id": "22f2213d1d583796",
@@ -86,17 +85,18 @@
       "finance",
       "ft"
     ],
-    "summary_zh": "印度教育科技獨角獸Byju's在疫情期間迅速崛起，卻同樣迅速瓦解，引發美國法庭制裁和證人妨礙指控，反映印度科技行業的隱憂。",
+    "summary_zh": "印度教育科技獨角獸Byju's從疫情期間的明星企業迅速崩潰，引發美國法庭制裁和妨礙證人指控，反映印度科技產業的風險。",
     "keywords_zh": [
       "Byju's",
       "印度",
       "科技公司",
+      "崩潰",
       "破產",
       "教育科技",
       "美國法庭",
       "證人妨礙"
     ],
-    "processed_at": "2026-04-03T20:36:32Z"
+    "processed_at": "2026-04-03T23:05:52Z"
   },
   {
     "episode_id": "9373e2f462b3969b",
@@ -119,17 +119,17 @@
       "tech",
       "nyt"
     ],
-    "summary_zh": "探討成癮式設計的未來發展、DeepMind的深度研究，以及HatGPT等新興技術的應用前景。",
+    "summary_zh": "探討成癮式設計的未來、DeepMind的深度研究，以及HatGPT等議題，分析科技平台面臨的監管與法律挑戰。",
     "keywords_zh": [
       "成癮式設計",
       "DeepMind",
       "HatGPT",
-      "平台監管",
-      "人工智能",
-      "法律風險",
-      "技術倫理"
+      "科技平台",
+      "監管",
+      "國會",
+      "法律訴訟"
     ],
-    "processed_at": "2026-04-03T20:36:32Z"
+    "processed_at": "2026-04-03T23:05:52Z"
   },
   {
     "episode_id": "413fe18e136cc3f1",
@@ -152,17 +152,17 @@
       "finance",
       "bloomberg"
     ],
-    "summary_zh": "特朗普在黃金時段發表演講為對伊朗用兵辯護，承諾迅速結束衝突同時繼續密集軍事打擊，惟其言詞自相矛盾引起市場波動和盟友擔憂。",
+    "summary_zh": "特朗普就伊朗戰爭發表全國演講，承諾戰爭即將結束同時宣佈繼續軍事打擊，引發市場波動並削弱盟友信心。",
     "keywords_zh": [
-      "特朗普",
+      "Trump",
       "伊朗",
       "戰爭",
       "軍事打擊",
-      "黃金時段演講",
-      "中東衝突",
-      "美國政策"
+      "演講",
+      "美國",
+      "衝突"
     ],
-    "processed_at": "2026-04-03T20:36:32Z"
+    "processed_at": "2026-04-03T23:05:52Z"
   },
   {
     "episode_id": "55f02b4d8911345a",
@@ -185,17 +185,18 @@
       "finance",
       "bloomberg"
     ],
-    "summary_zh": "美國總統特朗普發表黃金時段演講，威脅將在未來兩三週內對伊朗採取極端措施，引發股市下跌和油價上升。",
+    "summary_zh": "特朗普總統在白宮發表黃金時段演講，聲言將在未來兩至三周內對伊朗採取極端行動，引發股市下跌油價上升。",
     "keywords_zh": [
       "特朗普",
-      "美國總統",
-      "演講",
       "伊朗",
       "白宮",
-      "石油",
-      "中東局勢"
+      "演講",
+      "能源基礎設施",
+      "荷美茲海峽",
+      "油價",
+      "美國"
     ],
-    "processed_at": "2026-04-03T20:36:32Z"
+    "processed_at": "2026-04-03T23:05:52Z"
   },
   {
     "episode_id": "01e877fbfebbdb30",
@@ -218,17 +219,18 @@
       "finance",
       "bloomberg"
     ],
-    "summary_zh": "中國AI應用OpenClaw因FOMO心態和政府推動而爆紅，惟自主AI系統獲取個人數據並出現失控現象，引發用戶和監管機構對安全風險的重新評估。",
+    "summary_zh": "中國AI代理系統OpenClaw因政府推動和用戶恐懼而快速竄紅，但隨著其訪問個人數據的權限擴大，「失控」事件頻傳，引發安全隱憂。",
     "keywords_zh": [
       "OpenClaw",
       "中國",
-      "AI",
-      "自主AI系統",
-      "個人數據安全",
-      "政府政策",
-      "監管"
+      "AI代理系統",
+      "人工智能",
+      "數據安全",
+      "政府推動",
+      "用戶隱私",
+      "監管風險"
     ],
-    "processed_at": "2026-04-03T20:36:32Z"
+    "processed_at": "2026-04-03T23:05:52Z"
   },
   {
     "episode_id": "ed844d8f68aedd84",
@@ -251,18 +253,17 @@
       "finance",
       "bloomberg"
     ],
-    "summary_zh": "特朗普政府威脅摧毀伊朗水淡化設施，以作為伊朗戰爭談判籌碼，引發中東人道主義危機隱憂。",
+    "summary_zh": "特朗普政府威脅摧毀伊朗水利設施以施壓談判，引發中東人道主義危機隱憂。",
     "keywords_zh": [
       "Trump",
       "伊朗",
-      "水",
-      "威脅",
-      "淡化設施",
+      "水利設施",
+      "談判",
       "中東",
-      "基礎設施",
-      "戰爭"
+      "人道危機",
+      "基礎設施"
     ],
-    "processed_at": "2026-04-03T20:36:32Z"
+    "processed_at": "2026-04-03T23:05:52Z"
   },
   {
     "episode_id": "393e455d29d6a11b",
@@ -285,17 +286,17 @@
       "economics",
       "bloomberg"
     ],
-    "summary_zh": "投資銀行前行政總裁Scott Bok解析投資銀行家的實際工作內容，探討AI對金融業白領職位的衝擊。",
+    "summary_zh": "投資銀行前行政總裁Scott Bok揭示投資銀行家的日常工作內容及價值所在，並探討AI對白領工作的潛在衝擊。",
     "keywords_zh": [
       "Scott Bok",
-      "投資銀行",
+      "投資銀行家",
       "Greenhill",
       "華爾街",
-      "金融業",
       "AI",
-      "白領工作"
+      "白領工作",
+      "金融業"
     ],
-    "processed_at": "2026-04-03T20:36:32Z"
+    "processed_at": "2026-04-03T23:05:52Z"
   },
   {
     "episode_id": "0e40bd0f233b4a9e",
@@ -318,17 +319,16 @@
       "economics",
       "bloomberg"
     ],
-    "summary_zh": "探討如何辨別AI生成的文字特徵，以及AI寫作對教育、資訊可信度等領域的影響。",
+    "summary_zh": "探討如何識別人工智能生成的文字，分析AI寫作與人類寫作的差異及其帶來的影響。",
     "keywords_zh": [
-      "AI",
-      "文字生成",
-      "寫作",
-      "檢測",
+      "人工智能",
+      "AI寫作",
+      "文字識別",
       "學生作弊",
       "聊天機器人",
-      "欺騙性內容"
+      "寫作風格"
     ],
-    "processed_at": "2026-04-03T20:36:32Z"
+    "processed_at": "2026-04-03T23:05:52Z"
   },
   {
     "episode_id": "fcfafc7570727d4c",
@@ -351,18 +351,17 @@
       "economics",
       "bloomberg"
     ],
-    "summary_zh": "油價因伊朗戰爭急劇上升，但仍有進一步上漲空間；戰略石油儲備的釋放雖暫時緩解供應衝擊，惟長期風險仍然巨大。",
+    "summary_zh": "油價因伊朗戰爭大幅上升，但仍有進一步上漲空間；霍爾木茲海峽關閉造成供應中斷，東亞地區受創最深。",
     "keywords_zh": [
       "油價",
       "伊朗",
       "戰爭",
       "霍爾木茲海峽",
-      "石油供應",
       "Javier Blas",
-      "戰略儲備",
-      "東亞"
+      "東亞",
+      "石油供應"
     ],
-    "processed_at": "2026-04-03T20:36:32Z"
+    "processed_at": "2026-04-03T23:05:52Z"
   },
   {
     "episode_id": "6bcb2e98f7d63be0",
@@ -385,17 +384,17 @@
       "finance",
       "bloomberg"
     ],
-    "summary_zh": "特斯拉電動車銷售連續未達預期，陷入深度衰退；同時Stellantis與中國合作夥伴探討在加拿大生產電動車。",
+    "summary_zh": "特斯拉電動車銷售再次低於預期，陷入持續下滑困境，面臨市場挑戰。",
     "keywords_zh": [
       "Tesla",
       "電動車銷售",
+      "銷售下滑",
       "華爾街預期",
+      "市場困境",
       "Stellantis",
-      "Zhejiang Leapmotor",
-      "加拿大",
       "電動車市場"
     ],
-    "processed_at": "2026-04-03T20:36:32Z"
+    "processed_at": "2026-04-03T23:05:52Z"
   },
   {
     "episode_id": "29b90e0440561934",
@@ -418,17 +417,16 @@
       "finance",
       "bloomberg"
     ],
-    "summary_zh": "SpaceX秘密向美國證交會提交IPO申請，有望成為有史以來最大規模的上市案。",
+    "summary_zh": "SpaceX據報秘密向美國證交會提交首次公開募股申請，估值可能超過1.75兆美元，有望成為歷來最大型上市案。",
     "keywords_zh": [
       "SpaceX",
       "IPO",
-      "秘密申請",
+      "首次公開募股",
       "美國證交會",
-      "上市",
       "估值",
-      "AI競爭對手"
+      "上市"
     ],
-    "processed_at": "2026-04-03T20:36:32Z"
+    "processed_at": "2026-04-03T23:05:52Z"
   },
   {
     "episode_id": "2f1e6ae7bfd1ebe4",
@@ -451,17 +449,17 @@
       "economics",
       "npr"
     ],
-    "summary_zh": "經濟學家稱就業市場處於「低招聘、低裁員」狀態，新大學畢業生面臨嚴峻求職前景。",
+    "summary_zh": "經濟學家形容就業市場處於「低聘低裁」狀態，雇主既不裁員也不招聘，對大學畢業生前景堪憂。",
     "keywords_zh": [
       "大學畢業生",
       "就業市場",
-      "低招聘",
-      "低裁員",
-      "霍華德大學",
+      "低聘低裁",
+      "Howard University",
       "華盛頓",
-      "求職"
+      "工作前景",
+      "經濟"
     ],
-    "processed_at": "2026-04-03T20:36:32Z"
+    "processed_at": "2026-04-03T23:05:52Z"
   },
   {
     "episode_id": "ece74f0b302bb90d",
@@ -484,18 +482,18 @@
       "economics",
       "npr"
     ],
-    "summary_zh": "節目介紹全球各地傑出的公共商品，如海上自由、全球定位系統與大型強子對撞機等，展示公共商品如何推動社會繁榮與進步。",
+    "summary_zh": "節目介紹全球各地對人類社會有重大貢獻的公共財，包括海上自由、GPS及大型強子對撞機等，透過精美明信片形式展現其重要性。",
     "keywords_zh": [
-      "公共商品",
-      "自由海域",
-      "全球定位系統",
-      "大型強子對撞機",
+      "公共財",
       "Planet Money",
       "Alex Mayyasi",
+      "GPS",
+      "大型強子對撞機",
+      "海上自由",
       "明信片",
-      "世界巡禮"
+      "公益"
     ],
-    "processed_at": "2026-04-03T20:36:32Z"
+    "processed_at": "2026-04-03T23:05:52Z"
   },
   {
     "episode_id": "f65610a43855c036",
@@ -518,17 +516,16 @@
       "economics",
       "npr"
     ],
-    "summary_zh": "寶可夢卡牌價值在過去一年內飆升170%，增長速度遠超退休基金，成為投資熱潮。",
+    "summary_zh": "寶可夢卡牌價值在過去一年飆升170%，增長速度超越傳統退休基金，成為投資新熱點。",
     "keywords_zh": [
       "寶可夢卡牌",
-      "價值增長",
       "收藏品投資",
+      "價值增長",
       "稀有卡牌",
       "媒體特許經營",
-      "市場熱潮",
-      "童年收藏"
+      "退休賬戶"
     ],
-    "processed_at": "2026-04-03T20:36:32Z"
+    "processed_at": "2026-04-03T23:05:52Z"
   },
   {
     "episode_id": "2587487e3686bf4e",
@@ -551,17 +548,50 @@
       "economics",
       "npr"
     ],
-    "summary_zh": "古巴經濟實驗陷入困境，美國石油禁運導致醫療、運輸、食品供應等系統癱瘓，國家面臨嚴峻危機。",
+    "summary_zh": "古巴經濟實驗陷入困境，美國石油禁運導致該國共產主義與資本主義並行策略雙雙受阻，造成醫療、運輸及電力等民生危機。",
     "keywords_zh": [
       "古巴",
-      "經濟實驗",
-      "美國",
+      "經濟",
       "石油禁運",
-      "醫療",
-      "運輸",
-      "食品供應",
-      "能源危機"
+      "美國",
+      "共產主義",
+      "資本主義",
+      "能源危機",
+      "民生"
     ],
-    "processed_at": "2026-04-03T20:36:32Z"
+    "processed_at": "2026-04-03T23:05:52Z"
+  },
+  {
+    "episode_id": "775af064ed11a7f0",
+    "podcast_name": "Wall Street Week",
+    "podcast_apple_id": 1494307824,
+    "podcast_author": "Bloomberg",
+    "podcast_image": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/3441857d-10f0-47c5-991f-ae3c0021f233/9040f928-9636-419d-8ac6-ae3c0021f241/image.jpg?t=1728558973&size=Large",
+    "title": "Fan Favorite: Japan’s New Horizon",
+    "description": "On this special, fan favorite edition of Bloomberg Wall Street Week, we travel to Japan to bring you stories of how its economy could be turning the page after 30 years of stagnation. After the so-called ‘lost decades,’ Apollo Global Management’s Marc Rowan explains why there’s a ‘new swagger’ in Japan now. Plus, can private capital help power Japan’s next growth cycle? Later, after decades of caution and stability, Japan’s business culture now faces a defining test as reform collides with tradition. See omnystudio.com/listener for privacy information.",
+    "published_at": "Fri, 03 Apr 2026 22:00:00 +0000",
+    "duration_seconds": 2880,
+    "episode_url": "https://omny.fm/shows/wall-street-week/fan-favorite-japan-s-new-horizon",
+    "audio_url": "https://podtrac.com/pts/redirect.mp3/traffic.omny.fm/d/clips/e73c998e-6e60-432f-8610-ae210140c5b1/3441857d-10f0-47c5-991f-ae3c0021f233/441aa573-ebcf-46e5-9ecc-b4200153db5e/audio.mp3?utm_source=Podcast&in_playlist=9040f928-9636-419d-8ac6-ae3c0021f241",
+    "audio_length_bytes": 46138049,
+    "episode_number": null,
+    "season_number": null,
+    "fetched_at": "2026-04-03T23:05:08Z",
+    "language": "en",
+    "tags": [
+      "finance",
+      "bloomberg"
+    ],
+    "summary_zh": "日本經濟在三十年停滯後出現轉機，私人資本和商業文化改革推動其增長新周期。",
+    "keywords_zh": [
+      "日本",
+      "經濟",
+      "新地平線",
+      "停滯",
+      "增長",
+      "商業文化",
+      "改革"
+    ],
+    "processed_at": "2026-04-03T23:05:52Z"
   }
 ]

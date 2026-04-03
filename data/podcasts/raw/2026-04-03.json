@@ -372,5 +372,27 @@
       "economics",
       "npr"
     ]
+  },
+  {
+    "episode_id": "775af064ed11a7f0",
+    "podcast_name": "Wall Street Week",
+    "podcast_apple_id": 1494307824,
+    "podcast_author": "Bloomberg",
+    "podcast_image": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/3441857d-10f0-47c5-991f-ae3c0021f233/9040f928-9636-419d-8ac6-ae3c0021f241/image.jpg?t=1728558973&size=Large",
+    "title": "Fan Favorite: Japan’s New Horizon",
+    "description": "On this special, fan favorite edition of Bloomberg Wall Street Week, we travel to Japan to bring you stories of how its economy could be turning the page after 30 years of stagnation. After the so-called ‘lost decades,’ Apollo Global Management’s Marc Rowan explains why there’s a ‘new swagger’ in Japan now. Plus, can private capital help power Japan’s next growth cycle? Later, after decades of caution and stability, Japan’s business culture now faces a defining test as reform collides with tradition. See omnystudio.com/listener for privacy information.",
+    "published_at": "Fri, 03 Apr 2026 22:00:00 +0000",
+    "duration_seconds": 2880,
+    "episode_url": "https://omny.fm/shows/wall-street-week/fan-favorite-japan-s-new-horizon",
+    "audio_url": "https://podtrac.com/pts/redirect.mp3/traffic.omny.fm/d/clips/e73c998e-6e60-432f-8610-ae210140c5b1/3441857d-10f0-47c5-991f-ae3c0021f233/441aa573-ebcf-46e5-9ecc-b4200153db5e/audio.mp3?utm_source=Podcast&in_playlist=9040f928-9636-419d-8ac6-ae3c0021f241",
+    "audio_length_bytes": 46138049,
+    "episode_number": null,
+    "season_number": null,
+    "fetched_at": "2026-04-03T23:05:08Z",
+    "language": "en",
+    "tags": [
+      "finance",
+      "bloomberg"
+    ]
   }
 ]
