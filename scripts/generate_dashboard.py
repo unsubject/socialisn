@@ -190,6 +190,7 @@ def generate_dashboard(youtube: list, news: list):
 <title>情報簡報 Dashboard</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/recharts/2.15.3/Recharts.min.js"></script>
 <style>
   *, *::before, *::after {{ box-sizing: border-box; margin: 0; padding: 0; }}
   body {{
