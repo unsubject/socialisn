@@ -34,7 +34,7 @@ PODCASTS_PROCESSED_DIR = REPO_ROOT / "data" / "podcasts" / "processed"
 BRIEFINGS_DIR = REPO_ROOT / "data" / "briefings"
 
 MODEL = "claude-sonnet-4-5-20250514"
-MAX_TOKENS = 4096
+MAX_TOKENS = 8192
 
 logging.basicConfig(
     level=logging.INFO,
