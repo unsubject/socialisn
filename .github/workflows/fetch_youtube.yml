@@ -2,8 +2,8 @@ name: Fetch and Process Intelligence
 
 on:
   schedule:
-    # Twice daily: 00:00 and 12:00 UTC
-    - cron: "0 0,12 * * *"
+    # Six times daily: 00:00, 04:00, 08:00, 12:00, 16:00, 20:00 UTC
+    - cron: "0 0,4,8,12,16,20 * * *"
   workflow_dispatch:
 
 # Prevent concurrent runs — if a run is in progress, cancel it and start fresh
@@ -41,6 +41,9 @@ jobs:
       - name: Fetch news data
         run: python scripts/fetch_news.py
 
+      - name: Fetch podcast data
+        run: python scripts/fetch_podcasts.py
+
       # --- Haiku processing ---
       - name: Process all sources with Haiku
         env:
@@ -56,11 +59,21 @@ jobs:
           RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
         run: python scripts/generate_briefing.py
 
-      # --- RSS feed ---
-      - name: Generate RSS feed
+      # --- RSS feeds ---
+      - name: Generate briefing RSS feed
         env:
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: python scripts/generate_rss.py
+
+      - name: Generate YouTube RSS feed
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python scripts/generate_youtube_rss.py
+
+      - name: Generate Podcast RSS feed
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python scripts/generate_podcast_rss.py
 
       # --- Dashboard ---
       - name: Generate dashboard
@@ -68,7 +81,7 @@ jobs:
 
       # --- Cleanup ---
       - name: Run data cleanup (30-day rolloff)
-        if: ${{ github.event.schedule == '0 0 * * *' || github.event_name == 'workflow_dispatch' }}
+        if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
         run: python scripts/cleanup_old_data.py
 
       # --- Commit ---
