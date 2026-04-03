@@ -378,7 +378,12 @@ def main():
     html = markdown_to_html(briefing_md, subject)
 
     log.info("Sending email...")
-    send_gmail(subject, html)
+    try:
+        send_gmail(subject, html)
+    except Exception as e:
+        log.error(f"Email delivery failed (briefing still saved): {e}")
+    else:
+        log.info("Email sent successfully.")
     log.info("Done.")
 
 
