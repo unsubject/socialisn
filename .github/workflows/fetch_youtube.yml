@@ -56,11 +56,16 @@ jobs:
           RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
         run: python scripts/generate_briefing.py
 
-      # --- RSS feed ---
-      - name: Generate RSS feed
+      # --- RSS feeds ---
+      - name: Generate briefing RSS feed
         env:
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: python scripts/generate_rss.py
+
+      - name: Generate YouTube RSS feed
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python scripts/generate_youtube_rss.py
 
       # --- Dashboard ---
       - name: Generate dashboard

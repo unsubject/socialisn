@@ -369,7 +369,8 @@ function BriefingArchive({{ archive }}) {{
   );
 }}
 
-function Section({{ title, children, rssLink }}) {{
+function Section({{ title, children, rssLink, rssHref }}) {{
+  const feedUrl = rssHref || "feed.xml";
   return React.createElement("div", {{
     style: {{ background: "#fff", borderRadius: "8px", padding: "20px 24px",
               boxShadow: "0 1px 3px rgba(0,0,0,0.06)" }}
@@ -383,7 +384,7 @@ function Section({{ title, children, rssLink }}) {{
                   borderLeft: "3px solid #d4a017", paddingLeft: "10px" }}
       }}, title),
       rssLink && React.createElement("a", {{
-        href: "feed.xml", style: {{ fontSize: "11px", color: "#d4a017" }}
+        href: feedUrl, style: {{ fontSize: "11px", color: "#d4a017" }}
       }}, "RSS ↗")
     ),
     children
@@ -440,7 +441,7 @@ function App() {{
         React.createElement(LatestBriefing, {{ html: DATA.latestBriefing }})
       ),
       tab === "youtube" && React.createElement("div", {{ style: {{ display: "flex", flexDirection: "column", gap: "16px" }} }},
-        React.createElement(Section, {{ title: "頻道活躍度" }},
+        React.createElement(Section, {{ title: "頻道活躍度", rssLink: true, rssHref: "youtube-feed.xml" }},
           React.createElement(ChannelChart, {{ channels: DATA.channels }})
         ),
         React.createElement(Section, {{ title: "熱門影片（按觀看數）" }},
