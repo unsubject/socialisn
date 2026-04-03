@@ -56,7 +56,7 @@ SOURCES = {
     },
 }
 
-MODEL = "claude-haiku-4-5-20251001"
+MODEL = "claude-haiku-4-5"
 MAX_TOKENS = 256
 # Seconds to wait between API calls to avoid rate limiting
 RATE_LIMIT_DELAY = 0.5
