@@ -123,11 +123,6 @@ def format_podcast_item(item: dict) -> str:
     )
 
 
-def is_priority(item: dict) -> bool:
-    """Return True if item is from the highest-priority podcast-pipeline feed."""
-    return "Podcast Pipeline" in item.get("source_name", "")
-
-
 def build_prompt(youtube_items: list[dict], news_items: list[dict],
                  podcast_items: list[dict], slot: str, date_str: str) -> str:
     """Build the Sonnet briefing prompt."""
@@ -138,31 +133,18 @@ def build_prompt(youtube_items: list[dict], news_items: list[dict],
     # Sort YouTube by view count descending for prominence
     youtube_sorted = sorted(youtube_items, key=lambda x: x.get("view_count", 0), reverse=True)
 
-    # Separate podcast-pipeline items from regular news
-    news_podcast_items = [i for i in news_items if is_priority(i)]
-    regular_news = [i for i in news_items if not is_priority(i)]
-
     youtube_block = "\n\n".join(format_youtube_item(i) for i in youtube_sorted) if youtube_sorted else "（今日無YouTube資料）"
-    news_block = "\n\n".join(format_news_item(i) for i in regular_news) if regular_news else "（今日無新聞資料）"
-    news_podcast_block = "\n\n".join(format_news_item(i) for i in news_podcast_items) if news_podcast_items else ""
-    curated_podcast_block = "\n\n".join(format_podcast_item(i) for i in podcast_items) if podcast_items else ""
-
-    # Combine podcast pipeline (from news) and curated podcasts
-    all_podcast_parts = []
-    if news_podcast_block:
-        all_podcast_parts.append(news_podcast_block)
-    if curated_podcast_block:
-        all_podcast_parts.append(curated_podcast_block)
-    combined_podcast_block = "\n\n".join(all_podcast_parts) if all_podcast_parts else "（今日無Podcast資料）"
+    news_block = "\n\n".join(format_news_item(i) for i in news_items) if news_items else "（今日無新聞資料）"
+    podcast_block = "\n\n".join(format_podcast_item(i) for i in podcast_items) if podcast_items else "（今日無Podcast資料）"
 
     total_items = len(youtube_items) + len(news_items) + len(podcast_items)
 
     podcast_section = f"""## 🎙 Podcast（最優先）
 以下是來自Podcast的最新內容，請務必在簡報中獨立呈現，不要與其他新聞混合：
 
-{combined_podcast_block}
+{podcast_block}
 
----""" if all_podcast_parts else ""
+---""" if podcast_items else ""
 
     return f"""你是利世民的個人情報助理。請根據以下今日收集的資料，用繁體中文撰寫一份{slot_label}簡報。
 
@@ -205,7 +187,7 @@ def build_prompt(youtube_items: list[dict], news_items: list[dict],
 以下是今日所有資料：
 
 ### 🎙 Podcast（最優先，獨立成節）
-{combined_podcast_block}
+{podcast_block}
 
 ### YouTube影片
 {youtube_block}
