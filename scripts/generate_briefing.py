@@ -30,6 +30,7 @@ import markdown
 REPO_ROOT = Path(__file__).resolve().parent.parent
 YOUTUBE_PROCESSED_DIR = REPO_ROOT / "data" / "youtube" / "processed"
 NEWS_PROCESSED_DIR = REPO_ROOT / "data" / "news" / "processed"
+PODCASTS_PROCESSED_DIR = REPO_ROOT / "data" / "podcasts" / "processed"
 BRIEFINGS_DIR = REPO_ROOT / "data" / "briefings"
 
 MODEL = "claude-sonnet-4-20250514"
@@ -100,13 +101,35 @@ def format_news_item(item: dict) -> str:
     )
 
 
+def format_podcast_item(item: dict) -> str:
+    """Format a podcast episode for the Sonnet prompt."""
+    title = item.get("title", "")
+    podcast = item.get("podcast_name", "")
+    summary = item.get("summary_zh", "")
+    keywords = "、".join(item.get("keywords_zh", []))
+    duration = item.get("duration_seconds", 0)
+    duration_min = duration // 60 if duration else 0
+    url = item.get("episode_url", "")
+    tags = "、".join(item.get("tags", []))
+
+    return (
+        f"【Podcast｜{podcast}】\n"
+        f"標題：{title}\n"
+        f"撮要：{summary}\n"
+        f"關鍵詞：{keywords}\n"
+        f"數據：{duration_min} 分鐘\n"
+        f"標籤：{tags}\n"
+        f"連結：{url}"
+    )
+
+
 def is_priority(item: dict) -> bool:
     """Return True if item is from the highest-priority podcast-pipeline feed."""
     return "Podcast Pipeline" in item.get("source_name", "")
 
 
 def build_prompt(youtube_items: list[dict], news_items: list[dict],
-                 slot: str, date_str: str) -> str:
+                 podcast_items: list[dict], slot: str, date_str: str) -> str:
     """Build the Sonnet briefing prompt."""
 
     slot_label = "早報" if slot == "morning" else "晚報"
@@ -116,26 +139,35 @@ def build_prompt(youtube_items: list[dict], news_items: list[dict],
     youtube_sorted = sorted(youtube_items, key=lambda x: x.get("view_count", 0), reverse=True)
 
     # Separate podcast-pipeline items from regular news
-    podcast_items = [i for i in news_items if is_priority(i)]
+    news_podcast_items = [i for i in news_items if is_priority(i)]
     regular_news = [i for i in news_items if not is_priority(i)]
 
     youtube_block = "\n\n".join(format_youtube_item(i) for i in youtube_sorted) if youtube_sorted else "（今日無YouTube資料）"
     news_block = "\n\n".join(format_news_item(i) for i in regular_news) if regular_news else "（今日無新聞資料）"
-    podcast_block = "\n\n".join(format_news_item(i) for i in podcast_items) if podcast_items else "（今日無Podcast Pipeline資料）"
+    news_podcast_block = "\n\n".join(format_news_item(i) for i in news_podcast_items) if news_podcast_items else ""
+    curated_podcast_block = "\n\n".join(format_podcast_item(i) for i in podcast_items) if podcast_items else ""
 
-    total_items = len(youtube_items) + len(news_items)
+    # Combine podcast pipeline (from news) and curated podcasts
+    all_podcast_parts = []
+    if news_podcast_block:
+        all_podcast_parts.append(news_podcast_block)
+    if curated_podcast_block:
+        all_podcast_parts.append(curated_podcast_block)
+    combined_podcast_block = "\n\n".join(all_podcast_parts) if all_podcast_parts else "（今日無Podcast資料）"
 
-    podcast_section = f"""## 🎙 Podcast Pipeline（最優先）
-以下是來自Podcast Pipeline的最新內容，請務必在簡報中獨立呈現，不要與其他新聞混合：
+    total_items = len(youtube_items) + len(news_items) + len(podcast_items)
 
-{podcast_block}
+    podcast_section = f"""## 🎙 Podcast（最優先）
+以下是來自Podcast的最新內容，請務必在簡報中獨立呈現，不要與其他新聞混合：
 
----""" if podcast_items else ""
+{combined_podcast_block}
+
+---""" if all_podcast_parts else ""
 
     return f"""你是利世民的個人情報助理。請根據以下今日收集的資料，用繁體中文撰寫一份{slot_label}簡報。
 
 日期：{hkt_date}（香港時間）
-資料來源數量：共 {total_items} 項（YouTube {len(youtube_items)} 項，新聞 {len(news_items)} 項）
+資料來源數量：共 {total_items} 項（YouTube {len(youtube_items)} 項，新聞 {len(news_items)} 項，Podcast {len(podcast_items)} 項）
 
 ---
 
@@ -162,6 +194,7 @@ def build_prompt(youtube_items: list[dict], news_items: list[dict],
 - 今日監測項目總數：{total_items}
 - YouTube頻道：{len(youtube_items)} 條影片
 - 新聞來源：{len(news_items)} 篇文章
+- Podcast：{len(podcast_items)} 集
 - 最高觀看影片：{youtube_sorted[0].get('title', 'N/A')[:50] if youtube_sorted else 'N/A'}（{youtube_sorted[0].get('view_count', 0):,} 觀看）
 
 ## 編輯備注
@@ -171,8 +204,8 @@ def build_prompt(youtube_items: list[dict], news_items: list[dict],
 
 以下是今日所有資料：
 
-### 🎙 Podcast Pipeline（最優先，獨立成節）
-{podcast_block}
+### 🎙 Podcast（最優先，獨立成節）
+{combined_podcast_block}
 
 ### YouTube影片
 {youtube_block}
@@ -300,7 +333,7 @@ def markdown_to_html(md_text: str, title: str) -> str:
 {body_html}
 <div class="footer">
   由 Socialisn Intelligence Monitor 自動生成 ·
-  資料來源：YouTube / RSS新聞
+  資料來源：YouTube / RSS新聞 / Podcast
 </div>
 </body>
 </html>"""
@@ -342,15 +375,16 @@ def main():
     # Load processed data
     youtube_items = load_processed(YOUTUBE_PROCESSED_DIR, date_str)
     news_items = load_processed(NEWS_PROCESSED_DIR, date_str)
+    podcast_items = load_processed(PODCASTS_PROCESSED_DIR, date_str)
 
-    if not youtube_items and not news_items:
+    if not youtube_items and not news_items and not podcast_items:
         log.warning("No processed data found for today. Exiting.")
         sys.exit(0)
 
-    log.info(f"Loaded {len(youtube_items)} YouTube items, {len(news_items)} news items.")
+    log.info(f"Loaded {len(youtube_items)} YouTube items, {len(news_items)} news items, {len(podcast_items)} podcast items.")
 
     # Generate briefing
-    prompt = build_prompt(youtube_items, news_items, slot, date_str)
+    prompt = build_prompt(youtube_items, news_items, podcast_items, slot, date_str)
     log.info("Calling Sonnet...")
     briefing_md = call_sonnet(client, prompt)
 

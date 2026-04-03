@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Podcast 監察 Podcast Monitor</title>
+    <link>https://your-username.github.io/your-repo</link>
+    <description>精選財經及科技 Podcast 最新集數，自動監察更新</description>
+    <language>en</language>
+    <lastBuildDate>Fri, 03 Apr 2026 04:57:23 +0000</lastBuildDate>
+    <atom:link href="https://your-username.github.io/your-repo/podcast-feed.xml" rel="self" type="application/rss+xml"/>
+
+  </channel>
+</rss>

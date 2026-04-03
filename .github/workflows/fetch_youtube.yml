@@ -41,6 +41,9 @@ jobs:
       - name: Fetch news data
         run: python scripts/fetch_news.py
 
+      - name: Fetch podcast data
+        run: python scripts/fetch_podcasts.py
+
       # --- Haiku processing ---
       - name: Process all sources with Haiku
         env:
@@ -66,6 +69,11 @@ jobs:
         env:
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: python scripts/generate_youtube_rss.py
+
+      - name: Generate Podcast RSS feed
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python scripts/generate_podcast_rss.py
 
       # --- Dashboard ---
       - name: Generate dashboard

@@ -48,6 +48,12 @@ SOURCES = {
         "title_field": "headline",
         "text_fields": ["excerpt", "full_text"],
     },
+    "podcasts": {
+        "raw_dir": REPO_ROOT / "data" / "podcasts" / "raw",
+        "processed_dir": REPO_ROOT / "data" / "podcasts" / "processed",
+        "title_field": "title",
+        "text_fields": ["description"],
+    },
 }
 
 MODEL = "claude-haiku-4-5-20251001"
@@ -261,7 +267,7 @@ def process_source(source_name: str, client: anthropic.Anthropic,
     processed_records = []
 
     for i, record in enumerate(raw_records):
-        item_id = record.get("video_id") or record.get("article_id", "unknown")
+        item_id = record.get("video_id") or record.get("article_id") or record.get("episode_id", "unknown")
         title = record.get(title_field, "")
         log.info(f"  [{i+1}/{len(raw_records)}] {item_id} — {title[:60]}")
 
@@ -290,7 +296,7 @@ def main():
     parser = argparse.ArgumentParser(description="Process raw data with Claude Haiku.")
     parser.add_argument(
         "--source",
-        choices=["youtube", "news", "all"],
+        choices=["youtube", "news", "podcasts", "all"],
         default="all",
         help="Which source type to process (default: all)",
     )
