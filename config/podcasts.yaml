@@ -1,0 +1,94 @@
+# Podcasts to Monitor
+# Each entry uses an Apple Podcast ID. The fetcher resolves IDs to RSS feed URLs
+# via the iTunes Lookup API at runtime.
+#
+# Fields:
+#   apple_id — Apple Podcasts numeric ID (from the URL: .../id<NUMBER>)
+#   name     — Display name (used in output JSON and dashboard)
+#   language — Primary language hint (en, zh, etc.)
+#   tags     — Optional labels for grouping (e.g. finance, tech, economics)
+
+podcasts:
+  - apple_id: 1691284824
+    name: Unhedged
+    language: en
+    tags:
+      - finance
+      - ft
+
+  - apple_id: 1746352576
+    name: The Economics Show
+    language: en
+    tags:
+      - economics
+      - ft
+
+  - apple_id: 1376303362
+    name: Behind the Money
+    language: en
+    tags:
+      - finance
+      - ft
+
+  - apple_id: 1169101860
+    name: FT Tech Tonic
+    language: en
+    tags:
+      - tech
+      - ft
+
+  - apple_id: 1528594034
+    name: Hard Fork
+    language: en
+    tags:
+      - tech
+      - nyt
+
+  - apple_id: 1578096201
+    name: Big Take
+    language: en
+    tags:
+      - finance
+      - bloomberg
+
+  - apple_id: 1739582836
+    name: "Money Stuff: The Podcast"
+    language: en
+    tags:
+      - finance
+      - bloomberg
+
+  - apple_id: 1056200096
+    name: Odd Lots
+    language: en
+    tags:
+      - economics
+      - bloomberg
+
+  - apple_id: 326301337
+    name: Bloomberg Intelligence
+    language: en
+    tags:
+      - finance
+      - bloomberg
+
+  - apple_id: 1494307824
+    name: Wall Street Week
+    language: en
+    tags:
+      - finance
+      - bloomberg
+
+  - apple_id: 1320118593
+    name: "The Indicator from Planet Money"
+    language: en
+    tags:
+      - economics
+      - npr
+
+  - apple_id: 290783428
+    name: Planet Money
+    language: en
+    tags:
+      - economics
+      - npr

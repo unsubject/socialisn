@@ -12,19 +12,9 @@
 sources:
 
   # ---------------------------------------------------------------------------
-  # Simon's Own Feeds (Highest Priority)
+  # Simon's Own Feeds
   # ---------------------------------------------------------------------------
- 
-  - name: "Podcast Pipeline"
-    type: rss
-    url: "https://unsubject.github.io/podcast-pipeline/feed"
-    language: zh-TW
-    priority: highest
-    tags:
-      - simon
-      - podcast
-      - priority
-      
+
   - name: "Newsletter Digest"
     type: rss
     url: "https://unsubject.github.io/newsletter-digest/feed"
