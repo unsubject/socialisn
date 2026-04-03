@@ -140,7 +140,8 @@ def get_nested(record: dict, field_path: str) -> str:
 
 
 def build_prompt(record: dict, title_field: str = "title",
-                 text_fields: list[str] | None = None) -> str:
+                 text_fields: list[str] | None = None,
+                 source_name: str = "youtube") -> str:
     """Build the Haiku prompt for any source type."""
     if text_fields is None:
         text_fields = ["description"]
@@ -161,10 +162,18 @@ def build_prompt(record: dict, title_field: str = "title",
 
     content = "\n\n".join(text_parts)
 
-    return f"""你是一位香港時事分析助手。請根據以下YouTube影片資料，用繁體中文完成兩項任務：
+    # Source-specific labels
+    source_labels = {
+        "youtube": ("YouTube影片", "標題、簡介及字幕"),
+        "news": ("新聞文章", "標題、摘要及全文"),
+        "podcasts": ("Podcast節目", "標題及節目描述"),
+    }
+    item_label, ref_label = source_labels.get(source_name, ("資料", "標題及內容"))
 
-1. 撮要：用1至2句話概括影片的核心內容，風格簡潔如新聞標題。可參考標題、簡介及字幕。
-2. 關鍵詞：只根據「標題」提取5至8個最重要的繁體中文關鍵詞（人名、地名、事件、議題等），不要從簡介或字幕中提取。
+    return f"""你是一位香港時事分析助手。請根據以下{item_label}資料，用繁體中文完成兩項任務：
+
+1. 撮要：用1至2句話概括內容的核心，風格簡潔如新聞標題。可參考{ref_label}。
+2. 關鍵詞：只根據「標題」提取5至8個最重要的繁體中文關鍵詞（人名、地名、事件、議題等），不要從其他參考資料中提取。
 
 請以下列JSON格式回覆，不要加任何其他文字：
 {{
@@ -271,7 +280,7 @@ def process_source(source_name: str, client: anthropic.Anthropic,
         title = record.get(title_field, "")
         log.info(f"  [{i+1}/{len(raw_records)}] {item_id} — {title[:60]}")
 
-        prompt = build_prompt(record, title_field=title_field, text_fields=text_fields)
+        prompt = build_prompt(record, title_field=title_field, text_fields=text_fields, source_name=source_name)
         result = call_haiku(client, prompt)
 
         enriched = {

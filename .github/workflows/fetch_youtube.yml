@@ -50,8 +50,20 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/process_with_haiku.py --source all
 
-      # --- Sonnet briefing + email ---
+      # --- Sonnet briefing + email (only at 00:00 and 12:00 UTC, or manual dispatch) ---
+      - name: Check if briefing should run
+        id: briefing_check
+        run: |
+          HOUR=$(date -u +%H)
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]] || [[ "$HOUR" == "00" ]] || [[ "$HOUR" == "12" ]]; then
+            echo "should_run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "should_run=false" >> "$GITHUB_OUTPUT"
+            echo "Skipping briefing (current hour: $HOUR UTC, only runs at 00/12)"
+          fi
+
       - name: Generate briefing and send email
+        if: steps.briefing_check.outputs.should_run == 'true'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GMAIL_CREDENTIALS: ${{ secrets.GMAIL_CREDENTIALS }}
