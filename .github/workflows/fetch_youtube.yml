@@ -2,8 +2,8 @@ name: Fetch and Process Intelligence
 
 on:
   schedule:
-    # Twice daily: 00:00 and 12:00 UTC
-    - cron: "0 0,12 * * *"
+    # Six times daily: 00:00, 04:00, 08:00, 12:00, 16:00, 20:00 UTC
+    - cron: "0 0,4,8,12,16,20 * * *"
   workflow_dispatch:
 
 # Prevent concurrent runs — if a run is in progress, cancel it and start fresh
