@@ -20,15 +20,17 @@
       "finance",
       "ft"
     ],
-    "summary_zh": "探討伊朗戰爭引發的全球能源危機及其長期影響，分析能源供應中斷後復常所需時間。",
+    "summary_zh": "探討伊朗戰爭對全球能源供應的衝擊及戰後恢復時間；分析煤炭前景與市場智慧。",
     "keywords_zh": [
       "能源危機",
       "伊朗戰爭",
+      "能源供應",
+      "煤炭",
       "全球能源",
-      "供應中斷",
-      "能源編輯"
+      "市場",
+      "Katie Martin"
     ],
-    "processed_at": "2026-04-04T01:57:13Z"
+    "processed_at": "2026-04-04T05:23:41Z"
   },
   {
     "episode_id": "48f9948ddf9fe2d3",
@@ -51,18 +53,18 @@
       "economics",
       "ft"
     ],
-    "summary_zh": "節目探討經濟戰爭的歷史教訓，分析制裁、關稅、封鎖等經濟武器的實際成效，並應用於當代伊朗及俄羅斯等案例。",
+    "summary_zh": "經濟戰爭由來已久，制裁、關稅、封鎖等經濟手段究竟是否有效？節目探討歷史教訓如何解讀伊朗及俄羅斯等當代案例。",
     "keywords_zh": [
       "經濟戰爭",
       "制裁",
       "關稅",
-      "封鎖",
+      "馬克·哈里遜",
+      "歷史",
       "伊朗",
       "俄羅斯",
-      "Mark Harrison",
-      "歷史"
+      "經濟衝突"
     ],
-    "processed_at": "2026-04-04T01:57:13Z"
+    "processed_at": "2026-04-04T05:23:41Z"
   },
   {
     "episode_id": "22f2213d1d583796",
@@ -85,17 +87,18 @@
       "finance",
       "ft"
     ],
-    "summary_zh": "印度教育科技獨角獸Byju's因欺詐及管理不善迅速崩潰，引發美國破產訴訟及證人作偽指控，反映印度科技業存在的深層問題。",
+    "summary_zh": "印度教育科技獨角獸Byju's在疫情期間迅速崛起，卻同樣迅速走向崩潰，涉及美國法庭制裁和妨礙司法指控，反映印度科技業的風險。",
     "keywords_zh": [
       "Byju's",
       "印度",
       "科技",
-      "崩潰",
       "破產",
-      "教育",
-      "欺詐"
+      "教育應用",
+      "疫情",
+      "美國法庭",
+      "崩潰"
     ],
-    "processed_at": "2026-04-04T01:57:13Z"
+    "processed_at": "2026-04-04T05:23:41Z"
   },
   {
     "episode_id": "9373e2f462b3969b",
@@ -118,15 +121,17 @@
       "tech",
       "nyt"
     ],
-    "summary_zh": "探討成癮性設計的未來發展、DeepMind的深度研究進展，以及HatGPT等新興技術議題。",
+    "summary_zh": "探討成癮式設計的未來發展、DeepMind的深度研究進展，以及HatGPT相關議題，涉及科技平台監管與法律風險。",
     "keywords_zh": [
-      "成癮性設計",
+      "成癮式設計",
       "DeepMind",
       "HatGPT",
-      "平台監管",
-      "技術倫理"
+      "科技平台",
+      "監管",
+      "法律風險",
+      "人工智能"
     ],
-    "processed_at": "2026-04-04T01:57:13Z"
+    "processed_at": "2026-04-04T05:23:41Z"
   },
   {
     "episode_id": "413fe18e136cc3f1",
@@ -149,17 +154,17 @@
       "finance",
       "bloomberg"
     ],
-    "summary_zh": "特朗普就對伊朗用兵進行全國演說，承諾衝突迫在眉睫結束但同時宣佈將進行2至3週的密集軍事打擊，引發市場波動及盟國困惑。",
+    "summary_zh": "特朗普就對伊朗開戰向美國民眾闡述立場，惟其言論自相矛盾且引發市場波動，未能達到預期效果。",
     "keywords_zh": [
-      "特朗普",
+      "Trump",
       "伊朗",
-      "戰爭",
+      "宣戰",
       "軍事打擊",
-      "演說",
+      "美國",
       "能源市場",
       "中期選舉"
     ],
-    "processed_at": "2026-04-04T01:57:13Z"
+    "processed_at": "2026-04-04T05:23:41Z"
   },
   {
     "episode_id": "55f02b4d8911345a",
@@ -182,17 +187,18 @@
       "finance",
       "bloomberg"
     ],
-    "summary_zh": "特朗普總統在白宮發表黃金時段演講，揚言未來數周內將對伊朗進行極端打擊，引發股市下跌和油價上升。",
+    "summary_zh": "特朗普在黃宮黃金時段演講中警告將在未來兩至三週內對伊朗「極其強硬」回應，並威脅打擊電力等關鍵基礎設施，引發股市下跌和油價飆升。",
     "keywords_zh": [
       "特朗普",
-      "白宮",
-      "演講",
       "伊朗",
-      "美國",
+      "白宮",
+      "黃金時段演講",
+      "基礎設施",
+      "荷爾木茲海峽",
       "油價",
-      "荷莫茲海峽"
+      "股市"
     ],
-    "processed_at": "2026-04-04T01:57:13Z"
+    "processed_at": "2026-04-04T05:23:41Z"
   },
   {
     "episode_id": "01e877fbfebbdb30",
@@ -215,18 +221,18 @@
       "finance",
       "bloomberg"
     ],
-    "summary_zh": "中國AI熱潮：OpenClaw因政府推動和用戶FOMO心理快速走紅，惟涉及個人數據使用和失控風險引發安全隱憂。",
+    "summary_zh": "中國AI熱潮中的OpenClaw應用快速爆紅，驅動力來自FOMO心態與政府推動，但隨著代理AI系統獲得個人數據權限，「失控」事件頻現引發安全隱憂。",
     "keywords_zh": [
       "OpenClaw",
       "中國",
       "AI",
-      "代理系統",
+      "代理AI系統",
       "個人數據",
-      "安全風險",
+      "安全隱憂",
       "政府推動",
-      "監管"
+      "FOMO"
     ],
-    "processed_at": "2026-04-04T01:57:13Z"
+    "processed_at": "2026-04-04T05:23:41Z"
   },
   {
     "episode_id": "393e455d29d6a11b",
@@ -249,17 +255,18 @@
       "economics",
       "bloomberg"
     ],
-    "summary_zh": "前高盛投資銀行CEO Scott Bok闡述投資銀行家的日常工作內容，並探討AI對白領行業的潛在衝擊。",
+    "summary_zh": "投資銀行前行政總裁Scott Bok解析投資銀行家的日常工作職能，探討AI時代對白領工作的潛在衝擊。",
     "keywords_zh": [
       "Scott Bok",
       "投資銀行",
-      "AI",
-      "白領工作",
+      "投資銀行家",
       "Greenhill",
       "華爾街",
+      "AI",
+      "白領工作",
       "金融行業"
     ],
-    "processed_at": "2026-04-04T01:57:13Z"
+    "processed_at": "2026-04-04T05:23:41Z"
   },
   {
     "episode_id": "0e40bd0f233b4a9e",
@@ -282,18 +289,17 @@
       "economics",
       "bloomberg"
     ],
-    "summary_zh": "探討如何辨別人工智能生成的文本，分析AI寫作的特徵與潛在影響，包括學術誠信和資訊真偽等問題。",
+    "summary_zh": "探討如何識別人工智能生成的文字，分析AI寫作與人類寫作的差異及其社會影響。",
     "keywords_zh": [
-      "AI",
-      "寫作",
-      "文本",
-      "辨別",
-      "生成",
-      "聊天機器人",
-      "學術作弊",
-      "資訊真偽"
+      "AI寫作",
+      "人工智能",
+      "文字識別",
+      "文體分析",
+      "學術誠信",
+      "聊天機械人",
+      "欺騙性內容"
     ],
-    "processed_at": "2026-04-04T01:57:13Z"
+    "processed_at": "2026-04-04T05:23:41Z"
   },
   {
     "episode_id": "fcfafc7570727d4c",
@@ -316,18 +322,18 @@
       "economics",
       "bloomberg"
     ],
-    "summary_zh": "伊朗戰爭引發油價飆升，荷姆茲海峽關閉導致供應嚴重中斷，專家警告油價仍有進一步上升空間。",
+    "summary_zh": "石油價格因伊朗戰爭大幅上升，但仍有進一步上漲空間；荷姆茲海峽關閉造成供應中斷，東亞地區受影響最大。",
     "keywords_zh": [
-      "油價",
+      "石油",
       "伊朗",
-      "戰爭",
       "荷姆茲海峽",
       "Javier Blas",
-      "能源危機",
-      "供應中斷",
-      "戰略儲備"
+      "油價上漲",
+      "戰爭",
+      "東亞",
+      "供應中斷"
     ],
-    "processed_at": "2026-04-04T01:57:13Z"
+    "processed_at": "2026-04-04T05:23:41Z"
   },
   {
     "episode_id": "6bcb2e98f7d63be0",
@@ -350,15 +356,17 @@
       "finance",
       "bloomberg"
     ],
-    "summary_zh": "特斯拉電動車銷售再次遜於預期，陷入深度銷售低迷，創多年來最差季度之一。",
+    "summary_zh": "Tesla電動車銷售連續低迷，季度銷量未達預期，反映電動車市場競爭加劇；Stellantis與中國夥伴探討在加拿大製造電動車方案。",
     "keywords_zh": [
       "Tesla",
       "電動車銷售",
-      "季度業績",
-      "華爾街預期",
-      "市場困境"
+      "季度銷量",
+      "Wall Street預期",
+      "電動車市場",
+      "Stellantis",
+      "加拿大"
     ],
-    "processed_at": "2026-04-04T01:57:13Z"
+    "processed_at": "2026-04-04T05:23:41Z"
   },
   {
     "episode_id": "29b90e0440561934",
@@ -381,18 +389,17 @@
       "finance",
       "bloomberg"
     ],
-    "summary_zh": "SpaceX據報秘密提交IPO申請，尋求逾1.75萬億美元估值，料將成為史上最大規模上市。Nike股價因業績展望黯淡而下跌。",
+    "summary_zh": "SpaceX秘密申報首次公開募股，公司估值可能超過1.75兆美元，有望成為史上規模最大的上市案。",
     "keywords_zh": [
       "SpaceX",
+      "首次公開募股",
       "IPO",
-      "上市",
-      "AI競爭對手",
-      "Nike",
-      "股價",
+      "秘密申報",
+      "證券交易委員會",
       "估值",
-      "美國證券交易委員會"
+      "上市"
     ],
-    "processed_at": "2026-04-04T01:57:13Z"
+    "processed_at": "2026-04-04T05:23:41Z"
   },
   {
     "episode_id": "775af064ed11a7f0",
@@ -415,17 +422,18 @@
       "finance",
       "bloomberg"
     ],
-    "summary_zh": "日本經濟在30年停滯後迎來轉機，私募資本和商業文化改革成為推動下一輪增長的關鍵。",
+    "summary_zh": "日本經濟在停滯30年後出現新機遇，私人資本和商業改革有望推動其下一輪增長週期。",
     "keywords_zh": [
       "日本",
       "經濟",
       "增長",
-      "私募資本",
-      "商業文化",
-      "改革",
-      "失去的十年"
+      "私人資本",
+      "商業改革",
+      "失落的十年",
+      "傳統",
+      "創新"
     ],
-    "processed_at": "2026-04-04T01:57:13Z"
+    "processed_at": "2026-04-04T05:23:41Z"
   },
   {
     "episode_id": "2f1e6ae7bfd1ebe4",
@@ -448,17 +456,18 @@
       "economics",
       "npr"
     ],
-    "summary_zh": "新大學畢業生面臨招聘市場低迷，企業既不裁員也不增聘，就業前景堪憂。",
+    "summary_zh": "美國就業市場呈「低聘低裁」狀態，僱主既不大幅裁員也不積極招聘，對大學應屆畢業生前景黯淡。",
     "keywords_zh": [
       "大學畢業生",
       "就業市場",
-      "招聘",
+      "低聘低裁",
       "霍華德大學",
-      "華盛頓",
-      "經濟學",
-      "就業數據"
+      "華盛頓特區",
+      "經濟學家",
+      "職位",
+      "招聘"
     ],
-    "processed_at": "2026-04-04T01:57:13Z"
+    "processed_at": "2026-04-04T05:23:41Z"
   },
   {
     "episode_id": "ece74f0b302bb90d",
@@ -481,17 +490,18 @@
       "economics",
       "npr"
     ],
-    "summary_zh": "節目介紹全球各地的公共財貨如海洋自由、全球定位系統、大型強子對撞機等，展示這些公共財貨如何促進人類的繁榮、準確性和知識進步。",
+    "summary_zh": "節目介紹全球各地傑出的公共產品，如海上自由航行、GPS和大型強子對撞機等，強調其對人類繁榮的重要貢獻。",
     "keywords_zh": [
-      "公共財貨",
-      "自由海洋",
-      "全球定位系統",
-      "大型強子對撞機",
+      "公共產品",
       "Planet Money",
       "Alex Mayyasi",
-      "明信片"
+      "GPS",
+      "大型強子對撞機",
+      "自由航行",
+      "明信片",
+      "現場表演"
     ],
-    "processed_at": "2026-04-04T01:57:13Z"
+    "processed_at": "2026-04-04T05:23:41Z"
   },
   {
     "episode_id": "f65610a43855c036",
@@ -514,17 +524,16 @@
       "economics",
       "npr"
     ],
-    "summary_zh": "寶可夢卡牌價值在過去一年飆升170%，增長速度超越傳統退休投資，成為熱門收藏資產。",
+    "summary_zh": "寶可夢卡牌價值在過去一年暴漲170%，增速遠超退休基金，成為投資熱門商品。",
     "keywords_zh": [
       "寶可夢卡牌",
-      "收藏品",
       "投資",
       "價值增長",
+      "收藏品",
       "稀有卡牌",
-      "媒體特許權",
-      "退休帳戶"
+      "媒體特許經營"
     ],
-    "processed_at": "2026-04-04T01:57:13Z"
+    "processed_at": "2026-04-04T05:23:41Z"
   },
   {
     "episode_id": "2587487e3686bf4e",
@@ -547,14 +556,50 @@
       "economics",
       "npr"
     ],
-    "summary_zh": "古巴經濟實驗面臨困境，美國石油禁運導致能源短缺，引發醫療、運輸及電力供應危機。",
+    "summary_zh": "古巴經濟實驗陷入困境，美國禁運導致油氣短缺，引發醫療、運輸及電力危機。",
     "keywords_zh": [
       "古巴",
-      "經濟",
-      "美國",
-      "石油",
-      "能源危機"
+      "經濟危機",
+      "美國禁運",
+      "石油短缺",
+      "醫療危機",
+      "電力短缺",
+      "共產主義",
+      "資本主義"
     ],
-    "processed_at": "2026-04-04T01:57:13Z"
+    "processed_at": "2026-04-04T05:23:41Z"
+  },
+  {
+    "episode_id": "27640109fc30400b",
+    "podcast_name": "Planet Money",
+    "podcast_apple_id": 290783428,
+    "podcast_author": "NPR (podcasts@npr.org)",
+    "podcast_image": "https://media.npr.org/assets/img/2022/10/24/pm_new_tile_2022_sq-e543deddd0a46a98be481b46e6a72efa6b52236f.jpg?s=1400&c=66&f=jpg",
+    "title": "Reese’s heir vs. chocolate skimpflation",
+    "description": "Live event info and tickets here. When ingredient costs skyrocket, companies have three basic options: They can raise their prices (a sort of product-specific inflation), shrink the size of the products (often called “shrinkflation”), or, sometimes, find more creative ways to reduce costs by degrading the quality of their products - which our very own Greg Rosalsky has dubbed as  “skimpflation.” The latest alleged culprit? Hershey’s. The Hershey Company is using ingredients in some of their Reese’s candies that — legally — they cannot call milk chocolate or peanut butter. This has infuriated Brad Reese, a grandson of H.B. Reese, the inventor of the Reese’s Peanut Butter Cup. On today’s show, why chocolate makers might be skimping on chocolate and peanut butter, what else might explain these ingredients, and how Brad Reese has launched a skimp-shaming campaign to get Hershey’s to go back to using classic Reese’s ingredients. And – EXCLUSIVE – you’ll hear Planet Money break some big news to third-generation peanut butter cup scion Brad Reese. Pre-order the Planet Money book and get a free gift . / Subscribe to Planet Money+ Listen free: Apple Podcasts , Spotify , the NPR app or anywhere you get podcasts. Facebook / Instagram / TikTok / Our weekly Newsletter . This episode was hosted by Greg Rosalsky and Sarah Gonzalez. It was produced by James Sneed. It was edited by Kenny Malone, fact-checked by Sierra Juarez, and engineered by Cena Loffredo. Alex Goldmark is Planet Money’s executive producer. To manage podcast ad preferences, review the links below: See pcm.adswizz.com for information about our collection and use of personal data for sponsorship and to manage your podcast sponsorship preferences. NPR Privacy Policy",
+    "published_at": "Sat, 04 Apr 2026 02:24:15 +0000",
+    "duration_seconds": 2022,
+    "episode_url": "https://www.npr.org/2026/04/03/nx-s1-5773425/reeses-peanut-butter-candy-chocolate-egg-easter-hershey-brad",
+    "audio_url": "https://tracking.swap.fm/track/XvDEoI11TR00olTUO8US/prfx.byspotify.com/e/play.podtrac.com/npr-510289/npr.simplecastaudio.com/43b5acee-463e-4612-95ad-d2596d9dd337/episodes/d107eed8-7d19-42a9-aaec-7636d86cc3bd/audio/128/default.mp3?awCollectionId=43b5acee-463e-4612-95ad-d2596d9dd337&awEpisodeId=d107eed8-7d19-42a9-aaec-7636d86cc3bd&feed=hvWWWzRv&t=podcast&e=nx-s1-5773425&p=510289&d=2022&size=32358905",
+    "audio_length_bytes": 32358905,
+    "episode_number": null,
+    "season_number": null,
+    "fetched_at": "2026-04-04T05:22:56Z",
+    "language": "en",
+    "tags": [
+      "economics",
+      "npr"
+    ],
+    "summary_zh": "好時公司因成本上升，被指在Reese's花生醬巧克力中使用替代材料，引發品質縮水爭議。",
+    "keywords_zh": [
+      "Reese's",
+      "好時公司",
+      "巧克力",
+      "花生醬",
+      "縮水",
+      "成本",
+      "品質"
+    ],
+    "processed_at": "2026-04-04T05:23:41Z"
   }
 ]
