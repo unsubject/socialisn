@@ -1,0 +1,126 @@
+{
+  "date": "2026-04-04",
+  "period": "morning",
+  "generated_at": "2026-04-04T10:06:00Z",
+  "topics": [
+    {
+      "id": 1,
+      "headline": "霍爾木茲不是『海峽』，是保險與金融的單點故障：戰爭如何直接抬高全球通脹",
+      "why_it_matters": "霍爾木茲風險已經從軍事問題變成『保險報價』：戰爭風險保費跳升會立刻轉化為能源與運費成本，最後落在通脹與利率預期。對港人（尤其海外高收入族群）而言，這直接影響資產配置：美債、能源股、航運、以及風險資產估值。",
+      "competitor_status": "高度擁擠。競品頻道大量用『伊朗戰況』『油價失控』『解鎖海峽』等敘事搶流量（多集中於戰況更新與立場表態）。可用角度：用保險市場/再保險/風險溢價的機制，把『戰爭』翻譯成『資本市場訊號』。",
+      "simons_angle": "用一張『戰爭→保費→運費→通脹→央行/利率→股債估值』的因果鏈圖，並加入：1）誰還買得到保險、2）保險上限如何逼迫船東改道、3）哪一類資產其實是“二次受害者”（例如高槓桿地產與長久期成長股）。最後回到香港：高負債企業與永續債的脆弱性會被放大。",
+      "sources": [
+        {
+          "title": "Shipping Insurance Costs to Cross Hormuz Soar After Vessel Attacks",
+          "url": "https://www.insurancejournal.com/news/international/2026/03/17/862173.htm"
+        },
+        {
+          "title": "Hormuz Insurance Rates Spike After Vessel Strikes",
+          "url": "https://www.ttnews.com/articles/hormuz-insurance-rates-spike"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "headline": "馬興瑞落馬：反貪不是反貪，是『權力再分配』——新疆、軍工、太太派系的連動",
+      "why_it_matters": "政治局成員被查是罕見訊號，意味內部權力平衡正在被重新洗牌。對香港與海外港人而言，這類整肅通常不是“清廉化”，而是政策風向與資源配置改變的前兆：新疆治理、科技軍工、以及對外強硬的官僚系統可能出現換檔。",
+      "competitor_status": "中度擁擠。競品多以『皇后黨崩盤』『官宣落馬』做戲劇化解讀。可用角度：用制度語言解釋——為何“反貪”是中共的組織管理工具；以及誰會接盤新疆與軍工利益鏈。",
+      "simons_angle": "把事件放在“組織風險管理”框架：中共如何用紀檢把不確定性外包成“紀律問題”，避免政策辯論。再推演三個市場後果：1）對外資的合規風險與國安審查更不可預測；2）新疆/國企/軍工鏈的資本開支與人事波動；3）台海、對美談判的內部激勵可能更短視。",
+      "sources": [
+        {
+          "title": "Senior CPC official Ma Xingrui under investigation for suspected severe discipline, law violations (Xinhua)",
+          "url": "https://english.news.cn/20260403/b3c1f474df74460cbaa22e58417108cb/c.html"
+        },
+        {
+          "title": "Ma Xingrui becomes China's third Politburo member investigated for 'serious violations'",
+          "url": "https://www.scmp.com/news/china/politics/article/3348968/ma-xingrui-third-politburo-member-investigated-chinas-anti-corruption-bodies"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "headline": "醫管局5.6萬病人資料流出：『數據主權』才是香港的新國安前線",
+      "why_it_matters": "醫療資料外洩不只是私隱事故，而是治理能力的直接測試：香港若連最敏感的公營醫療數據都守不住，跨境金融、身份與稅務資料的風險更難想像。對港人與海外港人而言，這影響移民、保險、信用、甚至政治風險（資料可被用作施壓）。",
+      "competitor_status": "低到中度擁擠。競品更多以『國安法屈機』『法治崩壞』為主軸，較少把它提升到『國家能力/資安治理』。可用角度：用制度設計與責任鏈（採購、外判、存取控制）拆解。",
+      "simons_angle": "把事件框成“管治能力的會計帳”：誰是資料控制人？責任如何被外判？為何公營機構永遠缺資安人才但永遠不缺宣傳？最後給出『個人層面的風險對策』：海外港人如何減少被資料串聯（例如更改保險/醫療供應商資訊揭露面）。",
+      "sources": [
+        {
+          "title": "Probe launched after Hospital Authority data breach involving 56,000 patients",
+          "url": "https://www.scmp.com/news/hong-kong/law-and-crime/article/3349020/probe-launched-after-hospital-authority-data-breach-involving-560000-patients?module=top_story&pgtype=section"
+        },
+        {
+          "title": "醫管局病人資料外洩事件 網絡安全及科技罪案調查科接手調查 (RTHK)",
+          "url": "https://news.rthk.hk/rthk/ch/component/k2/1849952-20260404.htm"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "headline": "倫敦『香港影子警察』案：把香港國安輸出到英國，會如何反噬移民政策與金融信任？",
+      "why_it_matters": "UK National Security Act下的審訊，實際上把『香港國安外延化』放上法庭：這會影響英國對港移民敘事、對中國/香港機構的信任，甚至對香港金融專業人士的背景審查。對海外港人而言，這是“你以為你離開了，但權力仍在跟著你”的制度化證據。",
+      "competitor_status": "中度擁擠。競品多把它當政治八卦或“黑警出海”。可用角度：用“主權與法域競爭”解釋——英國為何要用國安法來定義這件事，而不是普通刑事法；以及這會如何改變BNO/庇護的政治氛圍。",
+      "simons_angle": "做一集『法域政治』：英國如何用國安法（而非間諜法）處理外國干預，背後是什麼國家能力焦慮？再把它連到香港：當“國安”成為可輸出的治理技術，香港的國際金融中心地位就更像“可替代的外判城市”，信任成本上升。",
+      "sources": [
+        {
+          "title": "Two men go on trial in London accused of spying on Hong Kong dissidents for China (Reuters)",
+          "url": "https://www.reuters.com/world/uk/two-men-go-trial-london-accused-spying-hong-kong-china-2026-03-04/"
+        },
+        {
+          "title": "UK Border Force officer was 'working for China', court told (BBC)",
+          "url": "https://www.bbc.com/news/articles/c80jj0749y9o"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "headline": "遠東發展永續債停派息：香港『次級發展商』的流動性黑洞，正在變成散戶的慢性爆雷",
+      "why_it_matters": "永續債延遲派息是信用事件前兆：它告訴市場，香港部分地產商的現金流已經緊到不能再撐“表面穩定”。對高淨值港人而言，這不是一張債券的問題，而是整個“香港資產=穩健收益”的敘事瓦解：銀行理財、私銀產品、與高息票的真實風險要重新定價。",
+      "competitor_status": "低擁擠（在政治頻道中）。財經頻道有提及，但政治/治理型解讀不足。可用角度：把它連到『政府土地財政』『銀行風險偏好』『香港人外遊/消費外移』，說明現金流的結構性壓力。",
+      "simons_angle": "用“香港版影子銀行”角度拆解永續債：為何它在好時代是金融工程，在壞時代變成『延遲承認損失』的工具？再問一個更刺痛的問題：香港的“法治+金融”品牌，能否承受一波又一波準違約？最後給出投資者的風險語言：哪些條款其實等同“可選擇性違約”。",
+      "sources": [
+        {
+          "title": "Far East Consortium bonds slump after deferring $360 million payout",
+          "url": "https://www.edgen.tech/news/post/far-east-consortium-bonds-slump-after-deferring-360-million-payout"
+        },
+        {
+          "title": "FAR EAST CONSORTIUM INTERNATIONAL (00035.HK) Bonds ... (AASTOCKS)",
+          "url": "http://www.aastocks.com/en/stocks/news/aafn-con/NOW.1515883/latest-news/AAFN"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "headline": "『文科無用論』在AI年代爆紅：其實是香港/華人社會的階級焦慮與教育錯配",
+      "why_it_matters": "這個議題在競品頻道已開始升溫，反映中產對『讀書換不到上流』的恐慌。對海外港人家長與高資產家庭而言，這是資本配置問題：你在投資子女的“人力資本”，但AI正在重寫哪些技能有溢價。",
+      "competitor_status": "中度擁擠。競品多停留在“文科有冇用”的二元爭論。可用角度：用勞動市場與產業結構來回答——不是文理之爭，而是“可被平台化/可被自動化”的工作之爭。",
+      "simons_angle": "做一個反直覺框架：AI提升的不是理工，而是“把抽象概念轉成可行動決策”的能力（政策、法律、管理、金融）。提出『AI時代的文科』其實是“寫規則的人”，而不是“被規則管理的人”。最後落地到港人移民家庭：如何設計跨語言、跨制度的競爭力（英文寫作+統計素養+制度理解）。",
+      "sources": [
+        {
+          "title": "經濟KFC EP67｜文科無用論爆紅｜其實反映咗咩現實？ (CC News 新聞.政評) — via YouTube feed",
+          "url": "https://unsubject.github.io/socialisn/youtube-feed.xml"
+        },
+        {
+          "title": "Daily Search Trends (US) — RSS feed",
+          "url": "https://trends.google.com/trending/rss?geo=US"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "headline": "70萬人復活節『大逃港』：不是旅遊，是用腳投票的消費外移與稅基萎縮",
+      "why_it_matters": "『外遊花掉四分一消費』這類現象，不只是景氣話題，而是香港財政與內需結構的長期下滑。對仍在香港或與香港有資產連結的海外港人而言，消費外移意味商業地產租金、零售、甚至政府收入都會被侵蝕，最終傳導到公共服務與稅制。",
+      "competitor_status": "低到中度擁擠。競品多以情緒化的“逃港”描述，少有人用宏觀角度把它算成“稅基與資本外流”。可用角度：把人流數據當作“香港內需的即時指標”。",
+      "simons_angle": "用『城市會計』講香港：旅客/港人外遊的淨流量如何改寫零售、餐飲、與租金（並反過來影響地產商現金流）。把它和“永續債事件”連起來：外遊不是原因，是結果；結果又會反過來加速信用風險。",
+      "sources": [
+        {
+          "title": "【香港1A】七十萬人復活節大逃港！港人四份一消費用於外遊… (Hong Kong Uncensored) — via YouTube feed",
+          "url": "https://unsubject.github.io/socialisn/youtube-feed.xml"
+        },
+        {
+          "title": "香港躍升全球第五大貿易體，惟港人感受落差… (《謎米香港》) — via YouTube feed",
+          "url": "https://unsubject.github.io/socialisn/youtube-feed.xml"
+        }
+      ]
+    }
+  ]
+}
