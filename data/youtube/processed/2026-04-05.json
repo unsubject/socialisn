@@ -91,18 +91,18 @@
       "text": null
     },
     "fetched_at": "2026-04-05T02:06:11Z",
-    "summary_zh": "本集涵蓋伊朗軍事局勢、全紅嬋事件、傑斯主播爭議及台北REV-NOW結業等多則時事，討論港澳台地區的社會話題。",
+    "summary_zh": "本集涵蓋伊朗軍事局勢、香港名人軼事及台北港店結業等多項時事，涉及A10戰機、全紅嬋及傑斯等話題。",
     "keywords_zh": [
       "伊朗",
-      "A10",
+      "A10戰機",
       "全紅嬋",
       "傑斯",
-      "主播",
       "台北",
       "REV-NOW",
-      "香港"
+      "港店",
+      "日不落香港"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
   },
   {
     "video_id": "RC4F6TI-9VQ",
@@ -196,15 +196,16 @@
       "text": null
     },
     "fetched_at": "2026-04-05T02:06:11Z",
-    "summary_zh": "分析中國防空系統的實際用途，指出其設計目的並非針對美軍。",
+    "summary_zh": "分析中國防空系統的實際用途，指出其並非真正針對美軍防禦，質疑其軍事效能。",
     "keywords_zh": [
       "中國",
       "防空系統",
       "美軍",
+      "軍事",
       "經濟",
-      "軍事"
+      "笑談中國經濟"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
   },
   {
     "video_id": "A1GexZ3VK5U",
@@ -298,18 +299,17 @@
       "text": null
     },
     "fetched_at": "2026-04-05T02:06:11Z",
-    "summary_zh": "中國加強對日本施壓，殲-15戰機雷達鎖定日本自衛隊F-15戰機，引發軍事緊張局勢。",
+    "summary_zh": "中國殲-15戰機雷達鎖定日本自衛隊F-15戰機，反映中國對日本施壓力度加強。",
     "keywords_zh": [
       "中國",
-      "日本",
       "殲-15",
-      "F-15",
-      "自衛隊",
       "雷達鎖定",
-      "施壓",
-      "軍事"
+      "日本",
+      "自衛隊",
+      "F-15戰機",
+      "施壓"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
   },
   {
     "video_id": "rG3RES5i9LI",
@@ -335,18 +335,18 @@
       "text": null
     },
     "fetched_at": "2026-04-05T02:06:11Z",
-    "summary_zh": "節目涵蓋全紅嬋網暴風波、台北港人酒店結業潮、以及伊朗戰事升級導致美軍戰機被擊落等多項時事議題。",
+    "summary_zh": "節目討論全紅嬋網暴事件、台北港人酒店Rev-NOW結業及移民港店經營困境，以及伊朗戰事中美軍A10戰機被擊落的軍事動態。",
     "keywords_zh": [
+      "伊朗",
+      "A10戰機",
       "全紅嬋",
+      "傑斯",
       "台北",
       "REV-NOW",
-      "港人店",
-      "伊朗",
-      "A10",
-      "戰機",
-      "傑斯"
+      "香港",
+      "港人店"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
   },
   {
     "video_id": "cjrAgfp850U",
@@ -372,17 +372,18 @@
       "text": null
     },
     "fetched_at": "2026-04-05T02:06:11Z",
-    "summary_zh": "美國陸軍高層人事異動反映軍事戰略調整，國防預算大幅增至一萬五千億，特朗普政府或籌謀新的地緣政治干預行動。",
+    "summary_zh": "美國陸軍換帥反映防守策略轉變，國防開支增至1.5萬億美元，特朗普政府似乎準備在海外尋找新的干預目標。",
     "keywords_zh": [
-      "美陸軍",
-      "易帥",
-      "陸軍派",
-      "國防開支",
-      "一萬五千億",
+      "美國陸軍",
+      "陸軍",
       "特朗普",
-      "委內瑞拉"
+      "國防開支",
+      "委內瑞拉",
+      "換帥",
+      "國際局勢",
+      "美國政策"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
   },
   {
     "video_id": "0_xtMFq8vcw",
@@ -408,7 +409,7 @@
       "text": null
     },
     "fetched_at": "2026-04-05T02:06:11Z",
-    "summary_zh": "特朗普政府大規模人事調整，傳商務部長、FBI局長、勞工部長等多位高官將被撤換，司法部長和FBI局長的連續更替暗示內部權力鬥爭加劇。",
+    "summary_zh": "特朗普政府進行人事大調整，傳商務部長、FBI局長、勞工部長等多名高官將被撤換，司法部長和FBI局長的連續更替反映內部權力鬥爭激化。",
     "keywords_zh": [
       "特朗普",
       "商務部長",
@@ -416,10 +417,9 @@
       "勞工部長",
       "司法部長",
       "人事調整",
-      "內鬥清算",
-      "美國政治"
+      "權力鬥爭"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
   },
   {
     "video_id": "a8_djz6t-68",
@@ -445,18 +445,17 @@
       "text": null
     },
     "fetched_at": "2026-04-05T02:06:11Z",
-    "summary_zh": "伊朗戰況升級，第二架美軍A10戰機被擊落，伊朗懸賞活捉飛行員，美軍派遣搜救特種部隊展開救援行動。",
+    "summary_zh": "伊朗戰況升級，美軍第二架A10軍機遭擊落，伊朗懸紅捉拿飛行員，美軍派遣搜救特種部隊展開救援行動。",
     "keywords_zh": [
       "伊朗",
       "戰況",
-      "A10戰機",
+      "軍機",
+      "A10",
       "擊落",
-      "懸紅",
-      "活捉",
       "美軍",
       "搜救特種部隊"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
   },
   {
     "video_id": "SugeCvHN_GU",
@@ -488,17 +487,17 @@
       "text": null
     },
     "fetched_at": "2026-04-05T02:06:11Z",
-    "summary_zh": "溫家寶現身發聲，表示希望被人民遺忘但永不忘祖國，引發大陸輿論發酵，人民日報兩篇評論反映當局對此事的態度與局勢動向。",
+    "summary_zh": "溫家寶罕見現身發聲，通過人民日報評論引發大陸政治局勢變化，傳遞對祖國人民的執念。",
     "keywords_zh": [
       "溫家寶",
       "人民日報",
-      "評論",
       "大陸",
-      "祖國人民",
-      "輿論",
-      "局勢"
+      "評論",
+      "局勢",
+      "祖國",
+      "人民"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
   },
   {
     "video_id": "GU1jPC9UCqI",
@@ -530,15 +529,15 @@
       "text": null
     },
     "fetched_at": "2026-04-05T02:06:11Z",
-    "summary_zh": "分析香港當下的複雜局勢，探討香港面臨的多重挑戰與事務。",
+    "summary_zh": "分析香港面臨的多項政治和社會挑戰，探討香港攬炒之路的發展狀況。",
     "keywords_zh": [
       "香港",
       "多事之秋",
       "攬炒",
-      "時勢分析",
-      "香港局勢"
+      "風雲會",
+      "時事分析"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
   },
   {
     "video_id": "XPc4uilaH2o",
@@ -569,18 +568,18 @@
       "text": null
     },
     "fetched_at": "2026-04-05T02:06:11Z",
-    "summary_zh": "美國F-15E戰機被伊朗擊落，質疑美國空中優勢是否虛幻，分析美國是否因維護面子而升級軍事行動以應對石油及經濟危機。",
+    "summary_zh": "美國F-15E戰機被伊朗擊落，質疑美國空中優勢是否為虛幻，分析美國可能為維護面子而升級軍事作戰以應對石油及經濟危機。",
     "keywords_zh": [
       "美國",
       "F-15E戰機",
       "伊朗",
-      "防空",
       "空中優勢",
-      "石油危機",
-      "經濟危機",
-      "軍事升級"
+      "擊落",
+      "防空",
+      "升級作戰",
+      "石油危機"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
   },
   {
     "video_id": "W3cBIiJtDJ0",
@@ -611,18 +610,18 @@
       "text": null
     },
     "fetched_at": "2026-04-05T02:06:11Z",
-    "summary_zh": "白宮爆發大規模人事地震，特朗普政府內閣成員及軍方高層遭大規模撤換，包括國土安全部長、發言人和商務部長等多名核心官員。",
+    "summary_zh": "特朗普政府發生人事大變動，內閣核心成員、國土安全部長、多名軍方高層及白宮發言人等相繼被撤換，引發外界關於其政策調整的猜測。",
     "keywords_zh": [
       "白宮",
       "特朗普",
-      "人事地震",
-      "國土安全部長",
+      "人事變動",
       "內閣",
+      "國土安全部長",
       "軍方高層",
-      "發言人",
+      "白宮發言人",
       "商務部長"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
   },
   {
     "video_id": "IF08X1mKTrM",
@@ -653,18 +652,17 @@
       "text": null
     },
     "fetched_at": "2026-04-05T02:06:11Z",
-    "summary_zh": "中國自駕品牌蘿蔔快跑近日出現大規模故障，專家預言自駕車市場前景廣闊，中美競爭成焦點。",
+    "summary_zh": "中國自駕車品牌「蘿蔔快跑」近日大規模故障，引發自駕車產業討論；專家預言2050年自駕車市場將達7億台，中美兩國競爭激烈。",
     "keywords_zh": [
       "蘿蔔快跑",
       "自駕車",
       "中國",
       "美國",
-      "競爭",
-      "市場",
       "2050年",
-      "蕭若元"
+      "市場競爭",
+      "自動駕駛"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
   },
   {
     "video_id": "VGiyK3HB34M",
@@ -717,18 +715,17 @@
       "text": null
     },
     "fetched_at": "2026-04-05T02:06:11Z",
-    "summary_zh": "陳文敏教授以納粹德國「雙軌政府」理論類比，指香港司法制度在普通案件與國安案件中採用不同準則，形成「雙軌法制」現象。",
+    "summary_zh": "陳文敏教授引用納粹德國「雙軌政府」理論，指香港司法制度在常規案件與國安案件上採用不同準則，形成「雙軌法制」現象。",
     "keywords_zh": [
+      "陳文敏",
       "香港",
       "雙軌法制",
-      "陳文敏",
-      "國安案件",
+      "納粹",
       "司法獨立",
-      "納粹歷史",
-      "47人初選案",
-      "一國兩制"
+      "國安案件",
+      "47人初選案"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
   },
   {
     "video_id": "0cUWY5FjA1A",
@@ -753,17 +750,17 @@
       "text": null
     },
     "fetched_at": "2026-04-05T02:06:11Z",
-    "summary_zh": "OpenAI旗艦模型Sora難產受挫，拖累全球AI生態發展，引發2026年AI泡沫爆破的預警。",
+    "summary_zh": "OpenAI旗艦模型Sora開發受挫，拖累全球AI生態發展，暗示2026年AI泡沫可能破裂。",
     "keywords_zh": [
       "AI神話",
       "Sora",
       "OpenAI",
       "龍蝦AI Agent",
       "AI泡沫",
-      "2026",
-      "模型受挫"
+      "2026年",
+      "全球生態"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
   },
   {
     "video_id": "kNsbo1IbRJk",
@@ -801,17 +798,18 @@
       "text": null
     },
     "fetched_at": "2026-04-05T02:06:11Z",
-    "summary_zh": "中共高層官員馬興瑞被官方宣布被抓，引發外界關注其與「皇后黨」的關聯及對習近平權力的影響。",
+    "summary_zh": "中共高級官員馬興瑞被官方宣布被捕，引發外界關注習近平政權內部權力鬥爭。",
     "keywords_zh": [
-      "馬興瑞",
-      "皇后黨",
-      "習近平",
-      "被抓",
       "中共",
-      "官員",
-      "反腐"
+      "皇后黨",
+      "馬興瑞",
+      "被抓",
+      "習近平",
+      "官宣",
+      "靈魂拷問",
+      "大員"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
   },
   {
     "video_id": "xDAiQVEIv-Q",
@@ -871,18 +869,18 @@
       "text": null
     },
     "fetched_at": "2026-04-05T02:06:11Z",
-    "summary_zh": "節目從政治心理學角度分析美國前總統特朗普的「屁孩式」領導風格，探討其自戀型人格特質如何影響中東外交決策與國際衝突升級風險。",
+    "summary_zh": "從政治心理學角度分析美國前總統特朗普的「屁孩式」領導風格，探討其自戀型人格特質如何影響中東外交決策與國際關係。",
     "keywords_zh": [
-      "屁孩",
-      "總統",
       "特朗普",
+      "總統",
+      "屁孩",
       "自戀型人格",
       "中東局勢",
       "外交政策",
-      "以色列",
-      "伊朗"
+      "領導風格",
+      "國際關係"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
   },
   {
     "video_id": "k96Wd8-B6Go",
@@ -913,18 +911,17 @@
       "text": null
     },
     "fetched_at": "2026-04-05T02:06:11Z",
-    "summary_zh": "通過兵棋推演分析美伊衝突中地面部隊傷亡的必然性，挑戰傳統戰爭「常識」，探討現代高科技條件下攻守交換的死亡比例與戰爭目標對戰爭時程的影響。",
+    "summary_zh": "探討地面部隊大規模傷亡是否必然，通過兵棋推演分析美伊戰爭的戰略目標與傷亡比例，指出決定勝負的關鍵在於攻守交換中的死亡成本而非武器代差。",
     "keywords_zh": [
       "美國",
       "伊朗",
       "地面部隊",
       "兵棋推演",
-      "傷亡",
+      "戰爭傷亡",
       "無人機",
-      "戰爭目標",
-      "美伊戰爭"
+      "軍事戰略"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
   },
   {
     "video_id": "yeqJA428Xz8",
@@ -955,17 +952,17 @@
       "text": null
     },
     "fetched_at": "2026-04-05T02:06:11Z",
-    "summary_zh": "悼念已故學者陳耀南教授，透過其親筆簽名著作《魏源研究》與「師夷長技以制夷」的思想遺產，重溫實體書籍與人文精神在AI時代的價值。",
+    "summary_zh": "悼念已故學人陳耀南教授，透過其親筆簽名著作《魏源研究》及私藏書籍，重溫「師夷長技以制夷」的學術精神與人文情懷。",
     "keywords_zh": [
       "陳耀南教授",
       "魏源研究",
       "師夷長技以制夷",
-      "親筆簽名",
-      "香港",
-      "學者",
-      "人文情懷"
+      "龍門陣",
+      "公共知識份子",
+      "典藏館",
+      "實體書"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
   },
   {
     "video_id": "dnNYtNLU81s",
@@ -1006,7 +1003,7 @@
       "text": null
     },
     "fetched_at": "2026-04-05T02:06:11Z",
-    "summary_zh": "傑斯探討基督十架的真實意義、基督復活對信仰的重要性，以及基督所承受的身心靈苦痛。",
+    "summary_zh": "傑斯探討基督十架的歷史真相、復活信仰的重要性，以及基督所承受的身心靈苦痛。",
     "keywords_zh": [
       "傑斯",
       "基督十架",
@@ -1014,9 +1011,9 @@
       "信仰",
       "苦痛",
       "精神",
-      "短打"
+      "皮肉"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
   },
   {
     "video_id": "KcSaimJBZAc",
@@ -1057,18 +1054,18 @@
       "text": null
     },
     "fetched_at": "2026-04-05T02:06:11Z",
-    "summary_zh": "涵蓋美伊軍事衝突、特朗普政策、全紅嬋事件及香港離散商戶困境等多項時事議題的綜合評論。",
+    "summary_zh": "涵蓋伊朗聲稱擊落美戰機、特朗普中東困局、全紅嬋事件及香港離散店舖倒閉潮等時事話題。",
     "keywords_zh": [
       "美軍",
       "伊朗",
-      "戰機",
       "特朗普",
       "全紅嬋",
-      "傑斯",
       "台北",
-      "香港"
+      "香港",
+      "離散",
+      "倒閉潮"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
   },
   {
     "video_id": "MVAR2CGVNCY",
@@ -1097,17 +1094,18 @@
       "text": null
     },
     "fetched_at": "2026-04-05T02:06:11Z",
-    "summary_zh": "美國陸軍參謀長喬治因與新任參謀總長赫格塞思在DEI政策上存在分歧而被撤換，反映新政府清除軍隊DEI文化的決心。",
+    "summary_zh": "美國陸軍參謀長喬治因在DEI政策上與新任參謀總長赫格塞思產生分歧而被免職，反映新政府清除軍隊DEI文化與舊領導層的衝突。",
     "keywords_zh": [
+      "城寨國際",
       "陸軍參謀長",
       "喬治",
-      "赫格塞思",
-      "DEI",
-      "參謀總長",
       "拜登",
+      "DEI",
+      "赫格塞思",
+      "參謀總長",
       "82空降師"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
   },
   {
     "video_id": "sYbAGdcsd04",
@@ -1136,16 +1134,17 @@
       "text": null
     },
     "fetched_at": "2026-04-05T02:06:11Z",
-    "summary_zh": "紐約時報批評侵爺考慮退出北約，但該報紙卻將北約誤解為北美公約而非北大西洋公約，知識分子報紙犯此低級錯誤引發嘲笑。",
+    "summary_zh": "紐約時報批評侵爺考慮退出北約，惟該報紙對北約定義理解有誤，將其誤認為北美公約而非北大西洋公約，知識分子報紙犯此低級錯誤引發嘲笑。",
     "keywords_zh": [
       "紐約時報",
       "侵爺",
       "北約",
+      "退出",
       "北美公約",
       "北大西洋公約",
-      "城寨國際"
+      "知識分子報紙"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
   },
   {
     "video_id": "fSsiYXzFmt8",
@@ -1174,7 +1173,7 @@
       "text": null
     },
     "fetched_at": "2026-04-05T02:06:11Z",
-    "summary_zh": "美軍A10地面攻擊機及F15E戰機被伊朗擊落，機師成功逃生；評論指美國左媒貶低軍事成果並批評政府對伊朗政策失誤。",
+    "summary_zh": "美軍A10地面攻擊機及F15E戰機在伊朗遭擊落，機師成功逃生；美國左翼媒體指責政策失誤並貶低軍事行動成果。",
     "keywords_zh": [
       "美軍",
       "A10地面攻擊機",
@@ -1182,10 +1181,10 @@
       "伊朗",
       "機師逃生",
       "左媒",
-      "中期選舉",
-      "共和黨"
+      "共和黨",
+      "中期選舉"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
   },
   {
     "video_id": "TPBmJTRw9ME",
@@ -1214,7 +1213,7 @@
       "text": null
     },
     "fetched_at": "2026-04-05T02:06:11Z",
-    "summary_zh": "香港法庭審訊龍五涉及指示跟蹤羅冠聰案件，同時倫敦爆發青少年暴亂搶掠事件，零售業因盜竊問題深受困擾。",
+    "summary_zh": "香港商人龍五被主控盤問時承認指示跟蹤羅冠聰，同時倫敦爆發青少年暴亂搶掠事件，零售業因店舖盜竊損失嚴重。",
     "keywords_zh": [
       "龍五",
       "羅冠聰",
@@ -1225,7 +1224,7 @@
       "盜竊",
       "零元購"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
   },
   {
     "video_id": "69_5bM6VUH0",
@@ -1251,16 +1250,15 @@
       "text": null
     },
     "fetched_at": "2026-04-05T02:06:11Z",
-    "summary_zh": "香港汽車油價世界最貴，達美國4倍，儘管有祖國供應支援，油價問題仍未解決。",
+    "summary_zh": "香港汽車油價世界最貴，高達美國的4倍，儘管有祖國供應支援，油價問題仍未解決。",
     "keywords_zh": [
       "香港",
       "汽車油價",
       "世界最貴",
       "美國",
-      "祖國支援",
-      "油價問題"
+      "祖國供應"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
   },
   {
     "video_id": "EOon1Q6beM4",
@@ -1286,16 +1284,16 @@
       "text": null
     },
     "fetched_at": "2026-04-05T02:06:11Z",
-    "summary_zh": "伊朗戰爭導致特朗普民望跌至新低，甚至基本支持者亦見流失，共和黨中期選舉前景堪憂。",
+    "summary_zh": "伊朗戰爭導致特朗普民望跌至新低，甚至共和黨基本盤也流失，共和黨面臨中期選舉困境。",
     "keywords_zh": [
       "伊朗戰爭",
       "特朗普",
       "民望",
-      "基本盤",
       "共和黨",
-      "中期選舉"
+      "中期選舉",
+      "基本盤"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
   },
   {
     "video_id": "3nY8T-ClRho",
@@ -1321,17 +1319,16 @@
       "text": null
     },
     "fetched_at": "2026-04-05T02:06:11Z",
-    "summary_zh": "美國總統特朗普聲言對伊朗進行空襲，惟美國空軍兩架戰機在伊朗境內被擊落，局勢升級。",
+    "summary_zh": "美國總統特朗普聲言對伊朗採取軍事行動，惟美國空軍兩架戰機在伊朗境內被擊落，引發美伊局勢升溫。",
     "keywords_zh": [
-      "侵侵",
+      "特朗普",
       "伊朗",
       "美國空軍",
-      "戰機",
-      "擊落",
-      "石器時代",
-      "空襲"
+      "戰機被擊落",
+      "軍事衝突",
+      "石器時代"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
   },
   {
     "video_id": "NdcyYxz9XxM",
@@ -1429,12 +1426,11 @@
     "keywords_zh": [
       "特朗普",
       "F-15戰機",
-      "飛官",
+      "飛行員",
       "伊朗",
-      "擊落",
-      "救回"
+      "擊落"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
   },
   {
     "video_id": "H6OMTaeC2ww",
@@ -1466,18 +1462,18 @@
       "text": null
     },
     "fetched_at": "2026-04-05T05:43:22Z",
-    "summary_zh": "評論溫家寶高調現身、北京宏福災場火災、北京剷泥車恐襲事件，以及香港歷史博物館改歷史爭議，並分析霍木茲海峽局勢與台海安全的關聯。",
+    "summary_zh": "分析溫總現身、宏福火災、北京安全威脅、香港歷史博物館爭議及霍木茲海峽局勢等時事熱點。",
     "keywords_zh": [
       "溫總",
       "宏福災場",
       "北京",
-      "歷史博物館",
       "霍木茲",
       "台海",
+      "香港歷史博物館",
       "陶傑",
       "鮑偉聰"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
   },
   {
     "video_id": "j3ue0z2yh5k",
@@ -1508,7 +1504,7 @@
       "text": null
     },
     "fetched_at": "2026-04-05T05:43:22Z",
-    "summary_zh": "美國時隔50年後重返月球，NASA推出「月球女神號2號」任務，改採公私合作模式與中國在月球競賽中競爭。",
+    "summary_zh": "美國時隔50年重返月球，NASA推出「月球女神號2號」繞月任務，採用公私合作模式應對中美月球競賽。",
     "keywords_zh": [
       "美國",
       "月球",
@@ -1516,10 +1512,9 @@
       "NASA",
       "公私合作",
       "中美競賽",
-      "征月",
       "50年"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
   },
   {
     "video_id": "ZAeBm1HZkws",
@@ -1550,18 +1545,18 @@
       "text": null
     },
     "fetched_at": "2026-04-05T05:43:22Z",
-    "summary_zh": "通過德黑蘭搜羅的霍梅尼圖集，展現伊朗神權國度的複雜性，反映其人民友善與政治宣傳的雙面特性。",
+    "summary_zh": "通過霍梅尼畫集探討伊朗神權國度的兩面性，從革命領袖的歷史瞬間反映國家的政治宣傳、人民文化與國際關係。",
     "keywords_zh": [
       "伊朗",
       "伊斯蘭共和國",
       "霍梅尼",
       "最高精神領袖",
-      "德黑蘭",
+      "畫集",
       "革命",
-      "兩伊戰爭",
-      "政治宣傳"
+      "德黑蘭",
+      "兩伊戰爭"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
   },
   {
     "video_id": "8nEjs2Fpqus",
@@ -1590,15 +1585,13 @@
       "text": null
     },
     "fetched_at": "2026-04-05T05:43:22Z",
-    "summary_zh": "城寨進行直播節目，與觀眾實時互動分享時事評論。",
+    "summary_zh": "城寨直播節目進行中。",
     "keywords_zh": [
       "城寨",
-      "直播",
       "Singjai",
-      "時事評論",
-      "互動"
+      "直播"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
   },
   {
     "video_id": "dMOrjLPseKA",
@@ -1627,7 +1620,7 @@
       "text": null
     },
     "fetched_at": "2026-04-05T05:43:22Z",
-    "summary_zh": "蔡若蓮否認福建中學淋紅油事件與政治相關，同時中共多名軍工高層離奇人間蒸發或猝死，習近平追究武器系統失靈責任。",
+    "summary_zh": "蔡若蓮否認福建中學淋紅油事件與政治相關，而多名中共軍工高層人間蒸發或猝死，習近平啟動調查追究武器系統失靈責任。",
     "keywords_zh": [
       "蔡若蓮",
       "福建中學",
@@ -1635,9 +1628,424 @@
       "中共軍工",
       "習近平",
       "武器系統",
-      "人間蒸發",
-      "軍事現代化"
+      "余茂春"
     ],
-    "processed_at": "2026-04-05T05:46:51Z"
+    "processed_at": "2026-04-05T08:42:23Z"
+  },
+  {
+    "video_id": "hckC0I_RNh4",
+    "channel_id": "UCVZTkv6LM-_xWUM9t-jS5JA",
+    "channel_name": "CC News 新聞.政評",
+    "channel_tags": [
+      "taiwan",
+      "hongkong"
+    ],
+    "title": "【日不落香港EP12-3】移民港店應否搶中國客？小紅書係紅線？吳日言被鬧爆的啟示",
+    "description": "#1點新聞 #港股 #23條\n\n支持CC媒體發展：\nPatreon支持及收看最新獨家內容\n 《財富BB Club》\nhttps://www.patreon.com/wealthclub\nCoffee support☕\nhttps://www.buymeacoffee.com/calvinwine\n《CC工作室》\nhttp://patreon.com/calvinchoy\n訂閱 CC News \nhttps://youtube.com/@ccnewshk\n成為CC News 頻道會員：\nhttps://www.youtube.com/channel/UCVZTkv6LM-_xWUM9t-jS5JA/join\n訂閱CC China Economics 中國經濟頻道：\nhttps://youtube.com/@CCChinaecon\n\n追踪CalvinChoyStudio動向：\nIG:\nhttps://www.instagram.com/calvinchoy_studio/\nFB:\nhttps://www.facebook.com/calvinwine.raga\nTwitter:\nhttps://twitter.com/CalvinChoy7\nMewe:\nhttps://mewe.com/i/calvinwine",
+    "published_at": "2026-04-05T00:04:27Z",
+    "duration_seconds": 0,
+    "view_count": 0,
+    "like_count": 5,
+    "comment_count": 0,
+    "tags": [
+      "習近平",
+      "美國",
+      "中國",
+      "小粉紅",
+      "限電令",
+      "恆大",
+      "拜登",
+      "國情",
+      "糧荒",
+      "華記",
+      "張高麗",
+      "彭帥",
+      "李雲迪",
+      "維尼",
+      "黃明志",
+      "玻璃心",
+      "武統",
+      "港獨",
+      "台獨",
+      "國安法",
+      "林鄭",
+      "內房",
+      "債務",
+      "違約",
+      "中美",
+      "洪為民",
+      "洪門宴",
+      "gg",
+      "gg channel",
+      "covid",
+      "疫情",
+      "疫苗",
+      "抗疫",
+      "一國兩制",
+      "國案法",
+      "清零",
+      "0+0",
+      "0+7",
+      "烏克蘭",
+      "俄羅斯",
+      "晶片",
+      "半導體",
+      "二十大",
+      "港股",
+      "侯友宜",
+      "賴清德",
+      "柯文哲",
+      "國民黨",
+      "民眾黨",
+      "民進黨",
+      "趙少康",
+      "年代向錢看",
+      "藍白合",
+      "柯P",
+      "馬英九",
+      "黃珊珊",
+      "郭台銘",
+      "閱兵",
+      "洪秀柱",
+      "金正恩",
+      "抗日",
+      "普京",
+      "普丁",
+      "nvidia",
+      "中芯",
+      "芯片",
+      "阿里巴巴"
+    ],
+    "thumbnail_url": "https://i.ytimg.com/vi/hckC0I_RNh4/hqdefault.jpg",
+    "transcript": {
+      "available": false,
+      "language": null,
+      "source": null,
+      "text": null
+    },
+    "fetched_at": "2026-04-05T08:38:56Z",
+    "summary_zh": "探討移民港店應否以小紅書等平台搶攻中國客市場，以及吳日言事件引發的社會啟示。",
+    "keywords_zh": [
+      "日不落香港",
+      "移民港店",
+      "中國客",
+      "小紅書",
+      "紅線",
+      "吳日言"
+    ],
+    "processed_at": "2026-04-05T08:42:23Z"
+  },
+  {
+    "video_id": "C84G3HgahlA",
+    "channel_id": "UCVZTkv6LM-_xWUM9t-jS5JA",
+    "channel_name": "CC News 新聞.政評",
+    "channel_tags": [
+      "taiwan",
+      "hongkong"
+    ],
+    "title": "【日不落香港EP12-4】伊朗之戰失控！繼F15E機師落難，又一架A10被擊落！美軍發動「雷霆救兵」真人版！機師一旦受擒，伊朗戰爭想完都難！",
+    "description": "#1點新聞 #港股 #23條\n\n支持CC媒體發展：\nPatreon支持及收看最新獨家內容\n 《財富BB Club》\nhttps://www.patreon.com/wealthclub\nCoffee support☕\nhttps://www.buymeacoffee.com/calvinwine\n《CC工作室》\nhttp://patreon.com/calvinchoy\n訂閱 CC News \nhttps://youtube.com/@ccnewshk\n成為CC News 頻道會員：\nhttps://www.youtube.com/channel/UCVZTkv6LM-_xWUM9t-jS5JA/join\n訂閱CC China Economics 中國經濟頻道：\nhttps://youtube.com/@CCChinaecon\n\n追踪CalvinChoyStudio動向：\nIG:\nhttps://www.instagram.com/calvinchoy_studio/\nFB:\nhttps://www.facebook.com/calvinwine.raga\nTwitter:\nhttps://twitter.com/CalvinChoy7\nMewe:\nhttps://mewe.com/i/calvinwine",
+    "published_at": "2026-04-04T23:53:07Z",
+    "duration_seconds": 0,
+    "view_count": 0,
+    "like_count": 5,
+    "comment_count": 0,
+    "tags": [
+      "習近平",
+      "美國",
+      "中國",
+      "小粉紅",
+      "限電令",
+      "恆大",
+      "拜登",
+      "國情",
+      "糧荒",
+      "華記",
+      "張高麗",
+      "彭帥",
+      "李雲迪",
+      "維尼",
+      "黃明志",
+      "玻璃心",
+      "武統",
+      "港獨",
+      "台獨",
+      "國安法",
+      "林鄭",
+      "內房",
+      "債務",
+      "違約",
+      "中美",
+      "洪為民",
+      "洪門宴",
+      "gg",
+      "gg channel",
+      "covid",
+      "疫情",
+      "疫苗",
+      "抗疫",
+      "一國兩制",
+      "國案法",
+      "清零",
+      "0+0",
+      "0+7",
+      "烏克蘭",
+      "俄羅斯",
+      "晶片",
+      "半導體",
+      "二十大",
+      "港股",
+      "侯友宜",
+      "賴清德",
+      "柯文哲",
+      "國民黨",
+      "民眾黨",
+      "民進黨",
+      "趙少康",
+      "年代向錢看",
+      "藍白合",
+      "柯P",
+      "馬英九",
+      "黃珊珊",
+      "郭台銘",
+      "閱兵",
+      "洪秀柱",
+      "金正恩",
+      "抗日",
+      "普京",
+      "普丁",
+      "nvidia",
+      "中芯",
+      "芯片",
+      "阿里巴巴"
+    ],
+    "thumbnail_url": "https://i.ytimg.com/vi/C84G3HgahlA/hqdefault.jpg",
+    "transcript": {
+      "available": false,
+      "language": null,
+      "source": null,
+      "text": null
+    },
+    "fetched_at": "2026-04-05T08:38:56Z",
+    "summary_zh": "美軍F15E機師在伊朗戰事中落難後，又一架A10攻擊機遭擊落，美軍展開救援行動，若機師被俘將使伊朗衝突陷入膠著。",
+    "keywords_zh": [
+      "伊朗",
+      "美軍",
+      "F15E",
+      "A10",
+      "機師落難",
+      "雷霆救兵",
+      "戰爭"
+    ],
+    "processed_at": "2026-04-05T08:42:23Z"
+  },
+  {
+    "video_id": "mRGw1zH42nw",
+    "channel_id": "UCVZTkv6LM-_xWUM9t-jS5JA",
+    "channel_name": "CC News 新聞.政評",
+    "channel_tags": [
+      "taiwan",
+      "hongkong"
+    ],
+    "title": "【日不落香港EP12-2】台北REV-NOW結業！｜海外港人黃店倒閉潮？政治情懷撐唔住生意",
+    "description": "#1點新聞 #港股 #23條\n\n支持CC媒體發展：\nPatreon支持及收看最新獨家內容\n 《財富BB Club》\nhttps://www.patreon.com/wealthclub\nCoffee support☕\nhttps://www.buymeacoffee.com/calvinwine\n《CC工作室》\nhttp://patreon.com/calvinchoy\n訂閱 CC News \nhttps://youtube.com/@ccnewshk\n成為CC News 頻道會員：\nhttps://www.youtube.com/channel/UCVZTkv6LM-_xWUM9t-jS5JA/join\n訂閱CC China Economics 中國經濟頻道：\nhttps://youtube.com/@CCChinaecon\n\n追踪CalvinChoyStudio動向：\nIG:\nhttps://www.instagram.com/calvinchoy_studio/\nFB:\nhttps://www.facebook.com/calvinwine.raga\nTwitter:\nhttps://twitter.com/CalvinChoy7\nMewe:\nhttps://mewe.com/i/calvinwine",
+    "published_at": "2026-04-04T23:45:14Z",
+    "duration_seconds": 0,
+    "view_count": 0,
+    "like_count": 6,
+    "comment_count": 0,
+    "tags": [
+      "習近平",
+      "美國",
+      "中國",
+      "小粉紅",
+      "限電令",
+      "恆大",
+      "拜登",
+      "國情",
+      "糧荒",
+      "華記",
+      "張高麗",
+      "彭帥",
+      "李雲迪",
+      "維尼",
+      "黃明志",
+      "玻璃心",
+      "武統",
+      "港獨",
+      "台獨",
+      "國安法",
+      "林鄭",
+      "內房",
+      "債務",
+      "違約",
+      "中美",
+      "洪為民",
+      "洪門宴",
+      "gg",
+      "gg channel",
+      "covid",
+      "疫情",
+      "疫苗",
+      "抗疫",
+      "一國兩制",
+      "國案法",
+      "清零",
+      "0+0",
+      "0+7",
+      "烏克蘭",
+      "俄羅斯",
+      "晶片",
+      "半導體",
+      "二十大",
+      "港股",
+      "侯友宜",
+      "賴清德",
+      "柯文哲",
+      "國民黨",
+      "民眾黨",
+      "民進黨",
+      "趙少康",
+      "年代向錢看",
+      "藍白合",
+      "柯P",
+      "馬英九",
+      "黃珊珊",
+      "郭台銘",
+      "閱兵",
+      "洪秀柱",
+      "金正恩",
+      "抗日",
+      "普京",
+      "普丁",
+      "nvidia",
+      "中芯",
+      "芯片",
+      "阿里巴巴"
+    ],
+    "thumbnail_url": "https://i.ytimg.com/vi/mRGw1zH42nw/hqdefault.jpg",
+    "transcript": {
+      "available": false,
+      "language": null,
+      "source": null,
+      "text": null
+    },
+    "fetched_at": "2026-04-05T08:38:56Z",
+    "summary_zh": "台北港人黃店REV-NOW結業，反映海外港人經營的政治導向商店面臨經營困難，政治情懷難以支撑商業運營。",
+    "keywords_zh": [
+      "日不落香港",
+      "台北",
+      "REV-NOW",
+      "港人黃店",
+      "結業",
+      "倒閉潮",
+      "海外港人",
+      "政治情懷"
+    ],
+    "processed_at": "2026-04-05T08:42:23Z"
+  },
+  {
+    "video_id": "VrzhxEmXrew",
+    "channel_id": "UCVZTkv6LM-_xWUM9t-jS5JA",
+    "channel_name": "CC News 新聞.政評",
+    "channel_tags": [
+      "taiwan",
+      "hongkong"
+    ],
+    "title": "【日不落香港EP12-1】全紅嬋被網暴？中國運動員真實下場 ｜傑斯數威水史「食過主播」",
+    "description": "#1點新聞 #港股 #23條\n\n支持CC媒體發展：\nPatreon支持及收看最新獨家內容\n 《財富BB Club》\nhttps://www.patreon.com/wealthclub\nCoffee support☕\nhttps://www.buymeacoffee.com/calvinwine\n《CC工作室》\nhttp://patreon.com/calvinchoy\n訂閱 CC News \nhttps://youtube.com/@ccnewshk\n成為CC News 頻道會員：\nhttps://www.youtube.com/channel/UCVZTkv6LM-_xWUM9t-jS5JA/join\n訂閱CC China Economics 中國經濟頻道：\nhttps://youtube.com/@CCChinaecon\n\n追踪CalvinChoyStudio動向：\nIG:\nhttps://www.instagram.com/calvinchoy_studio/\nFB:\nhttps://www.facebook.com/calvinwine.raga\nTwitter:\nhttps://twitter.com/CalvinChoy7\nMewe:\nhttps://mewe.com/i/calvinwine",
+    "published_at": "2026-04-04T22:39:21Z",
+    "duration_seconds": 0,
+    "view_count": 0,
+    "like_count": 5,
+    "comment_count": 0,
+    "tags": [
+      "習近平",
+      "美國",
+      "中國",
+      "小粉紅",
+      "限電令",
+      "恆大",
+      "拜登",
+      "國情",
+      "糧荒",
+      "華記",
+      "張高麗",
+      "彭帥",
+      "李雲迪",
+      "維尼",
+      "黃明志",
+      "玻璃心",
+      "武統",
+      "港獨",
+      "台獨",
+      "國安法",
+      "林鄭",
+      "內房",
+      "債務",
+      "違約",
+      "中美",
+      "洪為民",
+      "洪門宴",
+      "gg",
+      "gg channel",
+      "covid",
+      "疫情",
+      "疫苗",
+      "抗疫",
+      "一國兩制",
+      "國案法",
+      "清零",
+      "0+0",
+      "0+7",
+      "烏克蘭",
+      "俄羅斯",
+      "晶片",
+      "半導體",
+      "二十大",
+      "港股",
+      "侯友宜",
+      "賴清德",
+      "柯文哲",
+      "國民黨",
+      "民眾黨",
+      "民進黨",
+      "趙少康",
+      "年代向錢看",
+      "藍白合",
+      "柯P",
+      "馬英九",
+      "黃珊珊",
+      "郭台銘",
+      "閱兵",
+      "洪秀柱",
+      "金正恩",
+      "抗日",
+      "普京",
+      "普丁",
+      "nvidia",
+      "中芯",
+      "芯片",
+      "阿里巴巴"
+    ],
+    "thumbnail_url": "https://i.ytimg.com/vi/VrzhxEmXrew/hqdefault.jpg",
+    "transcript": {
+      "available": false,
+      "language": null,
+      "source": null,
+      "text": null
+    },
+    "fetched_at": "2026-04-05T08:38:56Z",
+    "summary_zh": "探討全紅嬋遭網暴事件，分析中國運動員在輿論風暴中的真實處境。",
+    "keywords_zh": [
+      "全紅嬋",
+      "網暴",
+      "中國運動員",
+      "日不落香港",
+      "傑斯",
+      "主播",
+      "輿論"
+    ],
+    "processed_at": "2026-04-05T08:42:23Z"
   }
 ]
