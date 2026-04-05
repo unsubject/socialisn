@@ -107,6 +107,59 @@ def is_within_lookback(published_at: str | None, lookback_hours: int) -> bool:
 
 HT_NS = "https://trends.google.com/trending/rss"
 
+# Entertainment / sports / lifestyle sources to skip in Google Trends.
+# Trends whose related news ALL come from these sources are filtered out.
+_SKIP_SOURCES = {
+    # Entertainment / celebrity / lifestyle
+    "香港01", "明報 Our Lifestyle", "Ming Pao Weekly", "明周娛樂",
+    "香港文匯網", "搜狐网", "Sohu", "3DM", "TMZ", "Instagram",
+    "InStyle", "Town & Country Magazine", "The Telegraph",
+    "Boston Herald", "モデルプレス", "Yahoo!ニュース",
+    "TVB", "星島頭條", "LIMO",
+    # Sports
+    "ESPN", "ESPN Deportes", "CBS Sports", "Yahoo Sports",
+    "ATP Tour", "MARCA", "Eurosport", "スタ뉴스",
+    "フォーカス台湾",
+}
+
+# Keywords in news_item_title that indicate entertainment/sports/lifestyle
+_SKIP_TITLE_KEYWORDS = [
+    # Entertainment / celebrity
+    "娛樂", "明星", "演員", "歌手", "選秀", "綜藝", "偶像",
+    "紅毯", "時裝", "美妝", "穿搭", "outfit", "逝世", "去世",
+    "古惑仔", "姊妹情", "好聲音", "女星", "男星",
+    "美脚", "ドレス", "ミニスカ",
+    # Sports
+    "NBA", "NFL", "MLB", "ATP", "FIFA", "UFC", "卓球", "W杯",
+    "Final Four", "March Madness", "NCAA",
+    "Hacks", "movie", "film", "drama", "ドラマ",
+    # Weather
+    "cuaca", "天氣預報", "weather forecast",
+]
+
+
+def _is_relevant_trend(news_items: list[dict]) -> bool:
+    """Return True if at least one related news item looks relevant
+    (i.e. not purely entertainment/sports/lifestyle)."""
+    if not news_items:
+        # No related news — keep it, could be a finance/politics keyword
+        return True
+    for ni in news_items:
+        source = ni.get("source", "")
+        title = ni.get("title", "")
+        # Skip if source is in blocklist
+        if source in _SKIP_SOURCES:
+            continue
+        # Skip if title contains entertainment/sports keywords
+        title_lower = title.lower()
+        if any(kw.lower() in title_lower for kw in _SKIP_TITLE_KEYWORDS):
+            continue
+        # At least one relevant article found
+        return True
+    # All articles matched skip criteria
+    return False
+
+
 def fetch_google_trends(source: dict, fetched_at: str) -> list[dict]:
     """Parse Google Trends RSS with raw XML to preserve ht:news_item children."""
     name = source["name"]
@@ -156,6 +209,11 @@ def fetch_google_trends(source: dict, fetched_at: str) -> list[dict]:
                     "source": ni_source,
                     "snippet": ni_snippet,
                 })
+
+        # Filter out entertainment / sports / lifestyle trends
+        if not _is_relevant_trend(news_items):
+            log.info(f"    Skipping entertainment/sports trend: {headline}")
+            continue
 
         # Build full_text from related news titles (snippets are usually empty)
         full_text_parts = [f"熱搜關鍵字: {headline}"]
