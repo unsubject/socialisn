@@ -884,5 +884,328 @@
       "taiwan",
       "chinese"
     ]
+  },
+  {
+    "article_id": "2936fc7670fae3f7",
+    "source_name": "South China Morning Post",
+    "source_type": "rss",
+    "url": "https://www.scmp.com/tech/policy/article/3348956/chinese-firms-trail-us-peers-ai-adoption-due-corporate-culture-ex-openai-executive?utm_source=rss_feed",
+    "headline": "Chinese firms trail US peers in AI adoption due to corporate culture: ex-OpenAI executive",
+    "excerpt": "Traditional corporate culture and hierarchies are slowing down artificial intelligence adoption in Chinese enterprises, leaving them trailing their US peers, even as China’s savvy consumers embrace AI agents at a breakneck pace, says Zack Kass, former head of go-to-market at OpenAI.\nChina has a very “techno-centric consumer”, while the US has a very “techno-centric enterprise”, Kass told the South China Morning Post in a recent interview.\nHighlighting this contrast, Kass said typical Chinese...",
+    "full_text": "China has a very “techno-centric consumer”, while the US has a very “techno-centric enterprise”, Kass told the South China Morning Post in a recent interview.\n\nKass worked at OpenAI from 2021 to 2023, during which the company launched its groundbreaking chatbot, ChatGPT, in November 2022. He now runs his own consultancy.\n\n“The American consumer is far more cynical about technology and big tech,” said Kass, citing anxieties over social media’s impact on children and declining public trust. This cultural divergence, he said, helped explain the frenzy surrounding OpenClaw in China, even as it struggles to achieve the same scale and popularity in the US.",
+    "published_at": "Sun, 05 Apr 2026 11:00:08 +0000",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "en",
+    "tags": [
+      "hongkong",
+      "english",
+      "general"
+    ]
+  },
+  {
+    "article_id": "9638836e0039fefd",
+    "source_name": "CNBC Asia Economy",
+    "source_type": "rss",
+    "url": "https://www.cnbc.com/2026/04/05/ai-retail-start-ups-virtual-try-on-tech-margins.html",
+    "headline": "'Silent killers': How AI start-ups are trying to solve one of the retail industry's biggest problems",
+    "excerpt": "The rapid evolution of generative AI has finally made these applications good enough to meaningfully impact retailers' bottom lines.",
+    "full_text": "Moment Makers Group | Istock | Getty Images\n\nIt pinches here; drags there; the draping is wrong. These are some of the examples of the feedback a new crop of artificial intelligence apps might give a prospective customer trying on clothing ahead of a purchase, and in the process reduce the chances of a product being returned to a store.\n\nFashion retailers are increasingly turning to AI to solve the issue of rising product returns, a persistent drag on profitability and something many in the industry refer to as the industry's \"silent killer\".\n\nA growing number of AI start-ups have emerged to provide virtual try-on technology, allowing potential customers to visualize fit and style before they buy.\n\nWhile tech companies have attempted to solve online fit issues since the 2010's, the rapid development of generative AI has finally made these applications good enough to meaningfully impact retailers' bottom lines.\n\nThe U.S. National Retail Federation late last year estimated that 15.8% of annual retail sales were returned in 2025, totaling $849.9 billion. For online sales, that number jumped to 19.3%. Gen Z is driving this trend, with shoppers aged 18 to 30 averaging nearly eight online returns per person last year, the NRF found.\n\nMost returned items never make it back to the shelves and often cost the retailer more to process than the value of the refund itself. It's a multibillion-dollar problem for the industry that's eating directly into companies' margins.\n\n\"Figuring out how to proactively use returns and then how to minimize them can be a meaningful driver of business and profitability,\" Guggenheim Senior Managing Director Simeon Siegel told CNBC.\n\nWhile fit technology will never be as good as trying something on in person, it's a great way to bridge the gap, Siegel said. \"It's going to continue to get better, I think that's going to continue to reduce returns.\"\n\nMirror-like realism?\n\nThe primary reason for returns and abandoned shopping carts is uncertainty over fit, Ed Voyce, founder and CEO of AI startup Catches, told CNBC in an interview.\n\nCatches has developed a platform that allows users to create a \"digital twin\" to try on clothes virtually with what it calls \"mirror-like realism.\" The application went live last month on luxury brand Amiri's website for a select range of clothes.\n\nUnlike other models that Voyce says \"just look pretty,\" the Catches platform incorporates the physics of fabric texture and how material interacts with a moving body.\n\nwatch now\n\n\"The reason we built Catches was to take advantage of a kind of confluence of technologies that is taking place right now to solve this issue effectively,\" says Voyce, who founded the startup backed by LVMH's Antoine Arnault and built on Nvidia's CUDA platform.\n\n\"The reason it's solvable now in terms of timing is that you have to be able to run visuals for end users on bare metal in the cloud, cheaply enough to make a [return on investment] for brands,\" Voyce says.\n\n\"This technology has the potential to impact the whole industry and really usher in the new wave of what end users expect.\"\n\nProtecting the margin\n\nThese AI tools aren't only meant to reduce returns, but also to help enhance purchases.\n\nWhile e-commerce has grown rapidly in recent years, with online shopping driving retail sales growth, the current U.S. trade policy under President Donald Trump has put a dampener on the sector which relies heavily on manufacturing in Southeast Asia. Across the price spectrum, retailers are struggling to maintain margins as costs rise and consumers become increasingly price sensitive amid inflationary pressures.\n\nWhile returns are a meaningful drag on profit margins, they are also a critical factor in consumers' purchasing decisions. NRF data shows that 82% of consumers consider free returns essential, yet the cost of providing them is becoming unsustainable for many brands.\n\nRetailers are now testing a mix of tech and policy to protect margins.\n\nStrategies to reduce returns range from charging for return shipping to providing more granular sizing information and incentivizing exchanges over refunds.\n\nZara, owned by Inditex , was one of the first to implement return fees for online orders, and while it was a contentious change for some customers, it helped the Spanish retailer protect its gross margin and discourage \"bracketing\" – the practice of buying multiple sizes to try on at home.\n\nThe retailer also rolled out a virtual try-on tool, \"Zara try-on,\" in December.\n\nMeanwhile, ASOS recently highlighted a stark improvement in profitability, partly driven by a 160 basis point reduction in its returns rate.\n\nThe online fast fashion player has been experimenting with virtual try-ons in partnership with deep-tech startup AIUTA, allowing prospective customers to see a piece of clothing on a range of body types, heights, and skin tones. ASOS, however, cautions that the tool is designed to give general guidance and that customers must still check size guides...",
+    "published_at": "Sun, 05 Apr 2026 12:37:57 GMT",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "en",
+    "tags": [
+      "global",
+      "economics",
+      "english"
+    ]
+  },
+  {
+    "article_id": "8d8fb2c0905e3548",
+    "source_name": "CNBC Asia Economy",
+    "source_type": "rss",
+    "url": "https://www.cnbc.com/2026/04/05/autos-defense-europe-car-industry.html",
+    "headline": "'Anything but autos': Can defense save Europe’s ailing car industry?",
+    "excerpt": "The transition from wheels to weapons is achievable in part because many of the underlying skills are highly transferable, according to experts.",
+    "full_text": "Ludovic Marin | AFP | Getty Images\n\nThe European car industry is in a structural crisis. Slowing demand for electric vehicles, lost market share to Chinese competitors and higher borrowing costs have created the perfect storm for the sector over the past five years, as sales volumes continue to slump well below pre-pandemic levels.\n\nEurope's automakers have a long history of producing defense equipment and weapons when called upon during wartime. Some firms now think returning to these roots could offer a lifeline.\n\nAnalysts at Citi have dubbed this shift the \"anything but autos\" trade.\n\nOn Monday, Renault announced it was developing a ground-based drone for military and civilian use. This followed its announcement of a partnership with defense group Turgis Gaillard in January to produce aerial drones in France.\n\nMeanwhile, German automaker Volkswagen is reportedly in talks with Israeli defense firm Rafael to produce parts for missile defense systems.\n\nThe pair are in discussions to convert VW's factory in Osnabrück, Germany, into facilities for making components for the Israeli Iron Dome missile-defense system produced by Rafael, the FT reported on March 24.\n\nEuropean autos are struggling to compete directly with Chinese rivals, such as BYD. While new-car sales dropped in the EU through January, BYD stunned the market by reporting a 175% year-on-year increase in deliveries to 13,982 units, according to ACEA data.\n\nThe industry's decline is felt in carmakers' share prices, too. The Stoxx 600 Automobiles index has fallen 30% over the past five years as of April 2, while VW has tanked over 60% since then. Stellantis , which owns brands including Fiat and Peugeot, has shed 58% over the same period.\n\nStock Chart IconStock chart icon\n\nBy contrast, the European defense industry is booming. The urgent need to rearm following Russia's invasion of Ukraine in 2022 and an apparent fracturing of relations within NATO mean Europe must become more self-sufficient in its defense production.\n\nLast year, EU president Ursula von der Leyen said Europe was in an \"era of rearmament\" and could mobilize 800 billion euros in defense investment through loans and other programs.\n\n\"The defense industry has huge growth prospects with government budgets and Nato requirements backing it,\" Rico Luman, senior sector economist for transport and logistics at Dutch bank ING, told CNBC by email.\n\n\"For the defense industry it's rather a question of how to expand production than if. Redirecting production capacity is an opportunity for the automotive industry.\"\n\nBut other analysts question whether riding the coattails of the defense sector will be enough to save the ailing auto industry, flagging several concerns about carmakers' ability to grow in this space.\n\nA farewell to arms? Not so fast\n\nThe relationship between carmakers and weapons manufacturing has always been symbiotic. During World War II, automotive companies across the world halted civilian production to focus on their nations' respective war efforts — producing military vehicles, aircraft engines, as well as guns and ammunition.\n\nThe transition from wheels to weapons and back again is achievable in part because many of the underlying skills are highly transferable, according to experts.\n\n\"There is significant overlap in capabilities, as both industries rely on advanced manufacturing, complex supply chains, and engineering,\" Zuzana Pelakova, economy and business director at Slovakian think tank Globsec, told CNBC over email.\n\n\"There is also a historical precedent. Countries like Slovakia and Czechia – today among the world leaders in car production per capita – built much of their automotive strength on a workforce that once worked in defense industries before the end of socialism.\"\n\nVW is in a particularly tight spot, facing deteriorating profitability and looking to reduce headcount by 35,000 — or roughly 5% of its workforce — before 2030.\n\nShould talks with Rafael or other defense suitors bear fruit, VW's potential to repurpose its obsolete Osnabrück plant – which the company is due to close in 2027 – could save up to 2,300 jobs.\n\nBut Germany's largest trade union said that transferring large numbers of workers from other industrial sectors to defense industry companies is \"unrealistic\" and \"not a solution\" to the industry's structural problems.\n\n\"This will not be enough to offset the impending job losses in the automotive industry, among suppliers, and in other core sectors of the metal and electrical industries,\" IG Metall told CNBC over email.\n\n\"The sectors operate too differently for that. Unlike in the high-volume automotive industry, for example, the defense sector is dominated by small-batch production. Even if production volumes are ramped up here, manufacturing will not resemble that of the automotive industry.\"\n\nEthical concerns\n\nAutomakers' partnerships with defense firms could also raise ethical concerns among workers, should they be given the choice of producing wea...",
+    "published_at": "Sun, 05 Apr 2026 05:00:01 GMT",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "en",
+    "tags": [
+      "global",
+      "economics",
+      "english"
+    ]
+  },
+  {
+    "article_id": "7284446fc16171e7",
+    "source_name": "RTHK 本地新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1850043-20260405.htm",
+    "headline": "旺角發生非禮案　48歲男子被捕",
+    "excerpt": "旺角發生非禮案，一名48歲男子被捕，正被扣查。\n\n事發於傍晚約6時半，警方接報一名17歲女子在旺角彌敦道，懷疑被一名男子非禮。\n\n案件交由旺角警區刑事調查隊第六隊跟進。\n\n\n\n編輯：陳曉慶",
+    "full_text": null,
+    "published_at": "Sun, 05 Apr 2026 20:42:55 +0800",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "politics",
+      "chinese"
+    ]
+  },
+  {
+    "article_id": "687ee78d367800bd",
+    "source_name": "RTHK 本地新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1850041-20260405.htm",
+    "headline": "港鐵機場快綫及東涌綫服務逐步回復正常",
+    "excerpt": "港鐵表示，經搶修後，小蠔灣車廠附近的信號設備完成復修，機場快綫及東涌綫服務逐步回復正常。\n\n機場快綫市區預辦登機服務亦已回復正常。\n\n\n\n編輯：陳曉慶",
+    "full_text": null,
+    "published_at": "Sun, 05 Apr 2026 20:14:56 +0800",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "politics",
+      "chinese"
+    ]
+  },
+  {
+    "article_id": "0dd73f241cf81603",
+    "source_name": "RTHK 本地新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1850038-20260405.htm",
+    "headline": "陳國基結束陝西訪問行程返港　指期望與陝西加強愛國主義教育合作",
+    "excerpt": "政務司司長陳國基結束陝西省訪問行程返港。他在陝西省兩日訪問行程期間，拜訪當地領導，就加強兩地人文交流、教育合作、創新科技等各方面的發展交流意見。\n\n陳國基昨日拜會陝西省委書記趙一德，就深化陝港兩地各方面的交流合作交換意見。中央港澳辦、國務院港澳辦分管日常工作的副主任徐啟方亦參加會面。陳國基指出，陝港雙方自2024年簽署《深化陝港交流合作協議》，以及一系列在法律服務、科技創新、教育、旅遊等領域的合作備忘錄起，在中央政府支持及陝港共同努力下，兩地交流合作成果豐碩，未來可在不同範疇，尤其是人文交流、教育合作、創新科技等方面加強合作，優勢互補。\n\n陳國基亦感謝陝西省人民政府邀請參與今日舉行的清明公祭軒轅黃帝典禮。他表示，今次活動意義非凡，連結海內外的炎黃子孫一同祭拜「人文初祖」黃帝，傳承中華民族慎終追遠的傳統美德。香港特區政府參與今次典禮，有助讓香港市民更深入認識中華文明的源流，進一步提升國民身分認同和民族情感。\n\n陳國基又在社交專頁表示，愛國主義教育是深耕細作、細水長流、久久為功的人心工作，需要更多歷史文化遺跡、歷史文化作品、歷史文化場景和歷史文化平台，期望未來進一步與陝西加強在愛國主義教育",
+    "full_text": null,
+    "published_at": "Sun, 05 Apr 2026 19:50:51 +0800",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "politics",
+      "chinese"
+    ]
+  },
+  {
+    "article_id": "3ce159ef87d8b3ab",
+    "source_name": "RTHK 本地新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1850037-20260405.htm",
+    "headline": "西九咖啡節受天雨影響　今日入場人士可憑手帶或收據明日再次入場",
+    "excerpt": "戶外咖啡節「2026 Coffee Hong Kong @WestK​」周五起一連四日在西九藝術公園大草坪舉行，昨日和今日天文台先後發出黃色暴雨警告信號。主辦方表示，活動不設退票安排，但考慮到天雨影響訪客體驗，今日入場人士可憑印有日期的入場手帶，或場內任何消費收據，明日免費再次入場。\n\n受天雨影響，西九藝術公園的草地變為泥濘，有參加者要用膠袋包裹雙腳入場。主辦方解釋，天文台連續兩日發出黃色暴雨警告，持續大雨導致大草坪出現積水，主辦單位已抽調吸水設備持續清理，並感謝參加者及檔主的體諒與支持。\n\n主辦方又說，雖然受惡劣天氣影響，但活動依然深受歡迎，自開幕以來已吸引超過17000人參與。\n\n\n\n編輯：陳曉慶",
+    "full_text": null,
+    "published_at": "Sun, 05 Apr 2026 19:38:28 +0800",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "politics",
+      "chinese"
+    ]
+  },
+  {
+    "article_id": "592b30864ba5cc8e",
+    "source_name": "RTHK 本地新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1850036-20260405.htm",
+    "headline": "運輸署預計未來兩天較多人使用陸路口岸回港　呼籲預早規劃行程",
+    "excerpt": "運輸署預計周一及周二將有較多跨境旅客使用陸路口岸回港，呼籲有關旅客預早妥善規劃行程，又特別提醒使用港珠澳大橋珠海口岸返港的駕駛人士，預留充裕交通時間，同時在輪候時保持忍讓。\n\n署方表示，在返港高峰時間的公共運輸需求會較高，乘客候車時間亦會較長，呼籲乘客耐心等候。運輸署已指示公共運輸服務營辦商加強服務應付乘客需求。運輸署的緊急交通事故協調中心會繼續監察各陸路口岸的公共運輸服務情況，並會透過運輸署網頁及流動應用程式「香港出行易」，發放最新的交通消息。\n\n\n\n編輯：陳曉慶",
+    "full_text": null,
+    "published_at": "Sun, 05 Apr 2026 19:23:23 +0800",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "politics",
+      "chinese"
+    ]
+  },
+  {
+    "article_id": "0f6cb52ee8dfa93b",
+    "source_name": "RTHK 本地新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1850035-20260405.htm",
+    "headline": "小蠔灣車廠附近信號設備故障　機場快綫及東涌綫料需額外行車時間",
+    "excerpt": "港鐵表示，由於小蠔灣車廠附近有信號設備故障，機場快綫及東涌綫的行車時間，預計需要額外15至20分鐘。\n\n市區預辦登機服務的截止時間，由航班起飛前90分鐘改為120分鐘。\n\n港鐵又說，港鐵人員正處理事件，提醒乘客為行程預留充裕時間。\n\n\n\n編輯：陳曉慶",
+    "full_text": null,
+    "published_at": "Sun, 05 Apr 2026 19:17:47 +0800",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "politics",
+      "chinese"
+    ]
+  },
+  {
+    "article_id": "14b2255553044c93",
+    "source_name": "RTHK 本地新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1850029-20260405.htm",
+    "headline": "【重溫】2026年4月5日新聞天地",
+    "excerpt": "詳盡報道本地時事、大中華消息、國際局勢等新聞，緊貼最新熱話。",
+    "full_text": null,
+    "published_at": "Sun, 05 Apr 2026 18:42:59 +0800",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "politics",
+      "chinese"
+    ]
+  },
+  {
+    "article_id": "aace83ae29e28be7",
+    "source_name": "RTHK 本地新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1850031-20260405.htm",
+    "headline": "政府計劃擴展在校課後託管　議員倡增設服務至晚上8時名額",
+    "excerpt": "政府計劃擴展「在校課後託管服務計劃」，有立法會議員建議增設服務至晚上8時的名額，並吸納更多已完成有關再培訓課程的婦女擔任兼職照顧員，應付新增的服務需求。\n\n有參與計劃的服務機構表示，要擴展服務，需同時考慮人手資源及確保服務質素。\n\n\n\n編輯：陳曉慶",
+    "full_text": null,
+    "published_at": "Sun, 05 Apr 2026 18:38:40 +0800",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "politics",
+      "chinese"
+    ]
+  },
+  {
+    "article_id": "ba2e363cbbd280a2",
+    "source_name": "RTHK 本地新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1850033-20260405.htm",
+    "headline": "宏福苑委任管理人合安　將於5月上旬舉行業戶簡介會",
+    "excerpt": "宏福苑委任管理人合安管理有限公司表示，將於5月上旬舉行業戶簡介會，稍後公布具體詳情。\n\n合安在網頁發表公告，表示收到居民反映，不希望簡介會的時間與居民返回單位執拾，以及聽證會日期有衝突，因此作出有關安排。\n\n合安又指，正處理大維修基金及各項按金的退款安排，當中牽涉檢視與前管理公司交接所取得的80多萬份文件，亦透過律師團隊檢視法團所簽訂的合約，以釐清法團可能承擔的法律責任與其他事宜；以及敲定退款的具體安排等。\n\n\n\n編輯：陳曉慶",
+    "full_text": null,
+    "published_at": "Sun, 05 Apr 2026 18:37:42 +0800",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "politics",
+      "chinese"
+    ]
+  },
+  {
+    "article_id": "1cad46420d3caa22",
+    "source_name": "RTHK 本地新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1850024-20260405.htm",
+    "headline": "羅淑佩：香港創作土壤肥沃　深入了解國安法毋須憂慮「踩地雷」",
+    "excerpt": "文化體育及旅遊局局長羅淑佩表示，要時刻警剔社會可能出現的軟對抗，包括在推廣藝術方面。她說，香港的創作土壤肥沃，只要深入了解國家安全相關法律，毋須太過擔憂會「踩地雷」。\n\n羅淑佩在一個電視節目訪問中又表示，今年開始審視啟德體育園的關鍵績效指標，體育園以「體育」優先，但主場館對於拉動本港經濟，創造就業很重要。\n\n\n\n\n編輯：劉景輝",
+    "full_text": null,
+    "published_at": "Sun, 05 Apr 2026 18:26:24 +0800",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "politics",
+      "chinese"
+    ]
+  },
+  {
+    "article_id": "2060df2c04c38d84",
+    "source_name": "RTHK 本地新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1850023-20260405.htm",
+    "headline": "中車集團生產零部件供高鐵及部分港鐵使用　協助培訓維修員",
+    "excerpt": "特區政府公布的《香港鐵路標準》提到，引入包括「國家標準」在內的多項鐵路標準。在江蘇常州，生產鐵路列車零部件央企「中國中車集團」負責人說，中國鐵路工程技術達世界前列水平，「中國標準」和「國際標準」銜接得不錯。\n\n負責人又說，中國中車有為廣深港高鐵「復興號」和部分港鐵列車，按香港實際使用情況，提供列車傳動系統和制動系統的零部件。\n\n\n\n\n編輯：黃佩珊",
+    "full_text": null,
+    "published_at": "Sun, 05 Apr 2026 18:24:06 +0800",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "politics",
+      "chinese"
+    ]
+  },
+  {
+    "article_id": "ff193ca47410c346",
+    "source_name": "RTHK 本地新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1850026-20260405.htm",
+    "headline": "陳茂波 : 首季金融市場表現不俗　實體經濟見改善",
+    "excerpt": "財政司司長陳茂波發表網誌，總結本港今年首季經濟。他說，金融市場表現不俗，實體經濟整體亦見改善，部分領域更錄得顯著成績。\n\n陳茂波說，港股雖受外部因素影響回調，但交投上升，反映在不明朗形勢下，投資者增加在本港配置資產。另外，截止上月27日，本港IPO市場集資額，已超過1030億港元，全球排行第一，說明當外圍環境愈不明朗，愈有更多企業視香港為融資與出海發展的重要窗口。\n\n\n\n編輯：汪溟曦",
+    "full_text": null,
+    "published_at": "Sun, 05 Apr 2026 18:13:18 +0800",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "politics",
+      "chinese"
+    ]
+  },
+  {
+    "article_id": "e2384351a5715b84",
+    "source_name": "RTHK 本地新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1850025-20260405.htm",
+    "headline": "陳國基出席清明公祭軒轅黃帝典禮",
+    "excerpt": "丙午年清明公祭軒轅黃帝典禮早上在陝西延安市舉行，政務司司長陳國基出席，代表香港特區政府敬獻花籃。\n\n有陝西傳媒引述陳國基說，「龍飛中華」環節令他印象最深刻，看著巨龍騰空而起，彷彿看到國家和民族正一飛沖天，前途無限。\n\n\n\n\n編輯：劉景輝",
+    "full_text": null,
+    "published_at": "Sun, 05 Apr 2026 18:03:17 +0800",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "politics",
+      "chinese"
+    ]
+  },
+  {
+    "article_id": "c9cf42293deaa6ae",
+    "source_name": "RTHK 本地新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1850032-20260405.htm",
+    "headline": "甯漢豪：當局積極研發及應用創新科技　提升公共服務質素及效率",
+    "excerpt": "發展局局長甯漢豪在網誌表示，局方與轄下部門積極研發及應用創新科技，提升公共服務質素和效率，改善成本效益；最近在日內瓦國際發明展共奪36項獎項，創歷年新高，令人鼓舞。她說，政府部門更首次獲頒最高榮譽之一的「沙特阿拉伯王國教育部 — 沙特創新卓越奬」，形容成績驕人。\n\n甯漢豪說，欣悉各得獎項目已陸續應用於政府部門及工務工程，並會逐步推展至業界及私人工程。她又說，會繼續積極推動業界更廣泛應用創新科技，為行業變革及升級注入強大動力，推動「新質生產力」發展，共同打造香港成為國際基建中心，助力國家高質量發展，更好融入和服務國家發展大局。\n\n發展局副秘書長何英傑表示，今屆日內瓦國際發明展的參展項目超過1000項，發展局團隊與工務部門共展出36個項目，榮獲36項獎項，涵蓋人工智能、機械人和無人機及其他先進技術，充分體現部門將創新科技轉化為實際應用，嶄新方案亦獲國際認可。\n\n得獎項目包括渠務署與內地專業團隊共同研發的全地形渠道檢測機械人「百變探哥」，並首獲「沙特創新卓越獎」；水務署與一間水務渠務工程公司研發的燒焊機械人「智管焊」；屋宇署研發的「BIM 建築物間距工具」以評估建築物透風度；土木工程拓展署自",
+    "full_text": null,
+    "published_at": "Sun, 05 Apr 2026 17:57:22 +0800",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "politics",
+      "chinese"
+    ]
+  },
+  {
+    "article_id": "1475d06edb83ab52",
+    "source_name": "RTHK 本地新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1850028-20260405.htm",
+    "headline": "截至下午4時　本港近68.9萬人次出入境",
+    "excerpt": "復活節及清明節假期第三日，截至下午4時，近68.9萬人次出入境。出境人次逾42.5萬，當中港人佔逾36萬人次；入境有約26萬人次。\n\n最多人經羅湖管制站出入境，其次是落馬洲支線及深圳灣口岸。\n\n\n\n編輯：汪溟曦",
+    "full_text": null,
+    "published_at": "Sun, 05 Apr 2026 17:52:08 +0800",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "politics",
+      "chinese"
+    ]
+  },
+  {
+    "article_id": "46835d7abdfe472b",
+    "source_name": "RTHK 本地新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1850022-20260405.htm",
+    "headline": "天文台取消黃色暴雨警告信號",
+    "excerpt": "天文台在下午5時40分，取消黃色暴雨警告信號。\n\n\n\n編輯：盧曉珊",
+    "full_text": null,
+    "published_at": "Sun, 05 Apr 2026 17:40:38 +0800",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "politics",
+      "chinese"
+    ]
   }
 ]

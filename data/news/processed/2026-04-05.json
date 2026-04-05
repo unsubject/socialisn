@@ -14,16 +14,16 @@
       "simon",
       "newsletter"
     ],
-    "summary_zh": "作家傑·麥克伊內尼在訪談中分享其人生經歷，講述如何從無名之輩成為知名人物的轉變故事。",
+    "summary_zh": "作者傑·麥克內尼在訪問中分享從籍籍無名到成名的人生歷程。",
     "keywords_zh": [
-      "傑·麥克伊內尼",
-      "作家",
-      "人生經歷",
-      "成功",
-      "訪談",
-      "Weekend highlight"
+      "傑·麥克內尼",
+      "作者",
+      "周末焦點",
+      "訪問",
+      "成名",
+      "個人經歷"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "e011be1403c1c55c",
@@ -43,12 +43,12 @@
       "chinese"
     ],
     "approx_traffic": "200+",
-    "summary_zh": "關於深圳天氣情況的報道。",
+    "summary_zh": "深圳天氣狀況報告。",
     "keywords_zh": [
       "深圳",
       "天氣"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "a8a88887d1f943e7",
@@ -66,18 +66,17 @@
       "english",
       "general"
     ],
-    "summary_zh": "文章探討特朗普任期內全球市場面臨的風險，包括中東伊朗局勢升溫及經濟衰退的潛在威脅。",
+    "summary_zh": "文章探討特朗普任期內全球市場能否度過難關，擔憂中東伊朗局勢升級與全球經濟衰退風險。",
     "keywords_zh": [
       "特朗普",
       "全球市場",
       "中東",
       "伊朗",
       "經濟衰退",
-      "軍事衝突",
       "貿易保護主義",
-      "地緣政治"
+      "軍事衝突"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "23c313684dcb374c",
@@ -95,18 +94,18 @@
       "english",
       "general"
     ],
-    "summary_zh": "台灣半導體產業主導地位帶動龐大財富效應，國際銀行紛紛調整策略以捕捉芯片生態系統產生的財富機會，改變台灣金融版圖。",
+    "summary_zh": "台灣半導體產業優勢帶動的財富效應正重塑島內金融版圖，國際銀行紛紛布局搶佔芯片生態系統創造的商機。",
     "keywords_zh": [
       "台灣",
       "半導體",
-      "國際銀行",
       "財富",
-      "芯片",
       "金融",
-      "家族辦公室",
-      "交易所交易基金"
+      "國際銀行",
+      "芯片",
+      "生態系統",
+      "金融版圖"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "636ec45141062594",
@@ -124,16 +123,17 @@
       "economics",
       "english"
     ],
-    "summary_zh": "美國F-15E戰機在伊朗西南部被擊落，一名機組人員失蹤，特朗普向伊朗發出48小時最後通牒威脅。",
+    "summary_zh": "美國軍機在伊朗遭擊落，一名機組人員失蹤，特朗普向伊朗發出48小時最後通牒，威脅將採取軍事行動。",
     "keywords_zh": [
       "特朗普",
       "伊朗",
-      "F-15E戰機",
-      "美軍",
+      "美國軍機",
+      "F-15E戰鬥機",
       "機組人員失蹤",
-      "威脅"
+      "軍事威脅",
+      "48小時"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "f6cb91ed16031740",
@@ -151,18 +151,17 @@
       "economics",
       "english"
     ],
-    "summary_zh": "伊朗戰爭導致中東旅遊受阻，亞洲旅客轉向其他目的地度假，同時航空公司機票價格上升。",
+    "summary_zh": "伊朗戰爭導致中東旅遊受阻，亞洲遊客轉向其他目的地，同時航空票價因安全隱憂而上升。",
     "keywords_zh": [
       "亞洲旅客",
       "中東旅遊",
       "伊朗戰爭",
-      "機票價格",
+      "航空票價",
+      "安全問題",
       "杜拜",
-      "航空公司",
-      "阿聯酋",
-      "安全隱憂"
+      "旅遊業"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "12bed449f383c509",
@@ -180,16 +179,16 @@
       "economics",
       "english"
     ],
-    "summary_zh": "沃倫·巴菲特因比爾·蓋茨與愛潑斯坦的關係而考慮終止向蓋茨基金會的捐款，兩人長期友誼受到衝擊。",
+    "summary_zh": "巴菲特因蓋茲與愛潑斯坦的關係而考慮終止對蓋茲基金會的捐款，此事件引發兩位億萬富翁之間友誼的緊張關係。",
     "keywords_zh": [
       "巴菲特",
-      "蓋茨",
+      "蓋茲",
       "愛潑斯坦",
-      "蓋茨基金會",
+      "蓋茲基金會",
       "捐款",
-      "友誼"
+      "億萬富翁"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "d5521b860db333d7",
@@ -207,18 +206,18 @@
       "economics",
       "english"
     ],
-    "summary_zh": "預測市場平台Polymarket在政治壓力下，移除了關於美軍在伊朗救援任務的賭盤，引發美國議員批評。",
+    "summary_zh": "預測市場平台Polymarket因政治壓力而移除關於美軍在伊朗救援任務的賭盤，引發議員強烈批評。",
     "keywords_zh": [
       "Polymarket",
+      "美軍",
       "伊朗",
-      "美軍救援",
-      "F-15E戰機",
+      "救援任務",
+      "F-15E戰鬥機",
       "Seth Moulton",
       "預測市場",
-      "賭盤",
-      "空軍"
+      "賭盤"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "6f91c9a48dbbe7c0",
@@ -236,17 +235,18 @@
       "economics",
       "english"
     ],
-    "summary_zh": "OpenAI產品及業務主管Fidji Simo因神經免疫疾病惡化而宣佈請醫療假，公司宣佈領導層變動由Greg Brockman接管產品事務。",
+    "summary_zh": "OpenAI產品及業務主管Fidji Simo因神經免疫疾病惡化而宣布休醫療假，並公布領導層變動；總裁Greg Brockman將在其休假期間接管產品工作。",
     "keywords_zh": [
       "OpenAI",
       "Fidji Simo",
       "醫療假",
       "領導層變動",
       "Greg Brockman",
-      "產品業務",
-      "POTS"
+      "POTS",
+      "產品主管",
+      "健康"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "39260aa425262f7c",
@@ -264,9 +264,9 @@
       "politics",
       "chinese"
     ],
-    "summary_zh": "81歲男子在屯門麥理浩徑行山時失蹤，警方、消防及飛行服務隊等多部門已展開第二日搜救。",
+    "summary_zh": "81歲男子在屯門麥理浩徑行山時失蹤，警方、消防及飛行服務隊等多個部門展開第二日搜救行動。",
     "keywords_zh": [
-      "81歲",
+      "81歲男子",
       "行山失蹤",
       "屯門",
       "麥理浩徑",
@@ -275,7 +275,7 @@
       "消防",
       "飛行服務隊"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "c5646010e54407b8",
@@ -293,17 +293,18 @@
       "politics",
       "chinese"
     ],
-    "summary_zh": "清明節假期首日，本港約108萬人次出入境，其中入境逾42萬人次、出境逾65萬人次，落馬洲及羅湖口岸為主要通道。",
+    "summary_zh": "清明節假期首日，香港約108萬人次進出境，其中入境逾42萬人次、出境逾65萬人次，落馬洲及羅湖口岸為主要通道。",
     "keywords_zh": [
       "清明節",
       "出入境",
+      "入境處",
       "落馬洲",
       "羅湖口岸",
       "內地旅客",
-      "香港",
-      "入境處"
+      "香港居民",
+      "口岸"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "9f6c40690a06f988",
@@ -321,18 +322,18 @@
       "politics",
       "chinese"
     ],
-    "summary_zh": "香港警方在觀塘進行為期7日的掃黃行動，拘捕14名內地女子，其中11人被控違法罪行，3人被遣返內地。",
+    "summary_zh": "警方在觀塘進行為期7日的掃黃行動，拘捕14名內地女子，其中11人被控相關罪行，3人被遣返內地，並檢取多個宣傳賣淫標誌。",
     "keywords_zh": [
       "警方",
       "觀塘",
-      "掃黃",
+      "掃黃行動",
       "內地女子",
       "拘捕",
       "賣淫",
-      "違反逗留條件",
-      "宣傳標誌"
+      "宣傳標誌",
+      "違法"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "155bcf6f55ad188c",
@@ -350,18 +351,17 @@
       "politics",
       "chinese"
     ],
-    "summary_zh": "海關在機場截獲入境旅客攜帶4.4公斤懷疑海洛英，市值約290萬元，拘捕20歲男旅客並控以販運危險藥物罪。",
+    "summary_zh": "海關在機場截獲入境旅客藏匿4.4公斤懷疑海洛英，拘捕20歲男旅客並控以販運危險藥物罪。",
     "keywords_zh": [
       "海關",
-      "機場",
-      "入境旅客",
       "販毒",
       "海洛英",
+      "入境旅客",
+      "機場",
       "檳城",
-      "東區裁判法院",
-      "危險藥物"
+      "拘捕"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "cbbe630774648a6b",
@@ -379,17 +379,18 @@
       "politics",
       "chinese"
     ],
-    "summary_zh": "沙田愉翠苑九巴車費回贈機一度故障，政府指示九巴必須向受影響乘客發還回贈，並強調不會承擔因此增加的補貼成本。",
+    "summary_zh": "沙田愉翠苑九巴車費回贈機故障，政府指示九巴必須向受影響乘客發還回贈，並強調不會向九巴發還因此增加的補貼。",
     "keywords_zh": [
       "愉翠苑",
       "車費回贈機",
       "九巴",
-      "政府",
+      "故障",
       "兩蚊兩折",
-      "沙田",
-      "公共交通"
+      "政府",
+      "乘客",
+      "回贈"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "5d8dab41e6744576",
@@ -407,15 +408,18 @@
       "politics",
       "chinese"
     ],
-    "summary_zh": "本篇為2026年4月4日的新聞天地重溫，涵蓋本地時事、大中華消息及國際局勢的最新報道。",
+    "summary_zh": "回顧2026年4月4日的新聞報道，涵蓋本地時事、大中華消息及國際局勢等多方面資訊。",
     "keywords_zh": [
+      "2026年",
+      "4月4日",
       "新聞天地",
-      "2026年4月4日",
       "本地時事",
       "大中華消息",
-      "國際局勢"
+      "國際局勢",
+      "香港新聞",
+      "時事報道"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "0cea7034d5ccbe77",
@@ -433,18 +437,18 @@
       "politics",
       "chinese"
     ],
-    "summary_zh": "警方東九龍總區在西貢進行反爆竊巡邏行動，拘捕兩名涉嫌備有偷竊工具的外籍男子，初步調查顯示他們企圖入屋盜竊。",
+    "summary_zh": "警方東九龍總區在西貢進行反爆竊巡邏行動，截查兩名可疑外籍男子並檢獲偷竊工具，以涉嫌備有偷竊用物品拘捕。",
     "keywords_zh": [
       "警方",
       "西貢",
       "反爆竊",
       "巡邏行動",
-      "外籍男子",
       "拘捕",
-      "入屋盜竊",
-      "東九龍"
+      "外籍男子",
+      "偷竊",
+      "獨立屋"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "8be28f303201e763",
@@ -462,17 +466,17 @@
       "politics",
       "chinese"
     ],
-    "summary_zh": "醫管局九龍東聯網發現逾5.6萬名病人資料遭人非法盜取並洩露至第三方平台，涉及姓名、身份證號碼等敏感資訊，警方已介入調查。",
+    "summary_zh": "醫管局九龍東聯網發現逾5.6萬名病人資料外洩事件，懷疑有人非法盜取資料並於第三方平台洩漏，警方已介入調查。",
     "keywords_zh": [
       "醫管局",
       "九龍東聯網",
-      "病人資料",
-      "外洩",
-      "盜取",
-      "資料洩漏",
-      "警方調查"
+      "病人資料外洩",
+      "盜取資料",
+      "身份證號碼",
+      "警方調查",
+      "網絡安全"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "58341dcfc0e68922",
@@ -490,18 +494,17 @@
       "politics",
       "chinese"
     ],
-    "summary_zh": "旅遊局長羅淑佩表示對4月訪港旅客前景樂觀，預計「五一黃金周」將迎百萬人次旅客，並認為中東局勢不會影響來港意欲。",
+    "summary_zh": "旅遊局局長羅淑佩表示，中東局勢不會影響旅客來港，預計今年五一黃金周將迎100萬人次訪港旅客。",
     "keywords_zh": [
       "羅淑佩",
+      "中東局勢",
       "旅客",
       "來港",
-      "中東局勢",
-      "清明節",
       "五一黃金周",
-      "旅遊",
-      "訪港"
+      "清明節",
+      "旅遊"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "206c4bd7f5d39fad",
@@ -519,17 +522,16 @@
       "politics",
       "chinese"
     ],
-    "summary_zh": "行政長官李家超視察參與課後託管服務計劃的小學，表示會進一步擴展計劃並大力推動更多課後託管服務。",
+    "summary_zh": "李家超視察參與課後託管服務計劃的小學，表示將大力推動擴展更多課後託管服務。",
     "keywords_zh": [
       "李家超",
       "課後託管服務",
-      "在校課後託管服務計劃",
-      "小學",
       "九龍城區",
-      "行政長官",
-      "擴展"
+      "小學",
+      "在校課後託管服務計劃",
+      "行政長官"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "ec4aa0cc0a80c290",
@@ -547,7 +549,7 @@
       "politics",
       "chinese"
     ],
-    "summary_zh": "「兩蚊兩折」乘車計劃首日推行，九巴部分回贈機故障致回贈金額不準，當局確認公帑及乘客無損失，錯誤由九巴自行承擔。",
+    "summary_zh": "「兩蚊兩折」計劃首日九巴回贈機故障，回贈全額車費，惟政府確認公帑及乘客沒有損失，九巴將承擔所有錯誤數額。",
     "keywords_zh": [
       "兩蚊兩折",
       "九巴",
@@ -556,9 +558,9 @@
       "政府",
       "公帑",
       "乘客",
-      "車費"
+      "孫玉菡"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "9a94482d165e6d12",
@@ -576,18 +578,18 @@
       "politics",
       "chinese"
     ],
-    "summary_zh": "清明節假期首日，截至下午4時共有72萬4千多人次進出香港，其中入境超過24萬4千人次，出境超過48萬人次。",
+    "summary_zh": "清明節假期首日，截至下午4時共有72萬4千多人次進出香港，其中入境逾24萬人次、出境逾48萬人次，高鐵西九龍站及羅湖口岸成主要通關點。",
     "keywords_zh": [
       "入境處",
       "清明節",
       "進出香港",
       "高鐵西九龍站",
-      "落馬洲管制站",
       "羅湖口岸",
+      "落馬洲管制站",
       "內地客",
       "港人"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "b1defcd80296e446",
@@ -605,18 +607,18 @@
       "politics",
       "chinese"
     ],
-    "summary_zh": "警方拘捕兩名男子涉嫌爆竊東涌食肆及盜竊私家車，尋回失車及部分贓物。",
+    "summary_zh": "警方拘捕兩名男子涉嫌爆竊東涌食肆及偷取私家車，通過閉路電視調查尋回失車及部分贓物。",
     "keywords_zh": [
       "爆竊",
       "東涌",
       "食肆",
       "失車",
-      "贓物",
-      "拘捕",
       "警方",
-      "上水"
+      "私家車",
+      "贓物",
+      "拘捕"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "31e7b794dcbd1557",
@@ -634,18 +636,18 @@
       "politics",
       "chinese"
     ],
-    "summary_zh": "警方展開反三合會行動，拘捕9名男子涉非法禁錮、販毒等罪行，其中一人被搜出市值逾436萬元可卡因毒品。",
+    "summary_zh": "警方展開反三合會行動拘捕9名男子涉非法禁錮、販毒等罪行，其中一人在大窩口村被搜出市值逾436萬元的可卡因毒品。",
     "keywords_zh": [
       "警方",
       "拘捕",
+      "9名男子",
       "販毒",
       "三合會",
       "可卡因",
       "大窩口村",
-      "毒品",
-      "刑事毀壞"
+      "436萬元"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "095a3cf53d676933",
@@ -663,18 +665,18 @@
       "politics",
       "chinese"
     ],
-    "summary_zh": "醫管局病人資料外洩事件，行政總裁李夏茵向員工發信表示已加強防護措施，初步調查顯示疑與有人非法盜取資料有關，與網絡攻擊無關。",
+    "summary_zh": "醫管局病人資料外洩事件，行政總裁李夏茵向員工發信表示無證據顯示網絡攻擊，疑與非法盜取資料有關，已報警並配合調查。",
     "keywords_zh": [
       "李夏茵",
       "醫管局",
-      "病人資料",
-      "外洩",
+      "病人資料外洩",
       "非法盜取",
-      "數據安全",
+      "公立醫院",
+      "網絡安全",
       "警方調查",
-      "公立醫院"
+      "個人私隱"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "6b92fc1d892c8fc9",
@@ -692,18 +694,18 @@
       "politics",
       "chinese"
     ],
-    "summary_zh": "醫管局發生病人資料外洩事件，涉及逾5萬名九龍東醫院聯網病人的姓名、身份證號碼及醫院檔案號碼等個人資料被洩露至第三方平台。",
+    "summary_zh": "醫管局九龍東醫院聯網發生病人資料外洩事件，涉及逾5萬名病人的姓名、身份證號碼及醫院檔案號碼等資料被洩露至第三方平台。醫管局已報警並通報私隱專員公署，承諾將採取措施保護受影響病人。",
     "keywords_zh": [
       "醫管局",
       "病人資料外洩",
       "九龍東醫院聯網",
-      "姓名",
+      "個人資料",
       "醫院檔案號碼",
-      "個人資料私隱專員公署",
-      "5萬病人",
-      "警方調查"
+      "網絡保安",
+      "私隱專員公署",
+      "未經授權"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "858b899760d9510e",
@@ -721,7 +723,7 @@
       "politics",
       "chinese"
     ],
-    "summary_zh": "醫管局病人資料外洩事件影響逾56000人，警方網絡安全及科技罪案調查科已接手調查。",
+    "summary_zh": "醫管局發生病人資料外洩事件，超過56000人受影響，警方網絡安全及科技罪案調查科已接手調查。",
     "keywords_zh": [
       "醫管局",
       "病人資料外洩",
@@ -730,7 +732,7 @@
       "未經授權",
       "第三方平台"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "1c39edd870d6a6f3",
@@ -748,18 +750,18 @@
       "politics",
       "chinese"
     ],
-    "summary_zh": "運輸及物logistics局局長陳美寶宣布當局將加快引進新型集體運輸系統的規管框架，以便更多創新運輸項目在香港落地，首批項目包括啟德、東九龍及洪水橋的智慧綠色集體運輸系統。",
+    "summary_zh": "運輸及物logistics局局長陳美寶表示，政府批准啟德智慧綠色集體運輸鐵路方案，並將推出全新法定規管框架以加快引進新型集體運輸系統，促進香港交通多元化發展。",
     "keywords_zh": [
       "陳美寶",
-      "集體運輸",
-      "規管框架",
       "啟德",
-      "智慧綠色",
-      "運輸系統",
+      "智慧綠色集體運輸",
+      "規管框架",
+      "新型集體運輸系統",
       "專營權",
-      "香港"
+      "東九龍",
+      "洪水橋"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "f05cfdc24e251be7",
@@ -777,18 +779,18 @@
       "politics",
       "chinese"
     ],
-    "summary_zh": "香港將於4月舉辦香港國際創科展及世界互聯網大會亞太峰會等創科盛事，局長孫東冀通過展示創科成果及促進業界交流，展現香港優勢並拓展商機與合作。",
+    "summary_zh": "本港將於4月舉辦香港國際創科展及世界互聯網大會亞太峰會等創科盛事，局長孫東期望通過活動展示香港優勢、促進國際合作與商機。",
     "keywords_zh": [
-      "香港",
-      "創科",
+      "香港國際創科展",
+      "世界互聯網大會亞太峰會",
       "孫東",
-      "國際創科展",
-      "世界互聯網大會",
-      "亞太峰會",
-      "4月",
-      "創新科技及工業局"
+      "創新科技",
+      "香港會展中心",
+      "數智賦能",
+      "國際合作",
+      "創科盛事"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "719339f97e92a3cb",
@@ -806,16 +808,18 @@
       "politics",
       "chinese"
     ],
-    "summary_zh": "清明節假期首日，截至早上10時，超過24萬人次出入境本港，當中出境人次遠多於入境。",
+    "summary_zh": "清明節假期首日截至早上10時，逾24萬人次出入境本港，入境旅客主要經機場和高鐵西九龍站進入，出境港人多經羅湖口岸前往內地。",
     "keywords_zh": [
-      "清明節",
+      "清明節假期",
       "出入境",
       "本港",
       "入境處",
       "機場",
-      "羅湖口岸"
+      "高鐵西九龍站",
+      "羅湖口岸",
+      "內地旅客"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "9c970e7cf676a224",
@@ -833,18 +837,18 @@
       "taiwan",
       "chinese"
     ],
-    "summary_zh": "中國中車集團生產供應廣深港高鐵及港鐵使用的零部件，並派員到香港為港鐵培訓維修人員，展示中國鐵路技術已達世界先進水平。",
+    "summary_zh": "中國中車集團為廣深港高鐵和港鐵供應零部件，並派員到香港為港鐵培訓維修人員，展示其軌道交通裝備的完整產業鏈。",
     "keywords_zh": [
       "中國中車集團",
       "港鐵",
       "廣深港高鐵",
       "零部件",
-      "維修培訓",
-      "常州",
-      "中國標準",
-      "軌道交通"
+      "復興號",
+      "培訓維修員",
+      "齒輪箱",
+      "風缸"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "ffa6613f5e37d477",
@@ -862,18 +866,18 @@
       "taiwan",
       "chinese"
     ],
-    "summary_zh": "內地清明假期首日道路交通平穩有序，全國未出現嚴重交通擠塞；港珠澳大橋口岸則迎來入境高峰，已超過19萬人次通關。",
+    "summary_zh": "內地清明假期首日全國道路交通總體平穩有序，未出現嚴重擠塞；港珠澳大橋珠海口岸迎來入境高峰，已逾19萬人次出入境。",
     "keywords_zh": [
       "清明假期",
       "道路交通",
-      "交通擠塞",
+      "高速公路",
       "港珠澳大橋",
       "珠海口岸",
-      "客流",
-      "通關",
+      "交通擠塞",
+      "客流車流",
       "出入境"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "4f98ebe45cb5f58c",
@@ -891,18 +895,17 @@
       "taiwan",
       "chinese"
     ],
-    "summary_zh": "中國學者陳群獲聯合國教科文組織任命為教育助理總幹事，將協助推動教育體系轉型及落實優質包容教育。",
+    "summary_zh": "中國學者陳群獲聯合國教科文組織聘任為教育助理總幹事，將協助推動全球教育體系轉型及落實公平優質教育。",
     "keywords_zh": [
       "陳群",
       "聯合國教科文組織",
       "助理總幹事",
       "教育",
       "教育體系轉型",
-      "中國",
       "華東師範大學",
       "教師教育"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "07627f25a38c88f7",
@@ -920,18 +923,17 @@
       "taiwan",
       "chinese"
     ],
-    "summary_zh": "中國駐以色列大使館因中東局勢緊張，提醒在當地中國公民加強安全防範並及時轉移避險，將於4月7日再組織撤離行動。",
+    "summary_zh": "中國駐以色列大使館因中東安全形勢緊張，提醒在地中國公民加強防範並及時轉移避險，計劃4月7日組織新一批撤離。",
     "keywords_zh": [
       "中國駐以色列大使館",
       "中國公民",
-      "以色列",
       "安全防範",
+      "中東",
       "轉移撤離",
-      "中東局勢",
       "埃及塔巴口岸",
       "港澳台同胞"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "2ba67f11b24580b1",
@@ -949,17 +951,17 @@
       "taiwan",
       "chinese"
     ],
-    "summary_zh": "蘇州科企積極推動創科產業發展，並表示未來將加強與香港在技術互通和人才交流方面的合作。",
+    "summary_zh": "蘇州科技企業表示，未來將加強與香港在技術互通和人才交流方面的合作，以推動創科產業發展。",
     "keywords_zh": [
       "蘇州",
-      "香港",
       "科企",
+      "香港",
       "技術互通",
       "人才交流",
       "創科",
-      "具身智能"
+      "科技園"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "275ab27ee4705c8d",
@@ -977,18 +979,17 @@
       "taiwan",
       "chinese"
     ],
-    "summary_zh": "內地清明假期首日全社會跨區域人員流動量接近3億人次，同比增長2.7%，其中公路運輸為主要出行方式。",
+    "summary_zh": "內地清明假期展開，預計今日全社會跨區域人員流動量近3億人次，較去年同期增長2.7%。",
     "keywords_zh": [
+      "內地",
       "清明假期",
       "人員流動",
       "跨區域",
       "交通運輸",
       "公路",
-      "鐵路",
-      "民航",
-      "內地"
+      "鐵路"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "b7def6194f5c1362",
@@ -1006,18 +1007,18 @@
       "english",
       "general"
     ],
-    "summary_zh": "中國人口老齡化速度前所未有，為養老和保險行業帶來龐大商機和增長潛力。",
+    "summary_zh": "中國人口老齡化速度和規模創全球紀錄，推動養老保險和老年護理產業快速增長。",
     "keywords_zh": [
       "中國",
       "人口老齡化",
       "人口結構轉變",
-      "養老產業",
+      "養老護理",
       "保險業",
-      "老年護理",
-      "醫療服務",
+      "銀髮消費",
+      "醫療保健",
       "人口趨勢"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "8cacf89f57c8f2bb",
@@ -1035,18 +1036,18 @@
       "english",
       "general"
     ],
-    "summary_zh": "日本零售連鎖Aeon及Ito-Yokado因競爭激烈和定價能力弱而在華北地區撤退，關閉多家門店。",
+    "summary_zh": "日本零售連鎖Aeon和伊藤洋華堂因競爭激烈和定價能力弱而在華北地區撤退，關閉多間門店。",
     "keywords_zh": [
-      "日本零售商",
+      "日本連鎖",
       "Aeon",
-      "Ito-Yokado",
-      "華北地區",
+      "伊藤洋華堂",
+      "華北",
+      "中國",
       "門店關閉",
-      "天津",
-      "河北",
-      "即時零售"
+      "零售競爭",
+      "本地化"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "25619eac3a31d715",
@@ -1064,16 +1065,16 @@
       "economics",
       "english"
     ],
-    "summary_zh": "美國總統特朗普確認兩名在伊朗失蹤的軍事人員已被成功救出，他們在敵方深入山區地帶進行救援行動。",
+    "summary_zh": "美國總統特朗普證實兩名在伊朗失蹤的軍官已被成功救出，他們是被擊落F-15戰鬥機的機組人員。",
     "keywords_zh": [
       "特朗普",
       "伊朗",
-      "軍事人員",
-      "救援",
+      "軍官",
+      "救出",
       "F-15戰鬥機",
-      "美國"
+      "機組人員"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "5383f428b2fd20e5",
@@ -1091,18 +1092,17 @@
       "economics",
       "english"
     ],
-    "summary_zh": "美國戰鬥機在伊朗遭擊落，一名機組人員獲救，另一名機組人員下落不明，美方正全力搜救。",
+    "summary_zh": "美國F-15戰鬥機在伊朗遭擊落，一名機組人員獲救，另一名機組人員下落不明，美國正進行搜救行動。",
     "keywords_zh": [
       "美國",
       "戰鬥機",
       "伊朗",
       "擊落",
-      "機組人員",
       "F-15",
-      "搜救",
-      "川普"
+      "機組人員",
+      "搜救"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "2b2218dac2ed9ed9",
@@ -1120,9 +1120,8 @@
       "politics",
       "chinese"
     ],
-    "summary_zh": "復活節及清明節假期第三日，本港截至早上10時有超過22萬人次出入境，其中出境人次逾14.6萬。",
+    "summary_zh": "復活節及清明節假期第三日，本港截至早上10時共超過22萬人次出入境，其中出境人次逾14.6萬。",
     "keywords_zh": [
-      "香港",
       "出入境",
       "復活節",
       "清明節",
@@ -1131,7 +1130,7 @@
       "港珠澳大橋",
       "深圳灣口岸"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "2cc981f6733e67a1",
@@ -1149,17 +1148,18 @@
       "politics",
       "chinese"
     ],
-    "summary_zh": "清明節假期市民外出掃墓，鑽石山墳場人流眾多，市民普遍反映交通順暢。",
+    "summary_zh": "清明節今日市民外出掃墓祭祖，儘管早上下雨但不減傳統拜祭熱情，市民普遍反映整體交通順暢。",
     "keywords_zh": [
       "清明節",
       "掃墓",
-      "鑽石山墳場",
-      "交通",
-      "市民",
       "祭祀",
-      "公共運輸"
+      "交通順暢",
+      "市民",
+      "鑽石山墳場",
+      "公共運輸",
+      "特別交通安排"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "c0902a01fc1323c9",
@@ -1177,18 +1177,18 @@
       "politics",
       "chinese"
     ],
-    "summary_zh": "清明公祭軒轅黃帝典禮在陝西舉行，政務司司長陳國基出席，通過九項儀式緬懷人文初祖、傳承中華文明。",
+    "summary_zh": "清明公祭軒轅黃帝典禮在陝西舉行，香港政務司司長陳國基出席儀式，與海內外同胞共同緬懷人文初祖。",
     "keywords_zh": [
-      "清明",
+      "清明公祭",
       "軒轅黃帝",
-      "公祭典禮",
-      "陝西",
       "陳國基",
-      "政務司司長",
+      "陝西",
       "黃陵縣",
-      "中華文明"
+      "典禮",
+      "中華文明",
+      "祭祀"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "1e62306d239fcc63",
@@ -1206,18 +1206,18 @@
       "politics",
       "chinese"
     ],
-    "summary_zh": "天文台警告香港短期內廣泛地區可能受大雨影響，今日有驟雨及狂風雷暴，未來兩三日仍有幾陣驟雨。",
+    "summary_zh": "天文台警告香港短期內廣泛地區將受大雨影響，今日有驟雨及狂風雷暴，市民應提高警覺。",
     "keywords_zh": [
       "天文台",
       "香港",
       "大雨",
       "驟雨",
       "雷暴",
-      "低壓槽",
+      "南海",
       "廣東",
-      "天氣警告"
+      "低壓槽"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "404747d3ac376107",
@@ -1235,18 +1235,18 @@
       "politics",
       "chinese"
     ],
-    "summary_zh": "財政司司長陳茂波盤點首季經濟，指本港股市交易活躍、IPO集資全球第一，實體經濟出口與消費信心亦見改善。",
+    "summary_zh": "財政司司長陳茂波盤點首季經濟，指香港股市交易活躍、IPO融資全球第一，實體經濟出口及消費信心逐步改善。",
     "keywords_zh": [
       "陳茂波",
       "香港經濟",
       "股市",
       "IPO",
       "實體經濟",
-      "金融中心",
       "出口",
-      "消費信心"
+      "消費信心",
+      "金融中心"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "98bd9c4733e4c4d1",
@@ -1264,18 +1264,17 @@
       "politics",
       "chinese"
     ],
-    "summary_zh": "公務員事務局局長楊何蓓茵清明節代表特區政府到浩園悼念因公殉職的公務員，向追授消防隊目的何偉豪致敬，並到景仰園向馬尼拉人質事件死難者獻花。",
+    "summary_zh": "公務員事務局局長楊何蓓茵清明節到浩園悼念因公殉職的公務員，向追授為消防隊目的何偉豪致敬，並到景仰園向馬尼拉人質事件死難者獻花。",
     "keywords_zh": [
       "楊何蓓茵",
       "浩園",
       "何偉豪",
       "清明節",
-      "因公殉職",
       "消防隊目",
-      "公務員",
+      "因公殉職",
       "馬尼拉人質事件"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "c279f356724ea214",
@@ -1293,17 +1292,17 @@
       "politics",
       "chinese"
     ],
-    "summary_zh": "天文台預警強雷雨帶逼近珠江口，預料未來一兩小時本港部分地區將出現大雨及狂風雷暴。",
+    "summary_zh": "天文台預警強雷雨帶逐漸靠近珠江口，未來一兩小時本港部分地區將出現大雨及狂風雷暴。",
     "keywords_zh": [
       "天文台",
       "香港",
       "雷暴",
       "狂風",
-      "大雨",
+      "降雨",
       "珠江口",
-      "天氣預警"
+      "天氣警告"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "314f0abef2245512",
@@ -1322,17 +1321,16 @@
       "government",
       "chinese"
     ],
-    "summary_zh": "財政司司長陳茂波盤點今年第一季經濟表現，指港股交易活躍、首次公開招股集資額全球第一，反映投資者看好香港及內地發展機遇。",
+    "summary_zh": "財政司司長陳茂波盤點今年第一季經濟，指港股交易活躍，首季IPO集資額全球排名第一，投資者視香港為資金避風港。",
     "keywords_zh": [
       "陳茂波",
-      "香港",
-      "第一季",
-      "經濟",
+      "財政司司長",
+      "第一季經濟",
       "港股",
-      "首次公開招股",
-      "內地"
+      "IPO集資",
+      "香港"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "ac7a80b38b8817f6",
@@ -1350,18 +1348,18 @@
       "english",
       "general"
     ],
-    "summary_zh": "英格蘭租賃法律改革對香港及內地投資者帶來雙重影響：地租上限措施有利於海外投資者，但租金管制收緊導致需求下降。",
+    "summary_zh": "英格蘭租屋法律改革對香港及內地投資者既有利亦有弊，地租上限措施利好外資，但新租戶權利法則打擊投資需求。",
     "keywords_zh": [
       "英格蘭",
-      "租賃法",
+      "租屋法律",
       "香港投資者",
       "內地投資者",
-      "地租",
-      "租金管制",
+      "地租上限",
+      "租戶權利法",
       "海外業主",
-      "倫敦房產"
+      "房產市場"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "ea5dbaa175183eb2",
@@ -1379,16 +1377,17 @@
       "politics",
       "chinese"
     ],
-    "summary_zh": "文化體育及旅遊局局長羅淑佩表示，當局考慮檢視啟德體育園的績效指標，擬加入經濟收益等計算方法，以更全面評估體育園的成效。",
+    "summary_zh": "文化體育及旅遊局局長羅淑佩表示當局考慮檢視啟德體育園的績效指標，擬納入經濟收益等新的計算方法，以更全面評估體育園的成果。",
     "keywords_zh": [
       "羅淑佩",
       "啟德體育園",
       "績效指標",
       "經濟收益",
       "體育賽事",
-      "文化體育及旅遊局"
+      "文化體育及旅遊局",
+      "主場館"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "eb439bd5146f7aa8",
@@ -1411,9 +1410,10 @@
       "黃色暴雨警告",
       "天文台",
       "警告信號",
-      "暴雨"
+      "暴雨",
+      "天氣"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "6e96e88b088b5bc4",
@@ -1431,7 +1431,7 @@
       "taiwan",
       "chinese"
     ],
-    "summary_zh": "葡萄牙議長布蘭科應邀將於4月7日率團訪華，進行為期5天的正式訪問。",
+    "summary_zh": "葡萄牙議長布蘭科應邀率團訪華，將於4月7日至11日進行訪問。",
     "keywords_zh": [
       "葡萄牙議長",
       "布蘭科",
@@ -1440,7 +1440,7 @@
       "趙樂際",
       "4月7日"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
   },
   {
     "article_id": "b0b7436e048357c3",
@@ -1458,16 +1458,555 @@
       "taiwan",
       "chinese"
     ],
-    "summary_zh": "國鐵集團預計清明假期第二日全國鐵路發送逾1400萬人次旅客，並計劃加開760多班列車應對高客流。",
+    "summary_zh": "國鐵集團預計今日全國鐵路發送逾1400萬人次旅客，計劃加開760多班列車應對清明假期客流高峰。",
     "keywords_zh": [
       "國鐵集團",
       "清明節",
       "鐵路",
       "旅客",
+      "列車",
       "全國",
-      "加開列車",
-      "客流"
+      "客流",
+      "假期"
     ],
-    "processed_at": "2026-04-05T08:42:23Z"
+    "processed_at": "2026-04-05T12:54:06Z"
+  },
+  {
+    "article_id": "2936fc7670fae3f7",
+    "source_name": "South China Morning Post",
+    "source_type": "rss",
+    "url": "https://www.scmp.com/tech/policy/article/3348956/chinese-firms-trail-us-peers-ai-adoption-due-corporate-culture-ex-openai-executive?utm_source=rss_feed",
+    "headline": "Chinese firms trail US peers in AI adoption due to corporate culture: ex-OpenAI executive",
+    "excerpt": "Traditional corporate culture and hierarchies are slowing down artificial intelligence adoption in Chinese enterprises, leaving them trailing their US peers, even as China’s savvy consumers embrace AI agents at a breakneck pace, says Zack Kass, former head of go-to-market at OpenAI.\nChina has a very “techno-centric consumer”, while the US has a very “techno-centric enterprise”, Kass told the South China Morning Post in a recent interview.\nHighlighting this contrast, Kass said typical Chinese...",
+    "full_text": "China has a very “techno-centric consumer”, while the US has a very “techno-centric enterprise”, Kass told the South China Morning Post in a recent interview.\n\nKass worked at OpenAI from 2021 to 2023, during which the company launched its groundbreaking chatbot, ChatGPT, in November 2022. He now runs his own consultancy.\n\n“The American consumer is far more cynical about technology and big tech,” said Kass, citing anxieties over social media’s impact on children and declining public trust. This cultural divergence, he said, helped explain the frenzy surrounding OpenClaw in China, even as it struggles to achieve the same scale and popularity in the US.",
+    "published_at": "Sun, 05 Apr 2026 11:00:08 +0000",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "en",
+    "tags": [
+      "hongkong",
+      "english",
+      "general"
+    ],
+    "summary_zh": "前OpenAI高管指中國企業因傳統企業文化和階級制度阻礙，人工智能應用落後美國同業，儘管中國消費者積極擁抱AI代理。",
+    "keywords_zh": [
+      "中國企業",
+      "美國企業",
+      "人工智能採納",
+      "企業文化",
+      "OpenAI",
+      "Zack Kass",
+      "AI應用"
+    ],
+    "processed_at": "2026-04-05T12:54:06Z"
+  },
+  {
+    "article_id": "9638836e0039fefd",
+    "source_name": "CNBC Asia Economy",
+    "source_type": "rss",
+    "url": "https://www.cnbc.com/2026/04/05/ai-retail-start-ups-virtual-try-on-tech-margins.html",
+    "headline": "'Silent killers': How AI start-ups are trying to solve one of the retail industry's biggest problems",
+    "excerpt": "The rapid evolution of generative AI has finally made these applications good enough to meaningfully impact retailers' bottom lines.",
+    "full_text": "Moment Makers Group | Istock | Getty Images\n\nIt pinches here; drags there; the draping is wrong. These are some of the examples of the feedback a new crop of artificial intelligence apps might give a prospective customer trying on clothing ahead of a purchase, and in the process reduce the chances of a product being returned to a store.\n\nFashion retailers are increasingly turning to AI to solve the issue of rising product returns, a persistent drag on profitability and something many in the industry refer to as the industry's \"silent killer\".\n\nA growing number of AI start-ups have emerged to provide virtual try-on technology, allowing potential customers to visualize fit and style before they buy.\n\nWhile tech companies have attempted to solve online fit issues since the 2010's, the rapid development of generative AI has finally made these applications good enough to meaningfully impact retailers' bottom lines.\n\nThe U.S. National Retail Federation late last year estimated that 15.8% of annual retail sales were returned in 2025, totaling $849.9 billion. For online sales, that number jumped to 19.3%. Gen Z is driving this trend, with shoppers aged 18 to 30 averaging nearly eight online returns per person last year, the NRF found.\n\nMost returned items never make it back to the shelves and often cost the retailer more to process than the value of the refund itself. It's a multibillion-dollar problem for the industry that's eating directly into companies' margins.\n\n\"Figuring out how to proactively use returns and then how to minimize them can be a meaningful driver of business and profitability,\" Guggenheim Senior Managing Director Simeon Siegel told CNBC.\n\nWhile fit technology will never be as good as trying something on in person, it's a great way to bridge the gap, Siegel said. \"It's going to continue to get better, I think that's going to continue to reduce returns.\"\n\nMirror-like realism?\n\nThe primary reason for returns and abandoned shopping carts is uncertainty over fit, Ed Voyce, founder and CEO of AI startup Catches, told CNBC in an interview.\n\nCatches has developed a platform that allows users to create a \"digital twin\" to try on clothes virtually with what it calls \"mirror-like realism.\" The application went live last month on luxury brand Amiri's website for a select range of clothes.\n\nUnlike other models that Voyce says \"just look pretty,\" the Catches platform incorporates the physics of fabric texture and how material interacts with a moving body.\n\nwatch now\n\n\"The reason we built Catches was to take advantage of a kind of confluence of technologies that is taking place right now to solve this issue effectively,\" says Voyce, who founded the startup backed by LVMH's Antoine Arnault and built on Nvidia's CUDA platform.\n\n\"The reason it's solvable now in terms of timing is that you have to be able to run visuals for end users on bare metal in the cloud, cheaply enough to make a [return on investment] for brands,\" Voyce says.\n\n\"This technology has the potential to impact the whole industry and really usher in the new wave of what end users expect.\"\n\nProtecting the margin\n\nThese AI tools aren't only meant to reduce returns, but also to help enhance purchases.\n\nWhile e-commerce has grown rapidly in recent years, with online shopping driving retail sales growth, the current U.S. trade policy under President Donald Trump has put a dampener on the sector which relies heavily on manufacturing in Southeast Asia. Across the price spectrum, retailers are struggling to maintain margins as costs rise and consumers become increasingly price sensitive amid inflationary pressures.\n\nWhile returns are a meaningful drag on profit margins, they are also a critical factor in consumers' purchasing decisions. NRF data shows that 82% of consumers consider free returns essential, yet the cost of providing them is becoming unsustainable for many brands.\n\nRetailers are now testing a mix of tech and policy to protect margins.\n\nStrategies to reduce returns range from charging for return shipping to providing more granular sizing information and incentivizing exchanges over refunds.\n\nZara, owned by Inditex , was one of the first to implement return fees for online orders, and while it was a contentious change for some customers, it helped the Spanish retailer protect its gross margin and discourage \"bracketing\" – the practice of buying multiple sizes to try on at home.\n\nThe retailer also rolled out a virtual try-on tool, \"Zara try-on,\" in December.\n\nMeanwhile, ASOS recently highlighted a stark improvement in profitability, partly driven by a 160 basis point reduction in its returns rate.\n\nThe online fast fashion player has been experimenting with virtual try-ons in partnership with deep-tech startup AIUTA, allowing prospective customers to see a piece of clothing on a range of body types, heights, and skin tones. ASOS, however, cautions that the tool is designed to give general guidance and that customers must still check size guides...",
+    "published_at": "Sun, 05 Apr 2026 12:37:57 GMT",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "en",
+    "tags": [
+      "global",
+      "economics",
+      "english"
+    ],
+    "summary_zh": "時裝零售業正面臨產品退貨率高企的問題，被業界稱為「無聲殺手」，AI初創企業利用生成式AI技術提供虛擬試衣等應用，幫助減少退貨率並改善零售商的利潤。",
+    "keywords_zh": [
+      "AI",
+      "時裝零售",
+      "產品退貨",
+      "虛擬試衣",
+      "初創企業",
+      "生成式AI",
+      "無聲殺手",
+      "消費者體驗"
+    ],
+    "processed_at": "2026-04-05T12:54:06Z"
+  },
+  {
+    "article_id": "8d8fb2c0905e3548",
+    "source_name": "CNBC Asia Economy",
+    "source_type": "rss",
+    "url": "https://www.cnbc.com/2026/04/05/autos-defense-europe-car-industry.html",
+    "headline": "'Anything but autos': Can defense save Europe’s ailing car industry?",
+    "excerpt": "The transition from wheels to weapons is achievable in part because many of the underlying skills are highly transferable, according to experts.",
+    "full_text": "Ludovic Marin | AFP | Getty Images\n\nThe European car industry is in a structural crisis. Slowing demand for electric vehicles, lost market share to Chinese competitors and higher borrowing costs have created the perfect storm for the sector over the past five years, as sales volumes continue to slump well below pre-pandemic levels.\n\nEurope's automakers have a long history of producing defense equipment and weapons when called upon during wartime. Some firms now think returning to these roots could offer a lifeline.\n\nAnalysts at Citi have dubbed this shift the \"anything but autos\" trade.\n\nOn Monday, Renault announced it was developing a ground-based drone for military and civilian use. This followed its announcement of a partnership with defense group Turgis Gaillard in January to produce aerial drones in France.\n\nMeanwhile, German automaker Volkswagen is reportedly in talks with Israeli defense firm Rafael to produce parts for missile defense systems.\n\nThe pair are in discussions to convert VW's factory in Osnabrück, Germany, into facilities for making components for the Israeli Iron Dome missile-defense system produced by Rafael, the FT reported on March 24.\n\nEuropean autos are struggling to compete directly with Chinese rivals, such as BYD. While new-car sales dropped in the EU through January, BYD stunned the market by reporting a 175% year-on-year increase in deliveries to 13,982 units, according to ACEA data.\n\nThe industry's decline is felt in carmakers' share prices, too. The Stoxx 600 Automobiles index has fallen 30% over the past five years as of April 2, while VW has tanked over 60% since then. Stellantis , which owns brands including Fiat and Peugeot, has shed 58% over the same period.\n\nStock Chart IconStock chart icon\n\nBy contrast, the European defense industry is booming. The urgent need to rearm following Russia's invasion of Ukraine in 2022 and an apparent fracturing of relations within NATO mean Europe must become more self-sufficient in its defense production.\n\nLast year, EU president Ursula von der Leyen said Europe was in an \"era of rearmament\" and could mobilize 800 billion euros in defense investment through loans and other programs.\n\n\"The defense industry has huge growth prospects with government budgets and Nato requirements backing it,\" Rico Luman, senior sector economist for transport and logistics at Dutch bank ING, told CNBC by email.\n\n\"For the defense industry it's rather a question of how to expand production than if. Redirecting production capacity is an opportunity for the automotive industry.\"\n\nBut other analysts question whether riding the coattails of the defense sector will be enough to save the ailing auto industry, flagging several concerns about carmakers' ability to grow in this space.\n\nA farewell to arms? Not so fast\n\nThe relationship between carmakers and weapons manufacturing has always been symbiotic. During World War II, automotive companies across the world halted civilian production to focus on their nations' respective war efforts — producing military vehicles, aircraft engines, as well as guns and ammunition.\n\nThe transition from wheels to weapons and back again is achievable in part because many of the underlying skills are highly transferable, according to experts.\n\n\"There is significant overlap in capabilities, as both industries rely on advanced manufacturing, complex supply chains, and engineering,\" Zuzana Pelakova, economy and business director at Slovakian think tank Globsec, told CNBC over email.\n\n\"There is also a historical precedent. Countries like Slovakia and Czechia – today among the world leaders in car production per capita – built much of their automotive strength on a workforce that once worked in defense industries before the end of socialism.\"\n\nVW is in a particularly tight spot, facing deteriorating profitability and looking to reduce headcount by 35,000 — or roughly 5% of its workforce — before 2030.\n\nShould talks with Rafael or other defense suitors bear fruit, VW's potential to repurpose its obsolete Osnabrück plant – which the company is due to close in 2027 – could save up to 2,300 jobs.\n\nBut Germany's largest trade union said that transferring large numbers of workers from other industrial sectors to defense industry companies is \"unrealistic\" and \"not a solution\" to the industry's structural problems.\n\n\"This will not be enough to offset the impending job losses in the automotive industry, among suppliers, and in other core sectors of the metal and electrical industries,\" IG Metall told CNBC over email.\n\n\"The sectors operate too differently for that. Unlike in the high-volume automotive industry, for example, the defense sector is dominated by small-batch production. Even if production volumes are ramped up here, manufacturing will not resemble that of the automotive industry.\"\n\nEthical concerns\n\nAutomakers' partnerships with defense firms could also raise ethical concerns among workers, should they be given the choice of producing wea...",
+    "published_at": "Sun, 05 Apr 2026 05:00:01 GMT",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "en",
+    "tags": [
+      "global",
+      "economics",
+      "english"
+    ],
+    "summary_zh": "歐洲汽車產業陷入結構性危機，面臨電動車需求放緩、中國競爭加劇等挑戰，車廠考慮轉向防務武器生產以尋求出路。",
+    "keywords_zh": [
+      "歐洲",
+      "汽車產業",
+      "防務",
+      "武器生產",
+      "電動車",
+      "中國競爭",
+      "結構性危機",
+      "轉型"
+    ],
+    "processed_at": "2026-04-05T12:54:06Z"
+  },
+  {
+    "article_id": "7284446fc16171e7",
+    "source_name": "RTHK 本地新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1850043-20260405.htm",
+    "headline": "旺角發生非禮案　48歲男子被捕",
+    "excerpt": "旺角發生非禮案，一名48歲男子被捕，正被扣查。\n\n事發於傍晚約6時半，警方接報一名17歲女子在旺角彌敦道，懷疑被一名男子非禮。\n\n案件交由旺角警區刑事調查隊第六隊跟進。\n\n\n\n編輯：陳曉慶",
+    "full_text": null,
+    "published_at": "Sun, 05 Apr 2026 20:42:55 +0800",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "politics",
+      "chinese"
+    ],
+    "summary_zh": "旺角彌敦道發生非禮案，48歲男子涉嫌非禮17歲女子被警方拘捕扣查。",
+    "keywords_zh": [
+      "旺角",
+      "非禮案",
+      "48歲男子",
+      "17歲女子",
+      "彌敦道",
+      "被捕",
+      "警方",
+      "扣查"
+    ],
+    "processed_at": "2026-04-05T12:54:06Z"
+  },
+  {
+    "article_id": "687ee78d367800bd",
+    "source_name": "RTHK 本地新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1850041-20260405.htm",
+    "headline": "港鐵機場快綫及東涌綫服務逐步回復正常",
+    "excerpt": "港鐵表示，經搶修後，小蠔灣車廠附近的信號設備完成復修，機場快綫及東涌綫服務逐步回復正常。\n\n機場快綫市區預辦登機服務亦已回復正常。\n\n\n\n編輯：陳曉慶",
+    "full_text": null,
+    "published_at": "Sun, 05 Apr 2026 20:14:56 +0800",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "politics",
+      "chinese"
+    ],
+    "summary_zh": "港鐵機場快綫及東涌綫因信號設備故障中斷服務，經搶修後逐步回復正常運作。",
+    "keywords_zh": [
+      "港鐵",
+      "機場快綫",
+      "東涌綫",
+      "信號設備",
+      "小蠔灣車廠",
+      "服務",
+      "預辦登機"
+    ],
+    "processed_at": "2026-04-05T12:54:06Z"
+  },
+  {
+    "article_id": "0dd73f241cf81603",
+    "source_name": "RTHK 本地新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1850038-20260405.htm",
+    "headline": "陳國基結束陝西訪問行程返港　指期望與陝西加強愛國主義教育合作",
+    "excerpt": "政務司司長陳國基結束陝西省訪問行程返港。他在陝西省兩日訪問行程期間，拜訪當地領導，就加強兩地人文交流、教育合作、創新科技等各方面的發展交流意見。\n\n陳國基昨日拜會陝西省委書記趙一德，就深化陝港兩地各方面的交流合作交換意見。中央港澳辦、國務院港澳辦分管日常工作的副主任徐啟方亦參加會面。陳國基指出，陝港雙方自2024年簽署《深化陝港交流合作協議》，以及一系列在法律服務、科技創新、教育、旅遊等領域的合作備忘錄起，在中央政府支持及陝港共同努力下，兩地交流合作成果豐碩，未來可在不同範疇，尤其是人文交流、教育合作、創新科技等方面加強合作，優勢互補。\n\n陳國基亦感謝陝西省人民政府邀請參與今日舉行的清明公祭軒轅黃帝典禮。他表示，今次活動意義非凡，連結海內外的炎黃子孫一同祭拜「人文初祖」黃帝，傳承中華民族慎終追遠的傳統美德。香港特區政府參與今次典禮，有助讓香港市民更深入認識中華文明的源流，進一步提升國民身分認同和民族情感。\n\n陳國基又在社交專頁表示，愛國主義教育是深耕細作、細水長流、久久為功的人心工作，需要更多歷史文化遺跡、歷史文化作品、歷史文化場景和歷史文化平台，期望未來進一步與陝西加強在愛國主義教育",
+    "full_text": null,
+    "published_at": "Sun, 05 Apr 2026 19:50:51 +0800",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "politics",
+      "chinese"
+    ],
+    "summary_zh": "陳國基結束陝西訪問返港，期望與陝西加強在愛國主義教育、人文交流、教育合作及創新科技等領域的合作。",
+    "keywords_zh": [
+      "陳國基",
+      "陝西",
+      "香港",
+      "愛國主義教育",
+      "人文交流",
+      "教育合作",
+      "創新科技",
+      "軒轅黃帝"
+    ],
+    "processed_at": "2026-04-05T12:54:06Z"
+  },
+  {
+    "article_id": "3ce159ef87d8b3ab",
+    "source_name": "RTHK 本地新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1850037-20260405.htm",
+    "headline": "西九咖啡節受天雨影響　今日入場人士可憑手帶或收據明日再次入場",
+    "excerpt": "戶外咖啡節「2026 Coffee Hong Kong @WestK​」周五起一連四日在西九藝術公園大草坪舉行，昨日和今日天文台先後發出黃色暴雨警告信號。主辦方表示，活動不設退票安排，但考慮到天雨影響訪客體驗，今日入場人士可憑印有日期的入場手帶，或場內任何消費收據，明日免費再次入場。\n\n受天雨影響，西九藝術公園的草地變為泥濘，有參加者要用膠袋包裹雙腳入場。主辦方解釋，天文台連續兩日發出黃色暴雨警告，持續大雨導致大草坪出現積水，主辦單位已抽調吸水設備持續清理，並感謝參加者及檔主的體諒與支持。\n\n主辦方又說，雖然受惡劣天氣影響，但活動依然深受歡迎，自開幕以來已吸引超過17000人參與。\n\n\n\n編輯：陳曉慶",
+    "full_text": null,
+    "published_at": "Sun, 05 Apr 2026 19:38:28 +0800",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "politics",
+      "chinese"
+    ],
+    "summary_zh": "西九咖啡節因天雨影響，主辦方推出補償措施，今日入場人士可憑手帶或收據明日免費再次入場；活動現場草地泥濘積水，但仍吸引超過17000人參與。",
+    "keywords_zh": [
+      "西九咖啡節",
+      "西九藝術公園",
+      "天雨",
+      "暴雨警告",
+      "黃色警告信號",
+      "免費入場",
+      "2026 Coffee Hong Kong"
+    ],
+    "processed_at": "2026-04-05T12:54:06Z"
+  },
+  {
+    "article_id": "592b30864ba5cc8e",
+    "source_name": "RTHK 本地新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1850036-20260405.htm",
+    "headline": "運輸署預計未來兩天較多人使用陸路口岸回港　呼籲預早規劃行程",
+    "excerpt": "運輸署預計周一及周二將有較多跨境旅客使用陸路口岸回港，呼籲有關旅客預早妥善規劃行程，又特別提醒使用港珠澳大橋珠海口岸返港的駕駛人士，預留充裕交通時間，同時在輪候時保持忍讓。\n\n署方表示，在返港高峰時間的公共運輸需求會較高，乘客候車時間亦會較長，呼籲乘客耐心等候。運輸署已指示公共運輸服務營辦商加強服務應付乘客需求。運輸署的緊急交通事故協調中心會繼續監察各陸路口岸的公共運輸服務情況，並會透過運輸署網頁及流動應用程式「香港出行易」，發放最新的交通消息。\n\n\n\n編輯：陳曉慶",
+    "full_text": null,
+    "published_at": "Sun, 05 Apr 2026 19:23:23 +0800",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "politics",
+      "chinese"
+    ],
+    "summary_zh": "運輸署預計周一及周二陸路口岸回港旅客增加，呼籲旅客預早規劃行程並預留充裕時間。",
+    "keywords_zh": [
+      "運輸署",
+      "陸路口岸",
+      "回港",
+      "港珠澳大橋",
+      "珠海口岸",
+      "公共運輸",
+      "交通擁塞"
+    ],
+    "processed_at": "2026-04-05T12:54:06Z"
+  },
+  {
+    "article_id": "0f6cb52ee8dfa93b",
+    "source_name": "RTHK 本地新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1850035-20260405.htm",
+    "headline": "小蠔灣車廠附近信號設備故障　機場快綫及東涌綫料需額外行車時間",
+    "excerpt": "港鐵表示，由於小蠔灣車廠附近有信號設備故障，機場快綫及東涌綫的行車時間，預計需要額外15至20分鐘。\n\n市區預辦登機服務的截止時間，由航班起飛前90分鐘改為120分鐘。\n\n港鐵又說，港鐵人員正處理事件，提醒乘客為行程預留充裕時間。\n\n\n\n編輯：陳曉慶",
+    "full_text": null,
+    "published_at": "Sun, 05 Apr 2026 19:17:47 +0800",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "politics",
+      "chinese"
+    ],
+    "summary_zh": "小蠔灣車廠附近信號設備故障，導致機場快綫及東涌綫行車時間需額外增加15至20分鐘。",
+    "keywords_zh": [
+      "小蠔灣車廠",
+      "信號設備故障",
+      "機場快綫",
+      "東涌綫",
+      "行車時間",
+      "港鐵",
+      "市區預辦登機"
+    ],
+    "processed_at": "2026-04-05T12:54:06Z"
+  },
+  {
+    "article_id": "14b2255553044c93",
+    "source_name": "RTHK 本地新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1850029-20260405.htm",
+    "headline": "【重溫】2026年4月5日新聞天地",
+    "excerpt": "詳盡報道本地時事、大中華消息、國際局勢等新聞，緊貼最新熱話。",
+    "full_text": null,
+    "published_at": "Sun, 05 Apr 2026 18:42:59 +0800",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "politics",
+      "chinese"
+    ],
+    "summary_zh": "新聞天地節目重溫2026年4月5日的本地時事、大中華消息及國際局勢報道。",
+    "keywords_zh": [
+      "新聞天地",
+      "2026年4月5日",
+      "本地時事",
+      "大中華消息",
+      "國際局勢",
+      "新聞報道"
+    ],
+    "processed_at": "2026-04-05T12:54:06Z"
+  },
+  {
+    "article_id": "aace83ae29e28be7",
+    "source_name": "RTHK 本地新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1850031-20260405.htm",
+    "headline": "政府計劃擴展在校課後託管　議員倡增設服務至晚上8時名額",
+    "excerpt": "政府計劃擴展「在校課後託管服務計劃」，有立法會議員建議增設服務至晚上8時的名額，並吸納更多已完成有關再培訓課程的婦女擔任兼職照顧員，應付新增的服務需求。\n\n有參與計劃的服務機構表示，要擴展服務，需同時考慮人手資源及確保服務質素。\n\n\n\n編輯：陳曉慶",
+    "full_text": null,
+    "published_at": "Sun, 05 Apr 2026 18:38:40 +0800",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "politics",
+      "chinese"
+    ],
+    "summary_zh": "政府計劃擴展在校課後託管服務，議員建議延長服務時間至晚上8時，並招聘更多婦女兼職照顧員應對需求。",
+    "keywords_zh": [
+      "政府",
+      "在校課後託管服務",
+      "擴展",
+      "晚上8時",
+      "議員",
+      "照顧員",
+      "婦女",
+      "服務需求"
+    ],
+    "processed_at": "2026-04-05T12:54:06Z"
+  },
+  {
+    "article_id": "ba2e363cbbd280a2",
+    "source_name": "RTHK 本地新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1850033-20260405.htm",
+    "headline": "宏福苑委任管理人合安　將於5月上旬舉行業戶簡介會",
+    "excerpt": "宏福苑委任管理人合安管理有限公司表示，將於5月上旬舉行業戶簡介會，稍後公布具體詳情。\n\n合安在網頁發表公告，表示收到居民反映，不希望簡介會的時間與居民返回單位執拾，以及聽證會日期有衝突，因此作出有關安排。\n\n合安又指，正處理大維修基金及各項按金的退款安排，當中牽涉檢視與前管理公司交接所取得的80多萬份文件，亦透過律師團隊檢視法團所簽訂的合約，以釐清法團可能承擔的法律責任與其他事宜；以及敲定退款的具體安排等。\n\n\n\n編輯：陳曉慶",
+    "full_text": null,
+    "published_at": "Sun, 05 Apr 2026 18:37:42 +0800",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "politics",
+      "chinese"
+    ],
+    "summary_zh": "宏福苑新任管理人合安將於5月上旬舉辦業戶簡介會，並正處理大維修基金及按金退款事宜。",
+    "keywords_zh": [
+      "宏福苑",
+      "合安管理",
+      "管理人",
+      "業戶簡介會",
+      "大維修基金",
+      "按金退款",
+      "前管理公司"
+    ],
+    "processed_at": "2026-04-05T12:54:06Z"
+  },
+  {
+    "article_id": "1cad46420d3caa22",
+    "source_name": "RTHK 本地新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1850024-20260405.htm",
+    "headline": "羅淑佩：香港創作土壤肥沃　深入了解國安法毋須憂慮「踩地雷」",
+    "excerpt": "文化體育及旅遊局局長羅淑佩表示，要時刻警剔社會可能出現的軟對抗，包括在推廣藝術方面。她說，香港的創作土壤肥沃，只要深入了解國家安全相關法律，毋須太過擔憂會「踩地雷」。\n\n羅淑佩在一個電視節目訪問中又表示，今年開始審視啟德體育園的關鍵績效指標，體育園以「體育」優先，但主場館對於拉動本港經濟，創造就業很重要。\n\n\n\n\n編輯：劉景輝",
+    "full_text": null,
+    "published_at": "Sun, 05 Apr 2026 18:26:24 +0800",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "politics",
+      "chinese"
+    ],
+    "summary_zh": "文化局長羅淑佩表示香港創作土壤肥沃，強調藝術工作者深入了解國安法後無須擔憂違法，同時提及將審視啟德體育園績效指標。",
+    "keywords_zh": [
+      "羅淑佩",
+      "香港",
+      "創作",
+      "國安法",
+      "藝術",
+      "啟德體育園",
+      "軟對抗",
+      "文化體育及旅遊局"
+    ],
+    "processed_at": "2026-04-05T12:54:06Z"
+  },
+  {
+    "article_id": "2060df2c04c38d84",
+    "source_name": "RTHK 本地新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1850023-20260405.htm",
+    "headline": "中車集團生產零部件供高鐵及部分港鐵使用　協助培訓維修員",
+    "excerpt": "特區政府公布的《香港鐵路標準》提到，引入包括「國家標準」在內的多項鐵路標準。在江蘇常州，生產鐵路列車零部件央企「中國中車集團」負責人說，中國鐵路工程技術達世界前列水平，「中國標準」和「國際標準」銜接得不錯。\n\n負責人又說，中國中車有為廣深港高鐵「復興號」和部分港鐵列車，按香港實際使用情況，提供列車傳動系統和制動系統的零部件。\n\n\n\n\n編輯：黃佩珊",
+    "full_text": null,
+    "published_at": "Sun, 05 Apr 2026 18:24:06 +0800",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "politics",
+      "chinese"
+    ],
+    "summary_zh": "中國中車集團為廣深港高鐵復興號及部分港鐵列車提供零部件，並協助培訓維修員工。",
+    "keywords_zh": [
+      "中車集團",
+      "高鐵",
+      "港鐵",
+      "零部件",
+      "復興號",
+      "維修員",
+      "列車",
+      "香港"
+    ],
+    "processed_at": "2026-04-05T12:54:06Z"
+  },
+  {
+    "article_id": "ff193ca47410c346",
+    "source_name": "RTHK 本地新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1850026-20260405.htm",
+    "headline": "陳茂波 : 首季金融市場表現不俗　實體經濟見改善",
+    "excerpt": "財政司司長陳茂波發表網誌，總結本港今年首季經濟。他說，金融市場表現不俗，實體經濟整體亦見改善，部分領域更錄得顯著成績。\n\n陳茂波說，港股雖受外部因素影響回調，但交投上升，反映在不明朗形勢下，投資者增加在本港配置資產。另外，截止上月27日，本港IPO市場集資額，已超過1030億港元，全球排行第一，說明當外圍環境愈不明朗，愈有更多企業視香港為融資與出海發展的重要窗口。\n\n\n\n編輯：汪溟曦",
+    "full_text": null,
+    "published_at": "Sun, 05 Apr 2026 18:13:18 +0800",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "politics",
+      "chinese"
+    ],
+    "summary_zh": "財政司司長陳茂波指香港首季金融市場表現不俗、實體經濟見改善，港股交投上升、IPO集資額全球第一。",
+    "keywords_zh": [
+      "陳茂波",
+      "金融市場",
+      "實體經濟",
+      "港股",
+      "IPO",
+      "首季",
+      "香港"
+    ],
+    "processed_at": "2026-04-05T12:54:06Z"
+  },
+  {
+    "article_id": "e2384351a5715b84",
+    "source_name": "RTHK 本地新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1850025-20260405.htm",
+    "headline": "陳國基出席清明公祭軒轅黃帝典禮",
+    "excerpt": "丙午年清明公祭軒轅黃帝典禮早上在陝西延安市舉行，政務司司長陳國基出席，代表香港特區政府敬獻花籃。\n\n有陝西傳媒引述陳國基說，「龍飛中華」環節令他印象最深刻，看著巨龍騰空而起，彷彿看到國家和民族正一飛沖天，前途無限。\n\n\n\n\n編輯：劉景輝",
+    "full_text": null,
+    "published_at": "Sun, 05 Apr 2026 18:03:17 +0800",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "politics",
+      "chinese"
+    ],
+    "summary_zh": "政務司司長陳國基出席在陝西延安舉行的丙午年清明公祭軒轅黃帝典禮，代表香港特區政府敬獻花籃。",
+    "keywords_zh": [
+      "陳國基",
+      "清明公祭",
+      "軒轅黃帝",
+      "典禮",
+      "延安",
+      "香港特區政府",
+      "花籃",
+      "龍飛中華"
+    ],
+    "processed_at": "2026-04-05T12:54:06Z"
+  },
+  {
+    "article_id": "c9cf42293deaa6ae",
+    "source_name": "RTHK 本地新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1850032-20260405.htm",
+    "headline": "甯漢豪：當局積極研發及應用創新科技　提升公共服務質素及效率",
+    "excerpt": "發展局局長甯漢豪在網誌表示，局方與轄下部門積極研發及應用創新科技，提升公共服務質素和效率，改善成本效益；最近在日內瓦國際發明展共奪36項獎項，創歷年新高，令人鼓舞。她說，政府部門更首次獲頒最高榮譽之一的「沙特阿拉伯王國教育部 — 沙特創新卓越奬」，形容成績驕人。\n\n甯漢豪說，欣悉各得獎項目已陸續應用於政府部門及工務工程，並會逐步推展至業界及私人工程。她又說，會繼續積極推動業界更廣泛應用創新科技，為行業變革及升級注入強大動力，推動「新質生產力」發展，共同打造香港成為國際基建中心，助力國家高質量發展，更好融入和服務國家發展大局。\n\n發展局副秘書長何英傑表示，今屆日內瓦國際發明展的參展項目超過1000項，發展局團隊與工務部門共展出36個項目，榮獲36項獎項，涵蓋人工智能、機械人和無人機及其他先進技術，充分體現部門將創新科技轉化為實際應用，嶄新方案亦獲國際認可。\n\n得獎項目包括渠務署與內地專業團隊共同研發的全地形渠道檢測機械人「百變探哥」，並首獲「沙特創新卓越獎」；水務署與一間水務渠務工程公司研發的燒焊機械人「智管焊」；屋宇署研發的「BIM 建築物間距工具」以評估建築物透風度；土木工程拓展署自",
+    "full_text": null,
+    "published_at": "Sun, 05 Apr 2026 17:57:22 +0800",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "politics",
+      "chinese"
+    ],
+    "summary_zh": "發展局局長甯漢豪指政府部門積極研發應用創新科技，在日內瓦國際發明展獲36項獎項創新高，並首獲沙特創新卓越獎。",
+    "keywords_zh": [
+      "甯漢豪",
+      "發展局",
+      "創新科技",
+      "日內瓦國際發明展",
+      "沙特創新卓越獎",
+      "公共服務",
+      "人工智能",
+      "香港"
+    ],
+    "processed_at": "2026-04-05T12:54:06Z"
+  },
+  {
+    "article_id": "1475d06edb83ab52",
+    "source_name": "RTHK 本地新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1850028-20260405.htm",
+    "headline": "截至下午4時　本港近68.9萬人次出入境",
+    "excerpt": "復活節及清明節假期第三日，截至下午4時，近68.9萬人次出入境。出境人次逾42.5萬，當中港人佔逾36萬人次；入境有約26萬人次。\n\n最多人經羅湖管制站出入境，其次是落馬洲支線及深圳灣口岸。\n\n\n\n編輯：汪溟曦",
+    "full_text": null,
+    "published_at": "Sun, 05 Apr 2026 17:52:08 +0800",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "politics",
+      "chinese"
+    ],
+    "summary_zh": "復活節及清明節假期第三日，本港截至下午4時近68.9萬人次出入境，其中出境逾42.5萬人次，入境約26萬人次。",
+    "keywords_zh": [
+      "出入境",
+      "復活節",
+      "清明節",
+      "羅湖管制站",
+      "落馬洲支線",
+      "深圳灣口岸",
+      "港人"
+    ],
+    "processed_at": "2026-04-05T12:54:06Z"
+  },
+  {
+    "article_id": "46835d7abdfe472b",
+    "source_name": "RTHK 本地新聞",
+    "source_type": "rss",
+    "url": "https://news.rthk.hk/rthk/ch/component/k2/1850022-20260405.htm",
+    "headline": "天文台取消黃色暴雨警告信號",
+    "excerpt": "天文台在下午5時40分，取消黃色暴雨警告信號。\n\n\n\n編輯：盧曉珊",
+    "full_text": null,
+    "published_at": "Sun, 05 Apr 2026 17:40:38 +0800",
+    "fetched_at": "2026-04-05T12:51:05Z",
+    "language": "zh-TW",
+    "tags": [
+      "hongkong",
+      "politics",
+      "chinese"
+    ],
+    "summary_zh": "香港天文台於下午5時40分取消黃色暴雨警告信號，暴雨情況已緩解。",
+    "keywords_zh": [
+      "天文台",
+      "黃色暴雨警告",
+      "警告信號",
+      "取消",
+      "暴雨"
+    ],
+    "processed_at": "2026-04-05T12:54:06Z"
   }
 ]
