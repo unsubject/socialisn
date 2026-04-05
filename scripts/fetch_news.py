@@ -157,17 +157,23 @@ def fetch_google_trends(source: dict, fetched_at: str) -> list[dict]:
                     "snippet": ni_snippet,
                 })
 
-        # Build full_text from related news snippets
+        # Build full_text from related news titles (snippets are usually empty)
         full_text_parts = [f"熱搜關鍵字: {headline}"]
         if approx_traffic:
             full_text_parts.append(f"搜尋量: {approx_traffic}")
         for ni in news_items:
-            full_text_parts.append(f"- {ni['title']} ({ni['source']}): {ni['snippet']}")
+            line = f"- {ni['title']} ({ni['source']})"
+            if ni["snippet"]:
+                line += f": {ni['snippet']}"
+            full_text_parts.append(line)
         full_text = "\n".join(full_text_parts)
 
         # Use headline + published date for unique ID (no per-item URL in feed)
         unique_key = f"gtrends-{headline}-{published_at or fetched_at}"
         article_id = make_article_id(unique_key)
+
+        # Use first related news article title as excerpt
+        excerpt = news_items[0]["title"] if news_items else None
 
         record = {
             "article_id": article_id,
@@ -175,8 +181,8 @@ def fetch_google_trends(source: dict, fetched_at: str) -> list[dict]:
             "source_type": "rss",
             "url": news_items[0]["url"] if news_items else url,
             "headline": headline,
-            "excerpt": news_items[0]["snippet"] if news_items else None,
-            "full_text": full_text if len(full_text) > len(headline) + 20 else None,
+            "excerpt": excerpt,
+            "full_text": full_text if news_items else None,
             "published_at": published_at,
             "fetched_at": fetched_at,
             "language": language,
