@@ -23,6 +23,8 @@ from datetime import datetime, timezone, timedelta
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 
+import xml.etree.ElementTree as ET
+
 import feedparser
 import requests
 import yaml
@@ -100,6 +102,161 @@ def is_within_lookback(published_at: str | None, lookback_hours: int) -> bool:
 
 
 # ---------------------------------------------------------------------------
+# Helpers — Google Trends (raw XML, since feedparser loses nested ht: elements)
+# ---------------------------------------------------------------------------
+
+HT_NS = "https://trends.google.com/trending/rss"
+
+# Entertainment / sports / lifestyle sources to skip in Google Trends.
+# Trends whose related news ALL come from these sources are filtered out.
+_SKIP_SOURCES = {
+    # Entertainment / celebrity / lifestyle
+    "香港01", "明報 Our Lifestyle", "Ming Pao Weekly", "明周娛樂",
+    "香港文匯網", "搜狐网", "Sohu", "3DM", "TMZ", "Instagram",
+    "InStyle", "Town & Country Magazine", "The Telegraph",
+    "Boston Herald", "モデルプレス", "Yahoo!ニュース",
+    "TVB", "星島頭條", "LIMO",
+    # Sports
+    "ESPN", "ESPN Deportes", "CBS Sports", "Yahoo Sports",
+    "ATP Tour", "MARCA", "Eurosport", "スタ뉴스",
+    "フォーカス台湾",
+}
+
+# Keywords in news_item_title that indicate entertainment/sports/lifestyle
+_SKIP_TITLE_KEYWORDS = [
+    # Entertainment / celebrity
+    "娛樂", "明星", "演員", "歌手", "選秀", "綜藝", "偶像",
+    "紅毯", "時裝", "美妝", "穿搭", "outfit", "逝世", "去世",
+    "古惑仔", "姊妹情", "好聲音", "女星", "男星",
+    "美脚", "ドレス", "ミニスカ",
+    # Sports
+    "NBA", "NFL", "MLB", "ATP", "FIFA", "UFC", "卓球", "W杯",
+    "Final Four", "March Madness", "NCAA",
+    "Hacks", "movie", "film", "drama", "ドラマ",
+    # Weather
+    "cuaca", "天氣預報", "weather forecast",
+]
+
+
+def _is_relevant_trend(news_items: list[dict]) -> bool:
+    """Return True if at least one related news item looks relevant
+    (i.e. not purely entertainment/sports/lifestyle)."""
+    if not news_items:
+        # No related news — keep it, could be a finance/politics keyword
+        return True
+    for ni in news_items:
+        source = ni.get("source", "")
+        title = ni.get("title", "")
+        # Skip if source is in blocklist
+        if source in _SKIP_SOURCES:
+            continue
+        # Skip if title contains entertainment/sports keywords
+        title_lower = title.lower()
+        if any(kw.lower() in title_lower for kw in _SKIP_TITLE_KEYWORDS):
+            continue
+        # At least one relevant article found
+        return True
+    # All articles matched skip criteria
+    return False
+
+
+def fetch_google_trends(source: dict, fetched_at: str) -> list[dict]:
+    """Parse Google Trends RSS with raw XML to preserve ht:news_item children."""
+    name = source["name"]
+    url = source["url"]
+    language = source.get("language", "en")
+    tags = source.get("tags", [])
+
+    log.info(f"  Fetching Google Trends: {name}")
+
+    try:
+        resp = requests.get(url, headers=HEADERS, timeout=15)
+        resp.raise_for_status()
+    except Exception as e:
+        log.error(f"  Request failed for Google Trends: {e}")
+        return []
+
+    try:
+        root = ET.fromstring(resp.content)
+    except ET.ParseError as e:
+        log.error(f"  XML parse failed for Google Trends: {e}")
+        return []
+
+    records = []
+    for item in root.findall(".//item"):
+        headline = (item.findtext("title") or "").strip()
+        if not headline:
+            continue
+
+        published_at = item.findtext("pubDate")
+        if not is_within_lookback(published_at, LOOKBACK_HOURS):
+            continue
+
+        approx_traffic = item.findtext(f"{{{HT_NS}}}approx_traffic") or ""
+        picture_url = item.findtext(f"{{{HT_NS}}}picture") or ""
+
+        # Extract related news articles
+        news_items = []
+        for ni in item.findall(f"{{{HT_NS}}}news_item"):
+            ni_title = ni.findtext(f"{{{HT_NS}}}news_item_title") or ""
+            ni_url = ni.findtext(f"{{{HT_NS}}}news_item_url") or ""
+            ni_source = ni.findtext(f"{{{HT_NS}}}news_item_source") or ""
+            ni_snippet = ni.findtext(f"{{{HT_NS}}}news_item_snippet") or ""
+            if ni_url:
+                news_items.append({
+                    "title": ni_title,
+                    "url": ni_url,
+                    "source": ni_source,
+                    "snippet": ni_snippet,
+                })
+
+        # Filter out entertainment / sports / lifestyle trends
+        if not _is_relevant_trend(news_items):
+            log.info(f"    Skipping entertainment/sports trend: {headline}")
+            continue
+
+        # Build full_text from related news titles (snippets are usually empty)
+        full_text_parts = [f"熱搜關鍵字: {headline}"]
+        if approx_traffic:
+            full_text_parts.append(f"搜尋量: {approx_traffic}")
+        for ni in news_items:
+            line = f"- {ni['title']} ({ni['source']})"
+            if ni["snippet"]:
+                line += f": {ni['snippet']}"
+            full_text_parts.append(line)
+        full_text = "\n".join(full_text_parts)
+
+        # Use headline + published date for unique ID (no per-item URL in feed)
+        unique_key = f"gtrends-{headline}-{published_at or fetched_at}"
+        article_id = make_article_id(unique_key)
+
+        # Use first related news article title as excerpt
+        excerpt = news_items[0]["title"] if news_items else None
+
+        record = {
+            "article_id": article_id,
+            "source_name": name,
+            "source_type": "rss",
+            "url": news_items[0]["url"] if news_items else url,
+            "headline": headline,
+            "excerpt": excerpt,
+            "full_text": full_text if news_items else None,
+            "published_at": published_at,
+            "fetched_at": fetched_at,
+            "language": language,
+            "tags": tags,
+            "approx_traffic": approx_traffic,
+        }
+        if news_items:
+            record["related_news"] = news_items
+
+        records.append(record)
+
+    log.info(f"  Found {len(records)} trend(s) within lookback window.")
+    return records
+
+
+# ---------------------------------------------------------------------------
 # Helpers — RSS
 # ---------------------------------------------------------------------------
 
@@ -164,23 +321,16 @@ def fetch_rss_source(source: dict, fetched_at: str) -> list[dict]:
                 separator=" ", strip=True
             )
 
-        # Extract full article text
+        # Extract full article text (fall back to excerpt for sources like RTHK
+        # where newspaper3k cannot parse the article page)
         log.info(f"    Extracting full text: {headline[:60]}")
         full_text = extract_full_text(article_url)
+        if not full_text and excerpt:
+            full_text = excerpt
+            log.info("    Using RSS excerpt as full_text (newspaper3k returned empty)")
         time.sleep(REQUEST_DELAY)
 
-        # Extract Google Trends-specific fields if present
-        approx_traffic = entry.get("ht_approx_traffic", None)
-        news_items = []
-        for ni in entry.get("ht_news_item", []):
-            if isinstance(ni, dict):
-                news_items.append({
-                    "title": ni.get("ht_news_item_title", ""),
-                    "url": ni.get("ht_news_item_url", ""),
-                    "source": ni.get("ht_news_item_source", ""),
-                })
-
-        record = {
+        records.append({
             "article_id": make_article_id(article_url),
             "source_name": name,
             "source_type": "rss",
@@ -192,13 +342,7 @@ def fetch_rss_source(source: dict, fetched_at: str) -> list[dict]:
             "fetched_at": fetched_at,
             "language": language,
             "tags": tags,
-        }
-        if approx_traffic:
-            record["approx_traffic"] = approx_traffic
-        if news_items:
-            record["related_news"] = news_items
-
-        records.append(record)
+        })
 
     log.info(f"  Found {len(records)} article(s) within lookback window.")
     return records
@@ -358,7 +502,12 @@ def main():
     for source in sources:
         source_type = source.get("type", "").lower()
 
-        if source_type == "rss":
+        # Route Google Trends to dedicated XML parser
+        is_google_trends = "trends.google.com" in source.get("url", "")
+
+        if source_type == "rss" and is_google_trends:
+            records = fetch_google_trends(source, fetched_at)
+        elif source_type == "rss":
             records = fetch_rss_source(source, fetched_at)
         elif source_type == "scrape":
             records = fetch_scrape_source(source, fetched_at)

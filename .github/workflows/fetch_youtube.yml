@@ -41,6 +41,11 @@ jobs:
       - name: Fetch news data
         run: python scripts/fetch_news.py
 
+      - name: Fetch news via Perplexity Search
+        env:
+          PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
+        run: python scripts/fetch_perplexity.py
+
       - name: Fetch podcast data
         run: python scripts/fetch_podcasts.py
 
