@@ -1,0 +1,126 @@
+{
+  "date": "2026-04-05",
+  "period": "evening",
+  "generated_at": "2026-04-05T22:06:11.580871+00:00",
+  "topics": [
+    {
+      "id": 1,
+      "headline": "美伊衝突的「一個飛行員」如何把美國拖進長戰：市場最怕的不是戰爭，是升級路徑",
+      "why_it_matters": "美軍戰機在伊朗境內被擊落並啟動高風險搜救，代表衝突已從「打擊」走向「地面接觸」，升級慣性一旦形成，油價與風險資產會先行定價。對港人資產配置而言，這是典型的「尾部風險突然具象化」時刻。",
+      "competitor_status": "非常擠：多個港評頻道集中談「F-15/A-10被擊落」「雷霆救兵」「特朗普民望」；多為情緒式或軍事八卦。可搶的空位是：用升級決策樹解釋為何一個人質/失聯人員會改變戰略，並落到油價、航運、通脹與港人投資組合。",
+      "simons_angle": "用「升級路徑」而非單一事件敘事：把搜救行動、基建打擊、伊朗報復串成可預測的下一步，並用市場語言（波動率、通脹預期、航運保費）說明香港人為何要關心。",
+      "sources": [
+        {
+          "title": "Iran Shoots Down U.S. Fighter Jet, Setting Off American Search and Rescue",
+          "url": "https://www.nytimes.com/2026/04/03/world/middleeast/us-airman-search-iran.html"
+        },
+        {
+          "title": "Iran downs US fighter jet, 1 crew member recovered, rescue operation ongoing for second",
+          "url": "https://www.longwarjournal.org/archives/2026/04/iran-downs-us-fighter-jet-1-crew-member-recovered-rescue-operation-ongoing-for-second.php"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "headline": "特朗普「分級鋼鋁關稅」：把貿易戰做成訂閱制，盟友與香港的真正成本在哪裏？",
+      "why_it_matters": "美國準備推出分級制度簡化鋼鋁關稅，訊號是：關稅不再是短期談判籌碼，而是變成可長期運行的制度設計。香港的中轉、供應鏈金融與在美港人企業會遇到持續的合規成本與價格傳導。",
+      "competitor_status": "港評圈未必深入：多集中講戰爭/內鬥，對貿易制度細節較少。空位是：拆解「分級」如何影響不同產業鏈（汽車、建材、家電），以及為何會逼企業把供應鏈去香港化/去中國化。",
+      "simons_angle": "用「制度化關稅」框架：關稅不是稅率，是行政權力如何重塑商業風險；再把故事拉回香港——作為『規則城市』失去規則後，企業如何選邊站。",
+      "sources": [
+        {
+          "title": "US Set to Roll Out Tiered Tariffs on Steel, Aluminum Imports",
+          "url": "https://www.bloomberg.com/news/articles/2026-04-01/us-to-set-25-tariff-on-finished-steel-aluminum-products-wsj"
+        },
+        {
+          "title": "Trump tariffs live updates: US to roll out tiered duties on steel and aluminium",
+          "url": "https://finance.yahoo.com/news/live/trump-tariffs-live-updates-us-to-roll-out-tiered-duties-on-steel-aluminum-one-year-after-trumps-liberation-day-tariffs-122637970.html"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "headline": "馬興瑞落馬：連政治局都要「交數」的反腐，真正目標是誰的忠誠？",
+      "why_it_matters": "政治局成員被查屬罕見級別政治訊號，意味反腐不只是清理利益，更是重畫派系安全邊界。對香港及海外港人而言，這種高層不確定性會透過資本外逃、地方政策急轉彎、以及對外強硬姿態傳導。",
+      "competitor_status": "擠但角度單一：多以宮鬥八卦、彭麗媛「皇后黨」敘事為主。空位是：從新疆治理、軍工體系與科技官僚路線，解釋為何此時要拿他開刀，以及對中國經濟治理的副作用。",
+      "simons_angle": "把反腐當作「組織管理」案例：當最高層只能用恐懼治理，體制會如何劣化（逆向選擇、資訊上行失真），最終反噬經濟與對外政策。",
+      "sources": [
+        {
+          "title": "Ma Xingrui becomes China’s third Politburo member investigated for corruption",
+          "url": "https://www.scmp.com/news/china/politics/article/3348968/ma-xingrui-third-politburo-member-investigated-chinas-anti-corruption-bodies"
+        },
+        {
+          "title": "Chinese Politburo member Ma Xingrui under investigation by anti-graft watchdog",
+          "url": "https://www.channelnewsasia.com/east-asia/chinese-politburo-member-ma-xingrui-under-investigation-anti-graft-watchdog-6035436"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "headline": "台灣漢光「電腦兵推」拉長兩週：戰爭不是打一天，是撐兩週的物流與社會動員",
+      "why_it_matters": "台灣年度漢光演習的電腦兵推拉長，焦點從戰術轉向持久戰的指揮與後勤。對在台港人與區內投資者，關鍵不只是會不會打，而是「打了之後供應鏈如何斷、何時修復」。",
+      "competitor_status": "相對不擠：港評頻道近期被伊朗與美國內政洗版，台灣演習的制度面討論較少。空位是：用『城市韌性』角度（電力、通訊、海纜、金融清算）把台海風險講清楚。",
+      "simons_angle": "不談口號，談「兩週生存清單」：把演習期間最脆弱的基建（海纜、電網、油料）拆解，並延伸到香港作為金融節點的外溢風險。",
+      "sources": [
+        {
+          "title": "Taiwan To Hold Computer-Assisted Drills in April – April 2, 2026",
+          "url": "https://www.youtube.com/watch?v=MIfdVkpljzM"
+        },
+        {
+          "title": "Defense Ministry Sets Han Kuang Agenda – April 2, 2026",
+          "url": "https://www.youtube.com/watch?v=ivnixzvzfqs"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "headline": "香港「雙軌法制」成形：普通法還在，但國安法庭已是另一套遊戲規則",
+      "why_it_matters": "當同一城市出現兩套司法標準，資本市場與人才會把它視為制度風險而非單一案件。對海外港人來說，這直接影響資產回流、家族信託、以及在港企業的可預期性。",
+      "competitor_status": "中度擠：已有法律評論談納粹「雙軌政府」類比。空位是：把概念落地到金融與商業——合約執行、仲裁、董事責任、以及在港上市公司風險溢價。",
+      "simons_angle": "用「制度套利」揭示：當國安成為超級法源，商界會如何自我審查與尋找替代司法管轄區，香港如何在不公開承認的情況下走向新加坡化/離岸化。",
+      "sources": [
+        {
+          "title": "香港步入「雙軌法制」時代？陳文敏解釋納粹歷史：一套司法制度，有兩種不同準則！",
+          "url": "https://www.youtube.com/watch?v=VGiyK3HB34M"
+        },
+        {
+          "title": "EP190｜ETO案：衞志樑供詞屢被質疑，稱流亡港人「曱甴」｜宏福聽證會...",
+          "url": "https://www.youtube.com/watch?v=PYiIfRn4BxA"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "headline": "中國「蘿蔔快跑」集體故障：自動駕駛不是AI，是治理與責任鏈",
+      "why_it_matters": "大規模故障事件讓自動駕駛的核心問題浮現：當系統出錯，誰負責、誰賠償、誰被追責？這是科技競賽的「制度戰」，港人投資AI概念股更需要看監管與責任框架。",
+      "competitor_status": "不算擠：有節目提到事件，但多停留在科技八卦。空位是：把它提升到『監管能力』與『產業政策』，以及中美在責任制度上誰更能支持大規模商用。",
+      "simons_angle": "用「責任鏈」視角：從保險、訴訟、地方政府KPI、到數據合規，講清楚為何自動駕駛最後拼的是制度，不是模型。",
+      "sources": [
+        {
+          "title": "中國最大自駕品牌「蘿蔔快跑」3月底近200台車突然齊跪低！",
+          "url": "https://www.youtube.com/watch?v=IF08X1mKTrM"
+        },
+        {
+          "title": "Get started with Google Trends | Documentation",
+          "url": "https://developers.google.com/search/docs/monitor-debug/trends-start"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "headline": "Google Trends告訴我們：今天全世界只在找體育？其實是「注意力被平台設計」偷走了",
+      "why_it_matters": "從Google Trends的日榜看，熱門往往被體育與娛樂佔據，政治經濟議題反而需要事件觸發才冒頭。對內容創作者與公共知識份子而言，這是「平台分配注意力」的制度性問題，也解釋了為何極端敘事更容易傳播。",
+      "competitor_status": "幾乎沒人做：多數頻道只跟新聞，不談注意力機制。空位是：用具體數據/例子解釋平台如何塑造議題，並給觀眾一套自我防禦的資訊飲食法。",
+      "simons_angle": "把它拉回香港：當公共討論空間被壓縮，平台化注意力更容易被操控；教觀眾如何用工具（趨勢、RSS、多語言比對）建立自己的「反宣傳儀表板」。",
+      "sources": [
+        {
+          "title": "Google Trends trending RSS (US) — Daily Search Trends",
+          "url": "https://trends.google.com/trending/rss?geo=US"
+        },
+        {
+          "title": "Google Trends trending RSS (HK) — Daily Search Trends",
+          "url": "https://trends.google.com/trending/rss?geo=HK"
+        }
+      ]
+    }
+  ]
+}
