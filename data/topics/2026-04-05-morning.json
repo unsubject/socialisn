@@ -1,0 +1,126 @@
+{
+  "date": "2026-04-05",
+  "period": "morning",
+  "generated_at": "2026-04-05T10:04:00Z",
+  "topics": [
+    {
+      "id": 1,
+      "headline": "伊朗戰事把油價變成全球『加息器』：誰會先跪？",
+      "why_it_matters": "競爭對手多在講『擊落戰機／救人』，但真正影響港人資產的是：油價與航運保費上升如何透過通脹預期、利率路徑、股債估值傳導到全球。對香港及海外港人而言，這是『中東戰火→美元利率→按揭與股票』的一條直線，而不是新聞花邊。",
+      "competitor_status": "非常擁擠：多個HK政評頻道集中討論美軍戰機被擊落、特朗普民望、是否升級作戰。可用角度：把事件抽象成『航運中斷＋保險成本＋央行反應函數』，用數據和情境推演取代戰況八卦。",
+      "simons_angle": "用『油價=全球加息器』框架拆解：若霍爾木茲受阻，能源成本會先打擊哪幾個經濟體（EU、印度、東亞製造鏈），以及央行在『通脹回升 vs 經濟放緩』兩難下會如何選邊。再補一個港人視角：能源／航運成本如何影響香港再出口、航空與保險業、以及港人海外生活成本。",
+      "sources": [
+        {
+          "title": "Oil rises over $1 as Iran crisis disrupts Middle East supply (mentions Strait of Hormuz disruption)",
+          "url": "https://www.reuters.com/business/energy/oil-rises-over-1-iran-crisis-disrupts-middle-east-supply-2026-03-04/"
+        },
+        {
+          "title": "YouTube competitor cluster shows heavy coverage of downed aircraft/rescue narratives",
+          "url": "https://unsubject.github.io/socialisn/youtube-feed.xml"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "headline": "政治局委員落馬：馬興瑞案不是反腐，是『政策執行風險』",
+      "why_it_matters": "馬興瑞被查反映北京高層整肅仍在擴散，對外界最重要的不是八卦派系，而是它如何改變地方官員的風險偏好：更怕犯錯、更愛做表面工程、數據更不可信。港人／海外投資者關心的是『中國增長、債務、產業政策』的可預測性。",
+      "competitor_status": "中度擁擠：已有頻道用『皇后黨』『宮廷鬥爭』解讀。可用角度：從政治風險到經濟後果——為何反腐周期往往導致投資與改革更保守、地方債與統計更黑箱。",
+      "simons_angle": "把案件放到『信息品質』框架：越高壓的問責，越容易出現KPI造假與風險隱瞞；再連到新疆／工業／能源／科技供應鏈（他曾在廣東與航天系統工作）——這類人事清洗對產業政策連貫性意味什麼。",
+      "sources": [
+        {
+          "title": "China's Communist Party investigates ex-Xinjiang leader Ma Xingrui (AP via Yahoo)",
+          "url": "https://ca.news.yahoo.com/chinas-communist-party-investigates-ex-115317893.html"
+        },
+        {
+          "title": "Competitor feed: multiple videos framing Ma Xingrui as Politburo purge",
+          "url": "https://unsubject.github.io/socialisn/youtube-feed.xml"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "headline": "NASA Artemis II重返繞月：這是美國工業政策的『宣傳片』",
+      "why_it_matters": "太空不是浪漫，而是供應鏈、國防、產業能力的展示。Artemis II在中美競賽下重啟載人繞月，會被盟友與對手解讀為『美國還能做大工程』的信號。對香港高資產族群，這也是判斷美國科技／國防投資周期的窗口。",
+      "competitor_status": "較少但正在升溫：競品頻道多以『50年後再征月』的新聞角度帶過，未深入到產業與財政結構。可用角度：以『公私合作＋軍民兩用供應鏈』解釋為何它影響市場與地緣政治。",
+      "simons_angle": "用『航天=國家級PMO』視角：拆解Artemis如何把風險外包給私營（合約、成本、技術路線），並把它放到對華競爭與盟友編隊（加拿大參與）中。最後連結投資：哪些產業會吃到長尾（高端製造、材料、航天電子、保險）。",
+      "sources": [
+        {
+          "title": "NASA counts down for first crewed lunar mission in half a century (Reuters)",
+          "url": "https://www.reuters.com/science/nasa-counts-down-first-crewed-lunar-mission-half-century-2026-04-01/"
+        },
+        {
+          "title": "Liftoff! NASA launches astronauts on historic Artemis Moon mission (NASA)",
+          "url": "https://www.nasa.gov/news-release/liftoff-nasa-launches-astronauts-on-historic-artemis-moon-mission/"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "headline": "香港『雙軌法制』：資本市場其實早已用腳投票",
+      "why_it_matters": "國安案件與一般案件的處理邏輯分裂，會令企業、投資者、保險公司對『可預測性』重新定價。對仍在香港與已離港的高資產港人而言，這影響到資產放哪裡、用哪個法域做合約、以及是否仍把香港當作安全港。",
+      "competitor_status": "中度擁擠：有頻道以納粹『雙軌政府』理論談香港司法現狀，但多停留在道德與歷史類比。可用角度：把它翻譯成『合約執行風險、政治風險保費、仲裁地選擇』。",
+      "simons_angle": "把議題做成『投資者備忘錄』：哪類交易最怕政治軌道（媒體、NGO、政治敏感行業），哪類仍相對穩定（純商業仲裁）；以及為何『普通法外觀』仍可能與實質風險背離。",
+      "sources": [
+        {
+          "title": "Green Bean Media video description on Hong Kong dual track legal system",
+          "url": "https://www.youtube.com/watch?v=VGiyK3HB34M"
+        },
+        {
+          "title": "Hong Kong court rejects appeal in landmark 'Hong Kong 47' case (Reuters)",
+          "url": "https://www.reuters.com/world/china/hong-kong-court-rejects-appeal-landmark-hong-kong-47-subversion-case-2026-02-23/"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "headline": "『港人四分一消費用於外遊』：其實是對未來的投票",
+      "why_it_matters": "如果大批市民把消費轉向外遊與離境，背後是對本地前景的折現率上升：不做長期規劃，只求短期效用最大化。對商業與政策而言，這是內需與零售結構變化的早期信號，也映照離散社群的心理狀態。",
+      "competitor_status": "較擁擠：有頻道用『大逃港』敘事，但多偏情緒與即時新聞。可用角度：用行為經濟學解釋『活在當下』如何成為理性選擇，並連到樓市、教育、人口流動。",
+      "simons_angle": "用『社會折現率』概念：當制度不可信、政策不可預期，個人會把未來貼現得更狠，導致儲蓄／投資／生育／教育選擇全改變。把它做成一集：從一個旅遊數字解釋一個城市的長期衰退機制。",
+      "sources": [
+        {
+          "title": "Competitor feed item on Easter exodus / spending on travel",
+          "url": "https://unsubject.github.io/socialisn/youtube-feed.xml"
+        },
+        {
+          "title": "Hong Kong Budget 2026-2027: driving growth through technology and innovation (background)",
+          "url": "https://www.china-briefing.com/news/hong-kong-budget-2026/"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "headline": "AI泡沫不是『模型』，是資本配置：下一輪爆雷會在哪？",
+      "why_it_matters": "競品在談OpenAI/Sora『難產』，但更大的問題是AI投資如何從『講故事』走向『現金流』，以及哪些公司會在利率與融資環境改變時先爆。對高資產港人，這關乎美股科技倉位與私募估值。",
+      "competitor_status": "中度擁擠：有人以陰謀或八卦談模型延期。可用角度：把AI當成資本開支周期與企業IT支出重分配，分析誰是受益者、誰是被擠出者。",
+      "simons_angle": "用『AI=新一代電力化』框架：短期泡沫與長期生產力並存，關鍵是採用曲線與資本成本。給觀眾一套檢查表：看算力供應、客戶留存、毛利、以及監管風險，而不是看demo。",
+      "sources": [
+        {
+          "title": "Competitor feed item discussing Sora delays and AI bubble risk",
+          "url": "https://unsubject.github.io/socialisn/youtube-feed.xml"
+        },
+        {
+          "title": "Oxford Economics: Key themes for 2026 include AI as shock absorber or shock magnifier",
+          "url": "https://www.oxfordeconomics.com/key-themes-2026/"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "headline": "美國『清除DEI』與軍隊換帥：這是國家機器再集中化",
+      "why_it_matters": "從多個頻道訊號看，美國政府正在透過人事更替與文化戰重塑國家機器。對國際秩序而言，這影響同盟信任、軍費與外交風格；對港人而言，這決定了美國對華政策的強硬度與可預測性。",
+      "competitor_status": "中度擁擠：競品多以『特朗普炒人』『內鬥』講法。可用角度：用組織行為學與制度分析，把它變成『國家能力』討論：忠誠度機制、官僚激勵、政策執行。",
+      "simons_angle": "把事件放到『戰時組織』框架：一個領導層若相信外部威脅上升，會傾向提高一致性、降低內部多元；但代價是錯誤更難被糾正。用這框架推演美國對伊朗／對華／對盟友的行為。",
+      "sources": [
+        {
+          "title": "Competitor feed includes multiple uploads on US military DEI and leadership changes",
+          "url": "https://unsubject.github.io/socialisn/youtube-feed.xml"
+        },
+        {
+          "title": "Oil disruption context: U.S.-Israeli war on Iran disrupts energy flows (Reuters)",
+          "url": "https://www.reuters.com/business/energy/oil-rises-over-1-iran-crisis-disrupts-middle-east-supply-2026-03-04/"
+        }
+      ]
+    }
+  ]
+}
