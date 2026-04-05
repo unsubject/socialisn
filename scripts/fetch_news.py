@@ -23,6 +23,8 @@ from datetime import datetime, timezone, timedelta
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 
+import xml.etree.ElementTree as ET
+
 import feedparser
 import requests
 import yaml
@@ -100,6 +102,97 @@ def is_within_lookback(published_at: str | None, lookback_hours: int) -> bool:
 
 
 # ---------------------------------------------------------------------------
+# Helpers — Google Trends (raw XML, since feedparser loses nested ht: elements)
+# ---------------------------------------------------------------------------
+
+HT_NS = "https://trends.google.com/trending/rss"
+
+def fetch_google_trends(source: dict, fetched_at: str) -> list[dict]:
+    """Parse Google Trends RSS with raw XML to preserve ht:news_item children."""
+    name = source["name"]
+    url = source["url"]
+    language = source.get("language", "en")
+    tags = source.get("tags", [])
+
+    log.info(f"  Fetching Google Trends: {name}")
+
+    try:
+        resp = requests.get(url, headers=HEADERS, timeout=15)
+        resp.raise_for_status()
+    except Exception as e:
+        log.error(f"  Request failed for Google Trends: {e}")
+        return []
+
+    try:
+        root = ET.fromstring(resp.content)
+    except ET.ParseError as e:
+        log.error(f"  XML parse failed for Google Trends: {e}")
+        return []
+
+    records = []
+    for item in root.findall(".//item"):
+        headline = (item.findtext("title") or "").strip()
+        if not headline:
+            continue
+
+        published_at = item.findtext("pubDate")
+        if not is_within_lookback(published_at, LOOKBACK_HOURS):
+            continue
+
+        approx_traffic = item.findtext(f"{{{HT_NS}}}approx_traffic") or ""
+        picture_url = item.findtext(f"{{{HT_NS}}}picture") or ""
+
+        # Extract related news articles
+        news_items = []
+        for ni in item.findall(f"{{{HT_NS}}}news_item"):
+            ni_title = ni.findtext(f"{{{HT_NS}}}news_item_title") or ""
+            ni_url = ni.findtext(f"{{{HT_NS}}}news_item_url") or ""
+            ni_source = ni.findtext(f"{{{HT_NS}}}news_item_source") or ""
+            ni_snippet = ni.findtext(f"{{{HT_NS}}}news_item_snippet") or ""
+            if ni_url:
+                news_items.append({
+                    "title": ni_title,
+                    "url": ni_url,
+                    "source": ni_source,
+                    "snippet": ni_snippet,
+                })
+
+        # Build full_text from related news snippets
+        full_text_parts = [f"熱搜關鍵字: {headline}"]
+        if approx_traffic:
+            full_text_parts.append(f"搜尋量: {approx_traffic}")
+        for ni in news_items:
+            full_text_parts.append(f"- {ni['title']} ({ni['source']}): {ni['snippet']}")
+        full_text = "\n".join(full_text_parts)
+
+        # Use headline + published date for unique ID (no per-item URL in feed)
+        unique_key = f"gtrends-{headline}-{published_at or fetched_at}"
+        article_id = make_article_id(unique_key)
+
+        record = {
+            "article_id": article_id,
+            "source_name": name,
+            "source_type": "rss",
+            "url": news_items[0]["url"] if news_items else url,
+            "headline": headline,
+            "excerpt": news_items[0]["snippet"] if news_items else None,
+            "full_text": full_text if len(full_text) > len(headline) + 20 else None,
+            "published_at": published_at,
+            "fetched_at": fetched_at,
+            "language": language,
+            "tags": tags,
+            "approx_traffic": approx_traffic,
+        }
+        if news_items:
+            record["related_news"] = news_items
+
+        records.append(record)
+
+    log.info(f"  Found {len(records)} trend(s) within lookback window.")
+    return records
+
+
+# ---------------------------------------------------------------------------
 # Helpers — RSS
 # ---------------------------------------------------------------------------
 
@@ -164,23 +257,16 @@ def fetch_rss_source(source: dict, fetched_at: str) -> list[dict]:
                 separator=" ", strip=True
             )
 
-        # Extract full article text
+        # Extract full article text (fall back to excerpt for sources like RTHK
+        # where newspaper3k cannot parse the article page)
         log.info(f"    Extracting full text: {headline[:60]}")
         full_text = extract_full_text(article_url)
+        if not full_text and excerpt:
+            full_text = excerpt
+            log.info("    Using RSS excerpt as full_text (newspaper3k returned empty)")
         time.sleep(REQUEST_DELAY)
 
-        # Extract Google Trends-specific fields if present
-        approx_traffic = entry.get("ht_approx_traffic", None)
-        news_items = []
-        for ni in entry.get("ht_news_item", []):
-            if isinstance(ni, dict):
-                news_items.append({
-                    "title": ni.get("ht_news_item_title", ""),
-                    "url": ni.get("ht_news_item_url", ""),
-                    "source": ni.get("ht_news_item_source", ""),
-                })
-
-        record = {
+        records.append({
             "article_id": make_article_id(article_url),
             "source_name": name,
             "source_type": "rss",
@@ -192,13 +278,7 @@ def fetch_rss_source(source: dict, fetched_at: str) -> list[dict]:
             "fetched_at": fetched_at,
             "language": language,
             "tags": tags,
-        }
-        if approx_traffic:
-            record["approx_traffic"] = approx_traffic
-        if news_items:
-            record["related_news"] = news_items
-
-        records.append(record)
+        })
 
     log.info(f"  Found {len(records)} article(s) within lookback window.")
     return records
@@ -358,7 +438,12 @@ def main():
     for source in sources:
         source_type = source.get("type", "").lower()
 
-        if source_type == "rss":
+        # Route Google Trends to dedicated XML parser
+        is_google_trends = "trends.google.com" in source.get("url", "")
+
+        if source_type == "rss" and is_google_trends:
+            records = fetch_google_trends(source, fetched_at)
+        elif source_type == "rss":
             records = fetch_rss_source(source, fetched_at)
         elif source_type == "scrape":
             records = fetch_scrape_source(source, fetched_at)

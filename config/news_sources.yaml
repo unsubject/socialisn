@@ -6,8 +6,7 @@
 #   language — "zh-TW", "zh-CN", "en", etc.
 #   tags     — optional labels for grouping
 #
-# Note: FT and Caixin are paywalled — full article text extraction will fall back
-#       to excerpt/headline only. All other feeds are open access.
+# Note: Perplexity Search API supplements RSS feeds with active news search.
 
 sources:
 
@@ -60,25 +59,6 @@ sources:
       - economics
       - english
 
-  - name: "Financial Times — China Economy"
-    type: rss
-    url: "https://www.ft.com/china-economy?format=rss"
-    language: en
-    tags:
-      - china
-      - economics
-      - english
-      - paywalled
-
-  - name: "Caixin Global"
-    type: rss
-    url: "https://www.caixinglobal.com/rss/"
-    language: en
-    tags:
-      - china
-      - economics
-      - english
-      - paywalled
 
   # ---------------------------------------------------------------------------
   # Traditional Chinese — RTHK
@@ -125,53 +105,6 @@ sources:
       - government
       - chinese
 
-  - name: "政府統計處 — 新聞公報"
-    type: rss
-    url: "https://www.censtatd.gov.hk/tc/press_release/rss.xml"
-    language: zh-TW
-    tags:
-      - hongkong
-      - statistics
-      - government
-      - chinese
-
-  - name: "財政司司長網誌"
-    type: rss
-    url: "https://www.fso.gov.hk/rss/fsblog_rss_c.xml"
-    language: zh-TW
-    tags:
-      - hongkong
-      - economics
-      - government
-      - chinese
-
-  - name: "金管局 — 演講及訪問"
-    type: rss
-    url: "https://www.hkma.gov.hk/chi/news-and-media/speeches/rss.xml"
-    language: zh-TW
-    tags:
-      - hongkong
-      - monetary-policy
-      - government
-      - chinese
-
-  - name: "金管局 — 洞悉觀點"
-    type: rss
-    url: "https://www.hkma.gov.hk/chi/news-and-media/insight/rss.xml"
-    language: zh-TW
-    tags:
-      - hongkong
-      - monetary-policy
-      - government
-      - chinese
-
-  - name: "金管局 — 研究報告"
-    type: rss
-    url: "https://www.hkma.gov.hk/chi/data-publications-research/research/rss.xml"
-    language: zh-TW
-    tags:
-      - hongkong
-      - monetary-policy
-      - research
-      - government
-      - chinese
+  # Note: 政府統計處, 財政司司長網誌, and 金管局 feeds removed — consistently
+  # produced zero articles. Coverage replaced by Perplexity Search API
+  # (see scripts/fetch_perplexity.py).
