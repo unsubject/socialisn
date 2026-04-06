@@ -1,0 +1,126 @@
+{
+  "date": "2026-04-06",
+  "period": "evening",
+  "generated_at": "2026-04-06T22:07:00Z",
+  "topics": [
+    {
+      "id": 1,
+      "headline": "霍爾木茲海峽最後通牒：市場押注『會開』，但保險與航運已先加價",
+      "why_it_matters": "特朗普把伊朗『開放霍爾木茲』定為具體期限，這不是純軍事新聞，而是全球油價、航運保險與亞洲燃料成本的定價事件。對高資產港人而言，重點是資產配置的二階效應：能源輸入、通脹預期與美元利率路徑的再評估。",
+      "competitor_status": "非常擁擠：多個港政經頻道都在講『擊落美軍戰機』『真人版雷霆救兵』『戰況失控』；但較少人用航運/保險/套利鏈條去拆解香港與英國生活成本、企業成本與投資組合風險。",
+      "simons_angle": "用『風險保費』做主線：不是預測戰爭輸贏，而是解釋為何即使海峽重開，保險費率與航運改道也不會立刻回落，並把這些成本如何滲透到香港（油價、機票、進口物價）與英國（能源賬單、通脹）說清楚。",
+      "sources": [
+        {
+          "title": "Trump says Tuesday deadline to make a deal with Iran is final (reopen Strait of Hormuz) — Reuters",
+          "url": "https://www.reuters.com/world/middle-east/trump-says-tuesday-deadline-make-deal-with-iran-is-final-2026-04-06/"
+        },
+        {
+          "title": "Wall St futures dip after Trump gives Iran deadline to open Hormuz — Investing.com",
+          "url": "https://www.investing.com/news/stock-market-news/wall-st-futures-dip-after-trump-gives-iran-tue-deadline-to-open-hormuz-4597675"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "headline": "Broadcom（AVGO）變成『地緣政治避險股』：AI 供應鏈正在被市場當作國策下注",
+      "why_it_matters": "Google Trends（全球）把 AVGO 與 S&P 500 推上熱門，顯示資金在『宏觀風險升溫』時仍追逐 AI 基礎設施龍頭。對港人投資者而言，關鍵是辨認：這是企業基本面，還是市場把半導體當作美國工業政策與盟友體系的代理標的。",
+      "competitor_status": "中度擁擠：對 AI 股/泡沫的情緒性討論很多，但較少人把 AVGO 這類『供應鏈節點公司』放進出口管制、盟友去風險與地緣政治資本流向的框架。",
+      "simons_angle": "把 AVGO 拆成三條線：1) AI 基建需求；2) 美國對中國科技管制的替代供應鏈；3) 市場在戰爭/通脹背景下，為何更偏好『現金流+定價權』的科技巨頭，而非純故事股。",
+      "sources": [
+        {
+          "title": "Google Trends (GLOBAL) — avgo stock",
+          "url": "https://trends.google.com/trending/rss?geo=GLOBAL"
+        },
+        {
+          "title": "Broadcom CEO, $100 billion AI revenue… — The Motley Fool",
+          "url": "https://www.fool.com/investing/2026/04/06/broadcom-ceo-100-billion-ai-revenue-stock-buy/"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "headline": "溫家寶『現本尊效應』：體制內的『安全出口』，其實是對市場與官僚的暗號",
+      "why_it_matters": "競爭頻道集中談『溫家寶罕見現身』的政治八卦，但對港人更有價值的是：這類『被允許的異音』如何被用作內部穩定與政策轉向的緩衝。若中國要處理外貿壓力與內需疲弱，這種敘事可能是為『重新分配』與『政策回擺』鋪路。",
+      "competitor_status": "擁擠但角度單一：多數把它當派系鬥爭或情緒宣洩；較少討論它作為『制度訊號機制』：誰需要這個故事？要安撫誰？",
+      "simons_angle": "用政治經濟學框架：把溫家寶當作『可信第三方』，解釋為何威權體制在經濟壓力時，會允許有限度的前朝敘事來重置期望；並連結到港人資產：人民幣、內地資產風險溢價、以及外資能否回流。",
+      "sources": [
+        {
+          "title": "Ch. 1710：溫家寶現本尊 效應大陸發酵 — 風雲谷 (YouTube feed)",
+          "url": "https://www.youtube.com/watch?v=SugeCvHN_GU"
+        },
+        {
+          "title": "風雲谷合集286（溫總現身等）— 風雲谷 (YouTube feed)",
+          "url": "https://www.youtube.com/watch?v=H6OMTaeC2ww"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "headline": "馬興瑞落馬＋軍工系統連環出事：軍民融合在『KPI化』下的失敗樣本",
+      "why_it_matters": "多個頻道都在談『皇后黨』『彭麗媛同鄉』等宮鬥敘事，但港人更需要的是：這是否反映軍工體系的技術/採購失靈，進而影響中國對外軍事冒險的能力與成本。若軍工現代化受挫，台海風險與中國對外策略可能出現更不對稱的轉向（例如灰色地帶、經濟脅迫）。",
+      "competitor_status": "擁擠：至少兩個大台已把焦點放在派系與反腐；較少人把它連到產業政策失效、地方財政、以及新疆治理成本。",
+      "simons_angle": "把『反腐』翻譯成『資源錯配』：用軍工院士落馬、買票、女公關等細節，講清楚威權體制如何在高壓與政績驅動下，把科研—採購—升遷扭曲成尋租鏈，最後導致武器系統失靈與戰略誤判。",
+      "sources": [
+        {
+          "title": "官宣了！政治局委員馬興瑞落馬… — 文昭 (YouTube feed)",
+          "url": "https://www.youtube.com/watch?v=1eSJt4uTnXs"
+        },
+        {
+          "title": "城寨新聞 II 3/4/26：馬興瑞涉貪被調查…軍工院士落馬… — 城寨 (YouTube feed)",
+          "url": "https://www.youtube.com/watch?v=ucgXFWCn0SM"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "headline": "香港『網約車』成熱搜：管制不是交通問題，而是平台經濟的政治問題",
+      "why_it_matters": "香港 Google Trends 熱搜出現『網約車』，反映本地對平台經濟與交通管制的矛盾升溫。對港人與移民港人來說，這是理解香港治理模式的一個縮影：政府如何在既得利益（牌照）、執法選擇性、與民生效率之間做取捨。",
+      "competitor_status": "相對不擁擠：政治頻道多談國安與大事件，較少把『網約車』這種民生議題上升到治理與制度激勵分析。",
+      "simons_angle": "用『制度設計』拆局：比較新加坡/台灣/英國的網約車監管，指出香港真正問題不是『合法不合法』，而是政府是否願意讓市場競爭觸碰既得利益；並延伸到：為何威權化治理更傾向保護可被管控的壟斷，而不是效率。",
+      "sources": [
+        {
+          "title": "Google Trends (HK) — 網約車",
+          "url": "https://trends.google.com/trending/rss?geo=HK"
+        },
+        {
+          "title": "Google Trends documentation: Trending Now & filters (for methodology)",
+          "url": "https://developers.google.com/search/docs/monitor-debug/trends-start"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "headline": "羅湖口岸熱搜背後：『復活節大逃港』其實是信心與消費外流指標",
+      "why_it_matters": "『羅湖口岸』在香港熱搜，與競爭頻道談的『復活節大逃港』互相呼應：大量跨境出行是對本地消費環境與生活質素的投票。對仍在港與海外港人而言，這是觀察香港內需、零售租金、以及城市吸引力（人才與資本）的一個即時代理指標。",
+      "competitor_status": "有討論但偏情緒：多以揶揄/怨氣描述『逃港』，較少把它量化成結構性經濟指標（消費外流、服務業利潤、租金承受力）。",
+      "simons_angle": "把『口岸人流』當成 macro 指標：結合零售、餐飲、酒店與租金循環，解釋為何『人走錢走』會先在週末/假期的口岸數據出現，然後才反映在失業率與樓市；並延伸到移民港人如何判斷是否回流投資/置業。",
+      "sources": [
+        {
+          "title": "Google Trends (HK) — 羅湖口岸",
+          "url": "https://trends.google.com/trending/rss?geo=HK"
+        },
+        {
+          "title": "【香港1A】七十萬人復活節大逃港… — Hong Kong Uncensored 香港冇格仔 (YouTube feed)",
+          "url": "https://www.youtube.com/watch?v=RUwokbNBu68"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "headline": "台灣四月兵推與關稅陰影：供應鏈不是撤走，而是『把利潤搬到安全區』",
+      "why_it_matters": "台灣的電腦兵推與關稅/貿易政策不確定性同時出現，讓企業更關心『中斷風險』的財務處理方式。對港人投資者與企業主來說，問題不是台海會不會打，而是資本如何用更高的風險折現率、更多庫存與多地生產，把利潤搬到可保險、可融資的安全區。",
+      "competitor_status": "中度擁擠：很多人談軍事新聞，但較少把它連到企業財務決策（保險、庫存、資本開支）與投資回報的折現率。",
+      "simons_angle": "用 CFO 視角講台海：如果你是供應鏈企業或投資者，你會怎樣把『地緣政治』寫進模型（WACC、保費、供應商備援、現金流波動）？用這個角度，觀眾會比一般軍事評論更有所得。",
+      "sources": [
+        {
+          "title": "Taiwan To Hold Computer-Assisted Drills in April — YouTube",
+          "url": "https://www.youtube.com/watch?v=MIfdVkpljzM"
+        },
+        {
+          "title": "Have risks around the Taiwan Strait increased? — Economist Intelligence Unit",
+          "url": "https://www.eiu.com/n/blogs/operational-risk-outlook-2026/"
+        }
+      ]
+    }
+  ]
+}
