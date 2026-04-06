@@ -5,7 +5,7 @@
     <link>https://unsubject.github.io/socialisn</link>
     <description>每日香港及國際時事情報簡報，由 AI 自動生成</description>
     <language>zh-TW</language>
-    <lastBuildDate>Sun, 05 Apr 2026 16:45:21 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 06 Apr 2026 00:00:09 +0000</lastBuildDate>
     <atom:link href="https://unsubject.github.io/socialisn/feed.xml" rel="self" type="application/rss+xml"/>
 
   <item>
@@ -15,154 +15,157 @@
     <pubDate>Sun, 05 Apr 2026 12:00:00 +0000</pubDate>
     <description><![CDATA[<h1>2026-04-05 晚報</h1>
 <h2>🎙 Podcast</h2>
-<h3>中東危機與能源衝擊</h3>
-<p><strong>伊朗戰爭能源危機分析</strong>（Unhedged，16分鐘）探討伊朗戰爭導致全球能源供應中斷，分析能源危機如何發展及戰後復蘇前景。<strong>特朗普對伊政策失效</strong>（Big Take，18分鐘）揭示特朗普對伊朗開戰辯護適得其反，充滿矛盾的演講引發市場動盪並令盟友困惑；另一集專題報道（Big Take，18分鐘）記錄特朗普白宮黃金時段演說，警告將在兩至三週內對伊朗採取「極其強硬」行動。<strong>經濟戰爭歷史教訓</strong>（The Economics Show，26分鐘）分析制裁、關稅、封鎖等經濟武器的實際效力，以伊朗和俄羅斯為當代案例。</p>
-<p><a href="https://shows.acast.com/unhedged/episodes/how-an-energy-crisis-unfolds">Unhedged</a> | <a href="https://omny.fm/shows/the-big-take/trump-made-his-case-for-war-with-iran-it-backfired">Big Take - 失效</a> | <a href="https://omny.fm/shows/the-big-take/special-report-president-trumps-prime-time-address">Big Take - 演說</a> | <a href="https://shows.acast.com/the-economics-show-with-soumaya-keynes/episodes/economic-warfare-lessons-from-history-with-mark-harrison">The Economics Show</a></p>
-<h3>AI與科技產業</h3>
-<p><strong>AI寫作辨別技術</strong>（Odd Lots，48分鐘）探討如何辨別人工智能生成的文章，分析AI寫作特徵及其帶來的欺騙和學術誠信問題。<strong>成癮設計未來</strong>（Hard Fork，69分鐘）探討成癮設計的未來發展、DeepMind深度研究及HatGPT等新興AI技術應用前景。</p>
-<p><a href="https://omny.fm/shows/odd-lots/this-is-how-to-tell-if-writing-was-made-by-ai">Odd Lots</a> | <a href="https://www.nytimes.com/column/hard-fork">Hard Fork</a></p>
-<h3>企業與市場動態</h3>
-<p><strong>SpaceX史上最大IPO</strong>（Bloomberg Intelligence，17分鐘）SpaceX據報秘密提交IPO申請，估值可能超過1.75萬億美元，將創史上最大上市規模。<strong>Tesla銷售深度衰退</strong>（Bloomberg Intelligence，17分鐘）Tesla電動車銷售再度不達預期，陷入深度困境。<strong>投資銀行家的日常</strong>（Odd Lots，54分鐘）Greenhill CEO解釋投資銀行家日常工作並探討AI對白領工作的衝擊。<strong>日本經濟轉機</strong>（Wall Street Week，48分鐘）日本經濟在30年停滯後出現轉機，私人資本與商業文化改革成為增長關鍵。</p>
-<p><a href="https://omny.fm/shows/the-tape/spacex-said-to-file-confidentially-for-ipo-before-ai-rivals">SpaceX IPO</a> | <a href="https://omny.fm/shows/the-tape/tesla-s-ev-sales-miss-expectations-again-in-deepening-slump">Tesla</a> | <a href="https://omny.fm/shows/odd-lots/scott-bok-explains-what-investment-bankers-actually-do-all-day">投資銀行</a> | <a href="https://omny.fm/shows/wall-street-week/fan-favorite-japan-s-new-horizon">日本</a></p>
-<h3>社會經濟議題</h3>
-<p><strong>美國畢業生就業困境</strong>（The Indicator，8分鐘）美國就業市場呈現「低招聘、低裁員」狀態，對新大學畢業生前景黯淡。<strong>好時巧克力偷工減料</strong>（Planet Money，33分鐘）好時公司被指控在Reese's產品中改用廉價替代原料而非真正牛奶巧克力和花生醬。<strong>古巴經濟危機</strong>（Planet Money，27分鐘）美國制裁導致古巴石油供應中斷，引發醫療、運輸及電力危機。<strong>公共財價值</strong>（The Indicator，6分鐘）介紹海上自由、GPS和大型強子對撞機等公共財對社會繁榮的貢獻。</p>
-<p><a href="https://www.npr.org/2026/04/03/nx-s1-5771609/jobs-that-new-college-grads-are-and-are-not-landing">就業</a> | <a href="https://www.npr.org/2026/04/03/nx-s1-5773425/reeses-peanut-butter-candy-chocolate-egg-easter-hershey-brad">巧克力</a> | <a href="https://www.npr.org/2026/04/01/nx-s1-5770721/cuba-oil-blockade-trump-power-crisis">古巴</a> | <a href="https://www.npr.org/2026/04/02/nx-s1-5770605/greetings-from-our-favorite-public-goods">公共財</a></p>
+<h3>美伊衝突與能源危機</h3>
+<p><strong>Unhedged</strong> 探討伊朗戰爭如何引發全球能源危機，分析戰後能源供應恢復的時間表及市場前景。特朗普就對伊朗開戰向美國民眾陳詞，承諾迅速結束衝突但續言將進行數週激烈軍事行動，言論自相矛盾引發市場及盟國擔憂。<strong>Big Take</strong> 指出特朗普總統發表黃金時段演講，警告將在數周內對伊朗採取極端行動，言論引發股市下跌及油價飆升。<br />
+- <a href="https://shows.acast.com/unhedged/episodes/how-an-energy-crisis-unfolds">How an energy crisis unfolds</a> - Unhedged, 16分鐘<br />
+- <a href="https://omny.fm/shows/the-big-take/trump-made-his-case-for-war-with-iran-it-backfired">Trump Made His Case for War With Iran. It Backfired</a> - Big Take, 18分鐘<br />
+- <a href="https://omny.fm/shows/the-big-take/special-report-president-trumps-prime-time-address">Special Report: President Trump's Prime Time Address</a> - Big Take, 18分鐘</p>
+<h3>經濟戰爭與制裁</h3>
+<p><strong>The Economics Show</strong> 探討制裁、關稅、封鎖等經濟武器的效果，並從歷史教訓看伊朗、俄羅斯等當代案例。經濟戰爭已有數百年歷史，本集分析經濟武器在地緣政治中的實際作用。<br />
+- <a href="https://shows.acast.com/the-economics-show-with-soumaya-keynes/episodes/economic-warfare-lessons-from-history-with-mark-harrison">Economic warfare: lessons from history, with Mark Harrison</a> - The Economics Show, 26分鐘</p>
+<h3>科技與人工智能</h3>
+<p><strong>Hard Fork</strong> 探討成癮性設計的未來發展、DeepMind的深度研究，以及HatGPT等議題，分析科技平台面臨的監管與法律風險。<strong>Odd Lots</strong> 探討如何辨別人工智能生成的文字，分析AI文章的特徵與潛在風險，包括學術作弊、詐騙聊天機器人等問題。<br />
+- <a href="https://www.nytimes.com/column/hard-fork">The Future of Addictive Design + Going Deep at DeepMind + HatGPT</a> - Hard Fork, 69分鐘<br />
+- <a href="https://omny.fm/shows/odd-lots/this-is-how-to-tell-if-writing-was-made-by-ai">This Is How to Tell if Writing Was Made by AI</a> - Odd Lots, 48分鐘</p>
+<h3>金融與投資</h3>
+<p><strong>Odd Lots</strong> 邀請投資銀行前行政總裁Scott Bok解釋投資銀行家的日常工作職責,探討AI對白領工作的潛在衝擊。<strong>Wall Street Week</strong> 指日本經濟在失落三十年後迎來轉機，私募資本與商業文化改革成為推動下一輪增長的關鍵。<br />
+- <a href="https://omny.fm/shows/odd-lots/scott-bok-explains-what-investment-bankers-actually-do-all-day">Scott Bok Explains What Investment Bankers Actually Do All Day</a> - Odd Lots, 54分鐘<br />
+- <a href="https://omny.fm/shows/wall-street-week/fan-favorite-japan-s-new-horizon">Fan Favorite: Japan's New Horizon</a> - Wall Street Week, 48分鐘</p>
+<h3>企業與市場</h3>
+<p><strong>Bloomberg Intelligence</strong> 報導特斯拉電動車銷售再次未達預期，公司陷入銷售困境；電動車市場競爭加劇，特斯拉核心業務面臨轉型挑戰。SpaceX秘密申報首次公開募股，公司估值可能超過1.75萬億美元，有望成為史上最大規模上市。<br />
+- <a href="https://omny.fm/shows/the-tape/tesla-s-ev-sales-miss-expectations-again-in-deepening-slump">Tesla's EV Sales Miss Expectations Again in Deepening Slump</a> - Bloomberg Intelligence, 17分鐘<br />
+- <a href="https://omny.fm/shows/the-tape/spacex-said-to-file-confidentially-for-ipo-before-ai-rivals">SpaceX Said to File Confidentially for IPO Before AI Rivals</a> - Bloomberg Intelligence, 17分鐘</p>
+<h3>就業與經濟生活</h3>
+<p><strong>The Indicator from Planet Money</strong> 報導美國就業市場呈現「低招聘、低裁員」狀態，新大學畢業生面臨嚴峻就業前景；節目走訪霍華德大學了解應屆畢業生的求職狀況。<strong>Planet Money</strong> 指好時公司因成本上升而改變Reese's花生醬杯的配方，使用非傳統材料以降低成本，引發消費者對「偷工減料」現象的關注。<br />
+- <a href="https://www.npr.org/2026/04/03/nx-s1-5771609/jobs-that-new-college-grads-are-and-are-not-landing">Jobs that new college grads are and are not landing</a> - The Indicator, 8分鐘<br />
+- <a href="https://www.npr.org/2026/04/03/nx-s1-5773425/reeses-peanut-butter-candy-chocolate-egg-easter-hershey-brad">Reese's heir vs. chocolate skimpflation</a> - Planet Money, 33分鐘</p>
+<h3>古巴與美國制裁</h3>
+<p><strong>Planet Money</strong> 報導古巴經濟實驗陷入困境，美國禁運石油導致該國醫療、運輸及電力供應系統癱瘓。<br />
+- <a href="https://www.npr.org/2026/04/01/nx-s1-5770721/cuba-oil-blockade-trump-power-crisis">Dark times for Cuba's economic experiment</a> - Planet Money, 27分鐘</p>
+<h3>公共物品</h3>
+<p><strong>The Indicator from Planet Money</strong> 介紹全球各地令人矚目的公共物品，如海上自由、全球定位系統及大型強子對撞機等，探討其對人類社會的貢獻。<br />
+- <a href="https://www.npr.org/2026/04/02/nx-s1-5770605/greetings-from-our-favorite-public-goods">Greetings from: Our favorite public goods</a> - The Indicator, 6分鐘</p>
 <hr />
 <h2>頭條故事</h2>
 <ol>
 <li>
-<p><strong>美軍戰機伊朗遭擊落 特種部隊救援成功</strong><br />
-   美軍F-15E及A10戰機在伊朗境內遭擊落，兩名機師經特種部隊搜救後成功獲救，特朗普確認救援行動並預告周二白宮講話。伊朗首次擊落美軍先進戰機標誌衝突升級，美國防預算大增至1.5萬億美元歷史新高，局勢難以降溫。<br />
-   來源：城寨、謎米香港、Hong Kong Uncensored、CC News、CNBC | <a href="https://www.youtube.com/watch?v=fSsiYXzFmt8">城寨</a> | <a href="https://www.youtube.com/watch?v=XPc4uilaH2o">謎米</a> | <a href="https://www.cnbc.com/2026/04/04/debris-from-interception-strikes-oracle-building-in-dubai-uae-says.html">CNBC</a></p>
+<p><strong>溫家寶罕見現身引發輿論風波</strong><br />
+   溫家寶罕見現身發表「希望人民把我忘記，但我永不忘祖國和人民」聲明，引發大陸輿論發酵，人民日報評論反映中共高層局勢變化。此事件成為今日YouTube最高觀看影片，顯示其政治敏感性。<br />
+   來源：風雲谷 (115,222觀看) <a href="https://www.youtube.com/watch?v=SugeCvHN_GU">連結</a></p>
 </li>
 <li>
-<p><strong>溫家寶現身發聲 人民日報連續評論</strong><br />
-   溫家寶罕見公開現身並發表「希望人民把我忘記，但我永不忘祖國和人民」言論，引發大陸輿論效應，人民日報連續刊登評論分析其對當下局勢的影響，視頻觀看量達11.5萬次。<br />
-   來源：風雲谷 | <a href="https://www.youtube.com/watch?v=SugeCvHN_GU">連結</a></p>
+<p><strong>美軍兩架戰機在伊朗被擊落 機師成功獲救</strong><br />
+   美軍A-10和F-15E戰機在伊朗境內遭擊落，特朗普確認兩名失蹤機師已成功獲救。美軍派遣特種部隊深入敵後進行絕地救援，展現多兵種協同、衛星無人機監控及人工智能預測等先進技術手段。<br />
+   來源：城寨、CNBC (80,272觀看) <a href="https://www.youtube.com/watch?v=fSsiYXzFmt8">連結</a></p>
 </li>
 <li>
-<p><strong>特朗普白宮人事大地震 核心內閣及軍方高層大換血</strong><br />
-   國土安全部長、核心內閣成員及三名軍方高層被炒，白宮發言人及商務部長亦面臨去職風險。陸軍參謀長因DEI政策分歧被撤換，反映新政府徹底清除軍隊DEI文化的決心。<br />
-   來源：謎米香港、城寨 | <a href="https://www.youtube.com/watch?v=W3cBIiJtDJ0">謎米</a> | <a href="https://www.youtube.com/watch?v=MVAR2CGVNCY">城寨</a></p>
+<p><strong>特朗普威脅伊朗開放荷莫茲海峽 油價飆升</strong><br />
+   特朗普警告伊朗須於周二前開放荷莫茲海峽否則面臨「地獄式」轟炸，國際油價因此升至114美元/桶。此威脅反映美國在中東能源通道的戰略焦慮，並加劇全球能源市場不確定性。<br />
+   來源：CNBC <a href="https://www.cnbc.com/2026/04/05/crude-oil-prices-iran-war-strait-hormuz.html">連結</a></p>
 </li>
 <li>
-<p><strong>中共「皇后黨」高官馬興瑞被抓 多名軍工大佬人間蒸發</strong><br />
-   中共高級官員馬興瑞被官方宣布被抓，引發對「皇后黨」及習近平政權的關注。多名中共軍工高層人間蒸發或猝死，習近平追究武器系統失靈責任。<br />
-   來源：文昭、城寨 | <a href="https://www.youtube.com/watch?v=kNsbo1IbRJk">文昭</a> | <a href="https://www.youtube.com/watch?v=dMOrjLPseKA">城寨</a></p>
+<p><strong>白宮人事大地震 核心內閣及軍方高層被撤換</strong><br />
+   特朗普政府爆發大規模人事調整，國土安全部長、三名軍方高層、白宮發言人及商務部長等核心人員遭撤換。陸軍參謀長喬治因與參謀總長在DEI政策上分歧而被撤職，反映政府內部權力鬥爭激烈。<br />
+   來源：《謎米香港》、城寨 (53,952觀看) <a href="https://www.youtube.com/watch?v=W3cBIiJtDJ0">連結</a></p>
 </li>
 <li>
-<p><strong>香港首季經濟強勁 IPO集資額全球第一</strong><br />
-   陳茂波盤點首季經濟，港股3月日均成交額超3000億港元，首季IPO集資額逾103億美元全球排名第一，反映香港成為投資避風港。實體經濟出口及消費信心均見改善。<br />
-   來源：RTHK、香港政府新聞網、SCMP | <a href="https://news.rthk.hk/rthk/ch/component/k2/1850026-20260405.htm">RTHK</a> | <a href="https://www.news.gov.hk/chi/2026/04/20260405/20260405_103806_704.html">政府</a></p>
+<p><strong>香港醫管局56,000病人資料外洩</strong><br />
+   醫管局九龍東聯網發現逾5.6萬名病人資料遭人盜取並在第三方平台洩漏，包括姓名、身份證號碼等敏感資料，警方網絡安全及科技罪案調查科已介入調查。此事件引發對公共醫療系統網絡安全的關注。<br />
+   來源：RTHK <a href="https://news.rthk.hk/rthk/ch/component/k2/1849964-20260404.htm">連結</a></p>
 </li>
 <li>
-<p><strong>醫管局九龍東聯網5.6萬病人資料外洩</strong><br />
-   醫管局發現逾5.6萬名九龍東聯網病人資料外洩至第三方平台，涉及姓名、身份證號碼及醫院檔案號碼等敏感信息，疑有人非法盜取，警方網絡安全及科技罪案調查科接手調查。<br />
-   來源：RTHK | <a href="https://news.rthk.hk/rthk/ch/component/k2/1849964-20260404.htm">連結1</a> | <a href="https://news.rthk.hk/rthk/ch/component/k2/1849952-20260404.htm">連結2</a></p>
+<p><strong>香港首季IPO集資額全球第一</strong><br />
+   財政司司長陳茂波盤點首季香港經濟，指港股IPO市場集資額超過1,030億港元躍居全球第一，3月港股日均成交額超過3,000億港元同比增加逾8%。人工智能等新興產業紛紛來港上市，彰顯香港國際金融中心地位。<br />
+   來源：RTHK、陳茂波網誌 <a href="https://www.news.gov.hk/chi/2026/04/20260405/20260405_103806_704.html">連結</a></p>
 </li>
 <li>
-<p><strong>中國最大自駕品牌「蘿蔔快跑」近200台車集體故障</strong><br />
-   中國最大自駕品牌「蘿蔔快跑」3月底近200台車突然齊跪低，專家預言2050年自駕車市場將逾7億台，凸顯中美在自駕車領域的激烈競爭。<br />
-   來源：謎米香港 | <a href="https://www.youtube.com/watch?v=IF08X1mKTrM">連結</a></p>
+<p><strong>紐約時報犯知識性錯誤 誤將北約理解為北美公約</strong><br />
+   紐約時報在批評特朗普考慮退出北約的報道中，誤將北約(North Atlantic Treaty Organization)理解為北美公約而非北大西洋公約，犯下基本知識錯誤引發嘲笑。<br />
+   來源：城寨 (44,302觀看) <a href="https://www.youtube.com/watch?v=sYbAGdcsd04">連結</a></p>
 </li>
 <li>
-<p><strong>紐約時報犯低級錯誤 誤將北約當作北美公約</strong><br />
-   紐約時報批評特朗普考慮退出北約，但竟將北約誤認為北美公約而非北大西洋公約，知識分子報紙犯此低級錯誤令人啞然失笑。<br />
-   來源：城寨 | <a href="https://www.youtube.com/watch?v=sYbAGdcsd04">連結</a></p>
+<p><strong>中國最大自駕品牌「蘿蔔快跑」近200台車突然故障</strong><br />
+   中國最大自駕品牌「蘿蔔快跑」3月底近200台車突然齊齊故障停運，引發對自駕技術可靠性的質疑。專家預測2050年自駕車市場將超7億台，中美兩國在此領域的競爭備受關注。<br />
+   來源：《謎米香港》(50,638觀看) <a href="https://www.youtube.com/watch?v=IF08X1mKTrM">連結</a></p>
 </li>
 <li>
-<p><strong>香港汽油價格世界最貴 為美國4倍</strong><br />
-   香港汽車油價高居世界最貴，較美國貴4倍，儘管有祖國供應支援但油價仍居高不下，伊朗戰爭進一步加劇香港燃油成本壓力。<br />
-   來源：吳志森、Times of India | <a href="https://www.youtube.com/watch?v=69_5bM6VUH0">吳志森</a> | <a href="https://timesofindia.indiatimes.com/business/international-business/tank-full-wallet-empty-hong-kongs-petrol-prices-worst-hit-amid-iran-war/articleshow/130033718.cms">TOI</a></p>
+<p><strong>龍五承認指示跟蹤羅冠聰 倫敦爆青少年暴亂</strong><br />
+   香港海外執法案件中，龍五被控承認指示跟蹤羅冠聰；同時倫敦爆發青少年暴亂搶掠事件，英國零售業因盜竊問題陷入困境，市長簡世德否認治安惡化但警察對盜竊行為置之不理。<br />
+   來源：城寨 (55,907觀看) <a href="https://www.youtube.com/watch?v=TPBmJTRw9ME">連結</a></p>
 </li>
 <li>
-<p><strong>法律學者陳文敏警告香港步入「雙軌法制」時代</strong><br />
-    陳文敏以納粹德國歷史為鑑，指香港司法現已出現兩套準則——普通案件維持嚴謹審判，但國安案件則給予控方寬鬆空間，質疑法治底線動搖。<br />
-    來源：綠豆 | <a href="https://www.youtube.com/watch?v=VGiyK3HB34M">連結</a></p>
+<p><strong>清明假期首日香港逾108萬人次出入境</strong><br />
+    清明節假期首日，香港截至晚上9時約108萬人次出入境，其中出境65.5萬人次、入境42.4萬人次。羅湖口岸、落馬洲等主要口岸迎來人流高峰。<br />
+    來源：RTHK <a href="https://news.rthk.hk/rthk/ch/component/k2/1849981-20260404.htm">連結</a></p>
 </li>
 </ol>
 <hr />
 <h2>主題分析</h2>
-<h3>中東局勢與能源危機</h3>
-<p>美伊軍事衝突急劇升級成為今日焦點，特朗普對伊政策遭遇重大挫折，其矛盾演講引發市場動盪。能源危機隨戰事惡化而加劇，全球油價飆升對各地經濟造成衝擊，香港油價更成為全球最貴。中國駐以色列大使館提醒中國公民加強安全防範並組織撤離行動。</p>
+<h3>一、美伊軍事衝突與能源危機</h3>
+<p>美伊局勢成為今日最重大國際議題。美軍兩架戰機在伊朗境內被擊落，特朗普威脅伊朗須於周二前開放荷莫茲海峽否則面臨「地獄式」轟炸，國際油價飆升至114美元/桶。多個Podcast深入分析這場衝突如何引發全球能源危機，以及經濟戰爭武器在當代地緣政治中的作用。</p>
 <p><strong>相關項目：</strong><br />
-- 伊朗戰爭導致全球能源供應中斷（Podcast - Unhedged）<br />
-- 特朗普對伊開戰辯護失效（Podcast - Big Take）<br />
-- 美軍F-15E及A10戰機遭伊朗擊落（城寨、謎米香港、Hong Kong Uncensored、CNBC）<br />
-- 亞洲旅客因中東旅遊受阻轉向其他目的地（CNBC）<br />
-- 香港汽油價格世界最貴為美國4倍（吳志森、Times of India）<br />
-- 中國駐以色列大使館提醒中國公民加強安全防範（RTHK）<br />
-- 油價衝擊全球經濟（Perplexity Search - Economic Times）</p>
-<h3>美國政治動盪</h3>
-<p>特朗普政府爆發大規模人事地震，包括國土安全部長、核心內閣成員及多名軍方高層被撤換，陸軍參謀長因DEI政策分歧被炒。伊朗戰爭導致特朗普民望跌至新低，連共和黨基本盤也出現流失，對中期選舉前景造成威脅。</p>
+- 美軍A10地面攻擊機及F15E被伊朗擊落機師成功逃生 (城寨)<br />
+- 美國F-15E戰機被所謂沒防空力的伊朗擊落 (《謎米香港》)<br />
+- 深入伊朗敵後救出跳傘機師絕不簡單 (城寨)<br />
+- Trump warns Iran '48 hours before all Hell will reign down' (CNBC)<br />
+- How an energy crisis unfolds (Podcast: Unhedged)<br />
+- Trump Made His Case for War With Iran. It Backfired (Podcast: Big Take)<br />
+- Economic warfare: lessons from history (Podcast: The Economics Show)</p>
+<h3>二、美國政局動盪</h3>
+<p>特朗普政府出現大規模人事地震，核心內閣成員、軍方高層及白宮發言人等遭撤換。陸軍參謀長因DEI政策分歧被撤職，反映政府內部權力鬥爭激烈。特朗普因伊朗戰爭民望跌至新低，連基本盤都流失，共和黨中期選舉前景堪憂。</p>
 <p><strong>相關項目：</strong><br />
-- 白宮人事大地震核心內閣及軍方高層大換血（謎米香港、城寨）<br />
-- 伊朗戰爭特朗普民望跌至新低（吳志森）<br />
-- 特朗普「屁孩式」領導風格分析（徐少驊）<br />
-- 特朗普維持對華貿易脆弱停戰（Perplexity Search - Politico）<br />
-- 特朗普關稅政策一年對全球貿易的影響（Perplexity Search - YouTube）</p>
-<h3>中國政局與經濟</h3>
-<p>溫家寶罕見公開現身並發表「希望人民把我忘記，但我永不忘祖國和人民」言論，引發大陸輿論效應。中共「皇后黨」高官馬興瑞被抓，多名中共軍工高層人間蒸發或猝死，習近平追究武器系統失靈責任。中國第十五個五年計劃引發關注，經濟政策調整受到國際矚目。</p>
+- 白宮人事大地震！核心內閣及國土安全部長被炒 (《謎米香港》)<br />
+- 陣前易帥陸軍參謀長喬治被炒 (城寨)<br />
+- 伊朗戰爭，特朗普民望跌至新低 (吳志森)<br />
+- 特朗普炒人自救！傳商務部長、FBI局長都烏紗不保 (Hong Kong Uncensored)</p>
+<h3>三、香港經濟與金融</h3>
+<p>香港首季經濟展現韌性，IPO市場集資額超過1,030億港元躍居全球第一，港股日均成交額超過3,000億港元。財政司司長陳茂波表示儘管中東局勢不明朗導致港股下跌，但投資者仍視香港為資金避風港。人工智能等新興產業紛紛來港上市。</p>
 <p><strong>相關項目：</strong><br />
-- 溫家寶現身發聲人民日報連續評論（風雲谷）<br />
-- 中共「皇后黨」高官馬興瑞被抓（文昭、城寨）<br />
-- 中國殲15雷達鎖定日本自衛隊F15戰機（CC News）<br />
-- 中國第十五個五年計劃專家分析（Perplexity Search）<br />
-- 中國人口老齡化帶動養老及保險產業（SCMP）<br />
-- 日本零售連鎖店Aeon及伊藤洋華堂在華北地區撤退（SCMP）</p>
-<h3>香港經濟與金融</h3>
-<p>香港首季經濟表現強勁，港股3月日均成交額超3000億港元，首季IPO集資額全球第一，反映香港國際金融中心地位穩固。儘管中東局勢緊張，投資者仍視香港為資金避風港。台灣半導體產業主導全球，帶動的財富正重塑台灣金融版圖。</p>
+- 陳茂波網誌盤點第一季經濟 (香港政府新聞網)<br />
+- 陳茂波：首季金融市場表現不俗 實體經濟見改善 (RTHK)<br />
+- 香港首季IPO集資額全球第一 (多個來源)<br />
+- China's AI Boom Ignites Capital Markets, Hong Kong Q1 Financing (Perplexity Search)</p>
+<h3>四、香港社會民生</h3>
+<p>醫管局九龍東聯網發生嚴重資料外洩事件，逾5.6萬名病人資料被盜取並在第三方平台洩漏。清明假期首日逾108萬人次出入境，羅湖口岸等迎來人流高峰。九巴車費回贈機故障，政府指示九巴須向受影響乘客發還回贈。</p>
 <p><strong>相關項目：</strong><br />
-- 香港首季IPO集資額全球第一（RTHK、香港政府新聞網、陳茂波網誌）<br />
-- 陳茂波盤點首季經濟股市交易活躍實體經濟改善（RTHK、Perplexity Search）<br />
-- 港股交易活躍投資者視香港為資金避風港（Perplexity Search - HK01）<br />
-- 台灣半導體財富重塑金融版圖（SCMP）<br />
-- 英格蘭租住法律改革對香港投資者的影響（SCMP、Perplexity Search）</p>
-<h3>香港社會與民生</h3>
-<p>醫管局九龍東聯網5.6萬病人資料外洩至第三方平台，疑有人非法盜取。陳文敏警告香港步入「雙軌法制」時代，質疑法治底線動搖。清明節假期首日超過108萬人次出入境，旅遊局長對旅客訪港前景樂觀。香港汽油價格高居世界最貴，為美國4倍。</p>
+- 醫管局逾5.6萬名病人資料外洩 疑有人盜取資料 (RTHK)<br />
+- 截至晚上9時 本港約108萬人次出入境 (RTHK)<br />
+- 愉翠苑車費回贈機一度故障 (RTHK)<br />
+- 警方西貢反爆竊巡邏行動拘捕兩名外籍男子 (RTHK)</p>
+<h3>五、中國政治與經濟</h3>
+<p>溫家寶罕見現身發表聲明引發大陸輿論風波。中國最大自駕品牌「蘿蔔快跑」近200台車突然故障停運。中俄外長通電話討論中東局勢，主張盡快停戰以解決霍爾木茲海峽通航問題。中國經濟在2026年面臨多重挑戰。</p>
 <p><strong>相關項目：</strong><br />
-- 醫管局九龍東聯網5.6萬病人資料外洩（RTHK）<br />
-- 法律學者陳文敏警告香港步入「雙軌法制」時代（綠豆）<br />
-- 清明節假期首日逾108萬人次出入境（RTHK）<br />
-- 羅淑佩稱中東局勢無損旅客來港意欲（RTHK）<br />
-- 香港汽油價格世界最貴為美國4倍（吳志森、Times of India）<br />
-- 李家超視察課後託管服務計劃（RTHK）<br />
-- 愉翠苑九巴車費回贈機一度故障（RTHK）<br />
-- 警方觀塘掃黃行動拘捕14名內地女子（RTHK）</p>
-<h3>科技與AI發展</h3>
-<p>OpenAI產品主管Fidji Simo因健康原因休醫療假，領導層出現調整。SpaceX據報秘密提交IPO申請，估值可能超過1.75萬億美元。Tesla電動車銷售再度不達預期。中國最大自駕品牌「蘿蔔快跑」近200台車集體故障。AI寫作辨別技術及成癮設計未來成為討論焦點。</p>
+- 溫家寶現本尊 效應大陸發酵 (風雲谷)<br />
+- 中國最大自駕品牌「蘿蔔快跑」3月底近200台車突然齊跪低 (《謎米香港》)<br />
+- 中俄外長通電話 王毅稱解決霍爾木茲海峽通航問題根本是盡快停戰 (RTHK)<br />
+- 中國加強施壓，殲15雷達鎖定日本自衛隊F15戰機 (CC News)</p>
+<h3>六、科技與人工智能</h3>
+<p>多個Podcast探討人工智能的發展與風險，包括成癮性設計的未來、如何辨別AI生成的文字、以及AI對白領工作的衝擊。OpenAI產品及商務主管因健康原因請醫療假，領導層人事變動。中國企業因企業文化在AI採納上落後於美國同行。</p>
 <p><strong>相關項目：</strong><br />
-- AI寫作辨別技術（Podcast - Odd Lots）<br />
-- 成癮設計未來及DeepMind研究（Podcast - Hard Fork）<br />
-- OpenAI產品主管休醫療假領導層調整（CNBC）<br />
-- SpaceX秘密提交IPO申請估值超1.75萬億美元（Podcast - Bloomberg Intelligence）<br />
-- Tesla電動車銷售再度不達預期（Podcast - Bloomberg Intelligence）<br />
-- 中國最大自駕品牌「蘿蔔快跑」近200台車集體故障（謎米香港）<br />
-- 中國企業因企業文化在AI採納速度落後美國（SCMP）<br />
-- AI股票升幅帶動香港新股上市創5年新高（Perplexity Search）<br />
-- AI初創公司利用技術解決零售業退貨問題（CNBC）</p>
-<h3>國際經貿與投資</h3>
-<p>巴菲特因蓋茨與愛潑斯坦的關係考慮終止向蓋茨基金會捐款。日本經濟在30年停滯後出現轉機，私人資本與商業文化改革成為增長關鍵。歐洲汽車產業陷入結構性危機，部分車廠考慮轉向生產防務裝備。美國聯邦儲備局維持利率不變，預計到2026年底前會進行一次減息。</p>
+- The Future of Addictive Design + Going Deep at DeepMind + HatGPT (Podcast: Hard Fork)<br />
+- This Is How to Tell if Writing Was Made by AI (Podcast: Odd Lots)<br />
+- Scott Bok Explains What Investment Bankers Actually Do All Day (Podcast: Odd Lots)<br />
+- OpenAI's Fidji Simo takes medical leave (CNBC)<br />
+- Chinese firms trail US peers in AI adoption (SCMP)</p>
+<h3>七、全球經濟與貿易</h3>
+<p>全球市場面臨特朗普任期內的多重風險，包括中東局勢升級、經濟衰退及保護主義貿易政策。「解放日關稅」實施一年後全球供應鏈重組，美國觀光收入大幅下滑。歐洲汽車業陷入結構性危機，轉向防務武器生產。</p>
 <p><strong>相關項目：</strong><br />
-- 巴菲特因蓋茨與愛潑斯坦關係考慮終止捐款（CNBC）<br />
-- 日本經濟轉機私人資本與商業文化改革（Podcast - Wall Street Week）<br />
-- 歐洲汽車產業陷入危機考慮轉向防務裝備（CNBC）<br />
-- 美國聯邦儲備局維持利率預計年底前減息一次（Perplexity Search）<br />
-- 印度央行預計維持回購利率在5.25%（Perplexity Search）<br />
-- 美國主要零售商稱關稅迫使其提高價格（Perplexity Search）<br />
-- 特朗普關稅政策持續重塑國際貿易規則（Perplexity Search）</p>
+- Can world markets ride out the rest of Trump's reign? (SCMP)<br />
+- 「解放日關稅」一年後，全球供應鏈大洗牌 (多個來源)<br />
+- 'Anything but autos': Can defense save Europe's ailing car industry? (CNBC)<br />
+- Trading in turbulence: How geopolitics is redefining global risk (Economic Times)</p>
 <hr />
 <h2>數字速覽</h2>
 <ul>
-<li><strong>今日監測項目總數：214</strong></li>
-<li><strong>YouTube頻道：39 條影片</strong></li>
-<li><strong>新聞來源：161 篇文章</strong></li>
+<li><strong>今日監測項目總數：323</strong></li>
+<li><strong>YouTube頻道：44 條影片</strong></li>
+<li><strong>新聞來源：265 篇文章</strong></li>
 <li><strong>Podcast：14 集</strong></li>
-<li><strong>最高觀看影片：</strong> 風雲谷《溫家寶現本尊 效應大陸發酵》（115,222 觀看）</li>
+<li><strong>最高觀看影片：</strong> Ch. 1710：溫家寶現本尊 效應大陸發酵 由人民日報兩篇評論分析局勢（115,222 觀看）</li>
 </ul>
 <hr />
 <h2>編輯備注</h2>
-<p>今日資訊環境呈現高度地緣政治緊張態勢，美伊軍事衝突升級主導國際新聞版面，能源危機與油價飆升成為全球經濟焦點。香港方面，首季經濟數據亮眼與醫管局資料外洩醜聞形成強烈對比，反映繁榮表象下的治理隱憂。中國政局動盪信號頻現，溫家寶現身及高官被抓均引發高度關注，值得持續追蹤後續發展。</p>]]></description>
+<p>今日資訊環境呈現三大特點：首先，美伊軍事衝突成為壓倒性焦點，從戰機被擊落到特朗普威脅、油價飆升，形成完整的地緣政治-能源-經濟連鎖反應；其次，香港本地議題中，醫管局資料外洩事件與首季經濟數據形成強烈對比，反映香港在網絡安全與金融實力上的兩極表現；第三，中國政治人物溫家寶罕見現身引發的輿論發酵，以及美國白宮人事大地震，均顯示2026年政治格局的高度不穩定性。Podcast內容質量優秀，多角度深入分析當前最重要議題。</p>]]></description>
   </item>
   <item>
     <title>【情報簡報】2026-04-04 晚報</title>
