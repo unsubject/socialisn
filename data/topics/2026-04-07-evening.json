@@ -1,0 +1,138 @@
+{
+  "date": "2026-04-07",
+  "period": "evening",
+  "generated_at": "2026-04-07T22:05:55.558205+00:00",
+  "topics": [
+    {
+      "id": 1,
+      "headline": "美伊戰爭升級到『斬首+精準打擊』：市場真正怕的是霍爾木茲與保險費率",
+      "why_it_matters": "Google Trends 全球與美國都被『Iran war／CENTCOM』類關鍵字帶動，顯示事件已外溢到普羅大眾的風險感知。對港人資產配置而言，油價只是表層，真正的傳導機制是航運保費、制裁合規與美元流動性收縮。",
+      "competitor_status": "競品頻道高度擁擠：多條影片集中在『伊朗擊落美軍戰機／CSAR營救／特朗普威脅轟炸基建』；但多停留於軍事戲劇化敘事。可切入的空位是：用金融語言拆解『風險溢價』如何進入香港人的每一筆投資（能源、航空、保險、美元資金成本）。",
+      "simons_angle": "把『戰爭』翻譯成投資者聽得懂的三條曲線：油價、航運保費、美元融資利差；再對照香港/離散港人常見資產（美股、保險、房產按息）會怎樣被動承受。",
+      "sources": [
+        {
+          "title": "Google Trends (GLOBAL) RSS: cnn live / Iran war live updates",
+          "url": "https://trends.google.com/trending/rss?geo=GLOBAL"
+        },
+        {
+          "title": "Google Trends (US) RSS: centcom / Iran-related trends",
+          "url": "https://trends.google.com/trending/rss?geo=US"
+        },
+        {
+          "title": "CNN live blog headline: Iran defiant as Trump warns entire country could be taken out",
+          "url": "https://www.cnn.com/2026/04/07/world/live-news/iran-war-trump-us-israel"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "headline": "香港國安法『交密碼』新規：把『過境香港』變成外企與港人旅遊的合規風險",
+      "why_it_matters": "BBC 指香港警方可要求涉嫌違反國安法者交出電子裝置密碼，拒絕可判囚一年並罰款，提供虛假資料最高可囚三年。這不只是人權議題，也直接影響香港作為轉機、金融與資料中心的信任資本，對海外港人回港/經港轉機風險評估亦更清晰。",
+      "competitor_status": "競品已有提及『拒交手機密碼可監禁』，但多以情緒化安全警示為主。缺口在於：把它放回『法治風險→資本成本→香港折價』的框架，並給觀眾一套可操作的風險清單（數據、裝置、雲端、保險）。",
+      "simons_angle": "用『港版邊境搜查權』的語言對比英美法系對電子搜查的門檻，指出香港正在把國安擴張為通用執法工具；再推演其對跨境資料、家族辦公室與保險業的長期傷害。",
+      "sources": [
+        {
+          "title": "BBC: Hong Kong police can now demand phone passwords under national security law",
+          "url": "https://www.bbc.com/news/articles/ce8j9yj52lro"
+        },
+        {
+          "title": "YouTube competitor feed item: 傑斯—拒交『手機密碼』可監禁，美國發香港安全警示",
+          "url": "https://unsubject.github.io/socialisn/youtube-feed.xml"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "headline": "特朗普用行政命令插手NCAA：『聯邦資助』成為治理大學與青年流動的槓桿",
+      "why_it_matters": "Google Trends US 出現『executive order』相關熱度；ESPN 報導特朗普簽署行政命令要求NCAA限制運動員五年期限與轉校次數，並以聯邦資助作為潛在制裁。這種治理方式值得港人注意：當政府把資助/合約變成『服從工具』，學術與公民社會的自治會如何被重塑。",
+      "competitor_status": "香港政治經濟圈較少談美國大學體制與聯邦權力，屬相對空白。可用角度：把它視作『行政國家』與『文化戰』的一部分，並連結到香港的大學治理被政治化的經驗。",
+      "simons_angle": "以制度設計角度拆解：行政命令不是法，但能靠資助與合規要求製造『事實上的法律』；再問一個反直覺問題：為何右派會用左派熟悉的國家槓桿？",
+      "sources": [
+        {
+          "title": "ESPN: Executive order limits NCAA athletes to five years, one transfer",
+          "url": "https://www.espn.com/college-sports/story/_/id/48387866/executive-order-limits-ncaa-athletes-five-years-one-transfer"
+        },
+        {
+          "title": "Google Trends (US) RSS: executive order trending",
+          "url": "https://trends.google.com/trending/rss?geo=US"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "headline": "甲骨文裁員3萬：大企業把『雲+AI』當成成本剪刀，白領的風險被重新定價",
+      "why_it_matters": "Oracle 大規模裁員的消息在競品頻道出現，也有主流媒體報導其裁員規模與重組。對高學歷港人而言，這是『AI 不是工具而是管理學』的實例：公司用AI投資敘事包裝裁員，市場卻可能給更高估值。",
+      "competitor_status": "競品談法多集中在『Oracle 裁員但股價升』與『AI 浪潮』的恐懼敘事。空位在於：從企業財務與資本市場語言，解釋為何裁員能被視為『重組→利潤率→估值』，以及哪些職能最先被擠壓。",
+      "simons_angle": "把裁員視作『資本對勞動的再談判』：AI 投資其實是提高議價能力；再教觀眾用三個指標看自己行業是否進入『Oracle 時刻』（毛利率壓力、重複性流程、可外包/自動化程度）。",
+      "sources": [
+        {
+          "title": "CIO: Oracle cuts up to 30,000 jobs globally",
+          "url": "https://www.cio.com/article/4153113/oracle-cuts-up-to-30000-jobs-globally-putting-enterprise-support-and-roadmaps-at-risk.html"
+        },
+        {
+          "title": "The Independent: Oracle reveals who it laid off (AI alarm for white-collar workers)",
+          "url": "https://www.the-independent.com/us/money/oracle-layoffs-ai-replacement-b2951467.html"
+        },
+        {
+          "title": "YouTube competitor feed item: Oracle預裁3萬人股價反升只因錢投AI發展",
+          "url": "https://unsubject.github.io/socialisn/youtube-feed.xml"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "headline": "香港『全球最貴汽油』其實是稅與地產邏輯：能源政策為何永遠讓位給財政？",
+      "why_it_matters": "競品頻道同日出現『香港汽油全球最貴、缺乏再生能源規劃』的討論，反映民生不滿可被延伸到政策治理。對海外港人而言，這題可連結到香港的財政結構與土地依賴：當政府靠稅與地價收入，能源轉型就被系統性拖延。",
+      "competitor_status": "話題在YouTube已有熱度但未必被做深。可用空位：把油價拆解成『稅、牌照、租金、競爭結構、環保政策缺口』，並比較新加坡/英國等城市如何用稅制而不是口號推動轉型。",
+      "simons_angle": "以公共財政角度反問：香港是否把『高油價』當成隱性稅？如果是，能源轉型為何會降低政府的現金流動機？用這個框架講清楚香港為何難成為真正的『智慧城市』。",
+      "sources": [
+        {
+          "title": "YouTube competitor feed: 財經拆局—香港汽油全球最貴 高美國四倍缺乏再生能源規劃",
+          "url": "https://unsubject.github.io/socialisn/youtube-feed.xml"
+        },
+        {
+          "title": "YouTube competitor feed: 吳志森—香港汽車油價點解會世界最貴？",
+          "url": "https://unsubject.github.io/socialisn/youtube-feed.xml"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "headline": "馬興瑞落馬：『技術官僚』神話破產，反腐其實是派系重組的語言",
+      "why_it_matters": "競品YouTube多條影片提到馬興瑞落馬與『皇后黨』敘事，顯示華語圈高度關注。對港人來說，重點不在八卦，而在中國地方治理與產業政策的連續性：當高層清洗擴散到技術官僚，投資與地方招商的可信承諾會被削弱。",
+      "competitor_status": "競品角度偏向宮廷政治與『習失勢？』的猜測。缺口是制度分析：反腐如何作為『治理技術』，用不確定性去馴服官僚與資本，並推高整體風險溢價。",
+      "simons_angle": "把『反腐』視為一種宏觀政策：它不是為了乾淨，而是為了可控；用香港人熟悉的『紅線』語言解釋中國官僚/企業如何在不確定中自我審查，進一步壓低創新與投資效率。",
+      "sources": [
+        {
+          "title": "YouTube competitor feed: CC News—笑談中國經濟 EP140｜馬興瑞落馬…香港保險走資",
+          "url": "https://unsubject.github.io/socialisn/youtube-feed.xml"
+        },
+        {
+          "title": "YouTube competitor feed: 文昭—馬興瑞官宣被抓",
+          "url": "https://unsubject.github.io/socialisn/youtube-feed.xml"
+        },
+        {
+          "title": "SCMP topic page: US-China trade war latest updates (context for Xi–Trump summit / tariff spillovers)",
+          "url": "https://www.scmp.com/topics/us-china-trade-war"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "headline": "『大北美＋G2』話術背後：美國正在把規則秩序改寫成勢力範圍談判",
+      "why_it_matters": "競品頻道出現多條討論『大北美』『特朗普要跟中俄分天下』的影片，顯示受眾關注美國外交路線轉向。對港人與台灣觀眾而言，這影響的是『小國/城市如何在大國交易中自保』，尤其是金融中心的規則紅利一旦消失，剩下的是政治風險定價。",
+      "competitor_status": "話題在競品端屬擁擠，但多停留在宏大敘事。空位在於：把勢力範圍談判落地成可觀測指標（關稅、出口管制、投資審查、匯率/美元武器化），並推演香港/台灣的選項集合如何縮窄。",
+      "simons_angle": "用『19世紀協調體系 vs 20世紀規則體系』對比：如果世界回到勢力範圍，香港人的資產與身份選擇要怎樣重新配置？最後落到一個實用結論：分散司法管轄區與貨幣風險。",
+      "sources": [
+        {
+          "title": "YouTube competitor feed: 徐少驊—『大北美＋G2』揭開全球分贓新秩序",
+          "url": "https://unsubject.github.io/socialisn/youtube-feed.xml"
+        },
+        {
+          "title": "Yahoo Finance live updates: Trump tariffs / steel and aluminum tiered duties",
+          "url": "https://finance.yahoo.com/news/live/trump-tariffs-live-updates-us-to-roll-out-tiered-duties-on-steel-aluminum-one-year-after-trumps-liberation-day-tariffs-122637970.html"
+        }
+      ]
+    }
+  ]
+}
