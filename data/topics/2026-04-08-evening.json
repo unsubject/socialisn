@@ -1,0 +1,130 @@
+{
+  "date": "2026-04-08",
+  "period": "evening",
+  "generated_at": "2026-04-08T22:09:00Z",
+  "topics": [
+    {
+      "id": 1,
+      "headline": "霍爾木茲兩星期停火：市場狂歡，但風險只是『延期結算』",
+      "why_it_matters": "美伊宣布兩星期停火並重開霍爾木茲後，油價與股市即時大幅反轉，反映市場把『供應中斷尾部風險』先行定價再快速撤回。對香港與海外港人而言，能源與航運成本的變化會直接影響通脹、資產配置與企業利潤（尤其是航運、航空、能源密集行業）。",
+      "competitor_status": "非常擁擠：多個頻道集中講特朗普最後通牒、炸基建、以及『今晚會唔會開打』的戲劇性敘事；較少人把停火視為『金融風險事件』來拆解其二階效應。",
+      "simons_angle": "把停火當成一次『風險事件的定價與去定價』案例：戰爭風險保險、LNG/油輪繞航、亞洲煉油商與庫存策略、以及金融市場如何用一個headline把極端情景從分母裡拿走。提醒觀眾：兩星期不是和平，是談判時間價值；真正的問題是誰能控制下一次的『關鍵水道開關』。",
+      "sources": [
+        {
+          "title": "Stocks surge, oil dives below $100 as Iran ceasefire sparks relief rally",
+          "url": "https://www.reuters.com/world/china/global-markets-global-markets-2026-04-07/"
+        },
+        {
+          "title": "Headlines for April 08, 2026",
+          "url": "https://www.democracynow.org/2026/4/8/headlines"
+        },
+        {
+          "title": "Trump's timeline for attacking Iran's critical infrastructure keeps shifting",
+          "url": "https://abcnews.com/Politics/trumps-timeline-attacking-irans-critical-infrastructure-shifting/story?id=131797649"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "headline": "特朗普式『死線談判』：為何deadline本身就是武器？",
+      "why_it_matters": "今次危機的核心不是單一軍事行動，而是領導人反覆設定與延後死線，將資訊不確定性變成對手與市場的壓力。香港觀眾熟悉『制度紅線』的模糊性，這套手法在國際與本地治理都同樣有效（也同樣危險）。",
+      "competitor_status": "擁擠但角度單一：多數只聚焦特朗普『失控/口嗨』或道德譴責；少有人把它當成一套可複製的政治技術（deadline engineering）。",
+      "simons_angle": "用博弈論框架拆解：死線如何改變對方的最優反應、如何逼盟友表態、如何讓市場替你傳播訊息；並指出這種策略的成本是『可信度折舊』與『誤判機率上升』。最後落到港人視角：當權力喜歡用死線治理時，社會的適應方式必然變成自我審查與超額合規。",
+      "sources": [
+        {
+          "title": "Trump's timeline for attacking Iran's critical infrastructure keeps shifting",
+          "url": "https://abcnews.com/Politics/trumps-timeline-attacking-irans-critical-infrastructure-shifting/story?id=131797649"
+        },
+        {
+          "title": "Iran War Live Updates: Trump Announces Two-Week Cease-Fire, Subject to Strait of Hormuz Reopening",
+          "url": "https://www.nytimes.com/live/2026/04/07/world/iran-war-trump-news"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "headline": "歐盟制裁中國網攻公司：歐中衝突正在從關稅轉向『數位主權』",
+      "why_it_matters": "歐盟以網絡攻擊為由制裁中資公司，意味地緣競爭加速進入供應鏈之外的『安全/數據/基礎設施』層面。對香港金融與跨境企業而言，這會轉化為合規成本、供應商審查、以及與歐洲往來的風險溢價。",
+      "competitor_status": "中等擁擠：多數評論停留在『西方抹黑/中國反擊』的政治口水；較少從企業治理、跨境合規與科技戰規則演化切入。",
+      "simons_angle": "把事件放進『制裁工具箱』演化：從出口管制到網攻歸責，再到資產凍結與旅行禁令，歐洲其實在學美國打造自己的經濟安全體系。Simon可補上香港角度：當你是區域總部或供應鏈中介，最怕的是不確定的合規標準；因此企業會預先自我去風險，長遠削弱香港作為中介平台的彈性。",
+      "sources": [
+        {
+          "title": "EU sanctions Chinese and Iranian companies for cyberattacks",
+          "url": "https://www.reuters.com/world/china/eu-sanctions-chinese-iranian-companies-cyber-attacks-2026-03-16/"
+        },
+        {
+          "title": "China calls latest EU cyber sanctions 'unlawful'",
+          "url": "https://economictimes.com/tech/internet/china-calls-latest-eu-cyber-sanctions-unlawful/articleshow/129631484.cms"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "headline": "WTO裁定後中國撤回『反訴禁令』做法：為何這是歐洲IP戰的關鍵一勝？",
+      "why_it_matters": "歐盟指中國在標準必要專利（SEP）訴訟中使用反訴禁令，削弱歐洲企業在海外維權能力；WTO裁決後中國宣布撤回相關做法，等於承認一套『不成文政策』也能被國際規則追究。對香港及海外港人投資者而言，這牽涉到高科技產業的利潤分配、專利費定價與供應鏈議價權。",
+      "competitor_status": "較不擁擠：競品頻道更愛即時戰爭與本地政治八卦；SEP/WTO這類硬政策議題較少人深入。",
+      "simons_angle": "把它講成『用規則打規則』：當中國政策常以不透明方式運作，外界往往覺得無從入手；但這次顯示只要能把行為具體化、制度化，就能在國際機制上取得可執行的成果。Simon可延伸到香港：當你失去本地法治的可預期性，唯一能依靠的就是跨境規則與合約治理。",
+      "sources": [
+        {
+          "title": "Following WTO ruling favourable to EU, China announces withdrawal of its anti-suit injunction policy",
+          "url": "https://policy.trade.ec.europa.eu/news/following-wto-ruling-favourable-eu-china-announces-withdrawal-its-anti-suit-injunction-policy-2026-04-01_en"
+        },
+        {
+          "title": "EU sanctions Chinese and Iranian companies for cyberattacks",
+          "url": "https://www.reuters.com/world/china/eu-sanctions-chinese-iranian-companies-cyber-attacks-2026-03-16/"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "headline": "香港餐廳牌照加國安條款：行政許可變成『思想合規』的入口",
+      "why_it_matters": "當國安條款被植入餐廳牌照續期，意味政治要求開始透過日常監管制度全面滲透。這不只影響本地商戶生存，也影響海外港人對香港營商環境、資產安全與『仍能否相信規則』的判斷。",
+      "competitor_status": "擁擠：多個頻道已在講『紅線更模糊』『人人自危』。但較少人把它系統化為一套治理模型：用低成本的行政權力，建立可隨時啟動的懲罰機制。",
+      "simons_angle": "用『監管國家 + 國安化』框架：牌照條款不是為了抓到違規，而是為了建立不對稱權力（你永遠要證明自己清白）。再加一個商業角度：這會催生一個新的『合規產業鏈』與政治風險顧問市場，而真正受損的是小商戶與創業者。",
+      "sources": [
+        {
+          "title": "Security clauses in all eatery licences by September",
+          "url": "https://news.rthk.hk/rthk/en/component/k2/1850205-20260407.htm?spTabChangeable=0"
+        },
+        {
+          "title": "HK food licenses to include national security clauses by Sept",
+          "url": "https://www.thestandard.com.hk/news/article/328636/HK-food-licenses-to-include-national-security-clauses-by-Sept"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "headline": "美國AI『全國統一監管』：以聯邦名義打州法，背後是產業戰與言論戰",
+      "why_it_matters": "白宮推出AI全國政策框架並設立AI Litigation Task Force，核心是以聯邦力量壓制州級AI法規，避免形成50套合規。對高資產港人而言，這會影響美國科技股估值、AI投資方向與跨境合規風險（尤其涉及數據、內容與金融）。",
+      "competitor_status": "相對不擁擠：競品多集中戰爭與香港本地；AI監管的政治經濟學較少人深入。",
+      "simons_angle": "把它拆成三層：1）監管的名義是『去碎片化』，但實際是中央集權；2）產業利益：降低初創成本、保住美國AI速度；3）政治文化戰：州法被指『要求模型輸出帶意識形態』。最後拉回香港視角：這是『技術—法律—權力』三角形的示範，提醒觀眾未來政治會先在科技層面落地。",
+      "sources": [
+        {
+          "title": "Ensuring a National Policy Framework for Artificial Intelligence",
+          "url": "https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/"
+        },
+        {
+          "title": "U.S. Tech Legislative & Regulatory Update – First Quarter 2026",
+          "url": "https://www.globalpolicywatch.com/2026/04/u-s-tech-legislative-regulatory-update-first-quarter-2026/"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "headline": "港人『走資』的新管道？從香港保險到資產外移的制度套利",
+      "why_it_matters": "競品頻道熱議『利用香港保險走資』，反映資本如何在制度縫隙中尋找出路；這與香港作為金融中心的定位、以及監管未來走向密切相關。對海外港人與仍在港的高資產人士而言，這是切身的資產配置與風險管理議題。",
+      "competitor_status": "中等擁擠：競品已有影片談『香港保險走資模式』與個別官員/權貴傳聞，但多停留在爆料敘事。",
+      "simons_angle": "把它提升到『制度套利』：為何保險產品（與其跨境收款、保單架構、受益人安排）容易成為資金移動工具？同時提出反向問題：當監管收緊，香港金融業會如何把風險轉嫁給客戶（KYC、資金來源審查、贖回限制）？用一個可操作的框架教觀眾評估：合規風險、對手方風險、流動性風險。",
+      "sources": [
+        {
+          "title": "笑談中國經濟 EP140｜馬興瑞落馬，爆太太團利用香港保險走資｜...",
+          "url": "https://www.youtube.com/watch?v=EyOg-P_h6OU"
+        },
+        {
+          "title": "YouTube 頻道監察 Channel Monitor",
+          "url": "https://unsubject.github.io/socialisn/youtube-feed.xml"
+        }
+      ]
+    }
+  ]
+}

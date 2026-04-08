@@ -1,262 +1,524 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
-  <channel>
-    <title>節目主題候選 Content Topic Candidates</title>
-    <link>https://unsubject.github.io/socialisn/topics-feed.xml</link>
-    <description>利世民節目內容準備——每日主題候選，每日兩次更新</description>
-    <language>zh-TW</language>
-    <lastBuildDate>Tue, 07 Apr 2026 22:05:55 +0000</lastBuildDate>
+<channel>
+<title>節目主題候選 Content Topic Candidates</title>
+<link>https://unsubject.github.io/socialisn/topics-feed.xml</link>
+<description>利世民節目內容準備——每日主題候選，每日兩次更新</description>
+<language>zh-TW</language>
 <item>
-  <title>2026-04-07 evening — Top: 美伊戰爭升級到『斬首+精準打擊』：市場真正怕的是霍爾木茲與保險費率</title>
-  <link>https://unsubject.github.io/socialisn/topics-feed.xml#2026-04-07-evening</link>
-  <guid isPermaLink="false">topics-2026-04-07-evening</guid>
-  <pubDate>Tue, 07 Apr 2026 22:05:55 +0000</pubDate>
-  <description><![CDATA[<h2>Topic Candidates (2026-04-07 evening)</h2>
+<title>2026-04-08 evening — Top: 霍爾木茲兩星期停火：市場狂歡，但風險只是『延期結算』</title>
+<link>https://unsubject.github.io/socialisn/topics-feed.xml#2026-04-08-evening</link>
+<guid isPermaLink="false">topics-2026-04-08-evening</guid>
+<pubDate>Wed, 08 Apr 2026 22:09:00 +0000</pubDate>
+<description><![CDATA[
+<div><p><strong>2026-04-08 evening</strong></p>
+<hr/>
+<h3>1. 霍爾木茲兩星期停火：市場狂歡，但風險只是『延期結算』</h3>
+<p><strong>Why it matters:</strong> 美伊宣布兩星期停火並重開霍爾木茲後，油價與股市即時大幅反轉，反映市場把『供應中斷尾部風險』先行定價再快速撤回。對香港與海外港人而言，能源與航運成本的變化會直接影響通脹、資產配置與企業利潤（尤其是航運、航空、能源密集行業）。</p>
+<p><strong>Competitor status:</strong> 非常擁擠：多個頻道集中講特朗普最後通牒、炸基建、以及『今晚會唔會開打』的戲劇性敘事；較少人把停火視為『金融風險事件』來拆解其二階效應。</p>
+<p><strong>Simon’s angle:</strong> 把停火當成一次『風險事件的定價與去定價』案例：戰爭風險保險、LNG/油輪繞航、亞洲煉油商與庫存策略、以及金融市場如何用一個headline把極端情景從分母裡拿走。提醒觀眾：兩星期不是和平，是談判時間價值；真正的問題是誰能控制下一次的『關鍵水道開關』。</p>
+<ul>
+<li><a href="https://www.reuters.com/world/china/global-markets-global-markets-2026-04-07/">Stocks surge, oil dives below $100 as Iran ceasefire sparks relief rally</a></li>
+<li><a href="https://www.democracynow.org/2026/4/8/headlines">Headlines for April 08, 2026</a></li>
+<li><a href="https://abcnews.com/Politics/trumps-timeline-attacking-irans-critical-infrastructure-shifting/story?id=131797649">Trump's timeline for attacking Iran's critical infrastructure keeps shifting</a></li>
+</ul>
+<hr/>
+<h3>2. 特朗普式『死線談判』：為何deadline本身就是武器？</h3>
+<p><strong>Why it matters:</strong> 今次危機的核心不是單一軍事行動，而是領導人反覆設定與延後死線，將資訊不確定性變成對手與市場的壓力。香港觀眾熟悉『制度紅線』的模糊性，這套手法在國際與本地治理都同樣有效（也同樣危險）。</p>
+<p><strong>Competitor status:</strong> 擁擠但角度單一：多數只聚焦特朗普『失控/口嗨』或道德譴責；少有人把它當成一套可複製的政治技術（deadline engineering）。</p>
+<p><strong>Simon’s angle:</strong> 用博弈論框架拆解：死線如何改變對方的最優反應、如何逼盟友表態、如何讓市場替你傳播訊息；並指出這種策略的成本是『可信度折舊』與『誤判機率上升』。最後落到港人視角：當權力喜歡用死線治理時，社會的適應方式必然變成自我審查與超額合規。</p>
+<ul>
+<li><a href="https://abcnews.com/Politics/trumps-timeline-attacking-irans-critical-infrastructure-shifting/story?id=131797649">Trump's timeline for attacking Iran's critical infrastructure keeps shifting</a></li>
+<li><a href="https://www.nytimes.com/live/2026/04/07/world/iran-war-trump-news">Iran War Live Updates: Trump Announces Two-Week Cease-Fire, Subject to Strait of Hormuz Reopening</a></li>
+</ul>
+<hr/>
+<h3>3. 歐盟制裁中國網攻公司：歐中衝突正在從關稅轉向『數位主權』</h3>
+<p><strong>Why it matters:</strong> 歐盟以網絡攻擊為由制裁中資公司，意味地緣競爭加速進入供應鏈之外的『安全/數據/基礎設施』層面。對香港金融與跨境企業而言，這會轉化為合規成本、供應商審查、以及與歐洲往來的風險溢價。</p>
+<p><strong>Competitor status:</strong> 中等擁擠：多數評論停留在『西方抹黑/中國反擊』的政治口水；較少從企業治理、跨境合規與科技戰規則演化切入。</p>
+<p><strong>Simon’s angle:</strong> 把事件放進『制裁工具箱』演化：從出口管制到網攻歸責，再到資產凍結與旅行禁令，歐洲其實在學美國打造自己的經濟安全體系。Simon可補上香港角度：當你是區域總部或供應鏈中介，最怕的是不確定的合規標準；因此企業會預先自我去風險，長遠削弱香港作為中介平台的彈性。</p>
+<ul>
+<li><a href="https://www.reuters.com/world/china/eu-sanctions-chinese-iranian-companies-cyber-attacks-2026-03-16/">EU sanctions Chinese and Iranian companies for cyberattacks</a></li>
+<li><a href="https://economictimes.com/tech/internet/china-calls-latest-eu-cyber-sanctions-unlawful/articleshow/129631484.cms">China calls latest EU cyber sanctions 'unlawful'</a></li>
+</ul>
+<hr/>
+<h3>4. WTO裁定後中國撤回『反訴禁令』做法：為何這是歐洲IP戰的關鍵一勝？</h3>
+<p><strong>Why it matters:</strong> 歐盟指中國在標準必要專利（SEP）訴訟中使用反訴禁令，削弱歐洲企業在海外維權能力；WTO裁決後中國宣布撤回相關做法，等於承認一套『不成文政策』也能被國際規則追究。對香港及海外港人投資者而言，這牽涉到高科技產業的利潤分配、專利費定價與供應鏈議價權。</p>
+<p><strong>Competitor status:</strong> 較不擁擠：競品頻道更愛即時戰爭與本地政治八卦；SEP/WTO這類硬政策議題較少人深入。</p>
+<p><strong>Simon’s angle:</strong> 把它講成『用規則打規則』：當中國政策常以不透明方式運作，外界往往覺得無從入手；但這次顯示只要能把行為具體化、制度化，就能在國際機制上取得可執行的成果。Simon可延伸到香港：當你失去本地法治的可預期性，唯一能依靠的就是跨境規則與合約治理。</p>
+<ul>
+<li><a href="https://policy.trade.ec.europa.eu/news/following-wto-ruling-favourable-eu-china-announces-withdrawal-its-anti-suit-injunction-policy-2026-04-01_en">Following WTO ruling favourable to EU, China announces withdrawal of its anti-suit injunction policy</a></li>
+<li><a href="https://www.reuters.com/world/china/eu-sanctions-chinese-iranian-companies-cyber-attacks-2026-03-16/">EU sanctions Chinese and Iranian companies for cyberattacks</a></li>
+</ul>
+<hr/>
+<h3>5. 香港餐廳牌照加國安條款：行政許可變成『思想合規』的入口</h3>
+<p><strong>Why it matters:</strong> 當國安條款被植入餐廳牌照續期，意味政治要求開始透過日常監管制度全面滲透。這不只影響本地商戶生存，也影響海外港人對香港營商環境、資產安全與『仍能否相信規則』的判斷。</p>
+<p><strong>Competitor status:</strong> 擁擠：多個頻道已在講『紅線更模糊』『人人自危』。但較少人把它系統化為一套治理模型：用低成本的行政權力，建立可隨時啟動的懲罰機制。</p>
+<p><strong>Simon’s angle:</strong> 用『監管國家 + 國安化』框架：牌照條款不是為了抓到違規，而是為了建立不對稱權力（你永遠要證明自己清白）。再加一個商業角度：這會催生一個新的『合規產業鏈』與政治風險顧問市場，而真正受損的是小商戶與創業者。</p>
+<ul>
+<li><a href="https://news.rthk.hk/rthk/en/component/k2/1850205-20260407.htm?spTabChangeable=0">Security clauses in all eatery licences by September</a></li>
+<li><a href="https://www.thestandard.com.hk/news/article/328636/HK-food-licenses-to-include-national-security-clauses-by-Sept">HK food licenses to include national security clauses by Sept</a></li>
+</ul>
+<hr/>
+<h3>6. 美國AI『全國統一監管』：以聯邦名義打州法，背後是產業戰與言論戰</h3>
+<p><strong>Why it matters:</strong> 白宮推出AI全國政策框架並設立AI Litigation Task Force，核心是以聯邦力量壓制州級AI法規，避免形成50套合規。對高資產港人而言，這會影響美國科技股估值、AI投資方向與跨境合規風險（尤其涉及數據、內容與金融）。</p>
+<p><strong>Competitor status:</strong> 相對不擁擠：競品多集中戰爭與香港本地；AI監管的政治經濟學較少人深入。</p>
+<p><strong>Simon’s angle:</strong> 把它拆成三層：1）監管的名義是『去碎片化』，但實際是中央集權；2）產業利益：降低初創成本、保住美國AI速度；3）政治文化戰：州法被指『要求模型輸出帶意識形態』。最後拉回香港視角：這是『技術—法律—權力』三角形的示範，提醒觀眾未來政治會先在科技層面落地。</p>
+<ul>
+<li><a href="https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/">Ensuring a National Policy Framework for Artificial Intelligence</a></li>
+<li><a href="https://www.globalpolicywatch.com/2026/04/u-s-tech-legislative-regulatory-update-first-quarter-2026/">U.S. Tech Legislative &amp; Regulatory Update – First Quarter 2026</a></li>
+</ul>
+<hr/>
+<h3>7. 港人『走資』的新管道？從香港保險到資產外移的制度套利</h3>
+<p><strong>Why it matters:</strong> 競品頻道熱議『利用香港保險走資』，反映資本如何在制度縫隙中尋找出路；這與香港作為金融中心的定位、以及監管未來走向密切相關。對海外港人與仍在港的高資產人士而言，這是切身的資產配置與風險管理議題。</p>
+<p><strong>Competitor status:</strong> 中等擁擠：競品已有影片談『香港保險走資模式』與個別官員/權貴傳聞，但多停留在爆料敘事。</p>
+<p><strong>Simon’s angle:</strong> 把它提升到『制度套利』：為何保險產品（與其跨境收款、保單架構、受益人安排）容易成為資金移動工具？同時提出反向問題：當監管收緊，香港金融業會如何把風險轉嫁給客戶（KYC、資金來源審查、贖回限制）？用一個可操作的框架教觀眾評估：合規風險、對手方風險、流動性風險。</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=EyOg-P_h6OU">笑談中國經濟 EP140｜馬興瑞落馬，爆太太團利用香港保險走資｜...</a></li>
+<li><a href="https://unsubject.github.io/socialisn/youtube-feed.xml">YouTube 頻道監察 Channel Monitor</a></li>
+</ul>
+</div>
+]]></description>
+</item>
+<item>
+<title>2026-04-07 evening — Top: 美伊戰爭升級到『斬首+精準打擊』：市場真正怕的是霍爾木茲與保險費率</title>
+<link>https://unsubject.github.io/socialisn/topics-feed.xml#2026-04-07-evening</link>
+<guid isPermaLink="false">topics-2026-04-07-evening</guid>
+<pubDate>Tue, 07 Apr 2026 22:05:55 +0000</pubDate>
+<description><![CDATA[
+<div><p><strong>2026-04-07 evening</strong></p>
+<hr/>
 <h3>1. 美伊戰爭升級到『斬首+精準打擊』：市場真正怕的是霍爾木茲與保險費率</h3>
 <p><strong>Why it matters:</strong> Google Trends 全球與美國都被『Iran war／CENTCOM』類關鍵字帶動，顯示事件已外溢到普羅大眾的風險感知。對港人資產配置而言，油價只是表層，真正的傳導機制是航運保費、制裁合規與美元流動性收縮。</p>
 <p><strong>Competitor status:</strong> 競品頻道高度擁擠：多條影片集中在『伊朗擊落美軍戰機／CSAR營救／特朗普威脅轟炸基建』；但多停留於軍事戲劇化敘事。可切入的空位是：用金融語言拆解『風險溢價』如何進入香港人的每一筆投資（能源、航空、保險、美元資金成本）。</p>
-<p><strong>Simon's angle:</strong> 把『戰爭』翻譯成投資者聽得懂的三條曲線：油價、航運保費、美元融資利差；再對照香港/離散港人常見資產（美股、保險、房產按息）會怎樣被動承受。</p>
-<p><strong>Sources:</strong> <a href="https://trends.google.com/trending/rss?geo=GLOBAL">Google Trends (GLOBAL) RSS: cnn live / Iran war live updates</a> <a href="https://trends.google.com/trending/rss?geo=US">Google Trends (US) RSS: centcom / Iran-related trends</a> <a href="https://www.cnn.com/2026/04/07/world/live-news/iran-war-trump-us-israel">CNN live blog headline: Iran defiant as Trump warns entire country could be taken out</a></p>
+<p><strong>Simon’s angle:</strong> 把『戰爭』翻譯成投資者聽得懂的三條曲線：油價、航運保費、美元融資利差；再對照香港/離散港人常見資產（美股、保險、房產按息）會怎樣被動承受。</p>
+<ul>
+<li><a href="https://trends.google.com/trending/rss?geo=GLOBAL">Google Trends (GLOBAL) RSS: cnn live / Iran war live updates</a></li>
+<li><a href="https://trends.google.com/trending/rss?geo=US">Google Trends (US) RSS: centcom / Iran-related trends</a></li>
+<li><a href="https://www.cnn.com/2026/04/07/world/live-news/iran-war-trump-us-israel">CNN live blog headline: Iran defiant as Trump warns entire country could be taken out</a></li>
+</ul>
+<hr/>
 <h3>2. 香港國安法『交密碼』新規：把『過境香港』變成外企與港人旅遊的合規風險</h3>
 <p><strong>Why it matters:</strong> BBC 指香港警方可要求涉嫌違反國安法者交出電子裝置密碼，拒絕可判囚一年並罰款，提供虛假資料最高可囚三年。這不只是人權議題，也直接影響香港作為轉機、金融與資料中心的信任資本，對海外港人回港/經港轉機風險評估亦更清晰。</p>
 <p><strong>Competitor status:</strong> 競品已有提及『拒交手機密碼可監禁』，但多以情緒化安全警示為主。缺口在於：把它放回『法治風險→資本成本→香港折價』的框架，並給觀眾一套可操作的風險清單（數據、裝置、雲端、保險）。</p>
-<p><strong>Simon's angle:</strong> 用『港版邊境搜查權』的語言對比英美法系對電子搜查的門檻，指出香港正在把國安擴張為通用執法工具；再推演其對跨境資料、家族辦公室與保險業的長期傷害。</p>
-<p><strong>Sources:</strong> <a href="https://www.bbc.com/news/articles/ce8j9yj52lro">BBC: Hong Kong police can now demand phone passwords under national security law</a> <a href="https://unsubject.github.io/socialisn/youtube-feed.xml">YouTube competitor feed item: 傑斯—拒交『手機密碼』可監禁，美國發香港安全警示</a></p>
+<p><strong>Simon’s angle:</strong> 用『港版邊境搜查權』的語言對比英美法系對電子搜查的門檻，指出香港正在把國安擴張為通用執法工具；再推演其對跨境資料、家族辦公室與保險業的長期傷害。</p>
+<ul>
+<li><a href="https://www.bbc.com/news/articles/ce8j9yj52lro">BBC: Hong Kong police can now demand phone passwords under national security law</a></li>
+<li><a href="https://unsubject.github.io/socialisn/youtube-feed.xml">YouTube competitor feed item: 傑斯—拒交『手機密碼』可監禁，美國發香港安全警示</a></li>
+</ul>
+<hr/>
 <h3>3. 特朗普用行政命令插手NCAA：『聯邦資助』成為治理大學與青年流動的槓桿</h3>
 <p><strong>Why it matters:</strong> Google Trends US 出現『executive order』相關熱度；ESPN 報導特朗普簽署行政命令要求NCAA限制運動員五年期限與轉校次數，並以聯邦資助作為潛在制裁。這種治理方式值得港人注意：當政府把資助/合約變成『服從工具』，學術與公民社會的自治會如何被重塑。</p>
 <p><strong>Competitor status:</strong> 香港政治經濟圈較少談美國大學體制與聯邦權力，屬相對空白。可用角度：把它視作『行政國家』與『文化戰』的一部分，並連結到香港的大學治理被政治化的經驗。</p>
-<p><strong>Simon's angle:</strong> 以制度設計角度拆解：行政命令不是法，但能靠資助與合規要求製造『事實上的法律』；再問一個反直覺問題：為何右派會用左派熟悉的國家槓桿？</p>
-<p><strong>Sources:</strong> <a href="https://www.espn.com/college-sports/story/_/id/48387866/executive-order-limits-ncaa-athletes-five-years-one-transfer">ESPN: Executive order limits NCAA athletes to five years, one transfer</a> <a href="https://trends.google.com/trending/rss?geo=US">Google Trends (US) RSS: executive order trending</a></p>
+<p><strong>Simon’s angle:</strong> 以制度設計角度拆解：行政命令不是法，但能靠資助與合規要求製造『事實上的法律』；再問一個反直覺問題：為何右派會用左派熟悉的國家槓桿？</p>
+<ul>
+<li><a href="https://www.espn.com/college-sports/story/_/id/48387866/executive-order-limits-ncaa-athletes-five-years-one-transfer">ESPN: Executive order limits NCAA athletes to five years, one transfer</a></li>
+<li><a href="https://trends.google.com/trending/rss?geo=US">Google Trends (US) RSS: executive order trending</a></li>
+</ul>
+<hr/>
 <h3>4. 甲骨文裁員3萬：大企業把『雲+AI』當成成本剪刀，白領的風險被重新定價</h3>
 <p><strong>Why it matters:</strong> Oracle 大規模裁員的消息在競品頻道出現，也有主流媒體報導其裁員規模與重組。對高學歷港人而言，這是『AI 不是工具而是管理學』的實例：公司用AI投資敘事包裝裁員，市場卻可能給更高估值。</p>
 <p><strong>Competitor status:</strong> 競品談法多集中在『Oracle 裁員但股價升』與『AI 浪潮』的恐懼敘事。空位在於：從企業財務與資本市場語言，解釋為何裁員能被視為『重組→利潤率→估值』，以及哪些職能最先被擠壓。</p>
-<p><strong>Simon's angle:</strong> 把裁員視作『資本對勞動的再談判』：AI 投資其實是提高議價能力；再教觀眾用三個指標看自己行業是否進入『Oracle 時刻』（毛利率壓力、重複性流程、可外包/自動化程度）。</p>
-<p><strong>Sources:</strong> <a href="https://www.cio.com/article/4153113/oracle-cuts-up-to-30000-jobs-globally-putting-enterprise-support-and-roadmaps-at-risk.html">CIO: Oracle cuts up to 30,000 jobs globally</a> <a href="https://www.the-independent.com/us/money/oracle-layoffs-ai-replacement-b2951467.html">The Independent: Oracle reveals who it laid off (AI alarm for white-collar workers)</a> <a href="https://unsubject.github.io/socialisn/youtube-feed.xml">YouTube competitor feed item: Oracle預裁3萬人股價反升只因錢投AI發展</a></p>
+<p><strong>Simon’s angle:</strong> 把裁員視作『資本對勞動的再談判』：AI 投資其實是提高議價能力；再教觀眾用三個指標看自己行業是否進入『Oracle 時刻』（毛利率壓力、重複性流程、可外包/自動化程度）。</p>
+<ul>
+<li><a href="https://www.cio.com/article/4153113/oracle-cuts-up-to-30000-jobs-globally-putting-enterprise-support-and-roadmaps-at-risk.html">CIO: Oracle cuts up to 30,000 jobs globally</a></li>
+<li><a href="https://www.the-independent.com/us/money/oracle-layoffs-ai-replacement-b2951467.html">The Independent: Oracle reveals who it laid off (AI alarm for white-collar workers)</a></li>
+<li><a href="https://unsubject.github.io/socialisn/youtube-feed.xml">YouTube competitor feed item: Oracle預裁3萬人股價反升只因錢投AI發展</a></li>
+</ul>
+<hr/>
 <h3>5. 香港『全球最貴汽油』其實是稅與地產邏輯：能源政策為何永遠讓位給財政？</h3>
 <p><strong>Why it matters:</strong> 競品頻道同日出現『香港汽油全球最貴、缺乏再生能源規劃』的討論，反映民生不滿可被延伸到政策治理。對海外港人而言，這題可連結到香港的財政結構與土地依賴：當政府靠稅與地價收入，能源轉型就被系統性拖延。</p>
 <p><strong>Competitor status:</strong> 話題在YouTube已有熱度但未必被做深。可用空位：把油價拆解成『稅、牌照、租金、競爭結構、環保政策缺口』，並比較新加坡/英國等城市如何用稅制而不是口號推動轉型。</p>
-<p><strong>Simon's angle:</strong> 以公共財政角度反問：香港是否把『高油價』當成隱性稅？如果是，能源轉型為何會降低政府的現金流動機？用這個框架講清楚香港為何難成為真正的『智慧城市』。</p>
-<p><strong>Sources:</strong> <a href="https://unsubject.github.io/socialisn/youtube-feed.xml">YouTube competitor feed: 財經拆局—香港汽油全球最貴 高美國四倍缺乏再生能源規劃</a> <a href="https://unsubject.github.io/socialisn/youtube-feed.xml">YouTube competitor feed: 吳志森—香港汽車油價點解會世界最貴？</a></p>
+<p><strong>Simon’s angle:</strong> 以公共財政角度反問：香港是否把『高油價』當成隱性稅？如果是，能源轉型為何會降低政府的現金流動機？用這個框架講清楚香港為何難成為真正的『智慧城市』。</p>
+<ul>
+<li><a href="https://unsubject.github.io/socialisn/youtube-feed.xml">YouTube competitor feed: 財經拆局—香港汽油全球最貴 高美國四倍缺乏再生能源規劃</a></li>
+<li><a href="https://unsubject.github.io/socialisn/youtube-feed.xml">YouTube competitor feed: 吳志森—香港汽車油價點解會世界最貴？</a></li>
+</ul>
+<hr/>
 <h3>6. 馬興瑞落馬：『技術官僚』神話破產，反腐其實是派系重組的語言</h3>
 <p><strong>Why it matters:</strong> 競品YouTube多條影片提到馬興瑞落馬與『皇后黨』敘事，顯示華語圈高度關注。對港人來說，重點不在八卦，而在中國地方治理與產業政策的連續性：當高層清洗擴散到技術官僚，投資與地方招商的可信承諾會被削弱。</p>
 <p><strong>Competitor status:</strong> 競品角度偏向宮廷政治與『習失勢？』的猜測。缺口是制度分析：反腐如何作為『治理技術』，用不確定性去馴服官僚與資本，並推高整體風險溢價。</p>
-<p><strong>Simon's angle:</strong> 把『反腐』視為一種宏觀政策：它不是為了乾淨，而是為了可控；用香港人熟悉的『紅線』語言解釋中國官僚/企業如何在不確定中自我審查，進一步壓低創新與投資效率。</p>
-<p><strong>Sources:</strong> <a href="https://unsubject.github.io/socialisn/youtube-feed.xml">YouTube competitor feed: CC News—笑談中國經濟 EP140｜馬興瑞落馬…香港保險走資</a> <a href="https://unsubject.github.io/socialisn/youtube-feed.xml">YouTube competitor feed: 文昭—馬興瑞官宣被抓</a> <a href="https://www.scmp.com/topics/us-china-trade-war">SCMP topic page: US-China trade war latest updates (context for Xi–Trump summit / tariff spillovers)</a></p>
+<p><strong>Simon’s angle:</strong> 把『反腐』視為一種宏觀政策：它不是為了乾淨，而是為了可控；用香港人熟悉的『紅線』語言解釋中國官僚/企業如何在不確定中自我審查，進一步壓低創新與投資效率。</p>
+<ul>
+<li><a href="https://unsubject.github.io/socialisn/youtube-feed.xml">YouTube competitor feed: CC News—笑談中國經濟 EP140｜馬興瑞落馬…香港保險走資</a></li>
+<li><a href="https://unsubject.github.io/socialisn/youtube-feed.xml">YouTube competitor feed: 文昭—馬興瑞官宣被抓</a></li>
+<li><a href="https://www.scmp.com/topics/us-china-trade-war">SCMP topic page: US-China trade war latest updates (context for Xi–Trump summit / tariff spillovers)</a></li>
+</ul>
+<hr/>
 <h3>7. 『大北美＋G2』話術背後：美國正在把規則秩序改寫成勢力範圍談判</h3>
 <p><strong>Why it matters:</strong> 競品頻道出現多條討論『大北美』『特朗普要跟中俄分天下』的影片，顯示受眾關注美國外交路線轉向。對港人與台灣觀眾而言，這影響的是『小國/城市如何在大國交易中自保』，尤其是金融中心的規則紅利一旦消失，剩下的是政治風險定價。</p>
 <p><strong>Competitor status:</strong> 話題在競品端屬擁擠，但多停留在宏大敘事。空位在於：把勢力範圍談判落地成可觀測指標（關稅、出口管制、投資審查、匯率/美元武器化），並推演香港/台灣的選項集合如何縮窄。</p>
-<p><strong>Simon's angle:</strong> 用『19世紀協調體系 vs 20世紀規則體系』對比：如果世界回到勢力範圍，香港人的資產與身份選擇要怎樣重新配置？最後落到一個實用結論：分散司法管轄區與貨幣風險。</p>
-<p><strong>Sources:</strong> <a href="https://unsubject.github.io/socialisn/youtube-feed.xml">YouTube competitor feed: 徐少驊—『大北美＋G2』揭開全球分贓新秩序</a> <a href="https://finance.yahoo.com/news/live/trump-tariffs-live-updates-us-to-roll-out-tiered-duties-on-steel-aluminum-one-year-after-trumps-liberation-day-tariffs-122637970.html">Yahoo Finance live updates: Trump tariffs / steel and aluminum tiered duties</a></p>]]></description>
+<p><strong>Simon’s angle:</strong> 用『19世紀協調體系 vs 20世紀規則體系』對比：如果世界回到勢力範圍，香港人的資產與身份選擇要怎樣重新配置？最後落到一個實用結論：分散司法管轄區與貨幣風險。</p>
+<ul>
+<li><a href="https://unsubject.github.io/socialisn/youtube-feed.xml">YouTube competitor feed: 徐少驊—『大北美＋G2』揭開全球分贓新秩序</a></li>
+<li><a href="https://finance.yahoo.com/news/live/trump-tariffs-live-updates-us-to-roll-out-tiered-duties-on-steel-aluminum-one-year-after-trumps-liberation-day-tariffs-122637970.html">Yahoo Finance live updates: Trump tariffs / steel and aluminum tiered duties</a></li>
+</ul>
+</div>
+]]></description>
 </item>
 <item>
-  <title>2026-04-06 evening — Top: 霍爾木茲海峽最後通牒：市場押注『會開』，但保險與航運已先加價</title>
-  <link>https://unsubject.github.io/socialisn/topics-feed.xml#2026-04-06-evening</link>
-  <guid isPermaLink="false">topics-2026-04-06-evening</guid>
-  <pubDate>Mon, 06 Apr 2026 22:07:05 +0000</pubDate>
-  <description><![CDATA[<h2>Topic Candidates (2026-04-06 evening)</h2>
+<title>2026-04-06 evening — Top: 霍爾木茲海峽最後通牒：市場押注『會開』，但保險與航運已先加價</title>
+<link>https://unsubject.github.io/socialisn/topics-feed.xml#2026-04-06-evening</link>
+<guid isPermaLink="false">topics-2026-04-06-evening</guid>
+<pubDate>Mon, 06 Apr 2026 22:07:00 +0000</pubDate>
+<description><![CDATA[
+<div><p><strong>2026-04-06 evening</strong></p>
+<hr/>
 <h3>1. 霍爾木茲海峽最後通牒：市場押注『會開』，但保險與航運已先加價</h3>
 <p><strong>Why it matters:</strong> 特朗普把伊朗『開放霍爾木茲』定為具體期限，這不是純軍事新聞，而是全球油價、航運保險與亞洲燃料成本的定價事件。對高資產港人而言，重點是資產配置的二階效應：能源輸入、通脹預期與美元利率路徑的再評估。</p>
 <p><strong>Competitor status:</strong> 非常擁擠：多個港政經頻道都在講『擊落美軍戰機』『真人版雷霆救兵』『戰況失控』；但較少人用航運/保險/套利鏈條去拆解香港與英國生活成本、企業成本與投資組合風險。</p>
-<p><strong>Simon's angle:</strong> 用『風險保費』做主線：不是預測戰爭輸贏，而是解釋為何即使海峽重開，保險費率與航運改道也不會立刻回落，並把這些成本如何滲透到香港（油價、機票、進口物價）與英國（能源賬單、通脹）說清楚。</p>
-<p><strong>Sources:</strong> <a href="https://www.reuters.com/world/middle-east/trump-says-tuesday-deadline-make-deal-with-iran-is-final-2026-04-06/">Trump says Tuesday deadline to make a deal with Iran is final (reopen Strait of Hormuz) — Reuters</a> <a href="https://www.investing.com/news/stock-market-news/wall-st-futures-dip-after-trump-gives-iran-tue-deadline-to-open-hormuz-4597675">Wall St futures dip after Trump gives Iran deadline to open Hormuz — Investing.com</a></p>
+<p><strong>Simon’s angle:</strong> 用『風險保費』做主線：不是預測戰爭輸贏，而是解釋為何即使海峽重開，保險費率與航運改道也不會立刻回落，並把這些成本如何滲透到香港（油價、機票、進口物價）與英國（能源賬單、通脹）說清楚。</p>
+<ul>
+<li><a href="https://www.reuters.com/world/middle-east/trump-says-tuesday-deadline-make-deal-with-iran-is-final-2026-04-06/">Trump says Tuesday deadline to make a deal with Iran is final (reopen Strait of Hormuz) — Reuters</a></li>
+<li><a href="https://www.investing.com/news/stock-market-news/wall-st-futures-dip-after-trump-gives-iran-tue-deadline-to-open-hormuz-4597675">Wall St futures dip after Trump gives Iran deadline to open Hormuz — Investing.com</a></li>
+</ul>
+<hr/>
 <h3>2. Broadcom（AVGO）變成『地緣政治避險股』：AI 供應鏈正在被市場當作國策下注</h3>
 <p><strong>Why it matters:</strong> Google Trends（全球）把 AVGO 與 S&amp;P 500 推上熱門，顯示資金在『宏觀風險升溫』時仍追逐 AI 基礎設施龍頭。對港人投資者而言，關鍵是辨認：這是企業基本面，還是市場把半導體當作美國工業政策與盟友體系的代理標的。</p>
 <p><strong>Competitor status:</strong> 中度擁擠：對 AI 股/泡沫的情緒性討論很多，但較少人把 AVGO 這類『供應鏈節點公司』放進出口管制、盟友去風險與地緣政治資本流向的框架。</p>
-<p><strong>Simon's angle:</strong> 把 AVGO 拆成三條線：1) AI 基建需求；2) 美國對中國科技管制的替代供應鏈；3) 市場在戰爭/通脹背景下，為何更偏好『現金流+定價權』的科技巨頭，而非純故事股。</p>
-<p><strong>Sources:</strong> <a href="https://trends.google.com/trending/rss?geo=GLOBAL">Google Trends (GLOBAL) — avgo stock</a> <a href="https://www.fool.com/investing/2026/04/06/broadcom-ceo-100-billion-ai-revenue-stock-buy/">Broadcom CEO, $100 billion AI revenue… — The Motley Fool</a></p>
+<p><strong>Simon’s angle:</strong> 把 AVGO 拆成三條線：1) AI 基建需求；2) 美國對中國科技管制的替代供應鏈；3) 市場在戰爭/通脹背景下，為何更偏好『現金流+定價權』的科技巨頭，而非純故事股。</p>
+<ul>
+<li><a href="https://trends.google.com/trending/rss?geo=GLOBAL">Google Trends (GLOBAL) — avgo stock</a></li>
+<li><a href="https://www.fool.com/investing/2026/04/06/broadcom-ceo-100-billion-ai-revenue-stock-buy/">Broadcom CEO, $100 billion AI revenue… — The Motley Fool</a></li>
+</ul>
+<hr/>
 <h3>3. 溫家寶『現本尊效應』：體制內的『安全出口』，其實是對市場與官僚的暗號</h3>
 <p><strong>Why it matters:</strong> 競爭頻道集中談『溫家寶罕見現身』的政治八卦，但對港人更有價值的是：這類『被允許的異音』如何被用作內部穩定與政策轉向的緩衝。若中國要處理外貿壓力與內需疲弱，這種敘事可能是為『重新分配』與『政策回擺』鋪路。</p>
 <p><strong>Competitor status:</strong> 擁擠但角度單一：多數把它當派系鬥爭或情緒宣洩；較少討論它作為『制度訊號機制』：誰需要這個故事？要安撫誰？</p>
-<p><strong>Simon's angle:</strong> 用政治經濟學框架：把溫家寶當作『可信第三方』，解釋為何威權體制在經濟壓力時，會允許有限度的前朝敘事來重置期望；並連結到港人資產：人民幣、內地資產風險溢價、以及外資能否回流。</p>
-<p><strong>Sources:</strong> <a href="https://www.youtube.com/watch?v=SugeCvHN_GU">Ch. 1710：溫家寶現本尊 效應大陸發酵 — 風雲谷 (YouTube feed)</a> <a href="https://www.youtube.com/watch?v=H6OMTaeC2ww">風雲谷合集286（溫總現身等）— 風雲谷 (YouTube feed)</a></p>
+<p><strong>Simon’s angle:</strong> 用政治經濟學框架：把溫家寶當作『可信第三方』，解釋為何威權體制在經濟壓力時，會允許有限度的前朝敘事來重置期望；並連結到港人資產：人民幣、內地資產風險溢價、以及外資能否回流。</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=SugeCvHN_GU">Ch. 1710：溫家寶現本尊 效應大陸發酵 — 風雲谷 (YouTube feed)</a></li>
+<li><a href="https://www.youtube.com/watch?v=H6OMTaeC2ww">風雲谷合集286（溫總現身等）— 風雲谷 (YouTube feed)</a></li>
+</ul>
+<hr/>
 <h3>4. 馬興瑞落馬＋軍工系統連環出事：軍民融合在『KPI化』下的失敗樣本</h3>
 <p><strong>Why it matters:</strong> 多個頻道都在談『皇后黨』『彭麗媛同鄉』等宮鬥敘事，但港人更需要的是：這是否反映軍工體系的技術/採購失靈，進而影響中國對外軍事冒險的能力與成本。若軍工現代化受挫，台海風險與中國對外策略可能出現更不對稱的轉向（例如灰色地帶、經濟脅迫）。</p>
 <p><strong>Competitor status:</strong> 擁擠：至少兩個大台已把焦點放在派系與反腐；較少人把它連到產業政策失效、地方財政、以及新疆治理成本。</p>
-<p><strong>Simon's angle:</strong> 把『反腐』翻譯成『資源錯配』：用軍工院士落馬、買票、女公關等細節，講清楚威權體制如何在高壓與政績驅動下，把科研—採購—升遷扭曲成尋租鏈，最後導致武器系統失靈與戰略誤判。</p>
-<p><strong>Sources:</strong> <a href="https://www.youtube.com/watch?v=1eSJt4uTnXs">官宣了！政治局委員馬興瑞落馬… — 文昭 (YouTube feed)</a> <a href="https://www.youtube.com/watch?v=ucgXFWCn0SM">城寨新聞 II 3/4/26：馬興瑞涉貪被調查…軍工院士落馬… — 城寨 (YouTube feed)</a></p>
+<p><strong>Simon’s angle:</strong> 把『反腐』翻譯成『資源錯配』：用軍工院士落馬、買票、女公關等細節，講清楚威權體制如何在高壓與政績驅動下，把科研—採購—升遷扭曲成尋租鏈，最後導致武器系統失靈與戰略誤判。</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=1eSJt4uTnXs">官宣了！政治局委員馬興瑞落馬… — 文昭 (YouTube feed)</a></li>
+<li><a href="https://www.youtube.com/watch?v=ucgXFWCn0SM">城寨新聞 II 3/4/26：馬興瑞涉貪被調查…軍工院士落馬… — 城寨 (YouTube feed)</a></li>
+</ul>
+<hr/>
 <h3>5. 香港『網約車』成熱搜：管制不是交通問題，而是平台經濟的政治問題</h3>
 <p><strong>Why it matters:</strong> 香港 Google Trends 熱搜出現『網約車』，反映本地對平台經濟與交通管制的矛盾升溫。對港人與移民港人來說，這是理解香港治理模式的一個縮影：政府如何在既得利益（牌照）、執法選擇性、與民生效率之間做取捨。</p>
 <p><strong>Competitor status:</strong> 相對不擁擠：政治頻道多談國安與大事件，較少把『網約車』這種民生議題上升到治理與制度激勵分析。</p>
-<p><strong>Simon's angle:</strong> 用『制度設計』拆局：比較新加坡/台灣/英國的網約車監管，指出香港真正問題不是『合法不合法』，而是政府是否願意讓市場競爭觸碰既得利益；並延伸到：為何威權化治理更傾向保護可被管控的壟斷，而不是效率。</p>
-<p><strong>Sources:</strong> <a href="https://trends.google.com/trending/rss?geo=HK">Google Trends (HK) — 網約車</a> <a href="https://developers.google.com/search/docs/monitor-debug/trends-start">Google Trends documentation: Trending Now &amp; filters (for methodology)</a></p>
+<p><strong>Simon’s angle:</strong> 用『制度設計』拆局：比較新加坡/台灣/英國的網約車監管，指出香港真正問題不是『合法不合法』，而是政府是否願意讓市場競爭觸碰既得利益；並延伸到：為何威權化治理更傾向保護可被管控的壟斷，而不是效率。</p>
+<ul>
+<li><a href="https://trends.google.com/trending/rss?geo=HK">Google Trends (HK) — 網約車</a></li>
+<li><a href="https://developers.google.com/search/docs/monitor-debug/trends-start">Google Trends documentation: Trending Now &amp; filters (for methodology)</a></li>
+</ul>
+<hr/>
 <h3>6. 羅湖口岸熱搜背後：『復活節大逃港』其實是信心與消費外流指標</h3>
 <p><strong>Why it matters:</strong> 『羅湖口岸』在香港熱搜，與競爭頻道談的『復活節大逃港』互相呼應：大量跨境出行是對本地消費環境與生活質素的投票。對仍在港與海外港人而言，這是觀察香港內需、零售租金、以及城市吸引力（人才與資本）的一個即時代理指標。</p>
 <p><strong>Competitor status:</strong> 有討論但偏情緒：多以揶揄/怨氣描述『逃港』，較少把它量化成結構性經濟指標（消費外流、服務業利潤、租金承受力）。</p>
-<p><strong>Simon's angle:</strong> 把『口岸人流』當成 macro 指標：結合零售、餐飲、酒店與租金循環，解釋為何『人走錢走』會先在週末/假期的口岸數據出現，然後才反映在失業率與樓市；並延伸到移民港人如何判斷是否回流投資/置業。</p>
-<p><strong>Sources:</strong> <a href="https://trends.google.com/trending/rss?geo=HK">Google Trends (HK) — 羅湖口岸</a> <a href="https://www.youtube.com/watch?v=RUwokbNBu68">【香港1A】七十萬人復活節大逃港… — Hong Kong Uncensored 香港冇格仔 (YouTube feed)</a></p>
+<p><strong>Simon’s angle:</strong> 把『口岸人流』當成 macro 指標：結合零售、餐飲、酒店與租金循環，解釋為何『人走錢走』會先在週末/假期的口岸數據出現，然後才反映在失業率與樓市；並延伸到移民港人如何判斷是否回流投資/置業。</p>
+<ul>
+<li><a href="https://trends.google.com/trending/rss?geo=HK">Google Trends (HK) — 羅湖口岸</a></li>
+<li><a href="https://www.youtube.com/watch?v=RUwokbNBu68">【香港1A】七十萬人復活節大逃港… — Hong Kong Uncensored 香港冇格仔 (YouTube feed)</a></li>
+</ul>
+<hr/>
 <h3>7. 台灣四月兵推與關稅陰影：供應鏈不是撤走，而是『把利潤搬到安全區』</h3>
 <p><strong>Why it matters:</strong> 台灣的電腦兵推與關稅/貿易政策不確定性同時出現，讓企業更關心『中斷風險』的財務處理方式。對港人投資者與企業主來說，問題不是台海會不會打，而是資本如何用更高的風險折現率、更多庫存與多地生產，把利潤搬到可保險、可融資的安全區。</p>
 <p><strong>Competitor status:</strong> 中度擁擠：很多人談軍事新聞，但較少把它連到企業財務決策（保險、庫存、資本開支）與投資回報的折現率。</p>
-<p><strong>Simon's angle:</strong> 用 CFO 視角講台海：如果你是供應鏈企業或投資者，你會怎樣把『地緣政治』寫進模型（WACC、保費、供應商備援、現金流波動）？用這個角度，觀眾會比一般軍事評論更有所得。</p>
-<p><strong>Sources:</strong> <a href="https://www.youtube.com/watch?v=MIfdVkpljzM">Taiwan To Hold Computer-Assisted Drills in April — YouTube</a> <a href="https://www.eiu.com/n/blogs/operational-risk-outlook-2026/">Have risks around the Taiwan Strait increased? — Economist Intelligence Unit</a></p>]]></description>
+<p><strong>Simon’s angle:</strong> 用 CFO 視角講台海：如果你是供應鏈企業或投資者，你會怎樣把『地緣政治』寫進模型（WACC、保費、供應商備援、現金流波動）？用這個角度，觀眾會比一般軍事評論更有所得。</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=MIfdVkpljzM">Taiwan To Hold Computer-Assisted Drills in April — YouTube</a></li>
+<li><a href="https://www.eiu.com/n/blogs/operational-risk-outlook-2026/">Have risks around the Taiwan Strait increased? — Economist Intelligence Unit</a></li>
+</ul>
+</div>
+]]></description>
 </item>
 <item>
-  <title>2026-04-05 morning — Top: 伊朗戰事把油價變成全球『加息器』：誰會先跪？</title>
-  <link>https://unsubject.github.io/socialisn/topics-feed.xml#2026-04-05-morning</link>
-  <guid isPermaLink="false">topics-2026-04-05-morning</guid>
-  <pubDate>Sun, 05 Apr 2026 10:07:06 +0000</pubDate>
-  <description><![CDATA[<h2>Topic Candidates (2026-04-05 morning)</h2>
-<h3>1. 伊朗戰事把油價變成全球『加息器』：誰會先跪？</h3>
-<p><strong>Why it matters:</strong> 競爭對手多在講『擊落戰機／救人』，但真正影響港人資產的是：油價與航運保費上升如何透過通脹預期、利率路徑、股債估值傳導到全球。對香港及海外港人而言，這是『中東戰火→美元利率→按揭與股票』的一條直線，而不是新聞花邊。</p>
-<p><strong>Competitor status:</strong> 非常擁擠：多個HK政評頻道集中討論美軍戰機被擊落、特朗普民望、是否升級作戰。可用角度：把事件抽象成『航運中斷＋保險成本＋央行反應函數』，用數據和情境推演取代戰況八卦。</p>
-<p><strong>Simon's angle:</strong> 用『油價=全球加息器』框架拆解：若霍爾木茲受阻，能源成本會先打擊哪幾個經濟體（EU、印度、東亞製造鏈），以及央行在『通脹回升 vs 經濟放緩』兩難下會如何選邊。再補一個港人視角：能源／航運成本如何影響香港再出口、航空與保險業、以及港人海外生活成本。</p>
-<p><strong>Sources:</strong> <a href="https://www.reuters.com/business/energy/oil-rises-over-1-iran-crisis-disrupts-middle-east-supply-2026-03-04/">Oil rises over $1 as Iran crisis disrupts Middle East supply (mentions Strait of Hormuz disruption)</a> <a href="https://unsubject.github.io/socialisn/youtube-feed.xml">YouTube competitor cluster shows heavy coverage of downed aircraft/rescue narratives</a></p>
-<h3>2. 政治局委員落馬：馬興瑞案不是反腐，是『政策執行風險』</h3>
-<p><strong>Why it matters:</strong> 馬興瑞被查反映北京高層整肅仍在擴散，對外界最重要的不是八卦派系，而是它如何改變地方官員的風險偏好：更怕犯錯、更愛做表面工程、數據更不可信。港人／海外投資者關心的是『中國增長、債務、產業政策』的可預測性。</p>
-<p><strong>Competitor status:</strong> 中度擁擠：已有頻道用『皇后黨』『宮廷鬥爭』解讀。可用角度：從政治風險到經濟後果——為何反腐周期往往導致投資與改革更保守、地方債與統計更黑箱。</p>
-<p><strong>Simon's angle:</strong> 把案件放到『信息品質』框架：越高壓的問責，越容易出現KPI造假與風險隱瞞；再連到新疆／工業／能源／科技供應鏈（他曾在廣東與航天系統工作）——這類人事清洗對產業政策連貫性意味什麼。</p>
-<p><strong>Sources:</strong> <a href="https://ca.news.yahoo.com/chinas-communist-party-investigates-ex-115317893.html">China's Communist Party investigates ex-Xinjiang leader Ma Xingrui (AP via Yahoo)</a> <a href="https://unsubject.github.io/socialisn/youtube-feed.xml">Competitor feed: multiple videos framing Ma Xingrui as Politburo purge</a></p>
-<h3>3. NASA Artemis II重返繞月：這是美國工業政策的『宣傳片』</h3>
-<p><strong>Why it matters:</strong> 太空不是浪漫，而是供應鏈、國防、產業能力的展示。Artemis II在中美競賽下重啟載人繞月，會被盟友與對手解讀為『美國還能做大工程』的信號。對香港高資產族群，這也是判斷美國科技／國防投資周期的窗口。</p>
-<p><strong>Competitor status:</strong> 較少但正在升溫：競品頻道多以『50年後再征月』的新聞角度帶過，未深入到產業與財政結構。可用角度：以『公私合作＋軍民兩用供應鏈』解釋為何它影響市場與地緣政治。</p>
-<p><strong>Simon's angle:</strong> 用『航天=國家級PMO』視角：拆解Artemis如何把風險外包給私營（合約、成本、技術路線），並把它放到對華競爭與盟友編隊（加拿大參與）中。最後連結投資：哪些產業會吃到長尾（高端製造、材料、航天電子、保險）。</p>
-<p><strong>Sources:</strong> <a href="https://www.reuters.com/science/nasa-counts-down-first-crewed-lunar-mission-half-century-2026-04-01/">NASA counts down for first crewed lunar mission in half a century (Reuters)</a> <a href="https://www.nasa.gov/news-release/liftoff-nasa-launches-astronauts-on-historic-artemis-moon-mission/">Liftoff! NASA launches astronauts on historic Artemis Moon mission (NASA)</a></p>
-<h3>4. 香港『雙軌法制』：資本市場其實早已用腳投票</h3>
-<p><strong>Why it matters:</strong> 國安案件與一般案件的處理邏輯分裂，會令企業、投資者、保險公司對『可預測性』重新定價。對仍在香港與已離港的高資產港人而言，這影響到資產放哪裡、用哪個法域做合約、以及是否仍把香港當作安全港。</p>
-<p><strong>Competitor status:</strong> 中度擁擠：有頻道以納粹『雙軌政府』理論談香港司法現狀，但多停留在道德與歷史類比。可用角度：把它翻譯成『合約執行風險、政治風險保費、仲裁地選擇』。</p>
-<p><strong>Simon's angle:</strong> 把議題做成『投資者備忘錄』：哪類交易最怕政治軌道（媒體、NGO、政治敏感行業），哪類仍相對穩定（純商業仲裁）；以及為何『普通法外觀』仍可能與實質風險背離。</p>
-<p><strong>Sources:</strong> <a href="https://www.youtube.com/watch?v=VGiyK3HB34M">Green Bean Media video description on Hong Kong dual track legal system</a> <a href="https://www.reuters.com/world/china/hong-kong-court-rejects-appeal-landmark-hong-kong-47-subversion-case-2026-02-23/">Hong Kong court rejects appeal in landmark 'Hong Kong 47' case (Reuters)</a></p>
-<h3>5. 『港人四分一消費用於外遊』：其實是對未來的投票</h3>
-<p><strong>Why it matters:</strong> 如果大批市民把消費轉向外遊與離境，背後是對本地前景的折現率上升：不做長期規劃，只求短期效用最大化。對商業與政策而言，這是內需與零售結構變化的早期信號，也映照離散社群的心理狀態。</p>
-<p><strong>Competitor status:</strong> 較擁擠：有頻道用『大逃港』敘事，但多偏情緒與即時新聞。可用角度：用行為經濟學解釋『活在當下』如何成為理性選擇，並連到樓市、教育、人口流動。</p>
-<p><strong>Simon's angle:</strong> 用『社會折現率』概念：當制度不可信、政策不可預期，個人會把未來貼現得更狠，導致儲蓄／投資／生育／教育選擇全改變。把它做成一集：從一個旅遊數字解釋一個城市的長期衰退機制。</p>
-<p><strong>Sources:</strong> <a href="https://unsubject.github.io/socialisn/youtube-feed.xml">Competitor feed item on Easter exodus / spending on travel</a> <a href="https://www.china-briefing.com/news/hong-kong-budget-2026/">Hong Kong Budget 2026-2027: driving growth through technology and innovation (background)</a></p>
-<h3>6. AI泡沫不是『模型』，是資本配置：下一輪爆雷會在哪？</h3>
-<p><strong>Why it matters:</strong> 競品在談OpenAI/Sora『難產』，但更大的問題是AI投資如何從『講故事』走向『現金流』，以及哪些公司會在利率與融資環境改變時先爆。對高資產港人，這關乎美股科技倉位與私募估值。</p>
-<p><strong>Competitor status:</strong> 中度擁擠：有人以陰謀或八卦談模型延期。可用角度：把AI當成資本開支周期與企業IT支出重分配，分析誰是受益者、誰是被擠出者。</p>
-<p><strong>Simon's angle:</strong> 用『AI=新一代電力化』框架：短期泡沫與長期生產力並存，關鍵是採用曲線與資本成本。給觀眾一套檢查表：看算力供應、客戶留存、毛利、以及監管風險，而不是看demo。</p>
-<p><strong>Sources:</strong> <a href="https://unsubject.github.io/socialisn/youtube-feed.xml">Competitor feed item discussing Sora delays and AI bubble risk</a> <a href="https://www.oxfordeconomics.com/key-themes-2026/">Oxford Economics: Key themes for 2026 include AI as shock absorber or shock magnifier</a></p>
-<h3>7. 美國『清除DEI』與軍隊換帥：這是國家機器再集中化</h3>
-<p><strong>Why it matters:</strong> 從多個頻道訊號看，美國政府正在透過人事更替與文化戰重塑國家機器。對國際秩序而言，這影響同盟信任、軍費與外交風格；對港人而言，這決定了美國對華政策的強硬度與可預測性。</p>
-<p><strong>Competitor status:</strong> 中度擁擠：競品多以『特朗普炒人』『內鬥』講法。可用角度：用組織行為學與制度分析，把它變成『國家能力』討論：忠誠度機制、官僚激勵、政策執行。</p>
-<p><strong>Simon's angle:</strong> 把事件放到『戰時組織』框架：一個領導層若相信外部威脅上升，會傾向提高一致性、降低內部多元；但代價是錯誤更難被糾正。用這框架推演美國對伊朗／對華／對盟友的行為。</p>
-<p><strong>Sources:</strong> <a href="https://unsubject.github.io/socialisn/youtube-feed.xml">Competitor feed includes multiple uploads on US military DEI and leadership changes</a> <a href="https://www.reuters.com/business/energy/oil-rises-over-1-iran-crisis-disrupts-middle-east-supply-2026-03-04/">Oil disruption context: U.S.-Israeli war on Iran disrupts energy flows (Reuters)</a></p>]]></description>
-</item>
-<item>
-  <title>2026-04-05 evening — Top: 美伊衝突的「一個飛行員」如何把美國拖進長戰：市場最怕的不是戰爭，是升級路徑</title>
-  <link>https://unsubject.github.io/socialisn/topics-feed.xml#2026-04-05-evening</link>
-  <guid isPermaLink="false">topics-2026-04-05-evening</guid>
-  <pubDate>Sun, 05 Apr 2026 22:06:11 +0000</pubDate>
-  <description><![CDATA[<h2>Topic Candidates (2026-04-05 evening)</h2>
+<title>2026-04-05 evening — Top: 美伊衝突的「一個飛行員」如何把美國拖進長戰：市場最怕的不是戰爭，是升級路徑</title>
+<link>https://unsubject.github.io/socialisn/topics-feed.xml#2026-04-05-evening</link>
+<guid isPermaLink="false">topics-2026-04-05-evening</guid>
+<pubDate>Sun, 05 Apr 2026 22:06:11 +0000</pubDate>
+<description><![CDATA[
+<div><p><strong>2026-04-05 evening</strong></p>
+<hr/>
 <h3>1. 美伊衝突的「一個飛行員」如何把美國拖進長戰：市場最怕的不是戰爭，是升級路徑</h3>
 <p><strong>Why it matters:</strong> 美軍戰機在伊朗境內被擊落並啟動高風險搜救，代表衝突已從「打擊」走向「地面接觸」，升級慣性一旦形成，油價與風險資產會先行定價。對港人資產配置而言，這是典型的「尾部風險突然具象化」時刻。</p>
 <p><strong>Competitor status:</strong> 非常擠：多個港評頻道集中談「F-15/A-10被擊落」「雷霆救兵」「特朗普民望」；多為情緒式或軍事八卦。可搶的空位是：用升級決策樹解釋為何一個人質/失聯人員會改變戰略，並落到油價、航運、通脹與港人投資組合。</p>
-<p><strong>Simon's angle:</strong> 用「升級路徑」而非單一事件敘事：把搜救行動、基建打擊、伊朗報復串成可預測的下一步，並用市場語言（波動率、通脹預期、航運保費）說明香港人為何要關心。</p>
-<p><strong>Sources:</strong> <a href="https://www.nytimes.com/2026/04/03/world/middleeast/us-airman-search-iran.html">Iran Shoots Down U.S. Fighter Jet, Setting Off American Search and Rescue</a> <a href="https://www.longwarjournal.org/archives/2026/04/iran-downs-us-fighter-jet-1-crew-member-recovered-rescue-operation-ongoing-for-second.php">Iran downs US fighter jet, 1 crew member recovered, rescue operation ongoing for second</a></p>
+<p><strong>Simon’s angle:</strong> 用「升級路徑」而非單一事件敘事：把搜救行動、基建打擊、伊朗報復串成可預測的下一步，並用市場語言（波動率、通脹預期、航運保費）說明香港人為何要關心。</p>
+<ul>
+<li><a href="https://www.nytimes.com/2026/04/03/world/middleeast/us-airman-search-iran.html">Iran Shoots Down U.S. Fighter Jet, Setting Off American Search and Rescue</a></li>
+<li><a href="https://www.longwarjournal.org/archives/2026/04/iran-downs-us-fighter-jet-1-crew-member-recovered-rescue-operation-ongoing-for-second.php">Iran downs US fighter jet, 1 crew member recovered, rescue operation ongoing for second</a></li>
+</ul>
+<hr/>
 <h3>2. 特朗普「分級鋼鋁關稅」：把貿易戰做成訂閱制，盟友與香港的真正成本在哪裏？</h3>
 <p><strong>Why it matters:</strong> 美國準備推出分級制度簡化鋼鋁關稅，訊號是：關稅不再是短期談判籌碼，而是變成可長期運行的制度設計。香港的中轉、供應鏈金融與在美港人企業會遇到持續的合規成本與價格傳導。</p>
 <p><strong>Competitor status:</strong> 港評圈未必深入：多集中講戰爭/內鬥，對貿易制度細節較少。空位是：拆解「分級」如何影響不同產業鏈（汽車、建材、家電），以及為何會逼企業把供應鏈去香港化/去中國化。</p>
-<p><strong>Simon's angle:</strong> 用「制度化關稅」框架：關稅不是稅率，是行政權力如何重塑商業風險；再把故事拉回香港——作為『規則城市』失去規則後，企業如何選邊站。</p>
-<p><strong>Sources:</strong> <a href="https://www.bloomberg.com/news/articles/2026-04-01/us-to-set-25-tariff-on-finished-steel-aluminum-products-wsj">US Set to Roll Out Tiered Tariffs on Steel, Aluminum Imports</a> <a href="https://finance.yahoo.com/news/live/trump-tariffs-live-updates-us-to-roll-out-tiered-duties-on-steel-aluminum-one-year-after-trumps-liberation-day-tariffs-122637970.html">Trump tariffs live updates: US to roll out tiered duties on steel and aluminium</a></p>
+<p><strong>Simon’s angle:</strong> 用「制度化關稅」框架：關稅不是稅率，是行政權力如何重塑商業風險；再把故事拉回香港——作為『規則城市』失去規則後，企業如何選邊站。</p>
+<ul>
+<li><a href="https://www.bloomberg.com/news/articles/2026-04-01/us-to-set-25-tariff-on-finished-steel-aluminum-products-wsj">US Set to Roll Out Tiered Tariffs on Steel, Aluminum Imports</a></li>
+<li><a href="https://finance.yahoo.com/news/live/trump-tariffs-live-updates-us-to-roll-out-tiered-duties-on-steel-aluminum-one-year-after-trumps-liberation-day-tariffs-122637970.html">Trump tariffs live updates: US to roll out tiered duties on steel and aluminium</a></li>
+</ul>
+<hr/>
 <h3>3. 馬興瑞落馬：連政治局都要「交數」的反腐，真正目標是誰的忠誠？</h3>
 <p><strong>Why it matters:</strong> 政治局成員被查屬罕見級別政治訊號，意味反腐不只是清理利益，更是重畫派系安全邊界。對香港及海外港人而言，這種高層不確定性會透過資本外逃、地方政策急轉彎、以及對外強硬姿態傳導。</p>
 <p><strong>Competitor status:</strong> 擠但角度單一：多以宮鬥八卦、彭麗媛「皇后黨」敘事為主。空位是：從新疆治理、軍工體系與科技官僚路線，解釋為何此時要拿他開刀，以及對中國經濟治理的副作用。</p>
-<p><strong>Simon's angle:</strong> 把反腐當作「組織管理」案例：當最高層只能用恐懼治理，體制會如何劣化（逆向選擇、資訊上行失真），最終反噬經濟與對外政策。</p>
-<p><strong>Sources:</strong> <a href="https://www.scmp.com/news/china/politics/article/3348968/ma-xingrui-third-politburo-member-investigated-chinas-anti-corruption-bodies">Ma Xingrui becomes China’s third Politburo member investigated for corruption</a> <a href="https://www.channelnewsasia.com/east-asia/chinese-politburo-member-ma-xingrui-under-investigation-anti-graft-watchdog-6035436">Chinese Politburo member Ma Xingrui under investigation by anti-graft watchdog</a></p>
+<p><strong>Simon’s angle:</strong> 把反腐當作「組織管理」案例：當最高層只能用恐懼治理，體制會如何劣化（逆向選擇、資訊上行失真），最終反噬經濟與對外政策。</p>
+<ul>
+<li><a href="https://www.scmp.com/news/china/politics/article/3348968/ma-xingrui-third-politburo-member-investigated-chinas-anti-corruption-bodies">Ma Xingrui becomes China’s third Politburo member investigated for corruption</a></li>
+<li><a href="https://www.channelnewsasia.com/east-asia/chinese-politburo-member-ma-xingrui-under-investigation-anti-graft-watchdog-6035436">Chinese Politburo member Ma Xingrui under investigation by anti-graft watchdog</a></li>
+</ul>
+<hr/>
 <h3>4. 台灣漢光「電腦兵推」拉長兩週：戰爭不是打一天，是撐兩週的物流與社會動員</h3>
 <p><strong>Why it matters:</strong> 台灣年度漢光演習的電腦兵推拉長，焦點從戰術轉向持久戰的指揮與後勤。對在台港人與區內投資者，關鍵不只是會不會打，而是「打了之後供應鏈如何斷、何時修復」。</p>
 <p><strong>Competitor status:</strong> 相對不擠：港評頻道近期被伊朗與美國內政洗版，台灣演習的制度面討論較少。空位是：用『城市韌性』角度（電力、通訊、海纜、金融清算）把台海風險講清楚。</p>
-<p><strong>Simon's angle:</strong> 不談口號，談「兩週生存清單」：把演習期間最脆弱的基建（海纜、電網、油料）拆解，並延伸到香港作為金融節點的外溢風險。</p>
-<p><strong>Sources:</strong> <a href="https://www.youtube.com/watch?v=MIfdVkpljzM">Taiwan To Hold Computer-Assisted Drills in April – April 2, 2026</a> <a href="https://www.youtube.com/watch?v=ivnixzvzfqs">Defense Ministry Sets Han Kuang Agenda – April 2, 2026</a></p>
+<p><strong>Simon’s angle:</strong> 不談口號，談「兩週生存清單」：把演習期間最脆弱的基建（海纜、電網、油料）拆解，並延伸到香港作為金融節點的外溢風險。</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=MIfdVkpljzM">Taiwan To Hold Computer-Assisted Drills in April – April 2, 2026</a></li>
+<li><a href="https://www.youtube.com/watch?v=ivnixzvzfqs">Defense Ministry Sets Han Kuang Agenda – April 2, 2026</a></li>
+</ul>
+<hr/>
 <h3>5. 香港「雙軌法制」成形：普通法還在，但國安法庭已是另一套遊戲規則</h3>
 <p><strong>Why it matters:</strong> 當同一城市出現兩套司法標準，資本市場與人才會把它視為制度風險而非單一案件。對海外港人來說，這直接影響資產回流、家族信託、以及在港企業的可預期性。</p>
 <p><strong>Competitor status:</strong> 中度擠：已有法律評論談納粹「雙軌政府」類比。空位是：把概念落地到金融與商業——合約執行、仲裁、董事責任、以及在港上市公司風險溢價。</p>
-<p><strong>Simon's angle:</strong> 用「制度套利」揭示：當國安成為超級法源，商界會如何自我審查與尋找替代司法管轄區，香港如何在不公開承認的情況下走向新加坡化/離岸化。</p>
-<p><strong>Sources:</strong> <a href="https://www.youtube.com/watch?v=VGiyK3HB34M">香港步入「雙軌法制」時代？陳文敏解釋納粹歷史：一套司法制度，有兩種不同準則！</a> <a href="https://www.youtube.com/watch?v=PYiIfRn4BxA">EP190｜ETO案：衞志樑供詞屢被質疑，稱流亡港人「曱甴」｜宏福聽證會...</a></p>
+<p><strong>Simon’s angle:</strong> 用「制度套利」揭示：當國安成為超級法源，商界會如何自我審查與尋找替代司法管轄區，香港如何在不公開承認的情況下走向新加坡化/離岸化。</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=VGiyK3HB34M">香港步入「雙軌法制」時代？陳文敏解釋納粹歷史：一套司法制度，有兩種不同準則！</a></li>
+<li><a href="https://www.youtube.com/watch?v=PYiIfRn4BxA">EP190｜ETO案：衞志樑供詞屢被質疑，稱流亡港人「曱甴」｜宏福聽證會...</a></li>
+</ul>
+<hr/>
 <h3>6. 中國「蘿蔔快跑」集體故障：自動駕駛不是AI，是治理與責任鏈</h3>
 <p><strong>Why it matters:</strong> 大規模故障事件讓自動駕駛的核心問題浮現：當系統出錯，誰負責、誰賠償、誰被追責？這是科技競賽的「制度戰」，港人投資AI概念股更需要看監管與責任框架。</p>
 <p><strong>Competitor status:</strong> 不算擠：有節目提到事件，但多停留在科技八卦。空位是：把它提升到『監管能力』與『產業政策』，以及中美在責任制度上誰更能支持大規模商用。</p>
-<p><strong>Simon's angle:</strong> 用「責任鏈」視角：從保險、訴訟、地方政府KPI、到數據合規，講清楚為何自動駕駛最後拼的是制度，不是模型。</p>
-<p><strong>Sources:</strong> <a href="https://www.youtube.com/watch?v=IF08X1mKTrM">中國最大自駕品牌「蘿蔔快跑」3月底近200台車突然齊跪低！</a> <a href="https://developers.google.com/search/docs/monitor-debug/trends-start">Get started with Google Trends | Documentation</a></p>
+<p><strong>Simon’s angle:</strong> 用「責任鏈」視角：從保險、訴訟、地方政府KPI、到數據合規，講清楚為何自動駕駛最後拼的是制度，不是模型。</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=IF08X1mKTrM">中國最大自駕品牌「蘿蔔快跑」3月底近200台車突然齊跪低！</a></li>
+<li><a href="https://developers.google.com/search/docs/monitor-debug/trends-start">Get started with Google Trends | Documentation</a></li>
+</ul>
+<hr/>
 <h3>7. Google Trends告訴我們：今天全世界只在找體育？其實是「注意力被平台設計」偷走了</h3>
 <p><strong>Why it matters:</strong> 從Google Trends的日榜看，熱門往往被體育與娛樂佔據，政治經濟議題反而需要事件觸發才冒頭。對內容創作者與公共知識份子而言，這是「平台分配注意力」的制度性問題，也解釋了為何極端敘事更容易傳播。</p>
 <p><strong>Competitor status:</strong> 幾乎沒人做：多數頻道只跟新聞，不談注意力機制。空位是：用具體數據/例子解釋平台如何塑造議題，並給觀眾一套自我防禦的資訊飲食法。</p>
-<p><strong>Simon's angle:</strong> 把它拉回香港：當公共討論空間被壓縮，平台化注意力更容易被操控；教觀眾如何用工具（趨勢、RSS、多語言比對）建立自己的「反宣傳儀表板」。</p>
-<p><strong>Sources:</strong> <a href="https://trends.google.com/trending/rss?geo=US">Google Trends trending RSS (US) — Daily Search Trends</a> <a href="https://trends.google.com/trending/rss?geo=HK">Google Trends trending RSS (HK) — Daily Search Trends</a></p>]]></description>
+<p><strong>Simon’s angle:</strong> 把它拉回香港：當公共討論空間被壓縮，平台化注意力更容易被操控；教觀眾如何用工具（趨勢、RSS、多語言比對）建立自己的「反宣傳儀表板」。</p>
+<ul>
+<li><a href="https://trends.google.com/trending/rss?geo=US">Google Trends trending RSS (US) — Daily Search Trends</a></li>
+<li><a href="https://trends.google.com/trending/rss?geo=HK">Google Trends trending RSS (HK) — Daily Search Trends</a></li>
+</ul>
+</div>
+]]></description>
 </item>
 <item>
-  <title>2026-04-04 morning — Top: 霍爾木茲不是『海峽』，是保險與金融的單點故障：戰爭如何直接抬高全球通脹</title>
-  <link>https://unsubject.github.io/socialisn/topics-feed.xml#2026-04-04-morning</link>
-  <guid isPermaLink="false">topics-2026-04-04-morning</guid>
-  <pubDate>Sat, 04 Apr 2026 10:08:09 +0000</pubDate>
-  <description><![CDATA[<h2>Topic Candidates (2026-04-04 morning)</h2>
-<h3>1. 霍爾木茲不是『海峽』，是保險與金融的單點故障：戰爭如何直接抬高全球通脹</h3>
-<p><strong>Why it matters:</strong> 霍爾木茲風險已經從軍事問題變成『保險報價』：戰爭風險保費跳升會立刻轉化為能源與運費成本，最後落在通脹與利率預期。對港人（尤其海外高收入族群）而言，這直接影響資產配置：美債、能源股、航運、以及風險資產估值。</p>
-<p><strong>Competitor status:</strong> 高度擁擠。競品頻道大量用『伊朗戰況』『油價失控』『解鎖海峽』等敘事搶流量（多集中於戰況更新與立場表態）。可用角度：用保險市場/再保險/風險溢價的機制，把『戰爭』翻譯成『資本市場訊號』。</p>
-<p><strong>Simon's angle:</strong> 用一張『戰爭→保費→運費→通脹→央行/利率→股債估值』的因果鏈圖，並加入：1）誰還買得到保險、2）保險上限如何逼迫船東改道、3）哪一類資產其實是“二次受害者”（例如高槓桿地產與長久期成長股）。最後回到香港：高負債企業與永續債的脆弱性會被放大。</p>
-<p><strong>Sources:</strong> <a href="https://www.insurancejournal.com/news/international/2026/03/17/862173.htm">Shipping Insurance Costs to Cross Hormuz Soar After Vessel Attacks</a> <a href="https://www.ttnews.com/articles/hormuz-insurance-rates-spike">Hormuz Insurance Rates Spike After Vessel Strikes</a></p>
-<h3>2. 馬興瑞落馬：反貪不是反貪，是『權力再分配』——新疆、軍工、太太派系的連動</h3>
-<p><strong>Why it matters:</strong> 政治局成員被查是罕見訊號，意味內部權力平衡正在被重新洗牌。對香港與海外港人而言，這類整肅通常不是“清廉化”，而是政策風向與資源配置改變的前兆：新疆治理、科技軍工、以及對外強硬的官僚系統可能出現換檔。</p>
-<p><strong>Competitor status:</strong> 中度擁擠。競品多以『皇后黨崩盤』『官宣落馬』做戲劇化解讀。可用角度：用制度語言解釋——為何“反貪”是中共的組織管理工具；以及誰會接盤新疆與軍工利益鏈。</p>
-<p><strong>Simon's angle:</strong> 把事件放在“組織風險管理”框架：中共如何用紀檢把不確定性外包成“紀律問題”，避免政策辯論。再推演三個市場後果：1）對外資的合規風險與國安審查更不可預測；2）新疆/國企/軍工鏈的資本開支與人事波動；3）台海、對美談判的內部激勵可能更短視。</p>
-<p><strong>Sources:</strong> <a href="https://english.news.cn/20260403/b3c1f474df74460cbaa22e58417108cb/c.html">Senior CPC official Ma Xingrui under investigation for suspected severe discipline, law violations (Xinhua)</a> <a href="https://www.scmp.com/news/china/politics/article/3348968/ma-xingrui-third-politburo-member-investigated-chinas-anti-corruption-bodies">Ma Xingrui becomes China's third Politburo member investigated for 'serious violations'</a></p>
-<h3>3. 醫管局5.6萬病人資料流出：『數據主權』才是香港的新國安前線</h3>
-<p><strong>Why it matters:</strong> 醫療資料外洩不只是私隱事故，而是治理能力的直接測試：香港若連最敏感的公營醫療數據都守不住，跨境金融、身份與稅務資料的風險更難想像。對港人與海外港人而言，這影響移民、保險、信用、甚至政治風險（資料可被用作施壓）。</p>
-<p><strong>Competitor status:</strong> 低到中度擁擠。競品更多以『國安法屈機』『法治崩壞』為主軸，較少把它提升到『國家能力/資安治理』。可用角度：用制度設計與責任鏈（採購、外判、存取控制）拆解。</p>
-<p><strong>Simon's angle:</strong> 把事件框成“管治能力的會計帳”：誰是資料控制人？責任如何被外判？為何公營機構永遠缺資安人才但永遠不缺宣傳？最後給出『個人層面的風險對策』：海外港人如何減少被資料串聯（例如更改保險/醫療供應商資訊揭露面）。</p>
-<p><strong>Sources:</strong> <a href="https://www.scmp.com/news/hong-kong/law-and-crime/article/3349020/probe-launched-after-hospital-authority-data-breach-involving-560000-patients?module=top_story&amp;pgtype=section">Probe launched after Hospital Authority data breach involving 56,000 patients</a> <a href="https://news.rthk.hk/rthk/ch/component/k2/1849952-20260404.htm">醫管局病人資料外洩事件 網絡安全及科技罪案調查科接手調查 (RTHK)</a></p>
-<h3>4. 倫敦『香港影子警察』案：把香港國安輸出到英國，會如何反噬移民政策與金融信任？</h3>
-<p><strong>Why it matters:</strong> UK National Security Act下的審訊，實際上把『香港國安外延化』放上法庭：這會影響英國對港移民敘事、對中國/香港機構的信任，甚至對香港金融專業人士的背景審查。對海外港人而言，這是“你以為你離開了，但權力仍在跟著你”的制度化證據。</p>
-<p><strong>Competitor status:</strong> 中度擁擠。競品多把它當政治八卦或“黑警出海”。可用角度：用“主權與法域競爭”解釋——英國為何要用國安法來定義這件事，而不是普通刑事法；以及這會如何改變BNO/庇護的政治氛圍。</p>
-<p><strong>Simon's angle:</strong> 做一集『法域政治』：英國如何用國安法（而非間諜法）處理外國干預，背後是什麼國家能力焦慮？再把它連到香港：當“國安”成為可輸出的治理技術，香港的國際金融中心地位就更像“可替代的外判城市”，信任成本上升。</p>
-<p><strong>Sources:</strong> <a href="https://www.reuters.com/world/uk/two-men-go-trial-london-accused-spying-hong-kong-china-2026-03-04/">Two men go on trial in London accused of spying on Hong Kong dissidents for China (Reuters)</a> <a href="https://www.bbc.com/news/articles/c80jj0749y9o">UK Border Force officer was 'working for China', court told (BBC)</a></p>
-<h3>5. 遠東發展永續債停派息：香港『次級發展商』的流動性黑洞，正在變成散戶的慢性爆雷</h3>
-<p><strong>Why it matters:</strong> 永續債延遲派息是信用事件前兆：它告訴市場，香港部分地產商的現金流已經緊到不能再撐“表面穩定”。對高淨值港人而言，這不是一張債券的問題，而是整個“香港資產=穩健收益”的敘事瓦解：銀行理財、私銀產品、與高息票的真實風險要重新定價。</p>
-<p><strong>Competitor status:</strong> 低擁擠（在政治頻道中）。財經頻道有提及，但政治/治理型解讀不足。可用角度：把它連到『政府土地財政』『銀行風險偏好』『香港人外遊/消費外移』，說明現金流的結構性壓力。</p>
-<p><strong>Simon's angle:</strong> 用“香港版影子銀行”角度拆解永續債：為何它在好時代是金融工程，在壞時代變成『延遲承認損失』的工具？再問一個更刺痛的問題：香港的“法治+金融”品牌，能否承受一波又一波準違約？最後給出投資者的風險語言：哪些條款其實等同“可選擇性違約”。</p>
-<p><strong>Sources:</strong> <a href="https://www.edgen.tech/news/post/far-east-consortium-bonds-slump-after-deferring-360-million-payout">Far East Consortium bonds slump after deferring $360 million payout</a> <a href="http://www.aastocks.com/en/stocks/news/aafn-con/NOW.1515883/latest-news/AAFN">FAR EAST CONSORTIUM INTERNATIONAL (00035.HK) Bonds ... (AASTOCKS)</a></p>
-<h3>6. 『文科無用論』在AI年代爆紅：其實是香港/華人社會的階級焦慮與教育錯配</h3>
-<p><strong>Why it matters:</strong> 這個議題在競品頻道已開始升溫，反映中產對『讀書換不到上流』的恐慌。對海外港人家長與高資產家庭而言，這是資本配置問題：你在投資子女的“人力資本”，但AI正在重寫哪些技能有溢價。</p>
-<p><strong>Competitor status:</strong> 中度擁擠。競品多停留在“文科有冇用”的二元爭論。可用角度：用勞動市場與產業結構來回答——不是文理之爭，而是“可被平台化/可被自動化”的工作之爭。</p>
-<p><strong>Simon's angle:</strong> 做一個反直覺框架：AI提升的不是理工，而是“把抽象概念轉成可行動決策”的能力（政策、法律、管理、金融）。提出『AI時代的文科』其實是“寫規則的人”，而不是“被規則管理的人”。最後落地到港人移民家庭：如何設計跨語言、跨制度的競爭力（英文寫作+統計素養+制度理解）。</p>
-<p><strong>Sources:</strong> <a href="https://unsubject.github.io/socialisn/youtube-feed.xml">經濟KFC EP67｜文科無用論爆紅｜其實反映咗咩現實？ (CC News 新聞.政評) — via YouTube feed</a> <a href="https://trends.google.com/trending/rss?geo=US">Daily Search Trends (US) — RSS feed</a></p>
-<h3>7. 70萬人復活節『大逃港』：不是旅遊，是用腳投票的消費外移與稅基萎縮</h3>
-<p><strong>Why it matters:</strong> 『外遊花掉四分一消費』這類現象，不只是景氣話題，而是香港財政與內需結構的長期下滑。對仍在香港或與香港有資產連結的海外港人而言，消費外移意味商業地產租金、零售、甚至政府收入都會被侵蝕，最終傳導到公共服務與稅制。</p>
-<p><strong>Competitor status:</strong> 低到中度擁擠。競品多以情緒化的“逃港”描述，少有人用宏觀角度把它算成“稅基與資本外流”。可用角度：把人流數據當作“香港內需的即時指標”。</p>
-<p><strong>Simon's angle:</strong> 用『城市會計』講香港：旅客/港人外遊的淨流量如何改寫零售、餐飲、與租金（並反過來影響地產商現金流）。把它和“永續債事件”連起來：外遊不是原因，是結果；結果又會反過來加速信用風險。</p>
-<p><strong>Sources:</strong> <a href="https://unsubject.github.io/socialisn/youtube-feed.xml">【香港1A】七十萬人復活節大逃港！港人四份一消費用於外遊… (Hong Kong Uncensored) — via YouTube feed</a> <a href="https://unsubject.github.io/socialisn/youtube-feed.xml">香港躍升全球第五大貿易體，惟港人感受落差… (《謎米香港》) — via YouTube feed</a></p>]]></description>
+<title>2026-04-05 morning — Top: 伊朗戰事把油價變成全球『加息器』：誰會先跪？</title>
+<link>https://unsubject.github.io/socialisn/topics-feed.xml#2026-04-05-morning</link>
+<guid isPermaLink="false">topics-2026-04-05-morning</guid>
+<pubDate>Sun, 05 Apr 2026 10:04:00 +0000</pubDate>
+<description><![CDATA[
+<div><p><strong>2026-04-05 morning</strong></p>
+<hr/>
+<h3>1. 伊朗戰事把油價變成全球『加息器』：誰會先跪？</h3>
+<p><strong>Why it matters:</strong> 競爭對手多在講『擊落戰機／救人』，但真正影響港人資產的是：油價與航運保費上升如何透過通脹預期、利率路徑、股債估值傳導到全球。對香港及海外港人而言，這是『中東戰火→美元利率→按揭與股票』的一條直線，而不是新聞花邊。</p>
+<p><strong>Competitor status:</strong> 非常擁擠：多個HK政評頻道集中討論美軍戰機被擊落、特朗普民望、是否升級作戰。可用角度：把事件抽象成『航運中斷＋保險成本＋央行反應函數』，用數據和情境推演取代戰況八卦。</p>
+<p><strong>Simon’s angle:</strong> 用『油價=全球加息器』框架拆解：若霍爾木茲受阻，能源成本會先打擊哪幾個經濟體（EU、印度、東亞製造鏈），以及央行在『通脹回升 vs 經濟放緩』兩難下會如何選邊。再補一個港人視角：能源／航運成本如何影響香港再出口、航空與保險業、以及港人海外生活成本。</p>
+<ul>
+<li><a href="https://www.reuters.com/business/energy/oil-rises-over-1-iran-crisis-disrupts-middle-east-supply-2026-03-04/">Oil rises over $1 as Iran crisis disrupts Middle East supply (mentions Strait of Hormuz disruption)</a></li>
+<li><a href="https://unsubject.github.io/socialisn/youtube-feed.xml">YouTube competitor cluster shows heavy coverage of downed aircraft/rescue narratives</a></li>
+</ul>
+<hr/>
+<h3>2. 政治局委員落馬：馬興瑞案不是反腐，是『政策執行風險』</h3>
+<p><strong>Why it matters:</strong> 馬興瑞被查反映北京高層整肅仍在擴散，對外界最重要的不是八卦派系，而是它如何改變地方官員的風險偏好：更怕犯錯、更愛做表面工程、數據更不可信。港人／海外投資者關心的是『中國增長、債務、產業政策』的可預測性。</p>
+<p><strong>Competitor status:</strong> 中度擁擠：已有頻道用『皇后黨』『宮廷鬥爭』解讀。可用角度：從政治風險到經濟後果——為何反腐周期往往導致投資與改革更保守、地方債與統計更黑箱。</p>
+<p><strong>Simon’s angle:</strong> 把案件放到『信息品質』框架：越高壓的問責，越容易出現KPI造假與風險隱瞞；再連到新疆／工業／能源／科技供應鏈（他曾在廣東與航天系統工作）——這類人事清洗對產業政策連貫性意味什麼。</p>
+<ul>
+<li><a href="https://ca.news.yahoo.com/chinas-communist-party-investigates-ex-115317893.html">China's Communist Party investigates ex-Xinjiang leader Ma Xingrui (AP via Yahoo)</a></li>
+<li><a href="https://unsubject.github.io/socialisn/youtube-feed.xml">Competitor feed: multiple videos framing Ma Xingrui as Politburo purge</a></li>
+</ul>
+<hr/>
+<h3>3. NASA Artemis II重返繞月：這是美國工業政策的『宣傳片』</h3>
+<p><strong>Why it matters:</strong> 太空不是浪漫，而是供應鏈、國防、產業能力的展示。Artemis II在中美競賽下重啟載人繞月，會被盟友與對手解讀為『美國還能做大工程』的信號。對香港高資產族群，這也是判斷美國科技／國防投資周期的窗口。</p>
+<p><strong>Competitor status:</strong> 較少但正在升溫：競品頻道多以『50年後再征月』的新聞角度帶過，未深入到產業與財政結構。可用角度：以『公私合作＋軍民兩用供應鏈』解釋為何它影響市場與地緣政治。</p>
+<p><strong>Simon’s angle:</strong> 用『航天=國家級PMO』視角：拆解Artemis如何把風險外包給私營（合約、成本、技術路線），並把它放到對華競爭與盟友編隊（加拿大參與）中。最後連結投資：哪些產業會吃到長尾（高端製造、材料、航天電子、保險）。</p>
+<ul>
+<li><a href="https://www.reuters.com/science/nasa-counts-down-first-crewed-lunar-mission-half-century-2026-04-01/">NASA counts down for first crewed lunar mission in half a century (Reuters)</a></li>
+<li><a href="https://www.nasa.gov/news-release/liftoff-nasa-launches-astronauts-on-historic-artemis-moon-mission/">Liftoff! NASA launches astronauts on historic Artemis Moon mission (NASA)</a></li>
+</ul>
+<hr/>
+<h3>4. 香港『雙軌法制』：資本市場其實早已用腳投票</h3>
+<p><strong>Why it matters:</strong> 國安案件與一般案件的處理邏輯分裂，會令企業、投資者、保險公司對『可預測性』重新定價。對仍在香港與已離港的高資產港人而言，這影響到資產放哪裡、用哪個法域做合約、以及是否仍把香港當作安全港。</p>
+<p><strong>Competitor status:</strong> 中度擁擠：有頻道以納粹『雙軌政府』理論談香港司法現狀，但多停留在道德與歷史類比。可用角度：把它翻譯成『合約執行風險、政治風險保費、仲裁地選擇』。</p>
+<p><strong>Simon’s angle:</strong> 把議題做成『投資者備忘錄』：哪類交易最怕政治軌道（媒體、NGO、政治敏感行業），哪類仍相對穩定（純商業仲裁）；以及為何『普通法外觀』仍可能與實質風險背離。</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=VGiyK3HB34M">Green Bean Media video description on Hong Kong dual track legal system</a></li>
+<li><a href="https://www.reuters.com/world/china/hong-kong-court-rejects-appeal-landmark-hong-kong-47-subversion-case-2026-02-23/">Hong Kong court rejects appeal in landmark 'Hong Kong 47' case (Reuters)</a></li>
+</ul>
+<hr/>
+<h3>5. 『港人四分一消費用於外遊』：其實是對未來的投票</h3>
+<p><strong>Why it matters:</strong> 如果大批市民把消費轉向外遊與離境，背後是對本地前景的折現率上升：不做長期規劃，只求短期效用最大化。對商業與政策而言，這是內需與零售結構變化的早期信號，也映照離散社群的心理狀態。</p>
+<p><strong>Competitor status:</strong> 較擁擠：有頻道用『大逃港』敘事，但多偏情緒與即時新聞。可用角度：用行為經濟學解釋『活在當下』如何成為理性選擇，並連到樓市、教育、人口流動。</p>
+<p><strong>Simon’s angle:</strong> 用『社會折現率』概念：當制度不可信、政策不可預期，個人會把未來貼現得更狠，導致儲蓄／投資／生育／教育選擇全改變。把它做成一集：從一個旅遊數字解釋一個城市的長期衰退機制。</p>
+<ul>
+<li><a href="https://unsubject.github.io/socialisn/youtube-feed.xml">Competitor feed item on Easter exodus / spending on travel</a></li>
+<li><a href="https://www.china-briefing.com/news/hong-kong-budget-2026/">Hong Kong Budget 2026-2027: driving growth through technology and innovation (background)</a></li>
+</ul>
+<hr/>
+<h3>6. AI泡沫不是『模型』，是資本配置：下一輪爆雷會在哪？</h3>
+<p><strong>Why it matters:</strong> 競品在談OpenAI/Sora『難產』，但更大的問題是AI投資如何從『講故事』走向『現金流』，以及哪些公司會在利率與融資環境改變時先爆。對高資產港人，這關乎美股科技倉位與私募估值。</p>
+<p><strong>Competitor status:</strong> 中度擁擠：有人以陰謀或八卦談模型延期。可用角度：把AI當成資本開支周期與企業IT支出重分配，分析誰是受益者、誰是被擠出者。</p>
+<p><strong>Simon’s angle:</strong> 用『AI=新一代電力化』框架：短期泡沫與長期生產力並存，關鍵是採用曲線與資本成本。給觀眾一套檢查表：看算力供應、客戶留存、毛利、以及監管風險，而不是看demo。</p>
+<ul>
+<li><a href="https://unsubject.github.io/socialisn/youtube-feed.xml">Competitor feed item discussing Sora delays and AI bubble risk</a></li>
+<li><a href="https://www.oxfordeconomics.com/key-themes-2026/">Oxford Economics: Key themes for 2026 include AI as shock absorber or shock magnifier</a></li>
+</ul>
+<hr/>
+<h3>7. 美國『清除DEI』與軍隊換帥：這是國家機器再集中化</h3>
+<p><strong>Why it matters:</strong> 從多個頻道訊號看，美國政府正在透過人事更替與文化戰重塑國家機器。對國際秩序而言，這影響同盟信任、軍費與外交風格；對港人而言，這決定了美國對華政策的強硬度與可預測性。</p>
+<p><strong>Competitor status:</strong> 中度擁擠：競品多以『特朗普炒人』『內鬥』講法。可用角度：用組織行為學與制度分析，把它變成『國家能力』討論：忠誠度機制、官僚激勵、政策執行。</p>
+<p><strong>Simon’s angle:</strong> 把事件放到『戰時組織』框架：一個領導層若相信外部威脅上升，會傾向提高一致性、降低內部多元；但代價是錯誤更難被糾正。用這框架推演美國對伊朗／對華／對盟友的行為。</p>
+<ul>
+<li><a href="https://unsubject.github.io/socialisn/youtube-feed.xml">Competitor feed includes multiple uploads on US military DEI and leadership changes</a></li>
+<li><a href="https://www.reuters.com/business/energy/oil-rises-over-1-iran-crisis-disrupts-middle-east-supply-2026-03-04/">Oil disruption context: U.S.-Israeli war on Iran disrupts energy flows (Reuters)</a></li>
+</ul>
+</div>
+]]></description>
 </item>
 <item>
-  <title>2026-04-04 evening — Top: 霍爾木茲海峽變『收費閘』：伊朗用通行費把油價、通脹與地緣政治綁在一起</title>
-  <link>https://unsubject.github.io/socialisn/topics-feed.xml#2026-04-04-evening</link>
-  <guid isPermaLink="false">topics-2026-04-04-evening</guid>
-  <pubDate>Sat, 04 Apr 2026 22:11:38 +0000</pubDate>
-  <description><![CDATA[<h2>Topic Candidates (2026-04-04 evening)</h2>
+<title>2026-04-04 evening — Top: 霍爾木茲海峽變『收費閘』：伊朗用通行費把油價、通脹與地緣政治綁在一起</title>
+<link>https://unsubject.github.io/socialisn/topics-feed.xml#2026-04-04-evening</link>
+<guid isPermaLink="false">topics-2026-04-04-evening</guid>
+<pubDate>Sat, 04 Apr 2026 22:10:32 +0000</pubDate>
+<description><![CDATA[
+<div><p><strong>2026-04-04 evening</strong></p>
+<hr/>
 <h3>1. 霍爾木茲海峽變『收費閘』：伊朗用通行費把油價、通脹與地緣政治綁在一起</h3>
 <p><strong>Why it matters:</strong> 伊朗對部分商船收取高達每航次200萬美元的通行費，等於把全球最重要能源水道變成『可定價的主權工具』，直接推高航運與保險成本，下一步很可能轉嫁到油價與通脹預期。對香港與海外港人而言，這是一個把『戰爭』翻譯成『生活成本』與『資產波動』的關鍵節點，也牽動中國、印度等亞洲進口國的供應安全與外交博弈。</p>
 <p><strong>Competitor status:</strong> 高度擁擠：多個頻道集中在『伊朗擊落美軍戰機』『美軍救援行動』『油價失控』等戰況敘事；較少人用制度/產業角度解釋『通行費＝新的海上關稅』對全球供應鏈和亞洲金融市場的傳導。</p>
-<p><strong>Simon's angle:</strong> 把通行費當作『戰時關稅』分析：伊朗不是封鎖，而是把通道商品化，讓友邦付費、敵對國承壓；對照中國若在台海採取『灰色通行費/檢查』手段，全球航運保費與港口金融會如何重估。最後落到投資層面：能源股、航運保險、以及亞洲進口國的貨幣與利率反應。</p>
-<p><strong>Sources:</strong> <a href="https://finance.yahoo.com/news/iran-charges-ships-hormuz-transit-125242888.html">Iran Charges Some Ships Hormuz Transit Fees for Safe Passage (Bloomberg via Yahoo Finance)</a> <a href="https://www.bloomberg.com/news/articles/2026-04-01/strait-of-hormuz-ships-paying-iran-yuan-and-crypto-tolls-for-safe-passage">Secret Codes and Yuan Fees Get Ships Through Iran's Hormuz (Bloomberg)</a></p>
+<p><strong>Simon’s angle:</strong> 把通行費當作『戰時關稅』分析：伊朗不是封鎖，而是把通道商品化，讓友邦付費、敵對國承壓；對照中國若在台海採取『灰色通行費/檢查』手段，全球航運保費與港口金融會如何重估。最後落到投資層面：能源股、航運保險、以及亞洲進口國的貨幣與利率反應。</p>
+<ul>
+<li><a href="https://finance.yahoo.com/news/iran-charges-ships-hormuz-transit-125242888.html">Iran Charges Some Ships Hormuz Transit Fees for Safe Passage (Bloomberg via Yahoo Finance)</a></li>
+<li><a href="https://www.bloomberg.com/news/articles/2026-04-01/strait-of-hormuz-ships-paying-iran-yuan-and-crypto-tolls-for-safe-passage">Secret Codes and Yuan Fees Get Ships Through Iran's Hormuz (Bloomberg)</a></li>
+</ul>
+<hr/>
 <h3>2. 白宮『忠誠清洗』加速：內閣震盪如何把戰爭與市場風險綁在一起</h3>
 <p><strong>Why it matters:</strong> 美國正處於對伊朗戰事與市場波動的敏感期，卻同時出現高層人事大幅更換與『可能再炒人』的消息，投資者會把這視為決策風險上升。香港高淨值受眾最在意的不是八卦，而是：當國家安全、外交、貿易、監管由更短期的政治激勵主導，美元資產的波動與政策意外會變得更頻繁。</p>
 <p><strong>Competitor status:</strong> 偏擁擠但角度單一：競品多以『特朗普炒人自救』『DEI清算』『內鬥』做政治劇解讀；較少把它連到市場機制（風險溢價、國防預算、供應鏈、盟友信任成本）。</p>
-<p><strong>Simon's angle:</strong> 用公司治理語言拆『政治人事』：把白宮當作一間在戰時運作的大企業，討論『任命/撤換＝風險控制失效』如何影響盟友、軍事行動選項與金融市場。再加一層：這種『忠誠優先』的治理邏輯，與北京的反腐/整肅其實同構。</p>
-<p><strong>Sources:</strong> <a href="https://www.nbcnews.com/politics/trump-administration/trump-considering-changes-cabinet-coming-weeks-rcna266624">Trump is considering more changes to his Cabinet in the coming weeks (NBC News)</a> <a href="https://newrepublic.com/post/208589/donald-trump-prepares-fire-more-cabinet-members">He's Very Angry: Trump Gets Ready to Purge Even More Advisers (The New Republic)</a></p>
+<p><strong>Simon’s angle:</strong> 用公司治理語言拆『政治人事』：把白宮當作一間在戰時運作的大企業，討論『任命/撤換＝風險控制失效』如何影響盟友、軍事行動選項與金融市場。再加一層：這種『忠誠優先』的治理邏輯，與北京的反腐/整肅其實同構。</p>
+<ul>
+<li><a href="https://www.nbcnews.com/politics/trump-administration/trump-considering-changes-cabinet-coming-weeks-rcna266624">Trump is considering more changes to his Cabinet in the coming weeks (NBC News)</a></li>
+<li><a href="https://newrepublic.com/post/208589/donald-trump-prepares-fire-more-cabinet-members">He's Very Angry: Trump Gets Ready to Purge Even More Advisers (The New Republic)</a></li>
+</ul>
+<hr/>
 <h3>3. 政治局委員馬興瑞被查：反腐還是『皇后黨』斷線？看北京權力再分配</h3>
 <p><strong>Why it matters:</strong> 中共政治局層級再有高官被立案調查，對外代表『反腐』，對內則是權力重整訊號，尤其馬興瑞曾任新疆黨委書記，位置敏感。香港與海外港人關心的是：在經濟壓力與外交對抗下，北京是否用更激烈的內部整肅換取控制，並可能外溢到港澳、外資與對台策略。</p>
 <p><strong>Competitor status:</strong> 中度擁擠：競品多以宮廷鬥爭、派系傳聞、彭麗媛『皇后黨』敘事為主；較少把它放進『政策可預測性下降』與『地方/軍工/科技系統整肅』的宏觀框架。</p>
-<p><strong>Simon's angle:</strong> 避開純八卦，改用『制度視角』：反腐其實是人事市場的重新定價機制。討論馬興瑞從航天系到地方大員的路徑，與科技—軍工—地方利益鏈如何在經濟下行時被切割；再連到香港：當北京需要替代性資金與外匯渠道時，港的角色會如何被重新定義。</p>
-<p><strong>Sources:</strong> <a href="https://www.npr.org/2026/04/03/g-s1-116327/chinas-communist-party-investigates-ex-xinjiang-leader-ma-xingrui">China's Communist Party investigates ex-Xinjiang leader Ma Xingrui (NPR)</a> <a href="https://www.bloomberg.com/news/articles/2026-04-03/china-probes-politburo-member-in-widest-purge-since-1976">China Probes Politburo Member in Widest Purge Since 1976 (Bloomberg)</a></p>
+<p><strong>Simon’s angle:</strong> 避開純八卦，改用『制度視角』：反腐其實是人事市場的重新定價機制。討論馬興瑞從航天系到地方大員的路徑，與科技—軍工—地方利益鏈如何在經濟下行時被切割；再連到香港：當北京需要替代性資金與外匯渠道時，港的角色會如何被重新定義。</p>
+<ul>
+<li><a href="https://www.npr.org/2026/04/03/g-s1-116327/chinas-communist-party-investigates-ex-xinjiang-leader-ma-xingrui">China's Communist Party investigates ex-Xinjiang leader Ma Xingrui (NPR)</a></li>
+<li><a href="https://www.bloomberg.com/news/articles/2026-04-03/china-probes-politburo-member-in-widest-purge-since-1976">China Probes Politburo Member in Widest Purge Since 1976 (Bloomberg)</a></li>
+</ul>
+<hr/>
 <h3>4. 香港小型地產商『永續債停派息』警號：信用文化正在改寫</h3>
 <p><strong>Why it matters:</strong> 遠東發展延遲支付美元3.6億永續債分派，屬『保現金』的最後手段之一，市場因此出現急跌反應，顯示投資者對香港中小型地產商的再融資能力愈來愈缺乏信心。對持有港股、港債或依賴香港金融體系的高淨值受眾，這是『利率高企＋商業地產估值下修』如何穿透到信用事件的現場案例。</p>
 <p><strong>Competitor status:</strong> 低度擁擠：競品頻道主要在講宏觀（香港經濟差/樓市），較少深入到『永續債』這類工具的結構、投資者心理與銀行信貸鏈條。</p>
-<p><strong>Simon's angle:</strong> 做一集『永續債101＋港式槓桿文化』：為何發行人可以選擇跳票？投資者原本買的是什麼（高息換不確定性）？把這件事放進更大的『港式家族企業』信用文化：當市場不再相信「大而不倒」時，誰會先被擠出資本市場？</p>
-<p><strong>Sources:</strong> <a href="https://www.edgen.tech/news/post/far-east-consortium-bonds-slump-after-deferring-360-million-payout">Far East Consortium bonds slump after deferring $360 million payout (EDGEn)</a> <a href="https://www.bloomberg.com/news/articles/2026-04-02/hong-kong-s-small-builder-debt-woes-mount-despite-property-rally">Hong Kong's Small Builder Debt Woes Mount Despite Property Rally (Bloomberg)</a></p>
+<p><strong>Simon’s angle:</strong> 做一集『永續債101＋港式槓桿文化』：為何發行人可以選擇跳票？投資者原本買的是什麼（高息換不確定性）？把這件事放進更大的『港式家族企業』信用文化：當市場不再相信「大而不倒」時，誰會先被擠出資本市場？</p>
+<ul>
+<li><a href="https://www.edgen.tech/news/post/far-east-consortium-bonds-slump-after-deferring-360-million-payout">Far East Consortium bonds slump after deferring $360 million payout (EDGEn)</a></li>
+<li><a href="https://www.bloomberg.com/news/articles/2026-04-02/hong-kong-s-small-builder-debt-woes-mount-despite-property-rally">Hong Kong's Small Builder Debt Woes Mount Despite Property Rally (Bloomberg)</a></li>
+</ul>
+<hr/>
 <h3>5. 復活節『70萬人大出走』：香港消費外流其實是對風險與價格的投票</h3>
 <p><strong>Why it matters:</strong> 復活節假期開始當晚已有逾68.5萬香港居民離境，並出現更多人改去內地的現象，背後原因包括中東戰事影響航班及燃油附加費上升。對香港經濟而言，這不只是旅遊潮，而是『消費外移』與『風險感知』的綜合指標：當市民用腳投票，零售、餐飲、服務業與租金結構都會被迫調整。</p>
 <p><strong>Competitor status:</strong> 中度擁擠：競品會用情緒角度講『逃港』『香港無得玩』；但較少把它當作宏觀數據：消費結構、內地高鐵替代航空、以及地緣政治如何改變旅遊供應曲線。</p>
-<p><strong>Simon's angle:</strong> 用『行為經濟＋城市財政』拆解：同一群高消費力人群，為何更願意把錢花在外地？把中東戰事→油價/燃油附加費→航空票價→旅遊目的地替代的傳導說清楚，並指出香港的結構問題：不是缺活動，而是缺可預期的生活與政策。</p>
-<p><strong>Sources:</strong> <a href="https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3348874/hongkongers-opt-mainland-chinese-tours-during-easter-amid-middle-east-war">685,000 Hongkongers head out of city at start of Easter holiday (South China Morning Post)</a> <a href="https://english.dotdotnews.com/a/202604/04/AP69d084aae4b09ea233116233.html">Easter first day draws huge outbound volume from HK, with congestion at checkpoints (DotDotNews)</a></p>
+<p><strong>Simon’s angle:</strong> 用『行為經濟＋城市財政』拆解：同一群高消費力人群，為何更願意把錢花在外地？把中東戰事→油價/燃油附加費→航空票價→旅遊目的地替代的傳導說清楚，並指出香港的結構問題：不是缺活動，而是缺可預期的生活與政策。</p>
+<ul>
+<li><a href="https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3348874/hongkongers-opt-mainland-chinese-tours-during-easter-amid-middle-east-war">685,000 Hongkongers head out of city at start of Easter holiday (South China Morning Post)</a></li>
+<li><a href="https://english.dotdotnews.com/a/202604/04/AP69d084aae4b09ea233116233.html">Easter first day draws huge outbound volume from HK, with congestion at checkpoints (DotDotNews)</a></li>
+</ul>
+<hr/>
 <h3>6. AI晶片出口『要投資美國先買得』：美國把算力變成地緣政治配額</h3>
 <p><strong>Why it matters:</strong> 美方考慮以『投資美國AI數據中心／提供安全保證』作為取得大量AI晶片的前提，意味算力正式被當成戰略資源配給。香港與海外港人受眾需要關心的是：這會改變全球科技資本流向與估值邏輯，也會影響中國與中東、東南亞在AI基建上的選址與資金路徑，香港能否在中介資本與合規之間找到位置。</p>
 <p><strong>Competitor status:</strong> 低度擁擠：本地政經頻道多在談中東戰事與油價，較少把AI出口管制當作金融與產業政策主線。</p>
-<p><strong>Simon's angle:</strong> 把它講成『算力版的布雷頓森林』：美國不是單純禁運，而是用市場准入換取投資與監管可見度；對照香港過去的角色（資金中介、法律與合規），今天是否還能在美中科技冷戰中成為『白名單金融接口』，抑或被雙方同時不信任。</p>
-<p><strong>Sources:</strong> <a href="https://www.reuters.com/world/us-mulls-new-rules-ai-chip-exports-including-requiring-investments-by-foreign-2026-03-05/">US mulls new rules for AI chip exports, including requiring investments by foreign countries (Reuters)</a> <a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/us-commerce-department-confirms-harsh-new-ai-export-rules-shoots-down-reports-over-the-return-of-biden-era-ai-diffusion-rule-doc-to-formalize-a-new-approach-to-strategic-ai-accelerator-export-controls">US Commerce Department confirms harsh new AI export rules (Tom's Hardware)</a></p>
+<p><strong>Simon’s angle:</strong> 把它講成『算力版的布雷頓森林』：美國不是單純禁運，而是用市場准入換取投資與監管可見度；對照香港過去的角色（資金中介、法律與合規），今天是否還能在美中科技冷戰中成為『白名單金融接口』，抑或被雙方同時不信任。</p>
+<ul>
+<li><a href="https://www.reuters.com/world/us-mulls-new-rules-ai-chip-exports-including-requiring-investments-by-foreign-2026-03-05/">US mulls new rules for AI chip exports, including requiring investments by foreign countries (Reuters)</a></li>
+<li><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/us-commerce-department-confirms-harsh-new-ai-export-rules-shoots-down-reports-over-the-return-of-biden-era-ai-diffusion-rule-doc-to-formalize-a-new-approach-to-strategic-ai-accelerator-export-controls">US Commerce Department confirms harsh new AI export rules (Tom's Hardware)</a></li>
+</ul>
+<hr/>
 <h3>7. 競品全講戰機：你可以講『海上保險、港口金融、與戰爭的二級市場』</h3>
 <p><strong>Why it matters:</strong> 從競品影片可見，伊朗戰事已被過度集中在『擊落/救援/戰況』，但香港高淨值受眾真正想知道的是：哪些二級市場最先反映戰爭成本（航運保險、能源運費、港口吞吐、資本外逃），以及這些指標如何預示下一輪金融緊縮或風險事件。這類『把戰爭翻譯成價格』的能力，正是Simon可以建立差異化的地方。</p>
 <p><strong>Competitor status:</strong> 擁擠主題下的稀缺角度：競品在同一主題上重複，卻缺乏數據化、金融化的框架。</p>
-<p><strong>Simon's angle:</strong> 做一集『戰爭二級市場監測清單』：1) 保險費率/戰爭險，2) 航運路線與繞行成本，3) 原油與成品油期限結構，4) 友邦貨幣與利率變化。最後回扣香港：港口、航運服務、離岸結算與資金避險需求，哪些會上升、哪些會被替代。</p>
-<p><strong>Sources:</strong> <a href="https://unsubject.github.io/socialisn/youtube-feed.xml">YouTube 頻道監察 Channel Monitor (competitor aggregated feed)</a> <a href="https://finance.yahoo.com/news/iran-charges-ships-hormuz-transit-125242888.html">Iran Charges Some Ships Hormuz Transit Fees for Safe Passage (Bloomberg via Yahoo Finance)</a></p>]]></description>
+<p><strong>Simon’s angle:</strong> 做一集『戰爭二級市場監測清單』：1) 保險費率/戰爭險，2) 航運路線與繞行成本，3) 原油與成品油期限結構，4) 友邦貨幣與利率變化。最後回扣香港：港口、航運服務、離岸結算與資金避險需求，哪些會上升、哪些會被替代。</p>
+<ul>
+<li><a href="https://unsubject.github.io/socialisn/youtube-feed.xml">YouTube 頻道監察 Channel Monitor (competitor aggregated feed)</a></li>
+<li><a href="https://finance.yahoo.com/news/iran-charges-ships-hormuz-transit-125242888.html">Iran Charges Some Ships Hormuz Transit Fees for Safe Passage (Bloomberg via Yahoo Finance)</a></li>
+</ul>
+</div>
+]]></description>
 </item>
-  </channel>
+<item>
+<title>2026-04-04 morning — Top: 霍爾木茲不是『海峽』，是保險與金融的單點故障：戰爭如何直接抬高全球通脹</title>
+<link>https://unsubject.github.io/socialisn/topics-feed.xml#2026-04-04-morning</link>
+<guid isPermaLink="false">topics-2026-04-04-morning</guid>
+<pubDate>Sat, 04 Apr 2026 10:06:00 +0000</pubDate>
+<description><![CDATA[
+<div><p><strong>2026-04-04 morning</strong></p>
+<hr/>
+<h3>1. 霍爾木茲不是『海峽』，是保險與金融的單點故障：戰爭如何直接抬高全球通脹</h3>
+<p><strong>Why it matters:</strong> 霍爾木茲風險已經從軍事問題變成『保險報價』：戰爭風險保費跳升會立刻轉化為能源與運費成本，最後落在通脹與利率預期。對港人（尤其海外高收入族群）而言，這直接影響資產配置：美債、能源股、航運、以及風險資產估值。</p>
+<p><strong>Competitor status:</strong> 高度擁擠。競品頻道大量用『伊朗戰況』『油價失控』『解鎖海峽』等敘事搶流量（多集中於戰況更新與立場表態）。可用角度：用保險市場/再保險/風險溢價的機制，把『戰爭』翻譯成『資本市場訊號』。</p>
+<p><strong>Simon’s angle:</strong> 用一張『戰爭→保費→運費→通脹→央行/利率→股債估值』的因果鏈圖，並加入：1）誰還買得到保險、2）保險上限如何逼迫船東改道、3）哪一類資產其實是“二次受害者”（例如高槓桿地產與長久期成長股）。最後回到香港：高負債企業與永續債的脆弱性會被放大。</p>
+<ul>
+<li><a href="https://www.insurancejournal.com/news/international/2026/03/17/862173.htm">Shipping Insurance Costs to Cross Hormuz Soar After Vessel Attacks</a></li>
+<li><a href="https://www.ttnews.com/articles/hormuz-insurance-rates-spike">Hormuz Insurance Rates Spike After Vessel Strikes</a></li>
+</ul>
+<hr/>
+<h3>2. 馬興瑞落馬：反貪不是反貪，是『權力再分配』——新疆、軍工、太太派系的連動</h3>
+<p><strong>Why it matters:</strong> 政治局成員被查是罕見訊號，意味內部權力平衡正在被重新洗牌。對香港與海外港人而言，這類整肅通常不是“清廉化”，而是政策風向與資源配置改變的前兆：新疆治理、科技軍工、以及對外強硬的官僚系統可能出現換檔。</p>
+<p><strong>Competitor status:</strong> 中度擁擠。競品多以『皇后黨崩盤』『官宣落馬』做戲劇化解讀。可用角度：用制度語言解釋——為何“反貪”是中共的組織管理工具；以及誰會接盤新疆與軍工利益鏈。</p>
+<p><strong>Simon’s angle:</strong> 把事件放在“組織風險管理”框架：中共如何用紀檢把不確定性外包成“紀律問題”，避免政策辯論。再推演三個市場後果：1）對外資的合規風險與國安審查更不可預測；2）新疆/國企/軍工鏈的資本開支與人事波動；3）台海、對美談判的內部激勵可能更短視。</p>
+<ul>
+<li><a href="https://english.news.cn/20260403/b3c1f474df74460cbaa22e58417108cb/c.html">Senior CPC official Ma Xingrui under investigation for suspected severe discipline, law violations (Xinhua)</a></li>
+<li><a href="https://www.scmp.com/news/china/politics/article/3348968/ma-xingrui-third-politburo-member-investigated-chinas-anti-corruption-bodies">Ma Xingrui becomes China's third Politburo member investigated for 'serious violations'</a></li>
+</ul>
+<hr/>
+<h3>3. 醫管局5.6萬病人資料流出：『數據主權』才是香港的新國安前線</h3>
+<p><strong>Why it matters:</strong> 醫療資料外洩不只是私隱事故，而是治理能力的直接測試：香港若連最敏感的公營醫療數據都守不住，跨境金融、身份與稅務資料的風險更難想像。對港人與海外港人而言，這影響移民、保險、信用、甚至政治風險（資料可被用作施壓）。</p>
+<p><strong>Competitor status:</strong> 低到中度擁擠。競品更多以『國安法屈機』『法治崩壞』為主軸，較少把它提升到『國家能力/資安治理』。可用角度：用制度設計與責任鏈（採購、外判、存取控制）拆解。</p>
+<p><strong>Simon’s angle:</strong> 把事件框成“管治能力的會計帳”：誰是資料控制人？責任如何被外判？為何公營機構永遠缺資安人才但永遠不缺宣傳？最後給出『個人層面的風險對策』：海外港人如何減少被資料串聯（例如更改保險/醫療供應商資訊揭露面）。</p>
+<ul>
+<li><a href="https://www.scmp.com/news/hong-kong/law-and-crime/article/3349020/probe-launched-after-hospital-authority-data-breach-involving-560000-patients?module=top_story&amp;pgtype=section">Probe launched after Hospital Authority data breach involving 56,000 patients</a></li>
+<li><a href="https://news.rthk.hk/rthk/ch/component/k2/1849952-20260404.htm">醫管局病人資料外洩事件 網絡安全及科技罪案調查科接手調查 (RTHK)</a></li>
+</ul>
+<hr/>
+<h3>4. 倫敦『香港影子警察』案：把香港國安輸出到英國，會如何反噬移民政策與金融信任？</h3>
+<p><strong>Why it matters:</strong> UK National Security Act下的審訊，實際上把『香港國安外延化』放上法庭：這會影響英國對港移民敘事、對中國/香港機構的信任，甚至對香港金融專業人士的背景審查。對海外港人而言，這是“你以為你離開了，但權力仍在跟著你”的制度化證據。</p>
+<p><strong>Competitor status:</strong> 中度擁擠。競品多把它當政治八卦或“黑警出海”。可用角度：用“主權與法域競爭”解釋——英國為何要用國安法來定義這件事，而不是普通刑事法；以及這會如何改變BNO/庇護的政治氛圍。</p>
+<p><strong>Simon’s angle:</strong> 做一集『法域政治』：英國如何用國安法（而非間諜法）處理外國干預，背後是什麼國家能力焦慮？再把它連到香港：當“國安”成為可輸出的治理技術，香港的國際金融中心地位就更像“可替代的外判城市”，信任成本上升。</p>
+<ul>
+<li><a href="https://www.reuters.com/world/uk/two-men-go-trial-london-accused-spying-hong-kong-china-2026-03-04/">Two men go on trial in London accused of spying on Hong Kong dissidents for China (Reuters)</a></li>
+<li><a href="https://www.bbc.com/news/articles/c80jj0749y9o">UK Border Force officer was 'working for China', court told (BBC)</a></li>
+</ul>
+<hr/>
+<h3>5. 遠東發展永續債停派息：香港『次級發展商』的流動性黑洞，正在變成散戶的慢性爆雷</h3>
+<p><strong>Why it matters:</strong> 永續債延遲派息是信用事件前兆：它告訴市場，香港部分地產商的現金流已經緊到不能再撐“表面穩定”。對高淨值港人而言，這不是一張債券的問題，而是整個“香港資產=穩健收益”的敘事瓦解：銀行理財、私銀產品、與高息票的真實風險要重新定價。</p>
+<p><strong>Competitor status:</strong> 低擁擠（在政治頻道中）。財經頻道有提及，但政治/治理型解讀不足。可用角度：把它連到『政府土地財政』『銀行風險偏好』『香港人外遊/消費外移』，說明現金流的結構性壓力。</p>
+<p><strong>Simon’s angle:</strong> 用“香港版影子銀行”角度拆解永續債：為何它在好時代是金融工程，在壞時代變成『延遲承認損失』的工具？再問一個更刺痛的問題：香港的“法治+金融”品牌，能否承受一波又一波準違約？最後給出投資者的風險語言：哪些條款其實等同“可選擇性違約”。</p>
+<ul>
+<li><a href="https://www.edgen.tech/news/post/far-east-consortium-bonds-slump-after-deferring-360-million-payout">Far East Consortium bonds slump after deferring $360 million payout</a></li>
+<li><a href="http://www.aastocks.com/en/stocks/news/aafn-con/NOW.1515883/latest-news/AAFN">FAR EAST CONSORTIUM INTERNATIONAL (00035.HK) Bonds ... (AASTOCKS)</a></li>
+</ul>
+<hr/>
+<h3>6. 『文科無用論』在AI年代爆紅：其實是香港/華人社會的階級焦慮與教育錯配</h3>
+<p><strong>Why it matters:</strong> 這個議題在競品頻道已開始升溫，反映中產對『讀書換不到上流』的恐慌。對海外港人家長與高資產家庭而言，這是資本配置問題：你在投資子女的“人力資本”，但AI正在重寫哪些技能有溢價。</p>
+<p><strong>Competitor status:</strong> 中度擁擠。競品多停留在“文科有冇用”的二元爭論。可用角度：用勞動市場與產業結構來回答——不是文理之爭，而是“可被平台化/可被自動化”的工作之爭。</p>
+<p><strong>Simon’s angle:</strong> 做一個反直覺框架：AI提升的不是理工，而是“把抽象概念轉成可行動決策”的能力（政策、法律、管理、金融）。提出『AI時代的文科』其實是“寫規則的人”，而不是“被規則管理的人”。最後落地到港人移民家庭：如何設計跨語言、跨制度的競爭力（英文寫作+統計素養+制度理解）。</p>
+<ul>
+<li><a href="https://unsubject.github.io/socialisn/youtube-feed.xml">經濟KFC EP67｜文科無用論爆紅｜其實反映咗咩現實？ (CC News 新聞.政評) — via YouTube feed</a></li>
+<li><a href="https://trends.google.com/trending/rss?geo=US">Daily Search Trends (US) — RSS feed</a></li>
+</ul>
+<hr/>
+<h3>7. 70萬人復活節『大逃港』：不是旅遊，是用腳投票的消費外移與稅基萎縮</h3>
+<p><strong>Why it matters:</strong> 『外遊花掉四分一消費』這類現象，不只是景氣話題，而是香港財政與內需結構的長期下滑。對仍在香港或與香港有資產連結的海外港人而言，消費外移意味商業地產租金、零售、甚至政府收入都會被侵蝕，最終傳導到公共服務與稅制。</p>
+<p><strong>Competitor status:</strong> 低到中度擁擠。競品多以情緒化的“逃港”描述，少有人用宏觀角度把它算成“稅基與資本外流”。可用角度：把人流數據當作“香港內需的即時指標”。</p>
+<p><strong>Simon’s angle:</strong> 用『城市會計』講香港：旅客/港人外遊的淨流量如何改寫零售、餐飲、與租金（並反過來影響地產商現金流）。把它和“永續債事件”連起來：外遊不是原因，是結果；結果又會反過來加速信用風險。</p>
+<ul>
+<li><a href="https://unsubject.github.io/socialisn/youtube-feed.xml">【香港1A】七十萬人復活節大逃港！港人四份一消費用於外遊… (Hong Kong Uncensored) — via YouTube feed</a></li>
+<li><a href="https://unsubject.github.io/socialisn/youtube-feed.xml">香港躍升全球第五大貿易體，惟港人感受落差… (《謎米香港》) — via YouTube feed</a></li>
+</ul>
+</div>
+]]></description>
+</item>
+</channel>
 </rss>
