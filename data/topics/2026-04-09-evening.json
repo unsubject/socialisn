@@ -1,0 +1,126 @@
+{
+  "date": "2026-04-09",
+  "period": "evening",
+  "generated_at": "2026-04-09T22:11:53.549430+00:00",
+  "topics": [
+    {
+      "id": 1,
+      "headline": "美伊停火兩星期：霍爾木茲海峽『安全通航』會唔會變成新型能源稅？",
+      "why_it_matters": "競爭者頻道集中講『特朗普轉軚』同『伊朗10點要求』，但香港投資者更直接受油價、航運保費、美元流動性波動影響。若海峽通航要靠臨時安排或第三方護航，市場其實等同接受一種地緣政治風險溢價長期化。",
+      "competitor_status": "非常擠迫：多個頻道同日談美伊停火兩週、伊朗條件、特朗普言論；常見角度係『侵又TACO』『伊朗勒索』『石油美元崩』。可用空間：把事件拆成一套可量化的『能源供應鏈稅』與港元/美元資產定價機制。",
+      "simons_angle": "用『金融工程』語言解釋戰事：停火不是和平，是把爆炸風險換成期權溢價。用航運保費、油價期限結構、美元資金成本三條線，推導香港人的資產配置該點樣避開假穩定。",
+      "sources": [
+        {
+          "title": "YouTube competitor feed (multiple channels on US–Iran two-week ceasefire / Hormuz)",
+          "url": "https://unsubject.github.io/socialisn/youtube-feed.xml"
+        },
+        {
+          "title": "『城寨新聞 I』：伊朗單方面宣布停火協定、雙方在伊斯蘭堡談判（影片）",
+          "url": "https://www.youtube.com/watch?v=1tIvtHqNWZA"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "headline": "港府把『國安』塞入食肆牌照：自由市場會唔會變成『政治合規市場』？",
+      "why_it_matters": "競爭者在feed出現多條討論『食肆牌照加國安條款』，顯示議題在港人社群發酵。對移民與仍在港的高資產家庭而言，這是把政治風險正式寫進商業許可制度：成本會轉嫁到租金、供應鏈與投資折現率。",
+      "competitor_status": "擠迫：至少有頻道以『黃店續牌』『政治審查毀自由經濟』作主軸。可用空間：用制度經濟學講『許可證—監管俘虜—合規成本』，並對比其他威權國家如何用牌照管理整肅民間經濟。",
+      "simons_angle": "把事件當作『香港版ESG』：但E/S/G全變成National Security。用一個簡單模型估算：合規不確定性如何推高小店資本成本、加速連鎖化，最後令香港失去中產消費與創業活力。",
+      "sources": [
+        {
+          "title": "YouTube competitor feed（多條影片提及食肆牌照加國安條款）",
+          "url": "https://unsubject.github.io/socialisn/youtube-feed.xml"
+        },
+        {
+          "title": "Hong Kong Uncensored：九月起食肆牌照加入國安條款（影片）",
+          "url": "https://www.youtube.com/watch?v=16ZOuH_dcVQ"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "headline": "中美『芯片工具』出口管制再加碼：下一步係迫盟友站隊，香港金融圈點避雷？",
+      "why_it_matters": "美國國會推動收緊對華芯片製造設備出口限制，意味不只針對美企，而是逼荷蘭、日本等盟友同步收緊。香港高淨值投資者常持有美股、日股、歐股供應鏈公司，政策一收緊，估值與收入可瞬間改寫。",
+      "competitor_status": "相對不擠迫：競品feed當天主題集中在中東與香港內政，對『芯片工具出口管制』未見多角度。可用空間：把政策拆成『同盟產業政策』與『金融制裁前哨』，並談ASML、東京威力科創等的二級影響。",
+      "simons_angle": "不要只講『科技戰』，改講『聯盟治理成本』：美國把國安外包給盟友監管，盟友用什麼換取豁免？用投資人角度列出三種情境：全面站隊、選擇性遵從、暗盤轉運，對應不同資產風險。",
+      "sources": [
+        {
+          "title": "Bloomberg：US Lawmakers Propose Crackdown on Chip Tool Sales to China",
+          "url": "https://www.bloomberg.com/news/articles/2026-04-02/us-lawmakers-propose-crackdown-on-sales-of-chip-tools-to-china"
+        },
+        {
+          "title": "YouTube competitor feed (for crowdedness comparison)",
+          "url": "https://unsubject.github.io/socialisn/youtube-feed.xml"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "headline": "『中國最後關頭逼伊朗停火』如果屬實：北京正在用能源線重塑外交槓桿",
+      "why_it_matters": "多個競品影片出現『中國促成停火』的說法，反映敘事戰正在形成。即使細節未完全確認，香港觀眾需要理解：北京若能在霍爾木茲議題上扮演關鍵角色，代表其能源安全與外交工具箱升級，會影響美元體系與區域安全。",
+      "competitor_status": "擠迫但角度單一：多以『中共暗撐伊朗』『特朗普承認』作爆點。可用空間：從『能源買家聯盟』與『戰時航道治理』談中國的結構性利益，而非陰謀論式講法。",
+      "simons_angle": "用一張『能源通道—支付結算—軍事護航』三角圖，解釋中國在中東真正想要的不是『做和事佬』，而是把能源安全變成可交易的地緣政治資產；並反問：香港作為美元/港元城市，將如何被迫定價這種新風險。",
+      "sources": [
+        {
+          "title": "YouTube competitor feed（特朗普承認中國促成停火等討論）",
+          "url": "https://unsubject.github.io/socialisn/youtube-feed.xml"
+        },
+        {
+          "title": "《謎米香港》：特朗普承認中國最後關頭逼伊朗停火（影片）",
+          "url": "https://www.youtube.com/watch?v=JcJxsjOAQo8"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "headline": "『中共超級運算中心』科研資料外洩：這不是八卦，是國家級AI競賽的供應鏈斷點",
+      "why_it_matters": "競品feed提到『中共超級運算中心大量科研資料被駭客盜走』。對關心科技政策與投資的香港人，這牽涉出口管制、算力供應、以及中國AI/軍工研發的安全性；同時也會觸發更嚴的審查與『內循環』。",
+      "competitor_status": "不算擠迫：在大量中東/香港話題之下，這條訊息容易被淹沒。可用空間：用『資料外洩=技術外包』角度討論：中國靠國企超算推動研發的模式，如何在安全上先天脆弱。",
+      "simons_angle": "把『駭客事件』講成『制度設計問題』：集中化算力與集中化科研管理，讓單點失守的外部性爆炸。再連到美國/盟友的管制策略：未必只封芯片，反而會利用中國內部安全漏洞加速其技術折舊。",
+      "sources": [
+        {
+          "title": "城寨：提到中共超級運算中心科研資料被盜走（影片）",
+          "url": "https://www.youtube.com/watch?v=IphNWu3AQas"
+        },
+        {
+          "title": "YouTube competitor feed (entry list)",
+          "url": "https://unsubject.github.io/socialisn/youtube-feed.xml"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "headline": "『香港47』上訴被拒：北京把立法會變成『只准表態、不可制衡』的制度示範",
+      "why_it_matters": "路透報道法院維持『香港47』案部分被告定罪與刑期，並把相關策略形容為『constitutional mass destruction weapon』。這不是單一案件，而是向所有仍在制度內的人發出訊號：任何實質制衡都可被重新定義為顛覆。",
+      "competitor_status": "當天競品feed更多聚焦在媒體認罪與個案八卦，較少把它放回『憲制設計』層面。可用空間：把案件作為『威權憲制化』案例，對比其他國家如何透過法律語言消滅制衡。",
+      "simons_angle": "從政治哲學切入：不是『法治』，是『以法治人』。用香港案例拆解威權如何把『否決權』從制衡工具變成犯罪意圖，最後把市場最需要的可預期性一併摧毀。",
+      "sources": [
+        {
+          "title": "Reuters：Hong Kong court rejects appeal in landmark 'Hong Kong 47' subversion case",
+          "url": "https://www.reuters.com/world/china/hong-kong-court-rejects-appeal-landmark-hong-kong-47-subversion-case-2026-02-23/"
+        },
+        {
+          "title": "YouTube competitor feed (context: related HK rule-of-law discussion)",
+          "url": "https://unsubject.github.io/socialisn/youtube-feed.xml"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "headline": "『人民幣取代美元』又熱：真正風險不在貨幣，而在中國願唔願意放棄資本管制",
+      "why_it_matters": "競品feed出現以『人民幣全球取代美金』作主題的節目，顯示這個敘事持續吸引觀眾。對香港高資產觀眾，重點不是口號，而是：若資本項目未開放、法治不可預期，人民幣難成真正儲備資產；但中國仍可透過貿易結算與能源定價擴張影響力。",
+      "competitor_status": "中度擠迫：有頻道用宏大敘事談『美國犯錯中國上位』。可用空間：把討論拉回技術條件（資本可兌換、資產供給、危機時央行互換安排），拆穿『替代論』的偷換概念。",
+      "simons_angle": "提出一個『三道閘門』框架：資本帳、金融法治、最後貸款人功能。逐一問：中國願付什麼代價開閘？如果不開閘，人民幣只能成為區域性結算貨幣，不是美元替代品。",
+      "sources": [
+        {
+          "title": "風雲谷：美國不斷犯錯 中國趁機上位？先實現人民幣全球取代美金（影片）",
+          "url": "https://www.youtube.com/watch?v=3JzfYwYAwLo"
+        },
+        {
+          "title": "YouTube competitor feed (entry list)",
+          "url": "https://unsubject.github.io/socialisn/youtube-feed.xml"
+        }
+      ]
+    }
+  ]
+}
