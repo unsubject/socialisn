@@ -1,0 +1,134 @@
+{
+  "date": "2026-04-10",
+  "period": "evening",
+  "generated_at": "2026-04-10T22:03:11.933467+00:00",
+  "topics": [
+    {
+      "id": 1,
+      "headline": "霍爾木茲海峽『名義重開』但航運仍卡關：能源衝擊會拖垮美國關稅戰嗎？",
+      "why_it_matters": "美伊僅兩週停火、航運公司仍然觀望，代表能源供應與保險成本的壓力不會立即消失。對香港投資者與企業而言，油價—利率—通脹的連鎖反應，會直接影響資產定價與全球需求，亦反過來約束美國進一步升級關稅戰的空間。",
+      "competitor_status": "非常擠擁：多個頻道都在談『兩週停火』『海峽收費站』『以色列不停火』。空位在於把『航運/保險/供應鏈恢復的時間常數』量化，並把它連結到美國關稅與聯儲政策的政治約束。",
+      "simons_angle": "用『供應鏈摩擦成本』角度拆解：海峽不是開/關二元，而是檢查、收費、保險、船期連鎖造成的長尾通脹。把事件翻譯成：美國若想繼續打關稅戰，就必須先處理能源通脹，否則政治代價先爆。",
+      "sources": [
+        {
+          "title": "US agrees two-week ceasefire with Iran but normal operations not expected to resume in Strait of Hormuz for several weeks",
+          "url": "https://www.automotivelogistics.media/supply-chain/us-agrees-twoweek-ceasefire-with-iran-but-normal-operations-not-expected-to-resume-in-strait-of-hormuz-for-several-weeks/2642409"
+        },
+        {
+          "title": "Iran war may set limits on how far US tariff war will go",
+          "url": "https://www.thenationalnews.com/business/economy/2026/04/09/iran-war-may-set-limits-on-how-far-us-tariff-war-will-go/"
+        },
+        {
+          "title": "(Competitor feed) 多頻道集中討論『兩週停火/海峽收費』",
+          "url": "https://unsubject.github.io/socialisn/youtube-feed.xml"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "headline": "『預測市場』變成地緣政治內線風向球：Polymarket 停火盤到底在賭什麼？",
+      "why_it_matters": "Polymarket 出現可疑的巨額押注與獲利，讓『市場價格』與『資訊優勢』的邊界變得模糊。香港觀眾最熟悉的是金融市場的資訊不對稱；把它放進戰爭與外交決策，等於把制度風險拉到投資層面。",
+      "competitor_status": "中度擠擁：競爭頻道多以『陰謀論/內幕』角度講，但少談監管結構、結算爭議機制、以及它如何影響媒體敘事與政策訊號。",
+      "simons_angle": "把它當作『新型外圍金融基建』來講：預測市場不是八卦，而是把政治事件金融化，讓某些人可以用價格訊號做輿論與談判槓桿。延伸到香港：當一個社會失去公開透明的制度，價格就變成新的傳話渠道。",
+      "sources": [
+        {
+          "title": "New Polymarket accounts make huge profits from well-timed US-Iran ceasefire bets",
+          "url": "https://www.independent.co.uk/news/world/americas/iran-ceasefire-trump-polymarket-insider-trading-b2954302.html"
+        },
+        {
+          "title": "Polymarket Ceasefire Bets Trigger Insider Trading Concerns",
+          "url": "https://www.sportsbookreview.com/news/polymarket-ceasefire-bets-trigger-insider-trading-concerns-april-9-2026/"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "headline": "美國通脹再起：戰爭能源成本與關稅同時抬價，藍領『復興』敘事會不會破功？",
+      "why_it_matters": "CPI 報道把通脹回升與中東戰事的能源成本連結起來，同時關稅提高了製造與維修成本。對港人而言，這是判斷美元資產、利率路徑、以及美國內政走向的關鍵輸入。",
+      "competitor_status": "偏擠擁：大家會談『通脹升/油價升』，但較少把它拆成政治經濟學：通脹如何限制政府在關稅、移民與財政上的可行政策組合。",
+      "simons_angle": "用『政策不可能三角』講清楚：要打關稅戰、要高油價下保民生、又要維持民意與債務可持續，三者不可兼得。讓觀眾理解：市場不是只看數據，而是看政治是否還有迴旋空間。",
+      "sources": [
+        {
+          "title": "Live Updates: Inflation Surges as Effects of the Iran War Show in Prices",
+          "url": "https://www.nytimes.com/live/2026/04/10/business/inflation-cpi-report"
+        },
+        {
+          "title": "Iran war may set limits on how far US tariff war will go",
+          "url": "https://www.thenationalnews.com/business/economy/2026/04/09/iran-war-may-set-limits-on-how-far-us-tariff-war-will-go/"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "headline": "香港國安法第43條實施細則再修：『拒交密碼/解密』入刑，外企與旅客風險怎樣重新定價？",
+      "why_it_matters": "香港政府公布修訂細則，把拒絕提供解密協助等行為刑事化，對跨境商務人士、轉機旅客、以及在港持有敏感資料的公司都是即時風險。對高資產港人而言，這直接牽涉資產配置、出入境與資料治理策略。",
+      "competitor_status": "相對不擠擁：競爭頻道多談政治口號，較少用合規/風險管理框架，具體討論『哪些行為』會觸發、企業該如何改流程。",
+      "simons_angle": "把『國安』翻譯成企業治理語言：這其實是把執法的不確定性外包給每個個人與公司（自我審查、資料最小化、零信任架構）。再用香港作為『制度折價』案例，解釋為何國際金融中心最怕的不是成本，而是不確定。",
+      "sources": [
+        {
+          "title": "2026 Implementation Rules for Amending the Implementation Rules for Article 43 of the Hong Kong National Security Law (Amendment Rules)",
+          "url": "https://www.info.gov.hk/gia/general/202603/23/P2026032300310.htm"
+        },
+        {
+          "title": "Recent Updates to Hong Kong's National Security Law",
+          "url": "https://www.striderintel.com/blog/recent-updates-to-hong-kongs-national-security-law/"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "headline": "台灣『灰色地帶』升級：海纜破壞、海空域限制、軍演前奏，真正的訊號是什麼？",
+      "why_it_matters": "台灣安全部門警告混合式/灰色地帶手段，軍演與海上壓力同步，市場與企業會先用『風險溢價』反應。香港觀眾關心的不只是戰爭，而是台海風險如何改變資金流向、供應鏈與移民選擇。",
+      "competitor_status": "中度擠擁：不少頻道談軍演與威脅，但較少把灰色地帶行動視為『談判前的成本施壓』，以及它如何影響民間基建（海纜、航道、保險）。",
+      "simons_angle": "用『戰略訊號 vs. 戰術噪音』框架：灰色地帶行動的目的通常不是開戰，而是把成本逐步加到對手社會。重點不是哪一天打，而是成本曲線何時讓企業與資金做出不可逆的撤離決策。",
+      "sources": [
+        {
+          "title": "Taiwan Warns of China's Hybrid Tactics – April 8, 2026",
+          "url": "https://www.youtube.com/watch?v=_d3Xdx_GoCA"
+        },
+        {
+          "title": "Taiwan To Hold Computer-Assisted Drills in April – April 2, 2026",
+          "url": "https://www.youtube.com/watch?v=MIfdVkpljzM"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "headline": "歐洲人『覺得美國比中國更危險』：這不是情緒，而是歐洲戰略自主的加速器",
+      "why_it_matters": "競爭頻道引用民調，反映歐洲對美國政策不確定性的焦慮。對香港人來說，歐洲若更快走向『去美國化』與防務/產業自主，會重塑制裁、科技管制、以及資本市場的規則。",
+      "competitor_status": "擠擁：已有頻道直接講『歐洲反美』。空位在於分析：這種民意如何轉成具體政策（產業補貼、軍費、對中政策、對美談判）。",
+      "simons_angle": "不要停在『誰更討厭誰』，而是把民調視為政策空間：當民意接受『美國是風險』，歐盟推戰略自主就更容易。進一步推論：香港資本與人才在歐洲的政治風險，未來會更像『制度型』而非『事件型』。",
+      "sources": [
+        {
+          "title": "20260409*民調：歐洲人視美國係威脅大過中國！",
+          "url": "https://www.youtube.com/watch?v=AHhkkU8QWsU"
+        },
+        {
+          "title": "Ch. 1718：關閉駐歐軍事基地 整頓北約…",
+          "url": "https://www.youtube.com/watch?v=fxFgtcTiB64"
+        },
+        {
+          "title": "(Competitor feed) 同題材多頻道集中上載",
+          "url": "https://unsubject.github.io/socialisn/youtube-feed.xml"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "headline": "美國對華科技封鎖再加碼（光刻機/出口管制）：中國的『替代路線』會令誰付代價？",
+      "why_it_matters": "競爭頻道提到美國新法案/禁售光刻機的說法，反映科技供應鏈正被政策硬切割。香港觀眾關心的是：這會怎樣影響中資企業融資、在港上市敘事、以及亞洲資本市場的風險定價。",
+      "competitor_status": "中度擠擁：常見敘事是『美國打壓/中國自強』；較少人拆解技術路線與資本成本：替代不是免費，會把成本轉嫁到誰（國企、地方財政、消費者、或盟友企業）。",
+      "simons_angle": "用『資本成本』與『良率』講：出口管制不是即時斷供，而是把中國半導體的時間表拉長、成本拉高，從而改寫整個工業升級的現金流。香港可以用作觀察窗口：哪些公司開始把故事從增長改成自主，那就代表資本回報率的下降被政治目標取代。",
+      "sources": [
+        {
+          "title": "中國頻扣巴拿馬船…美國MATCH法案光刻機全面禁售中國",
+          "url": "https://www.youtube.com/watch?v=zZH5EdDIhhY"
+        },
+        {
+          "title": "Trump 2.0 tariff tracker (includes Section 301/tech trade measures references)",
+          "url": "https://www.tradecomplianceresourcehub.com/2026/04/02/trump-2-0-tariff-tracker/"
+        }
+      ]
+    }
+  ]
+}
