@@ -5,9 +5,190 @@
     <link>https://unsubject.github.io/socialisn</link>
     <description>每日香港及國際時事情報簡報，由 AI 自動生成</description>
     <language>zh-TW</language>
-    <lastBuildDate>Sat, 11 Apr 2026 00:01:52 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 Apr 2026 23:55:58 +0000</lastBuildDate>
     <atom:link href="https://unsubject.github.io/socialisn/feed.xml" rel="self" type="application/rss+xml"/>
 
+  <item>
+    <title>【情報簡報】2026-04-11 晚報</title>
+    <link>https://unsubject.github.io/socialisn/briefings/2026-04-11-evening.html</link>
+    <guid isPermaLink="true">https://unsubject.github.io/socialisn/briefings/2026-04-11-evening.html</guid>
+    <pubDate>Sat, 11 Apr 2026 12:00:00 +0000</pubDate>
+    <description><![CDATA[<h1>2026-04-11 晚報</h1>
+<h2>🎙 Podcast</h2>
+<h3>地緣政治與能源危機</h3>
+<p><strong>Unhedged：市場結構深層變化</strong><br />
+特朗普政府在伊朗局勢上的政策趨向緩和，市場應聲上升，但分析認為市場結構已發生深層變化，難以回到疫情前狀態。<br />
+📻 20分鐘 | <a href="https://shows.acast.com/unhedged/episodes/what-has-changed">收聽</a></p>
+<p><strong>The Economics Show：伊朗能源衝擊持續多久？</strong><br />
+伊朗能源衝擊對全球經濟造成損害，停火後經濟影響將持續多久成關鍵問題。經濟學家Chris Giles深入分析能源危機的長期影響。<br />
+📻 30分鐘 | <a href="https://shows.acast.com/the-economics-show-with-soumaya-keynes/episodes/how-long-will-the-iran-energy-shock-last-with-chris-giles">收聽</a></p>
+<p><strong>Big Take：伊朗戰爭推高全球物價</strong><br />
+伊朗戰爭導致荷莫茲海峽運輸中斷，全球油價飆升並威脅食品、塑膠、半導體等商品供應，物價面臨廣泛上漲。<br />
+📻 20分鐘 | <a href="https://omny.fm/shows/the-big-take/it-s-not-just-oil-war-in-iran-will-hike-the-price-of-nearly-everything-you-buy">收聽</a></p>
+<p><strong>Odd Lots：戰時海運保險解密</strong><br />
+探討戰爭期間海運保險如何運作，以伊朗衝突導致霍爾木茲海峽保險費用飆升為案例，分析海運保險對國際貿易的影響。<br />
+📻 53分鐘 | <a href="https://omny.fm/shows/odd-lots/how-shipping-insurance-really-works-during-a-war">收聽</a></p>
+<p><strong>Wall Street Week：美伊談判與全球經濟焦慮</strong><br />
+美國與伊朗和平談判前景、伊朗石油危機對全球經濟衝擊，以及中美稀土礦物競爭成焦點。Richard Haass及Chrystia Freeland深入分析。<br />
+📻 48分鐘 | <a href="https://omny.fm/shows/wall-street-week/haass-on-the-war-in-iran-iran-oil-fallout-imf-meeting-anxiety-us-china-rare-earth-competition">收聽</a></p>
+<h3>人工智能與網絡安全</h3>
+<p><strong>Hard Fork：Anthropic網絡安全震撼波</strong><br />
+Anthropic的新AI模型因安全隱患被禁發布，卻已發現數千個軟件漏洞；記者Ronan Farrow與Andrew Marantz披露對Sam Altman的調查。<br />
+📻 64分鐘 | <a href="https://www.nytimes.com/column/hard-fork">收聽</a></p>
+<p><strong>Bloomberg Intelligence：AI模型引發監管警報</strong><br />
+美國財政部長貝森特及聯邦儲備局主席鮑威爾因Anthropic最新AI模型引發網絡風險擔憂，緊急召集華爾街銀行高管舉行會議。<br />
+📻 19分鐘 | <a href="https://omny.fm/shows/the-tape/anthropic-model-scare-sparks-bessent-powell-warning-to-bank-ceos">收聽</a></p>
+<p><strong>The Indicator：AI數據中心推高電價</strong><br />
+人工智能數據中心大幅增加電力需求，導致其周邊地區批發電價飆升，引發民眾反彈，但專家認為應從老舊電網長期問題尋根。<br />
+📻 8分鐘 | <a href="https://www.npr.org/2026/04/09/nx-s1-5777766/where-ai-data-centers-are-reducing-power-bills">收聽</a></p>
+<h3>金融市場與投資</h3>
+<p><strong>Odd Lots：股市長期上漲的宏觀驅動力</strong><br />
+節目探討股市長期上升的宏觀經濟因素，分析企業盈利增長與股票估值提升的背後驅動力，並探究為何股票估值未能回歸歷史平均水平。<br />
+📻 36分鐘 | <a href="https://omny.fm/shows/odd-lots/the-big-macro-force-thats-been-driving-stocks-higher-for-years">收聽</a></p>
+<p><strong>Money Stuff：IPO與加密貨幣動向</strong><br />
+探討加密貨幣創辦人、投資策略及IPO融資等金融議題，涵蓋Elon Musk、Bill Ackman等關鍵人物的最新動向。<br />
+📻 30分鐘 | <a href="https://omny.fm/shows/money-stuff-the-podcast/humiliation-ritual">收聽</a></p>
+<p><strong>Odd Lots：預測市場專業化計劃</strong><br />
+互動經紀商創辦人Thomas Peterffy計劃推動預測市場專業化，以吸引機構投資者參與。<br />
+📻 50分鐘 | <a href="https://omny.fm/shows/odd-lots/thomas-peterffy-on-interactive-brokers-plan-to-professionalize-prediction-markets">收聽</a></p>
+<h3>其他焦點</h3>
+<p><strong>Big Take：NASA月球經濟時代來臨</strong><br />
+NASA阿爾忒彌斯二號任務創造載人航天紀錄，象徵月球經濟時代的來臨。<br />
+📻 18分鐘 | <a href="https://omny.fm/shows/the-big-take/one-small-step-for-nasa-one-giant-leap-for-the-lunar-economy">收聽</a></p>
+<p><strong>Bloomberg Intelligence：美國司法部調查NFL轉播交易</strong><br />
+美國司法部對NFL體育電視轉播交易展開調查，涉及反競爭行為推高消費者觀看成本的指控。<br />
+📻 22分鐘 | <a href="https://omny.fm/shows/the-tape/doj-opens-probe-into-nfl-s-sports-tv-deals">收聽</a></p>
+<p><strong>Planet Money：書店經濟學</strong><br />
+探討書店如何選擇上架書籍，以及書店作為出版業最後把關者對讀者閱讀選擇的影響。<br />
+📻 40分鐘 | <a href="https://www.npr.org/2026/04/10/nx-s1-5751214/how-books-get-to-bookstores">收聽</a></p>
+<p><strong>The Indicator：中產階級迷思與電動船舶</strong><br />
+節目探討中產階級萎縮迷思、電動船舶興起，以及洛杉磯奧運票價高企等本週重點數據。<br />
+📻 9分鐘 | <a href="https://www.npr.org/2026/04/10/nx-s1-5780040/class-myths-an-influx-of-e-ships-and-olympics-tix">收聽</a></p>
+<h2>頭條故事</h2>
+<ol>
+<li>
+<p><strong>美伊和談未達協議 週日繼續談判</strong><br />
+   美國與伊朗在巴基斯坦舉行和平峰會，首輪談判經14小時後未達成協議，雙方同意週日繼續談判。特朗普政府向伊朗下達最後通牒，要求24小時內重開霍爾木茲海峽或面臨戰爭。多個Podcast及新聞指伊朗戰爭已導致全球油價及商品價格飆升，對全球經濟造成深遠影響。<br />
+   📰 CNBC | <a href="https://www.cnbc.com/2026/04/11/us-iran-talks-set-to-begin-in-islamabad-after-delegations-arrive.html">詳情</a></p>
+</li>
+<li>
+<p><strong>張敬軒出任保安局正向導師引發爭議</strong><br />
+   歌手張敬軒獲委任為保安局「特別項目」導師，帶領反修例被捕未檢控年輕人北上認識國家，並在文匯報刊登懺悔文為過去言論致歉。事件引發社會廣泛討論，被視為當局對軟對抗戰線的全面打擊。多個YouTube頻道及評論員批評計劃違反無罪推定原則。<br />
+   📺 風雲谷、城寨、曾志豪等 | <a href="https://www.youtube.com/watch?v=YuuiO3EHaU0">影片1</a> <a href="https://www.youtube.com/watch?v=zXehBb6kZwE">影片2</a></p>
+</li>
+<li>
+<p><strong>Anthropic AI模型安全隱患引發監管危機</strong><br />
+   Anthropic的新AI模型因發現數千個軟件漏洞而被禁止發布，美國財政部長貝森特及聯儲局主席鮑威爾緊急召集華爾街銀行高管討論網絡風險。事件顯示AI技術發展與安全監管之間的緊張關係，對金融系統構成潛在威脅。<br />
+   🎙 Hard Fork、Bloomberg Intelligence | <a href="https://www.nytimes.com/column/hard-fork">Podcast</a></p>
+</li>
+<li>
+<p><strong>習近平與國民黨主席鄭麗文會面</strong><br />
+   習近平與國民黨主席鄭麗文在北京會面，隨著國民黨上台執政，兩岸和平統一的機會被認為大幅增加。鄭麗文訪問期間參觀中關村科技園區，討論兩岸科技合作，但其讚揚中國脫貧成就引發陸委會反彈。<br />
+   📺 風雲谷、Hong Kong Uncensored | <a href="https://www.youtube.com/watch?v=dWrmVWUL77k">影片</a></p>
+</li>
+<li>
+<p><strong>真主黨Zoom會議遭以色列精準打擊</strong><br />
+   真主黨改用Zoom線上開會企圖規避追蹤，惟IP位置遭以色列摩薩德情報機構偵測，戰機於會議進行10分鐘後發射導彈摧毀百個地點。事件顯示即使使用商業通訊軟件，在國家級情報機構面前仍無所遁形。<br />
+   📺 城寨 | <a href="https://www.youtube.com/watch?v=7nZEXmUbOpI">影片</a></p>
+</li>
+<li>
+<p><strong>河南三地虛報78億投資 官媒揭露造假</strong><br />
+   河南三地宣稱投資78億元，惟最終資金零到位，央視和新華社揭露數據造假，反映官方統計數據存在嚴重虛報問題。事件罕見地由官方媒體自行揭露，引發對中國經濟數據可信度的質疑。<br />
+   📺 謎米香港 | <a href="https://www.youtube.com/watch?v=inu4IGJmzgY">影片</a></p>
+</li>
+<li>
+<p><strong>國泰及香港快運削減航班應對燃油價格</strong><br />
+   國泰航空因中東局勢升溫導致燃油成本飆升，將於5月中至6月底期間取消約2%航班，香港快運亦將取消約6%航班。運輸及物流局要求將影響減至最低並密切監察，反映地緣政治對香港航空業的直接衝擊。<br />
+   📰 RTHK | <a href="https://news.rthk.hk/rthk/ch/component/k2/1850731-20260411.htm">詳情</a></p>
+</li>
+<li>
+<p><strong>NASA阿爾忒彌斯二號任務成功返回</strong><br />
+   NASA阿爾忒彌斯二號任務創造載人航天紀錄後成功返回地球，象徵月球經濟時代的來臨。美國與中國在太空探索領域的競爭加劇，成為新一輪大國競爭的重要戰場。<br />
+   🎙 Big Take | <a href="https://omny.fm/shows/the-big-take/one-small-step-for-nasa-one-giant-leap-for-the-lunar-economy">Podcast</a></p>
+</li>
+<li>
+<p><strong>特朗普修改國防戰略 不再視中國為頭號威脅</strong><br />
+   《華爾街日報》報導特朗普親自修改美國《國防戰略》，不再將中國定性為頭號威脅，改變過往對華針對立場。此舉反映特朗普政府外交政策的重大調整，可能對全球地緣政治格局產生深遠影響。<br />
+   📺 Hong Kong Uncensored | <a href="https://www.youtube.com/watch?v=tAIoBpVIkZg">影片</a></p>
+</li>
+<li>
+<p><strong>香港推出上市改革2.0吸引創新企業</strong><br />
+    香港交易所推出上市改革2.0，旨在吸引創新科技公司上市，但現行市值要求仍可能阻礙大多數潛在上市者。金管局同時批准滙豐及渣打合資公司發行穩定幣，惟僅發出兩張牌照引發市場失望。<br />
+    📰 SCMP | <a href="https://www.scmp.com/business/markets/article/3349647/hong-kongs-listing-reform-20-can-it-outshine-global-rivals-innovative-firms">詳情</a></p>
+</li>
+</ol>
+<h2>主題分析</h2>
+<h3>地緣政治與能源危機</h3>
+<p>美伊衝突持續主導全球焦點，雙方在巴基斯坦進行和談但未達協議，荷莫茲海峽封鎖導致全球能源及商品價格飆升。多個分析指出戰爭對全球供應鏈的衝擊遠超油價本身，涉及食品、塑膠、半導體等多個領域，IMF下調全球經濟增長預測。</p>
+<p><strong>相關項目：</strong><br />
+- 美伊和談未達協議繼續談判（CNBC）<br />
+- 美伊未來24小時定生死（謎米香港）<br />
+- 伊朗戰爭推高全球物價（Big Take Podcast）<br />
+- 伊朗能源衝擊持續多久？（The Economics Show Podcast）<br />
+- 戰時海運保險解密（Odd Lots Podcast）<br />
+- 美軍艦通過霍爾木茲海峽（城寨）<br />
+- 巴基斯坦斡旋美伊談判（城寨）<br />
+- 以色列精準打擊真主黨Zoom會議（城寨）</p>
+<h3>香港政治與社會</h3>
+<p>張敬軒出任保安局正向導師成為焦點，被視為當局對軟對抗戰線的全面打擊。政務司副司長卓永興強調須保持高度警惕「打擦邊球」搞「軟對抗」行徑。同時，宏福苑火災善後、「聯廈聯管」試驗計劃、九龍城潑水節等民生議題持續發展。</p>
+<p><strong>相關項目：</strong><br />
+- 張敬軒任特別項目導師（RTHK、多個YouTube頻道）<br />
+- 卓永興警惕軟對抗（RTHK）<br />
+- 宏福苑居民上樓執拾安排（RTHK）<br />
+- 瑪嘉烈醫院實習醫生洩露病人資料（RTHK）<br />
+- 九龍城潑水節活動（RTHK）<br />
+- 一拳書館無牌辦學被罰（Hong Kong Uncensored）</p>
+<h3>兩岸關係</h3>
+<p>習近平與國民黨主席鄭麗文會面，兩岸和平統一議題再受關注。鄭麗文參觀中關村科技園區討論兩岸科技合作，但其言論引發台灣陸委會反彈。習近平同時向中美乒乓外交55周年紀念大會致賀信，強調中美青年交流。</p>
+<p><strong>相關項目：</strong><br />
+- 鄭習會細節（風雲谷）<br />
+- 鄭麗文訪問北京（RTHK、Hong Kong Uncensored）<br />
+- 習近平冀中美青年攜手前行（RTHK）<br />
+- 鄭麗文見習引發爭議（文昭、Hong Kong Uncensored）</p>
+<h3>人工智能與科技監管</h3>
+<p>Anthropic AI模型安全隱患引發美國監管機構高度關注，財政部長及聯儲局主席緊急召集銀行高管討論網絡風險。AI數據中心電力需求推高電價引發民眾反彈。中國加強對紅籌股結構的監管，影響科技企業治理模式。</p>
+<p><strong>相關項目：</strong><br />
+- Anthropic網絡安全震撼波（Hard Fork Podcast）<br />
+- AI模型引發監管警報（Bloomberg Intelligence Podcast）<br />
+- AI數據中心推高電價（The Indicator Podcast）<br />
+- 中國加強紅籌股監管（Perplexity Search）<br />
+- 美國MATCH法案限制中國晶片技術（Perplexity Search）</p>
+<h3>金融市場與經濟</h3>
+<p>特朗普政府伊朗政策緩和令市場上升，但分析認為市場結構已深層變化。歐洲製藥產業因特朗普政策及中國生物科技崛起而陷入困境。香港推出上市改革2.0及穩定幣監管框架，但市場反應審慎。</p>
+<p><strong>相關項目：</strong><br />
+- 市場結構深層變化（Unhedged Podcast）<br />
+- 股市長期上漲驅動力（Odd Lots Podcast）<br />
+- 特朗普政策衝擊歐洲製藥（CNBC）<br />
+- 香港上市改革2.0（SCMP）<br />
+- 穩定幣監管框架（SCMP）<br />
+- 比亞迪供應鏈資金風險（CC News）</p>
+<h3>中國經濟與政治</h3>
+<p>河南虛報78億投資被官媒揭露，反映經濟數據造假問題嚴重。中國推動氫能產業及「十五五」規劃支柱產業升級。習近平會見緬甸總統強調深化一帶一路合作。北京房山剷泥車事故引發維穩機制失效討論。</p>
+<p><strong>相關項目：</strong><br />
+- 河南虛報投資官媒揭露（謎米香港）<br />
+- 中國氫能產業加速發展（Perplexity Search）<br />
+- 十五五規劃支柱產業升級（Perplexity Search）<br />
+- 習近平會見緬甸總統（RTHK）<br />
+- 北京房山事故維穩危機（謎米香港）</p>
+<h3>國際動態</h3>
+<p>特朗普修改國防戰略不再視中國為頭號威脅，顯示美國外交政策重大調整。NASA阿爾忒彌斯二號任務成功返回，美中太空競賽加劇。西班牙首相訪問北京尋求科技合作。NFL轉播交易遭美國司法部調查。</p>
+<p><strong>相關項目：</strong><br />
+- 特朗普修改國防戰略（Hong Kong Uncensored）<br />
+- NASA月球任務成功（Big Take Podcast、白宮）<br />
+- 美中太空競賽（YouTube）<br />
+- 西班牙首相訪華（Perplexity Search）<br />
+- 司法部調查NFL（Bloomberg Intelligence Podcast）</p>
+<h2>數字速覽</h2>
+<ul>
+<li><strong>今日監測項目總數</strong>：154</li>
+<li><strong>YouTube頻道</strong>：37 條影片</li>
+<li><strong>新聞來源</strong>：102 篇文章</li>
+<li><strong>Podcast</strong>：15 集</li>
+<li><strong>最高觀看影片</strong>：風雲谷《「鄭習會」細節 習哥哥見鄭小妹 國民黨上台 和平統一 機會大增》（84,766 觀看）</li>
+</ul>
+<h2>編輯備注</h2>
+<p>今日資訊環境呈現三大特點：一、美伊衝突主導國際議題，能源危機對全球經濟的多維度衝擊成為各大Podcast及新聞焦點；二、香港本地政治出現標誌性事件，張敬軒出任保安局導師被視為當局加強思想管控的新策略；三、AI安全監管與科技競爭議題升溫，反映技術發展與監管平衡的緊迫性。整體而言，地緣政治、意識形態控制及技術監管三條主線交織，構成當前複雜的資訊圖景。</p>]]></description>
+  </item>
   <item>
     <title>【情報簡報】2026-04-10 晚報</title>
     <link>https://unsubject.github.io/socialisn/briefings/2026-04-10-evening.html</link>
