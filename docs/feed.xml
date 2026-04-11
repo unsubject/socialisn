@@ -5,9 +5,186 @@
     <link>https://unsubject.github.io/socialisn</link>
     <description>每日香港及國際時事情報簡報，由 AI 自動生成</description>
     <language>zh-TW</language>
-    <lastBuildDate>Fri, 10 Apr 2026 00:01:42 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 Apr 2026 00:01:52 +0000</lastBuildDate>
     <atom:link href="https://unsubject.github.io/socialisn/feed.xml" rel="self" type="application/rss+xml"/>
 
+  <item>
+    <title>【情報簡報】2026-04-10 晚報</title>
+    <link>https://unsubject.github.io/socialisn/briefings/2026-04-10-evening.html</link>
+    <guid isPermaLink="true">https://unsubject.github.io/socialisn/briefings/2026-04-10-evening.html</guid>
+    <pubDate>Fri, 10 Apr 2026 12:00:00 +0000</pubDate>
+    <description><![CDATA[<h1>2026-04-10 晚報</h1>
+<h2>🎙 Podcast（最優先）</h2>
+<p>【Unhedged｜FT】<strong>特朗普伊朗政策轉向，市場反彈但結構性變化持續</strong><br />
+特朗普總統對伊朗戰爭立場逐漸明確為退縮，市場應聲上漲，但分析指出2月28日以來的結構性變化將持續存在，投資者需警惕政策不確定性帶來的長期影響。銀行業和政策變化仍是市場關注焦點。<br />
+來源：<a href="https://shows.acast.com/unhedged/episodes/what-has-changed">Unhedged Podcast</a>（20分鐘）</p>
+<p>【The Economics Show｜FT】<strong>伊朗能源衝擊持續時間成經濟關鍵變數</strong><br />
+Chris Giles分析伊朗能源衝擊對全球經濟的損害程度，指出美國、伊朗與以色列達成停火後，能源價格波動及供應鏈中斷的經濟後續影響仍需長期評估，各國應對策略將決定復甦速度。<br />
+來源：<a href="https://shows.acast.com/the-economics-show-with-soumaya-keynes/episodes/how-long-will-the-iran-energy-shock-last-with-chris-giles">The Economics Show</a>（30分鐘）</p>
+<p>【Hard Fork｜NYT】<strong>Anthropic AI模型引發網絡安全危機</strong><br />
+Anthropic新型AI模型因發現數千個軟件漏洞而未公開發布，引發網絡安全界震動。記者Ronan Farrow和Andrew Marantz深入調查Sam Altman相關事項，揭示AI技術發展與安全風險之間的矛盾。<br />
+來源：<a href="https://www.nytimes.com/column/hard-fork">Hard Fork</a>（64分鐘）</p>
+<p>【Big Take｜Bloomberg】<strong>伊朗戰爭推高全球商品價格</strong><br />
+霍爾木茲海峽運輸中斷不僅導致油價飆升，更威脅食品、塑膠、半導體等商品供應，全面推高消費者物價。分析指出即使達成和平談判，供應鏈修復仍需時日，通脹壓力短期內難以緩解。<br />
+來源：<a href="https://omny.fm/shows/the-big-take/it-s-not-just-oil-war-in-iran-will-hike-the-price-of-nearly-everything-you-buy">Big Take</a>（20分鐘）</p>
+<p>【Big Take｜Bloomberg】<strong>NASA Artemis II任務開啟月球經濟新紀元</strong><br />
+美國太空總署Artemis II任務創造人類太空飛行紀錄，拍攝月球暗面罕見影像，預示月球經濟發展的新前景。這標誌著人類重返月球計劃進入實質階段，商業太空探索將迎來新機遇。<br />
+來源：<a href="https://omny.fm/shows/the-big-take/one-small-step-for-nasa-one-giant-leap-for-the-lunar-economy">Big Take</a>（18分鐘）</p>
+<p>【Big Take｜Bloomberg】<strong>Tether：你從未聽聞的加密貨幣巨頭</strong><br />
+Tether在十年間成長為全球加密貨幣巨頭，其美元掛鈎穩定幣成為業界關鍵基礎設施，正邁向成為全球最高估值私人公司之列。節目深入探討Tether如何在監管灰色地帶建立龐大商業帝國。<br />
+來源：<a href="https://omny.fm/shows/the-big-take/meet-tether-the-most-powerful-crypto-firm-you-ve-never-heard-of">Big Take</a>（19分鐘）</p>
+<p>【Odd Lots｜Bloomberg】<strong>戰爭時期海運保險運作機制揭秘</strong><br />
+伊朗衝突下保險公司取消戰爭風險保障、保費飆升，美國政府介入提供保險成為必要措施。節目詳細分析霍爾木茲海峽封鎖如何衝擊全球海運保險市場，以及川普政府的應對策略。<br />
+來源：<a href="https://omny.fm/shows/odd-lots/how-shipping-insurance-really-works-during-a-war">Odd Lots</a>（53分鐘）</p>
+<p>【Odd Lots｜Bloomberg】<strong>Interactive Brokers計劃將預測市場專業化</strong><br />
+創辦人Thomas Peterffy計劃針對機構投資者開發專業化預測市場交易平台，挑戰Polymarket和Kalshi等現有平台。這標誌著預測市場從散戶投機工具向機構級金融產品的轉型。<br />
+來源：<a href="https://omny.fm/shows/odd-lots/thomas-peterffy-on-interactive-brokers-plan-to-professionalize-prediction-markets">Odd Lots</a>（50分鐘）</p>
+<p>【Bloomberg Intelligence】<strong>Anthropic AI威脅促使美財金高層緊急召集銀行CEO</strong><br />
+美國財政部長貝森特及聯儲局主席鮑威爾因Anthropic最新AI模型引發網絡安全風險憂慮，緊急召集華爾街銀行高管召開會議。這反映AI技術發展對金融系統穩定性構成的潛在威脅已引起最高層重視。<br />
+來源：<a href="https://omny.fm/shows/the-tape/anthropic-model-scare-sparks-bessent-powell-warning-to-bank-ceos">Bloomberg Intelligence</a>（19分鐘）</p>
+<p>【Bloomberg Intelligence】<strong>美司法部調查NFL體育電視轉播協議</strong><br />
+美國司法部門開啟對美式足球聯盟體育電視轉播協議的調查，涉嫌採取反競爭手段推高消費者觀賽成本。此案可能重塑美國體育媒體版權市場格局。<br />
+來源：<a href="https://omny.fm/shows/the-tape/doj-opens-probe-into-nfl-s-sports-tv-deals">Bloomberg Intelligence</a>（22分鐘）</p>
+<p>【Wall Street Week｜Bloomberg】<strong>伊朗戰爭、IMF警示與中美稀土競爭</strong><br />
+美國與伊朗和平談判前景、伊朗石油衝擊全球經濟、IMF年會警示全球經濟風險，以及中美稀土礦產競爭成為焦點。Richard Haass深入分析多重地緣政治風險如何交織影響全球經濟。<br />
+來源：<a href="https://omny.fm/shows/wall-street-week/haass-on-the-war-in-iran-iran-oil-fallout-imf-meeting-anxiety-us-china-rare-earth-competition">Wall Street Week</a>（48分鐘）</p>
+<p>【The Indicator｜NPR】<strong>AI數據中心成美國電網老化問題替罪羊</strong><br />
+人工智能數據中心導致部分地區電力批發價格飆升267%，引發公眾反彈，但專家認為數據中心成為美國老化電網長期問題的替罪羊。真正需要解決的是數十年來基礎設施投資不足的結構性問題。<br />
+來源：<a href="https://www.npr.org/2026/04/09/nx-s1-5777766/where-ai-data-centers-are-reducing-power-bills">The Indicator</a>（8分鐘）</p>
+<p>【The Indicator｜NPR】<strong>美國駕駛者如何應對油價危機</strong><br />
+美國汽油平均價格超過每加侖4美元，加州更接近6美元，節目探討駕駛者的應對策略及其年度成本影響。能源危機正改變美國人的出行習慣和生活方式。<br />
+來源：<a href="https://www.npr.org/2026/04/08/nx-s1-5776781/how-are-drivers-riding-out-the-gas-crisis">The Indicator</a>（9分鐘）</p>
+<p>【Planet Money｜NPR】<strong>書店經濟學：出版業守門人的選擇邏輯</strong><br />
+探討書店如何選擇上架書籍，以及書店作為出版業守門人的角色如何影響讀者閱讀選擇。這揭示了文化產業中商業利益與文化價值之間的微妙平衡。<br />
+來源：<a href="https://www.npr.org/2026/04/10/nx-s1-5751214/how-books-get-to-bookstores">Planet Money</a>（40分鐘）</p>
+<p>【Planet Money｜NPR】<strong>私募基金員工持股實驗</strong><br />
+私募基金高層嘗試向員工分配股權，以平衡公司生產力提升與就業保障之間的矛盾。這種創新模式挑戰傳統私募基金只追求短期利潤最大化的運作方式。<br />
+來源：<a href="https://www.npr.org/2026/04/08/nx-s1-5776833/private-equity-pete-stavros-employee-ownership">Planet Money</a>（25分鐘）</p>
+<hr />
+<h2>頭條故事</h2>
+<ol>
+<li>
+<p><strong>美伊停火協議脆弱，霍爾木茲海峽仍封鎖</strong><br />
+   美國與伊朗達成兩週停火協議，但以色列持續轟炸黎巴嫩、海峽地位爭議未解，協議隨時可能破裂。油價本週暴跌13%反映市場對停火可持續性存疑，但供應鏈中斷影響仍持續擴大。伊朗設定談判前置條件要求解凍資產及黎巴嫩停火，美方則提出包括核設施拆除在內的15點要求，雙方分歧巨大。<br />
+   來源：<a href="https://www.cnbc.com/2026/04/10/iran-war-vance-negotiations-trump-oil-hormuz-strait.html">CNBC</a>、<a href="https://unsubject.github.io/newsletter-digest">Newsletter Digest</a></p>
+</li>
+<li>
+<p><strong>Anthropic AI模型引發金融系統網絡安全危機</strong><br />
+   美國財政部長貝森特及聯儲局主席鮑威爾緊急召集華爾街銀行CEO討論Anthropic最新AI模型Mythos帶來的網絡安全威脅。該模型已發現數千個軟件漏洞但因安全風險未公開發布，白宮事前與科技巨頭召開電話會議商討應對方案。這標誌著AI技術發展對金融系統穩定性構成的威脅已引起最高層重視。<br />
+   來源：<a href="https://www.cnbc.com/2026/04/10/powell-bessent-us-bank-ceos-anthropic-mythos-ai-cyber.html">CNBC</a>、<a href="https://www.nytimes.com/column/hard-fork">Hard Fork Podcast</a></p>
+</li>
+<li>
+<p><strong>習近平會見國民黨主席鄭麗文，強調兩岸關係掌握在中國人手中</strong><br />
+   習近平在北京會見國民黨主席鄭麗文，時隔近十年首次與台灣在野黨領導人會談，強調台獨為台海穩定最大威脅。會後15架中共軍機擾台示警，引發外界質疑此行是否為真正的和平之旅。學者認為會晤時機重要且規格罕見，體現大陸對國民黨的重視和支持。<br />
+   來源：<a href="https://news.rthk.hk/rthk/ch/component/k2/1850593-20260410.htm">RTHK</a>、<a href="https://www.cnbc.com/2026/04/10/china-taiwan-reunification-cross-strait-relations-trump-visit-may-.html">CNBC</a></p>
+</li>
+<li>
+<p><strong>香港發出首批穩定幣發行人牌照予滙豐及碇點金融</strong><br />
+   香港金管局向滙豐銀行及渣打銀行領導的碇點金融頒發首批穩定幣發行人牌照，兩家機構計劃今年中至下半年推出港元穩定幣。這標誌香港朝著成為全球數字資產樞紐邁進的重要一步，並為香港金融科技發展開創新局面。<br />
+   來源：<a href="https://www.scmp.com/business/cryptocurrency/article/3349644/hong-kong-awards-stablecoin-licences-hsbc-stanchart-led-group-long-awaited-roll-out">SCMP</a>、<a href="https://news.rthk.hk/rthk/ch/component/k2/1850662-20260410.htm">RTHK</a></p>
+</li>
+<li>
+<p><strong>美國3月CPI升至3.3%創近兩年最大升幅，消費者信心跌至歷史新低</strong><br />
+   美國3月消費物價指數按年升幅加快至3.3%，創近兩年最大升幅，核心CPI亦升至2.6%，遠離聯儲局通脹目標。密西根大學消費者信心指數急跌至47.6創歷史新低，各階層消費者信心普遍惡化，並預期未來通脹率將大幅上升。伊朗戰爭引發的能源價格飆升成為主要推手。<br />
+   來源：<a href="https://www.cnbc.com/2026/04/10/cpi-inflation-report-march-2026.html">CNBC</a>、<a href="https://news.rthk.hk/rthk/ch/component/k2/1850659-20260410.htm">RTHK</a></p>
+</li>
+<li>
+<p><strong>達美航空預計燃油成本增加20億美元，歐洲機場三週內恐面臨噴氣燃料短缺</strong><br />
+   達美航空首席執行官對前景持謹慎態度，預計燃油成本增加20億美元。歐洲機場業界警告三周內可能面臨噴氣燃料短缺危機，恐迫使航空公司取消班次並對歐洲經濟造成重大衝擊。荷莫茲海峽封鎖對全球航空業的影響正逐步顯現。<br />
+   來源：<a href="https://omny.fm/shows/the-tape/delta-predicts-2-billion-fuel-hit-with-ceo-cautious-on-outlook">Bloomberg Podcast</a>、<a href="https://www.cnbc.com/2026/04/10/jet-fuel-shortage-european-airports-strait-of-hormuz.html">CNBC</a></p>
+</li>
+<li>
+<p><strong>美國撤出西歐軍事基地，重新調配八萬四千美軍至東歐</strong><br />
+   白宮官員表示美軍將撤出西班牙及德國基地，重新調配八萬四千美軍至波蘭、羅馬尼亞、立陶宛、希臘等東歐及南歐國家。美國在新冷戰時代調整歐洲戰略，認為俄羅斯已成三流國家不足威脅，遂將駐歐重兵轉向東歐、中歐及格陵蘭，並加強關島部署以捍衛第一島鏈。<br />
+   來源：<a href="https://www.youtube.com/watch?v=SVjmsWNxMNk">城寨 YouTube</a>、<a href="https://www.youtube.com/watch?v=s-Z8KIAp2-I">城寨 YouTube</a></p>
+</li>
+<li>
+<p><strong>台積電首季收入按年增長35%至創新高，AI晶片需求強勁</strong><br />
+   台積電首季收入按年增長35%至創新高的1.13兆新台幣，受惠於人工智能晶片需求強勁。英偉達和蘋果等主要客戶持續擴大訂單，反映全球AI產業發展對先進製程晶片的殷切需求。<br />
+   來源：<a href="https://www.cnbc.com/2026/04/10/tsmc-q1-record-revenue-ai-chip-demand-strong.html">CNBC</a></p>
+</li>
+<li>
+<p><strong>內地深化創業板改革，針對新興產業增設第4套上市標準</strong><br />
+   內地證監會擬深化創業板改革，針對新興及未來產業增設第4套上市標準，並引入做市商制度以增強市場穩定性。這標誌著中國資本市場對科技創新企業支持力度進一步加強，鼓勵未盈利科技企業上市融資。<br />
+   來源：<a href="https://news.rthk.hk/rthk/ch/component/k2/1850658-20260410.htm">RTHK</a>、<a href="https://www.scmp.com/business/markets/article/3349675/china-opens-chinext-exchange-pre-profit-tech-firms-push-boost-innovation">SCMP</a></p>
+</li>
+<li>
+<p><strong>阿里巴巴Qwen系列模型佔據全球開源下載逾50%市場份額</strong><br />
+    阿里巴巴Qwen系列模型在全球開源下載中佔據超過50%的市場份額，凸顯中國AI模型在全球開源領域的主導地位。阿里巴巴更證實自己是在全球排行榜上大放異彩的神秘AI視頻生成模型HappyHorse-1.0的開發者，在文本轉視頻和圖像轉視頻生成領域名列前茅。<br />
+    來源：<a href="https://www.scmp.com/tech/big-tech/article/3349552/alibabas-qwen-family-captures-over-50-global-open-source-downloads-report-finds">SCMP</a>、<a href="https://www.cnbc.com/2026/04/10/alibaba-happyhorse-ai-video-model-benchmark-reveal.html">CNBC</a></p>
+</li>
+</ol>
+<hr />
+<h2>主題分析</h2>
+<h3>🔥 中東局勢與能源危機</h3>
+<p>美伊停火協議脆弱不堪，霍爾木茲海峽封鎖持續衝擊全球能源供應與商品價格。伊朗要求解凍資產及黎巴嫩停火作為談判前提，美方則提出包括核設施拆除在內的15點要求，雙方分歧巨大。以色列繼續轟炸黎巴嫩，阿聯酋出動戰機轟炸伊朗，中東產油國組建聯軍維持區域穩定。油價本週暴跌13%但供應鏈中斷影響擴大，達美航空預計燃油成本增加20億美元，歐洲機場三週內恐面臨噴氣燃料短缺。</p>
+<p><strong>相關項目：</strong><br />
+- 美伊停火協議差點破裂，油價預期持續回落（蕭若元 YouTube）<br />
+- 伊朗表面張牙舞爪，背地在偷讓步（謎米香港 YouTube）<br />
+- 談判協議在即以色列繼續狂轟，美國切割黎巴嫩議題（謎米香港 YouTube）<br />
+- 阿聯酋出動幻影戰機轟炸伊朗，產油國組成聯軍（城寨 YouTube）<br />
+- 美伊無協議、無共識、無誠信，襲伊朗永遠在路上（風雲谷 YouTube）<br />
+- How long will the Iran energy shock last?（The Economics Show Podcast）<br />
+- It's Not Just Oil. War in Iran Will Hike the Price of Nearly Everything（Big Take Podcast）<br />
+- Delta Predicts $2 Billion Fuel Hit（Bloomberg Intelligence Podcast）<br />
+- Airports could face jet fuel crunch within 3 weeks（CNBC）<br />
+- Oil price slips below $100 as Trump demands reopening of Strait of Hormuz（CNBC）</p>
+<h3>💻 AI技術與網絡安全危機</h3>
+<p>Anthropic新型AI模型Mythos因發現數千個軟件漏洞引發網絡安全危機，美國財政部長貝森特及聯儲局主席鮑威爾緊急召集華爾街銀行CEO討論應對方案。白宮警告職員勿在預測市場進行伊朗戰爭相關投注，以防止內幕交易。阿里巴巴Qwen系列模型佔據全球開源下載逾50%市場份額，並證實開發HappyHorse視頻生成模型。AI數據中心導致部分地區電力價格飆升267%，但專家認為這成為美國老化電網問題的替罪羊。</p>
+<p><strong>相關項目：</strong><br />
+- Anthropic's Cybersecurity Shock Wave（Hard Fork Podcast）<br />
+- Anthropic Model Scare Sparks Bessent, Powell Warning to Bank CEOs（Bloomberg Intelligence Podcast）<br />
+- Powell, Bessent discussed Anthropic's Mythos AI cyber threat（CNBC）<br />
+- Vance, Bessent questioned tech giants on AI security（CNBC）<br />
+- White House warned staff against Iran war bets on prediction markets（CNBC）<br />
+- Alibaba's Qwen family captures over 50% of global open-source downloads（SCMP）<br />
+- Alibaba just revealed it's behind HappyHorse AI video model（CNBC）<br />
+- Where AI data centers are reducing power bills（The Indicator Podcast）<br />
+- 解放軍AI指揮贏人類，中共敢放權？（謎米香港 YouTube）<br />
+- 美點名DeepSeek三宗罪，新加坡牽扯其中（謎米香港 YouTube）</p>
+<h3>🇨🇳 中國政經與兩岸關係</h3>
+<p>習近平會見國民黨主席鄭麗文，時隔近十年首次與台灣在野黨領導人會談，強調兩岸關係未來掌握在中國人手中。會後15架中共軍機擾台示警，引發外界質疑。內地深化創業板改革，針對新興產業增設第4套上市標準，並引入做市商制度。中國3月PPI首次轉升至0.5%，擺脫逾三年跌勢。中國通過多年能源結構多元化和儲備建設，在伊朗戰爭引發能源衝擊時成為避險資產。外交部長王毅訪朝與金正恩會面，朝鮮表示支持中方維護台灣等主權立場。</p>
+<p><strong>相關項目：</strong><br />
+- 習近平會見鄭麗文，稱兩岸關係未來應掌握在中國人手中（RTHK、CNBC）<br />
+- 鄭麗文見習近平慘遭羞辱，台灣熱議習近平身高造假（Hong Kong Uncensored YouTube）<br />
+- 國民黨主席鄭麗文同習近平握手15秒，15架中共軍機擾台（吳志森 YouTube）<br />
+- 鄭習會細節，國民黨上台和平統一機會大增（風雲谷 YouTube）<br />
+- 內地深化創業板改革，針對新興產業增設上市標準（RTHK）<br />
+- 內地生產物價擺脫逾三年跌勢，三月PPI轉升（RTHK）<br />
+- Chinese assets become conflict safe-haven（CNBC）<br />
+- 王毅感謝朝方修繕志願軍烈士陵園（RTHK）<br />
+- 金正恩稱堅定支持中方維護國家主權（RTHK）<br />
+- 中國斷網式全面封鎖海外網站，VPN清零禁止連接香港（傑斯 YouTube）</p>
+<h3>🏦 香港金融與經濟</h3>
+<p>香港金管局向滙豐及碇點金融發出首批穩定幣發行人牌照，兩家機構計劃今年中至下半年推出港元穩定幣。證監會將於短期內對首次公開招股保薦人展開主題視察，無紙證券市場改革將於今年11月16日實施。財委會通過政府18億元柴油補貼撥款申請，為期兩個月。政府完成檢讨36個帳目外基金，預計2026至27年度回撥約158億元至政府帳目。香港樓價已反彈13至14%並呈現止跌回穩跡象。政府計劃本月公布第六批約20間重點企業，預期帶來更大規模資本投入。</p>
+<p><strong>相關項目：</strong><br />
+- 滙豐及碇點金融獲批穩定幣發行人牌照（RTHK、SCMP）<br />
+- 陳浩濂：證監會短期內對上市保薦人展開主題視察（RTHK）<br />
+- 財委會通過政府柴油補貼18億元撥款申請（RTHK）<br />
+- 許正宇：完成檢讨政府帳目外基金，料本年度回撥約158億元（RTHK）<br />
+- 期待樓價見底是僥倖心理？我對樓市回穩的幾點觀察（財經拆局 YouTube）<br />
+- 政府擬本月公布第六批約20間重點企業（RTHK）<br />
+- 發債翻倍、動用終極儲備：基本法「量入為出」全面撕毀（謎米香港 YouTube）</p>
+<h3>🇺🇸 美國政治與政策</h3>
+<p>特朗普讚揚Palantir的軍事能力，惟該公司股價在過去一周下跌14%創逾一年最差表現。梅蘭妮亞突然召開記者會撇清與愛潑斯坦關係，特朗普事前稱不知情，引發白宮內部訊息不一致疑團。美國司法部門開啟對NFL體育電視轉播協議的反競爭調查。美國撤出西班牙及德國基地，重新調配八萬四千美軍至波蘭、羅馬尼亞等東歐國家。英國首相基爾·斯塔默表示厭倦於特朗普和普京的行動導致英國能源成本波動。特朗普政府與歐盟就科技公司罰款產生衝突，谷歌、蘋果和Meta等在兩年內遭歐盟罰款超過70億美元。</p>
+<p><strong>相關項目：</strong><br />
+- Trump praises Palantir as stock has worst week（CNBC）<br />
+- Michael Burry says he's still betting against Palantir（CNBC）<br />
+- 梅蘭妮亞突然發聲明撇清Epstein，特朗普竟然話自己唔知情（徐少驊 YouTube）<br />
+- DOJ Opens Probe Into NFL's Sports TV Deals（Bloomberg Intelligence Podcast）<br />
+- 美軍將兵力調到東歐中歐格陵蘭及捍衛第一島鏈（城寨 YouTube）<br />
+- Keir Starmer: I'm fed up with Trump and Putin affecting UK energy costs（CNBC）<br />
+- Trump administration getting angry as EU Big Tech fines top $7 billion（CNBC）</p>
+<h3>🚀 科技與商業</h3>
+<p>馬斯克旗下Terafab進軍晶圓製造業，可能挑戰台積電的市場地位。台積電首季收入按年增長35%至創新高的1.13兆新台幣，受惠於AI晶片需求強勁。NASA Artemis II任務創造人類太空飛行紀錄，拍攝月球暗面罕見影像。Tether在十年間成長為全球加密貨幣巨頭，正邁向成為全球最高估值私人公司之列。CoreWeave與AI公司Anthropic達成多年協議為其Claude模型提供基礎設施支援，股價應聲上漲11%。禮來製藥在印度減肥藥市場佔有率下滑至56%，諾和諾德則維持25%的穩定佔有率。</p>
+<p><strong>相關項目：</strong><br />
+- 馬斯克突襲晶圓戰場！Terafab橫空出世！台積電地位要變天？（蕭若元 YouTube）<br />
+- TSMC posts 35% jump in revenue to new record（CNBC）<br />
+- One Small Step for NASA, One Giant Leap for the Lunar Economy（Big Take Podcast）<br />
+- Meet Tether: The Most Powerful Crypto Firm You've Never Heard Of（Big Take Podcast）<br />
+- CoreWeave stock pops 11% on deal to power Anthropic's Claude（CNBC）<br />
+- Eli Lilly market share drops, Novo</p>]]></description>
+  </item>
   <item>
     <title>【情報簡報】2026-04-06 晚報</title>
     <link>https://unsubject.github.io/socialisn/briefings/2026-04-06-evening.html</link>
