@@ -177,7 +177,7 @@ def build_prompt(youtube_items: list[dict], news_items: list[dict],
 - YouTube頻道：{len(youtube_items)} 條影片
 - 新聞來源：{len(news_items)} 篇文章
 - Podcast：{len(podcast_items)} 集
-- 最高觀看影片：{youtube_sorted[0].get('title', 'N/A')[:50] if youtube_sorted else 'N/A'}（{youtube_sorted[0].get('view_count', 0):,} 觀看）
+- 最高觀看影片：{youtube_sorted[0].get('title', 'N/A')[:50] + '（' + format(youtube_sorted[0].get('view_count', 0), ',') + ' 觀看）' if youtube_sorted else 'N/A'}
 
 ## 編輯備注
 用2至3句話點出今日整體資訊環境的特點或值得留意之處。
