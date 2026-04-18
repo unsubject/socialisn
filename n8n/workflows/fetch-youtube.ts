@@ -160,7 +160,7 @@ const triggerTranscripts = node({
     name: 'Trigger Transcript Enrichment',
     parameters: {
       source: 'database',
-      workflowId: 'VuYc4FsgAxoDNMu7',
+      workflowId: { __rl: true, value: 'VuYc4FsgAxoDNMu7', mode: 'id' },
       mode: 'once',
       options: {
         waitForSubWorkflow: false
