@@ -97,7 +97,39 @@ ON CONFLICT (type, name) DO UPDATE SET
   updated_at = NOW();
 
 -- ---------------------------------------------------------------------------
+-- Perplexity Search queries (one row per topic)
+-- The fetch-perplexity workflow queries this set; each row produces a summary
+-- of recent news on that topic (saved into news_items with source_type='perplexity').
+-- ---------------------------------------------------------------------------
+
+INSERT INTO sources (type, name, language, tags, config) VALUES
+  ('perplexity', 'HK Economy & Finance (EN)',           'en',    ARRAY['hongkong','economics','finance'],          '{"query":"Hong Kong economy and financial market news today"}'::jsonb),
+  ('perplexity', '香港經濟金融 (ZH)',                   'zh-TW', ARRAY['hongkong','economics','finance','chinese'],'{"query":"香港經濟 金融市場 今日新聞"}'::jsonb),
+  ('perplexity', 'HK Stock Market & IPO',                'en',    ARRAY['hongkong','finance','stock-market'],       '{"query":"Hong Kong stock market IPO investment news today"}'::jsonb),
+  ('perplexity', 'HK Property Market',                   'en',    ARRAY['hongkong','economics','property'],         '{"query":"Hong Kong property market real estate news today"}'::jsonb),
+  ('perplexity', 'HKMA Monetary Policy',                 'en',    ARRAY['hongkong','monetary-policy','government'], '{"query":"HKMA monetary policy Hong Kong banking regulation news"}'::jsonb),
+  ('perplexity', 'HK Government & Politics (EN)',        'en',    ARRAY['hongkong','politics'],                     '{"query":"Hong Kong government policy political news today"}'::jsonb),
+  ('perplexity', '香港政治 (ZH)',                       'zh-TW', ARRAY['hongkong','politics','chinese'],           '{"query":"香港政治 政府政策 今日重要新聞"}'::jsonb),
+  ('perplexity', 'HK Top Breaking News',                 'en',    ARRAY['hongkong','general'],                      '{"query":"Hong Kong top breaking news today"}'::jsonb),
+  ('perplexity', 'China Economy & Trade (EN)',           'en',    ARRAY['china','economics'],                       '{"query":"China economy GDP trade policy news today"}'::jsonb),
+  ('perplexity', '中國經濟政策 (ZH)',                   'zh-TW', ARRAY['china','economics','politics','chinese'],  '{"query":"中國經濟 中央政府政策 今日新聞"}'::jsonb),
+  ('perplexity', 'China Government Policy',              'en',    ARRAY['china','politics'],                        '{"query":"China central government political decisions policy news today"}'::jsonb),
+  ('perplexity', 'China Finance & Technology',           'en',    ARRAY['china','finance','technology'],            '{"query":"China financial market regulation technology sector news today"}'::jsonb),
+  ('perplexity', 'Global Economy & Markets',             'en',    ARRAY['global','economics','finance'],            '{"query":"Global economy world financial market news today"}'::jsonb),
+  ('perplexity', 'US Fed & Monetary Policy',             'en',    ARRAY['global','monetary-policy'],                '{"query":"US Federal Reserve interest rate global monetary policy news today"}'::jsonb),
+  ('perplexity', 'Global Trade & Geopolitics',           'en',    ARRAY['global','economics','trade'],              '{"query":"Global trade tariffs geopolitics economic impact news today"}'::jsonb),
+  ('perplexity', 'UK Economy & Finance',                 'en',    ARRAY['uk','economics','finance'],                '{"query":"UK economy financial market Bank of England news today"}'::jsonb),
+  ('perplexity', 'UK Government & Politics',             'en',    ARRAY['uk','politics'],                           '{"query":"UK government Westminster political policy news today"}'::jsonb),
+  ('perplexity', 'Canada Economy & Finance',             'en',    ARRAY['canada','economics','finance'],            '{"query":"Canada economy financial market Bank of Canada news today"}'::jsonb),
+  ('perplexity', 'Canada Government & Politics',         'en',    ARRAY['canada','politics'],                       '{"query":"Canada federal government Ottawa political policy news today"}'::jsonb)
+ON CONFLICT (type, name) DO UPDATE SET
+  language = EXCLUDED.language,
+  tags     = EXCLUDED.tags,
+  config   = EXCLUDED.config,
+  updated_at = NOW();
+
+-- ---------------------------------------------------------------------------
 -- Verification
 -- ---------------------------------------------------------------------------
 -- SELECT type, COUNT(*) FROM sources GROUP BY type ORDER BY type;
---   Expected: podcast=12, rss=8, youtube=21
+--   Expected: perplexity=19, podcast=12, rss=8, youtube=21
