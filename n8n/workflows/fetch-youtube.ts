@@ -153,24 +153,6 @@ const saveVideo = node({
   output: [{}]
 });
 
-const triggerTranscripts = node({
-  type: 'n8n-nodes-base.executeWorkflow',
-  version: 1.3,
-  config: {
-    name: 'Trigger Transcript Enrichment',
-    parameters: {
-      source: 'database',
-      workflowId: { __rl: true, value: 'VuYc4FsgAxoDNMu7', mode: 'id' },
-      mode: 'once',
-      options: {
-        waitForSubWorkflow: false
-      }
-    },
-    position: [2160, 300]
-  },
-  output: [{}]
-});
-
 export default workflow('fetch-youtube', 'Fetch YouTube Videos')
   .add(schedule)
   .to(fetchChannels)
@@ -179,5 +161,4 @@ export default workflow('fetch-youtube', 'Fetch YouTube Videos')
   .to(filterRecentVideos)
   .to(fetchVideoDetails)
   .to(buildVideoRecord)
-  .to(saveVideo)
-  .to(triggerTranscripts);
+  .to(saveVideo);
