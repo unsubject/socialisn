@@ -23,7 +23,7 @@ logging.basicConfig(
 )
 log = logging.getLogger(__name__)
 
-TRANSCRIPT_LANG_PREFERENCE = ["zh-TW", "zh-Hant", "zh", "en"]
+TRANSCRIPT_LANG_PREFERENCE = ["zh-TW", "zh-Hant", "zh-Hans", "zh-CN", "zh", "en"]
 MAX_FULL_TEXT_CHARS = 5000
 
 # ── Health ────────────────────────────────────────────────────────────────────
@@ -47,67 +47,97 @@ class TranscriptResponse(BaseModel):
 
 @app.post("/youtube-transcript", response_model=TranscriptResponse)
 def youtube_transcript(req: TranscriptRequest):
-    from youtube_transcript_api import YouTubeTranscriptApi
-    from youtube_transcript_api._errors import (
-        NoTranscriptFound,
-        TranscriptsDisabled,
-        VideoUnavailable,
-    )
+    try:
+        from youtube_transcript_api import YouTubeTranscriptApi
+        from youtube_transcript_api._errors import (
+            NoTranscriptFound,
+            TranscriptsDisabled,
+            VideoUnavailable,
+        )
+    except ImportError as e:
+        log.error(f"youtube-transcript-api import failed (wrong version?): {e}")
+        return TranscriptResponse(available=False)
 
     null = TranscriptResponse(available=False)
 
     try:
         transcript_list = YouTubeTranscriptApi.list_transcripts(req.video_id)
-    except (TranscriptsDisabled, VideoUnavailable):
+    except (TranscriptsDisabled, VideoUnavailable) as e:
+        log.info(f"No transcripts for {req.video_id}: {type(e).__name__}")
         return null
     except Exception as e:
-        log.warning(f"Transcript list error for {req.video_id}: {e}")
+        log.error(f"Transcript list error for {req.video_id}: {type(e).__name__}: {e}")
         return null
+
+    available_langs = []
+    try:
+        all_transcripts = list(transcript_list)
+        available_langs = [
+            f"{t.language_code}({'gen' if t.is_generated else 'man'})"
+            for t in all_transcripts
+        ]
+        log.info(f"Video {req.video_id}: available transcripts: {available_langs}")
+    except Exception as e:
+        log.warning(f"Could not enumerate transcripts for {req.video_id}: {e}")
+        all_transcripts = []
 
     lang_pref = list(dict.fromkeys(
         (req.lang_prefs or []) + TRANSCRIPT_LANG_PREFERENCE
     ))
 
-    for lang in lang_pref:
-        try:
-            t = transcript_list.find_manually_created_transcript([lang])
-            entries = t.fetch()
-            return TranscriptResponse(
-                available=True,
-                language=t.language_code,
-                source="manual",
-                text=" ".join(e["text"] for e in entries).strip(),
-            )
-        except NoTranscriptFound:
-            continue
-
-    for lang in lang_pref:
-        try:
-            t = transcript_list.find_generated_transcript([lang])
-            entries = t.fetch()
-            return TranscriptResponse(
-                available=True,
-                language=t.language_code,
-                source="auto",
-                text=" ".join(e["text"] for e in entries).strip(),
-            )
-        except NoTranscriptFound:
-            continue
-
+    # Re-obtain transcript_list since we consumed the iterator
     try:
-        all_transcripts = list(transcript_list)
-        if all_transcripts:
+        transcript_list = YouTubeTranscriptApi.list_transcripts(req.video_id)
+    except Exception:
+        transcript_list = None
+
+    if transcript_list:
+        for lang in lang_pref:
+            try:
+                t = transcript_list.find_manually_created_transcript([lang])
+                entries = t.fetch()
+                text = " ".join(e["text"] for e in entries).strip()
+                log.info(f"Video {req.video_id}: found manual transcript lang={t.language_code} len={len(text)}")
+                return TranscriptResponse(
+                    available=True,
+                    language=t.language_code,
+                    source="manual",
+                    text=text,
+                )
+            except NoTranscriptFound:
+                continue
+
+        for lang in lang_pref:
+            try:
+                t = transcript_list.find_generated_transcript([lang])
+                entries = t.fetch()
+                text = " ".join(e["text"] for e in entries).strip()
+                log.info(f"Video {req.video_id}: found generated transcript lang={t.language_code} len={len(text)}")
+                return TranscriptResponse(
+                    available=True,
+                    language=t.language_code,
+                    source="auto",
+                    text=text,
+                )
+            except NoTranscriptFound:
+                continue
+
+    if all_transcripts:
+        try:
             t = all_transcripts[0]
             entries = t.fetch()
+            text = " ".join(e["text"] for e in entries).strip()
+            log.info(f"Video {req.video_id}: using fallback transcript lang={t.language_code} len={len(text)}")
             return TranscriptResponse(
                 available=True,
                 language=t.language_code,
                 source="manual" if not t.is_generated else "auto",
-                text=" ".join(e["text"] for e in entries).strip(),
+                text=text,
             )
-    except Exception as e:
-        log.warning(f"Fallback transcript error for {req.video_id}: {e}")
+        except Exception as e:
+            log.error(f"Fallback transcript fetch error for {req.video_id}: {type(e).__name__}: {e}")
 
+    log.warning(f"Video {req.video_id}: no transcript found. Available: {available_langs}, tried: {lang_pref}")
     return null
 
 
