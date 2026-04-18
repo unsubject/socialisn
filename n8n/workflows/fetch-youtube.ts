@@ -80,9 +80,9 @@ const filterRecentVideos = node({
   config: {
     name: 'Filter Recent Videos',
     parameters: {
-      mode: 'runOnceForEachItem',
+      mode: 'runOnceForAllItems',
       language: 'javaScript',
-      jsCode: "var resp = $json;\nvar ch = $(\"Derive Playlist IDs\").item.json;\nif (!ch || ch.skip || !resp.items || !Array.isArray(resp.items)) return { json: { skip: true } };\nvar cutoff = ch.published_after;\nvar results = [];\nfor (var i = 0; i < resp.items.length; i++) {\n  var details = resp.items[i].contentDetails || {};\n  var videoId = details.videoId;\n  var publishedAt = details.videoPublishedAt || '';\n  if (!videoId) continue;\n  if (publishedAt && publishedAt < cutoff) continue;\n  results.push({ json: { video_id: videoId, channel_id: ch.channel_id, channel_name: ch.channel_name, channel_language: ch.channel_language, channel_tags: ch.channel_tags } });\n}\nif (results.length === 0) return { json: { skip: true } };\nreturn results;"
+      jsCode: "var inputs = $input.all();\nvar chItems = $(\"Derive Playlist IDs\").all();\nvar results = [];\nfor (var k = 0; k < inputs.length; k++) {\n  var resp = inputs[k].json || {};\n  var ch = (chItems[k] && chItems[k].json) || {};\n  if (!ch || ch.skip || !resp.items || !Array.isArray(resp.items)) continue;\n  var cutoff = ch.published_after;\n  for (var i = 0; i < resp.items.length; i++) {\n    var details = resp.items[i].contentDetails || {};\n    var videoId = details.videoId;\n    var publishedAt = details.videoPublishedAt || '';\n    if (!videoId) continue;\n    if (publishedAt && publishedAt < cutoff) continue;\n    results.push({ json: { video_id: videoId, channel_id: ch.channel_id, channel_name: ch.channel_name, channel_language: ch.channel_language, channel_tags: ch.channel_tags }, pairedItem: { item: k } });\n  }\n}\nreturn results;"
     },
     position: [1200, 300]
   },
