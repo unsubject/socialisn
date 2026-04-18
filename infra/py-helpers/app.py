@@ -33,6 +33,62 @@ def health():
     return {"status": "ok"}
 
 
+@app.get("/debug/transcript/{video_id}")
+def debug_transcript(video_id: str):
+    """Diagnostic endpoint: returns library version, available transcripts, and
+    raw error info. Use to investigate why transcripts return null."""
+    import traceback
+    result = {"video_id": video_id}
+
+    try:
+        import youtube_transcript_api
+        result["library_version"] = getattr(youtube_transcript_api, "__version__", "unknown")
+    except Exception as e:
+        result["library_import_error"] = f"{type(e).__name__}: {e}"
+        return result
+
+    try:
+        from youtube_transcript_api import YouTubeTranscriptApi
+        transcript_list = YouTubeTranscriptApi.list_transcripts(video_id)
+    except Exception as e:
+        result["list_transcripts_error"] = f"{type(e).__name__}: {e}"
+        result["traceback"] = traceback.format_exc()
+        return result
+
+    try:
+        all_t = list(transcript_list)
+        result["transcripts"] = [
+            {
+                "language_code": t.language_code,
+                "language": getattr(t, "language", None),
+                "is_generated": t.is_generated,
+                "is_translatable": getattr(t, "is_translatable", None),
+            }
+            for t in all_t
+        ]
+    except Exception as e:
+        result["enumerate_error"] = f"{type(e).__name__}: {e}"
+        result["traceback"] = traceback.format_exc()
+        return result
+
+    if all_t:
+        try:
+            t = all_t[0]
+            entries = t.fetch()
+            entries_list = list(entries) if not isinstance(entries, list) else entries
+            result["first_fetch_sample"] = {
+                "language_code": t.language_code,
+                "entry_count": len(entries_list),
+                "first_entry_type": type(entries_list[0]).__name__ if entries_list else None,
+                "first_entry_text": _entry_text(entries_list[0]) if entries_list else None,
+            }
+        except Exception as e:
+            result["fetch_error"] = f"{type(e).__name__}: {e}"
+            result["traceback"] = traceback.format_exc()
+
+    return result
+
+
 # ── YouTube Transcript ────────────────────────────────────────────────────────
 
 class TranscriptRequest(BaseModel):
