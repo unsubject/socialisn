@@ -50,7 +50,7 @@ const callHelpers = node({
     name: 'Fetch Transcript',
     parameters: {
       method: 'POST',
-      url: 'https://py-helpers-production.up.railway.app/youtube-transcript',
+      url: 'https://socialisn-production.up.railway.app/youtube-transcript',
       sendBody: true,
       contentType: 'json',
       specifyBody: 'json',
