@@ -50,7 +50,6 @@ def youtube_transcript(req: TranscriptRequest):
     try:
         from youtube_transcript_api import YouTubeTranscriptApi
         from youtube_transcript_api._errors import (
-            NoTranscriptFound,
             TranscriptsDisabled,
             VideoUnavailable,
         )
@@ -69,76 +68,84 @@ def youtube_transcript(req: TranscriptRequest):
         log.error(f"Transcript list error for {req.video_id}: {type(e).__name__}: {e}")
         return null
 
-    available_langs = []
     try:
         all_transcripts = list(transcript_list)
-        available_langs = [
-            f"{t.language_code}({'gen' if t.is_generated else 'man'})"
-            for t in all_transcripts
-        ]
-        log.info(f"Video {req.video_id}: available transcripts: {available_langs}")
     except Exception as e:
         log.warning(f"Could not enumerate transcripts for {req.video_id}: {e}")
         all_transcripts = []
 
+    available = [
+        f"{t.language_code}({'gen' if t.is_generated else 'man'})"
+        for t in all_transcripts
+    ]
+    log.info(f"Video {req.video_id}: available transcripts: {available}")
+
+    if not all_transcripts:
+        log.warning(f"Video {req.video_id}: no transcripts returned from API")
+        return null
+
     lang_pref = list(dict.fromkeys(
         (req.lang_prefs or []) + TRANSCRIPT_LANG_PREFERENCE
     ))
+    # Case-insensitive lookup: map normalized code → priority rank
+    lang_rank = {code.lower(): i for i, code in enumerate(lang_pref)}
 
-    # Re-obtain transcript_list since we consumed the iterator
+    def score(t):
+        # (manual before generated, language-priority, original order)
+        manual_rank = 0 if not t.is_generated else 1
+        code = (t.language_code or "").lower()
+        # Exact match first; then fall back to prefix match (e.g. "zh" matches "zh-HK")
+        if code in lang_rank:
+            lang_score = lang_rank[code]
+        else:
+            prefix_scores = [
+                rank for pref, rank in lang_rank.items()
+                if code.startswith(pref.split("-")[0])
+            ]
+            lang_score = min(prefix_scores) + 1000 if prefix_scores else 9999
+        return (manual_rank, lang_score)
+
+    ranked = sorted(all_transcripts, key=score)
+    chosen = ranked[0]
+
     try:
-        transcript_list = YouTubeTranscriptApi.list_transcripts(req.video_id)
-    except Exception:
-        transcript_list = None
-
-    if transcript_list:
-        for lang in lang_pref:
+        entries = chosen.fetch()
+    except Exception as e:
+        log.error(f"Transcript fetch error for {req.video_id} lang={chosen.language_code}: {type(e).__name__}: {e}")
+        # Try the next-best option as a secondary fallback
+        for alt in ranked[1:]:
             try:
-                t = transcript_list.find_manually_created_transcript([lang])
-                entries = t.fetch()
-                text = " ".join(e["text"] for e in entries).strip()
-                log.info(f"Video {req.video_id}: found manual transcript lang={t.language_code} len={len(text)}")
-                return TranscriptResponse(
-                    available=True,
-                    language=t.language_code,
-                    source="manual",
-                    text=text,
-                )
-            except NoTranscriptFound:
+                entries = alt.fetch()
+                chosen = alt
+                break
+            except Exception:
                 continue
+        else:
+            return null
 
-        for lang in lang_pref:
-            try:
-                t = transcript_list.find_generated_transcript([lang])
-                entries = t.fetch()
-                text = " ".join(e["text"] for e in entries).strip()
-                log.info(f"Video {req.video_id}: found generated transcript lang={t.language_code} len={len(text)}")
-                return TranscriptResponse(
-                    available=True,
-                    language=t.language_code,
-                    source="auto",
-                    text=text,
-                )
-            except NoTranscriptFound:
-                continue
+    try:
+        text = " ".join(_entry_text(e) for e in entries).strip()
+    except Exception as e:
+        log.error(f"Transcript decode error for {req.video_id}: {type(e).__name__}: {e}")
+        return null
 
-    if all_transcripts:
-        try:
-            t = all_transcripts[0]
-            entries = t.fetch()
-            text = " ".join(e["text"] for e in entries).strip()
-            log.info(f"Video {req.video_id}: using fallback transcript lang={t.language_code} len={len(text)}")
-            return TranscriptResponse(
-                available=True,
-                language=t.language_code,
-                source="manual" if not t.is_generated else "auto",
-                text=text,
-            )
-        except Exception as e:
-            log.error(f"Fallback transcript fetch error for {req.video_id}: {type(e).__name__}: {e}")
+    log.info(
+        f"Video {req.video_id}: returning transcript lang={chosen.language_code} "
+        f"source={'auto' if chosen.is_generated else 'manual'} len={len(text)}"
+    )
+    return TranscriptResponse(
+        available=True,
+        language=chosen.language_code,
+        source="auto" if chosen.is_generated else "manual",
+        text=text,
+    )
 
-    log.warning(f"Video {req.video_id}: no transcript found. Available: {available_langs}, tried: {lang_pref}")
-    return null
+
+def _entry_text(e) -> str:
+    """Handle both v0.6.x (dict with 'text' key) and v1.x (object with .text attr)."""
+    if isinstance(e, dict):
+        return e.get("text", "")
+    return getattr(e, "text", "")
 
 
 # ── Article Scraping ──────────────────────────────────────────────────────────
