@@ -80,9 +80,9 @@ const filterRecentVideos = node({
   config: {
     name: 'Filter Recent Videos',
     parameters: {
-      mode: 'runOnceForEachItem',
+      mode: 'runOnceForAllItems',
       language: 'javaScript',
-      jsCode: "var resp = $json;\nvar ch = $(\"Derive Playlist IDs\").item.json;\nif (!ch || ch.skip || !resp.items || !Array.isArray(resp.items)) return { json: { skip: true } };\nvar cutoff = ch.published_after;\nvar results = [];\nfor (var i = 0; i < resp.items.length; i++) {\n  var details = resp.items[i].contentDetails || {};\n  var videoId = details.videoId;\n  var publishedAt = details.videoPublishedAt || '';\n  if (!videoId) continue;\n  if (publishedAt && publishedAt < cutoff) continue;\n  results.push({ json: { video_id: videoId, channel_id: ch.channel_id, channel_name: ch.channel_name, channel_language: ch.channel_language, channel_tags: ch.channel_tags } });\n}\nif (results.length === 0) return { json: { skip: true } };\nreturn results;"
+      jsCode: "var inputs = $input.all();\nvar chItems = $(\"Derive Playlist IDs\").all();\nvar results = [];\nfor (var k = 0; k < inputs.length; k++) {\n  var resp = inputs[k].json || {};\n  var ch = (chItems[k] && chItems[k].json) || {};\n  if (!ch || ch.skip || !resp.items || !Array.isArray(resp.items)) continue;\n  var cutoff = ch.published_after;\n  for (var i = 0; i < resp.items.length; i++) {\n    var details = resp.items[i].contentDetails || {};\n    var videoId = details.videoId;\n    var publishedAt = details.videoPublishedAt || '';\n    if (!videoId) continue;\n    if (publishedAt && publishedAt < cutoff) continue;\n    results.push({ json: { video_id: videoId, channel_id: ch.channel_id, channel_name: ch.channel_name, channel_language: ch.channel_language, channel_tags: ch.channel_tags }, pairedItem: { item: k } });\n  }\n}\nreturn results;"
     },
     position: [1200, 300]
   },
@@ -141,7 +141,7 @@ const saveVideo = node({
     name: 'Save YouTube Video',
     parameters: {
       operation: 'executeQuery',
-      query: "INSERT INTO youtube_items (video_id, channel_id, channel_name, channel_tags, title, description, published_at, duration_seconds, view_count, like_count, comment_count, thumbnail_url, tags, fetched_at) VALUES ($1, $2, $3, $4::text[], $5, $6, $7::timestamptz, $8::integer, $9::integer, $10::integer, $11::integer, $12, $13::text[], NOW()) ON CONFLICT (video_id) DO NOTHING",
+      query: "INSERT INTO youtube_items (video_id, channel_id, channel_name, channel_tags, title, description, published_at, duration_seconds, view_count, like_count, comment_count, thumbnail_url, tags, fetched_at) VALUES ($1, $2, $3, $4::text[], $5, $6, $7::timestamptz, $8::integer, $9::integer, $10::integer, $11::integer, $12, $13::text[], NOW()) ON CONFLICT (video_id) DO UPDATE SET view_count = EXCLUDED.view_count, like_count = EXCLUDED.like_count, comment_count = EXCLUDED.comment_count, fetched_at = NOW()",
       options: {
         queryReplacement: expr('={{ [$json.video_id, $json.channel_id, $json.channel_name, $json.channel_tags_literal, $json.title, $json.description, $json.published_at, $json.duration_seconds, $json.view_count, $json.like_count, $json.comment_count, $json.thumbnail_url, $json.tags_literal] }}')
       }
@@ -149,6 +149,24 @@ const saveVideo = node({
     credentials: { postgres: newCredential('Postgres') },
     onError: 'continueRegularOutput',
     position: [1920, 300]
+  },
+  output: [{}]
+});
+
+const triggerTranscripts = node({
+  type: 'n8n-nodes-base.executeWorkflow',
+  version: 1.3,
+  config: {
+    name: 'Trigger Transcript Enrichment',
+    parameters: {
+      source: 'database',
+      workflowId: { __rl: true, value: 'VuYc4FsgAxoDNMu7', mode: 'id' },
+      mode: 'once',
+      options: {
+        waitForSubWorkflow: false
+      }
+    },
+    position: [2160, 300]
   },
   output: [{}]
 });
@@ -161,4 +179,5 @@ export default workflow('fetch-youtube', 'Fetch YouTube Videos')
   .to(filterRecentVideos)
   .to(fetchVideoDetails)
   .to(buildVideoRecord)
-  .to(saveVideo);
+  .to(saveVideo)
+  .to(triggerTranscripts);

@@ -1,12 +1,12 @@
 import { workflow, node, trigger, newCredential, expr } from '@n8n/workflow-sdk';
 
-const schedule = trigger({
-  type: 'n8n-nodes-base.scheduleTrigger',
-  version: 1.3,
+const calledByYoutubeFetch = trigger({
+  type: 'n8n-nodes-base.executeWorkflowTrigger',
+  version: 1.1,
   config: {
-    name: 'Every Hour',
+    name: 'Called by YouTube Fetch',
     parameters: {
-      rule: { interval: [{ field: 'cronExpression', expression: '15 * * * *' }] }
+      inputSource: 'passthrough'
     },
     position: [240, 300]
   },
@@ -102,7 +102,7 @@ const updateRow = node({
 });
 
 export default workflow('enrich-youtube-transcripts', 'Enrich YouTube Transcripts')
-  .add(schedule)
+  .add(calledByYoutubeFetch)
   .to(fetchMissing)
   .to(buildRequest)
   .to(callHelpers)
