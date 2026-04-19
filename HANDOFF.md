@@ -1,6 +1,6 @@
 # Handoff — socialisn
 
-_Last updated: 2026-04-19_
+_Last updated: 2026-04-19 (continuation)_
 
 ## FIRST THING NEXT SESSION MUST DO
 
@@ -12,9 +12,37 @@ The user has n8n's native **Instance-level MCP** enabled at:
 - MCP settings page: `Settings → MCP` (screenshot confirms "Enabled")
 - Connection URL + API key: click **Connection details** on that page
 
-Add it to Claude Code's MCP config (`~/.claude/settings.json` or the project `.mcp.json`) so the `mcp__n8n__*` tools load at session start. Ask the user for the connection URL + API key — do **not** hard-code; keep the key in an env var. Expected tool surface in previous sessions: `list_workflows`, `get_workflow`, `update_workflow`, `create_workflow_from_code`, `validate_workflow`, `execute_workflow`, etc.
+### Verifying MCP is live
 
-Once connected, reconcile state: **git is the source of truth**. If a workflow exists in n8n but not in git, export it with `get_workflow` and commit. If it exists in git but not in n8n, upsert it via `create_workflow_from_code` / `update_workflow`.
+At session start, call `ToolSearch` with query `mcp__n8n`. If no tools come back, the MCP is **not** registered for this session — do not proceed with n8n changes. Print the config stanza below and ask the user to restart Claude Code.
+
+### Config stanza (fill in from n8n Settings → MCP → Connection details)
+
+Add to `~/.claude/settings.json` (personal, key stays off git) or project `.mcp.json` with env-var interpolation:
+
+```jsonc
+{
+  "mcpServers": {
+    "n8n": {
+      "type": "http",
+      "url": "https://n8n.srv1565522.hstgr.cloud/mcp/<connection-path-from-UI>",
+      "headers": {
+        "Authorization": "Bearer ${N8N_API_KEY}"
+      }
+    }
+  }
+}
+```
+
+Then export `N8N_API_KEY` (and `N8N_BASE_URL=https://n8n.srv1565522.hstgr.cloud` for the fallback script) in the shell before launching Claude Code.
+
+### Fallback when MCP isn't available
+
+`scripts/deploy_n8n_workflows.sh` does plain REST upserts using `$N8N_BASE_URL` + `$N8N_API_KEY`. Use only if the MCP route is down — MCP is still the default.
+
+### Reconcile direction
+
+**Git is the source of truth.** If a workflow exists in n8n but not in git, export it and commit. If it exists in git but not in n8n, upsert it via MCP (`create_workflow_from_code` / `update_workflow`) or the fallback script.
 
 ## Today's delivery (2026-04-19)
 
@@ -31,21 +59,21 @@ Three PRs merged:
 - **`Fetch Gmail Subscriptions` (today's new workflow) is NOT yet in n8n.** It exists only as JSON at `n8n/workflows/fetch-gmail-subscriptions.json` on `main`.
 - The canvas also shows an older workflow `Fetch Newsletter Emails1` (note the `1` suffix — a duplicate import of `fetch-gmail-newsletters.json`) with a manually added `Delete a message` node that is **erroring** (red frame, ✕ icon). Likely cause: the Gmail OAuth2 credential is missing the `https://www.googleapis.com/auth/gmail.modify` scope required for `messages.trash`, or the `messageId` expression doesn't resolve at that point in the flow. Next session should diagnose via MCP (`execute_workflow` with a test payload, inspect the error).
 
-### Known broken path — abandon the GitHub Actions deploy
+### Known broken path — GitHub Actions deploy has been deleted
 
-PR #32's `.github/workflows/deploy_n8n.yml` fails with:
+PR #32's `.github/workflows/deploy_n8n.yml` was removed this session. It failed with:
 
 ```
 curl: (28) Failed to connect to n8n.srv1565522.hstgr.cloud port 443 after 133318 ms
 ```
 
-GitHub-hosted runners are blocked at layer 4 by Hostinger's edge (server itself responds `403` from other networks — it's reachable, just not from GitHub runners). Attempted fixes considered and rejected: whitelist GitHub's `/meta` IP ranges (brittle), self-hosted runner (ops overhead), SSH-based deploy (OK but still reinvents what n8n MCP already does for free).
+GitHub-hosted runners are blocked at layer 4 by Hostinger's edge (server itself responds `403` from other networks — it's reachable, just not from GitHub runners). Rejected alternatives: whitelisting GitHub's `/meta` IP ranges (brittle), self-hosted runner (ops overhead), SSH-based deploy (reinvents MCP).
 
-**Next session: delete `.github/workflows/deploy_n8n.yml`.** With n8n MCP wired in, Claude deploys workflows directly via MCP — no CI pipeline needed for n8n.
+Replacement: `scripts/deploy_n8n_workflows.sh` runs locally from a shell that can reach the n8n host. Preferred path remains n8n MCP from Claude Code.
 
 ## Outstanding work next session should pick up
 
-1. **Wire up n8n MCP** (see top of file).
+1. **Wire up n8n MCP** (see top of file). Verify with `ToolSearch` query `mcp__n8n`.
 2. **Deploy `fetch-gmail-subscriptions.json`** via MCP `create_workflow_from_code` (or `update_workflow` if user imported manually). Validate with `validate_workflow` first.
 3. **Apply the DB migration** — `ALTER TABLE newsletter_items ADD COLUMN IF NOT EXISTS summary TEXT;` — either via n8n's Postgres credential inside a throwaway workflow, or a one-off psql. Already in `infra/init.sql` for fresh DBs.
 4. **Bind credentials** on the newly imported workflow (one-time, via UI — credentials don't live in git):
@@ -53,7 +81,7 @@ GitHub-hosted runners are blocked at layer 4 by Hostinger's edge (server itself 
    - `Postgres`
    - `Anthropic API Key` (HTTP Header Auth, header `x-api-key`)
 5. **Diagnose the `Delete a message` error** on the older `Fetch Newsletter Emails1` canvas. Either fix it or delete that workflow after confirming `fetch-gmail-subscriptions` subsumes it.
-6. **Delete `.github/workflows/deploy_n8n.yml`** — abandoned approach.
+6. ~~Delete `.github/workflows/deploy_n8n.yml`~~ — done this session.
 7. **Activate** `Fetch Gmail Subscriptions` (`active: true`) once verified.
 
 ## Architecture
