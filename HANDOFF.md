@@ -16,25 +16,30 @@ The user has n8n's native **Instance-level MCP** enabled at:
 
 At session start, call `ToolSearch` with query `mcp__n8n`. If no tools come back, the MCP is **not** registered for this session — do not proceed with n8n changes. Print the config stanza below and ask the user to restart Claude Code.
 
-### Config stanza (fill in from n8n Settings → MCP → Connection details)
+### Config stanza — already committed
 
-Add to `~/.claude/settings.json` (personal, key stays off git) or project `.mcp.json` with env-var interpolation:
+`.mcp.json` at the repo root is wired to env-var interpolation:
 
 ```jsonc
 {
   "mcpServers": {
     "n8n": {
       "type": "http",
-      "url": "https://n8n.srv1565522.hstgr.cloud/mcp/<connection-path-from-UI>",
-      "headers": {
-        "Authorization": "Bearer ${N8N_API_KEY}"
-      }
+      "url": "${N8N_MCP_URL}",
+      "headers": { "Authorization": "Bearer ${N8N_MCP_TOKEN}" }
     }
   }
 }
 ```
 
-Then export `N8N_API_KEY` (and `N8N_BASE_URL=https://n8n.srv1565522.hstgr.cloud` for the fallback script) in the shell before launching Claude Code.
+Before launching Claude Code from this repo, export both values from n8n Settings → MCP → Connection details → **Access Token** tab:
+
+```bash
+export N8N_MCP_URL="https://n8n.srv1565522.hstgr.cloud/mcp/<connection-path-from-UI>"
+export N8N_MCP_TOKEN="<personal MCP Access Token>"
+```
+
+The `N8N_MCP_TOKEN` is the **MCP Access Token** shown in the Connection details popup — it's a separate credential from the regular n8n REST API key (`N8N_API_KEY`) used by the fallback deploy script. For the fallback script also export `N8N_BASE_URL=https://n8n.srv1565522.hstgr.cloud` and `N8N_API_KEY=<n8n personal API key>`.
 
 ### Fallback when MCP isn't available
 
@@ -73,7 +78,7 @@ Replacement: `scripts/deploy_n8n_workflows.sh` runs locally from a shell that ca
 
 ## Outstanding work next session should pick up
 
-1. **Wire up n8n MCP** (see top of file). Verify with `ToolSearch` query `mcp__n8n`.
+1. ~~**Wire up n8n MCP**~~ — `.mcp.json` committed on branch `claude/wire-n8n-mcp-server-Ggb8R` (2026-04-19). Next session: export `N8N_MCP_URL` + `N8N_MCP_TOKEN`, then verify with `ToolSearch` query `mcp__n8n`.
 2. **Deploy `fetch-gmail-subscriptions.json`** via MCP `create_workflow_from_code` (or `update_workflow` if user imported manually). Validate with `validate_workflow` first.
 3. **Apply the DB migration** — `ALTER TABLE newsletter_items ADD COLUMN IF NOT EXISTS summary TEXT;` — either via n8n's Postgres credential inside a throwaway workflow, or a one-off psql. Already in `infra/init.sql` for fresh DBs.
 4. **Bind credentials** on the newly imported workflow (one-time, via UI — credentials don't live in git):
