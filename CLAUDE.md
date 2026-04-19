@@ -15,6 +15,10 @@ socialisn monitors Hong Kong public discourse via scheduled fetchers (YouTube, R
 
 GitHub Actions cannot reach the n8n host (blocked at Hostinger edge from GH runners) — do not add Actions that push to n8n. Use n8n MCP from Claude Code, or the local `scripts/deploy_n8n_workflows.sh` fallback.
 
+## Cross-project: shared Postgres
+
+The Railway Postgres instance used here is **shared with [`unsubject/frontierwatch2`](https://github.com/unsubject/frontierwatch2)** (private). frontierwatch2 owns the `frontier_watches`, `frontier_briefings`, and `frontier_watchlist` tables. Don't modify those from this repo's workflows or DDL. If a socialisn briefing wants to read frontier content, treat it as a read-only foreign surface.
+
 ## Deploying n8n workflows
 
 Preferred: n8n MCP tools (`mcp__n8n__create_workflow_from_code`, `mcp__n8n__update_workflow`). Always call `mcp__n8n__validate_workflow` first. If `mcp__n8n__*` tools aren't loaded in a session, the MCP env vars are missing — see README.
@@ -23,11 +27,13 @@ Fallback (only if MCP is unavailable): `scripts/deploy_n8n_workflows.sh` with `N
 
 ## Database
 
-Schema in `infra/init.sql`; source seeds in `infra/seed_sources.sql`. Key tables:
+Schema in `infra/init.sql`; source seeds in `infra/seed_sources.sql`. Key tables owned by this repo:
 - `sources` — fetcher config
 - `youtube_items`, `news_items`, `podcast_items`, `newsletter_items` — raw fetched items
 - `item_enrichment(item_type, item_id, summary_zh, keywords_zh[], processed_at)` — 1:1 enrichment (newsletter items use the inline `newsletter_items.summary` column instead)
 - `briefings(date, slot, markdown, html, email_sent_at, ...)`
+
+Tables owned by `unsubject/frontierwatch2` (share this DB, don't modify here): `frontier_watches`, `frontier_briefings`, `frontier_watchlist`.
 
 ## n8n SDK gotchas (stable invariants)
 
@@ -35,10 +41,16 @@ Schema in `infra/init.sql`; source seeds in `infra/seed_sources.sql`. Key tables
 - `runOnceForEachItem` Code nodes return a single `{json: {...}}`; `runOnceForAllItems` uses `$input.all()` / `$("NodeName").all()` with `pairedItem: { item: k }`.
 - `executeWorkflow` node's `workflowId` needs resource locator format: `{ __rl: true, value: 'ID', mode: 'id' }`.
 - Prefer `ON CONFLICT DO UPDATE` over `DO NOTHING` when downstream filters use `fetched_at >= NOW() - INTERVAL 'X hours'` — `DO NOTHING` strands items outside the window.
+- **n8n MCP skips HTTP Request credential auto-assignment.** `newCredential('Name')` doesn't resolve for HTTP nodes. After `create_workflow_from_code` for a workflow with HTTP nodes, bind each one in the UI once. Bindings persist across future `update_workflow` calls.
 
 ## Credentials live in n8n, not git
 
-One-time UI binding per workflow: `Postgres`, `Anthropic API Key` (HTTP Header Auth, `x-api-key`), `Gmail OAuth2` (needs `gmail.modify` scope for trash steps), `YouTube API Key` (httpQueryAuth, Name=`key`), `Perplexity API` (Bearer).
+One-time UI binding per workflow. Actual credential names on the instance:
+- Postgres: `Railway`
+- Gmail OAuth2: `Gmail account` (has `gmail.modify` scope)
+- Anthropic: `Anthropic API Key` (httpHeaderAuth, `x-api-key`)
+- Perplexity: `Perplexity API` (httpBearerAuth)
+- YouTube: `YouTube API Key` (httpQueryAuth, Name=`key`)
 
 ## Session handoff
 
