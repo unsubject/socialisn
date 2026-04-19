@@ -32,14 +32,18 @@ At session start, call `ToolSearch` with query `mcp__n8n`. If no tools come back
 }
 ```
 
-Before launching Claude Code from this repo, export both values from n8n Settings → MCP → Connection details → **Access Token** tab:
+Both values come from n8n Settings → MCP → Connection details → **Access Token** tab.
+
+**Claude Code on the web (how this repo is being used):** add `N8N_MCP_URL` and `N8N_MCP_TOKEN` as repository env vars/secrets in the Claude Code web settings for `unsubject/socialisn`. The runner's session env is where `.mcp.json` picks them up. After adding, start a fresh session — MCP servers register at session start only.
+
+**Claude Code locally:**
 
 ```bash
 export N8N_MCP_URL="https://n8n.srv1565522.hstgr.cloud/mcp/<connection-path-from-UI>"
 export N8N_MCP_TOKEN="<personal MCP Access Token>"
 ```
 
-The `N8N_MCP_TOKEN` is the **MCP Access Token** shown in the Connection details popup — it's a separate credential from the regular n8n REST API key (`N8N_API_KEY`) used by the fallback deploy script. For the fallback script also export `N8N_BASE_URL=https://n8n.srv1565522.hstgr.cloud` and `N8N_API_KEY=<n8n personal API key>`.
+The `N8N_MCP_TOKEN` is the **MCP Access Token** shown in the Connection details popup — it's a separate credential from the regular n8n REST API key (`N8N_API_KEY`) used by the fallback deploy script. For the fallback script also set `N8N_BASE_URL=https://n8n.srv1565522.hstgr.cloud` and `N8N_API_KEY=<n8n personal API key>`.
 
 ### Fallback when MCP isn't available
 
