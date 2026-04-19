@@ -1,7 +1,6 @@
 import { workflow, node, trigger, newCredential, expr } from '@n8n/workflow-sdk';
 
-// Runs every 3 hours and pulls all emails with a List-Unsubscribe header
-// (the RFC 2369 marker that identifies genuine newsletter/mailing-list traffic).
+// Runs every 3 hours and fetches all emails tagged with the 'subscription' Gmail label.
 // Deduplication is handled by ON CONFLICT (message_id) DO NOTHING in Postgres.
 
 const schedule = trigger({
@@ -28,11 +27,10 @@ const fetchEmails = node({
       returnAll: false,
       limit: 100,
       filters: {
-        // has:list-unsubscribe matches any email carrying the List-Unsubscribe
-        // header required by RFC 2369 — the most reliable newsletter signal.
-        // newer_than:3d gives a 50% overlap window so we never miss an email
-        // even if a run is delayed or skipped.
-        q: 'has:list-unsubscribe newer_than:3d',
+        // label:subscription targets the manually applied Gmail label.
+        // newer_than:3d gives a 50% overlap window on the 3-hour schedule
+        // so no email is missed even if a run is delayed or skipped.
+        q: 'label:subscription newer_than:3d',
         includeSpamTrash: false
       },
       options: {
@@ -50,7 +48,7 @@ const fetchEmails = node({
       subject: 'Weekly Digest #42',
       from: 'Example Newsletter <newsletter@example.com>',
       date: '2026-04-18T09:00:00Z',
-      labelIds: ['INBOX', 'CATEGORY_PROMOTIONS']
+      labelIds: ['INBOX', 'subscription']
     }
   ]
 });
@@ -88,7 +86,7 @@ const normalize = node({
         "let senderEmail = '', senderName = null;",
         "const fromMatch = from.match(/^([^<]*)<([^>]+)>/);",
         "if (fromMatch) {",
-        "  senderName  = fromMatch[1].replace(/[\"\']/g, '').trim() || null;",
+        "  senderName  = fromMatch[1].replace(/[\"']/g, '').trim() || null;",
         "  senderEmail = fromMatch[2].trim().toLowerCase();",
         "} else {",
         "  senderEmail = from.trim().toLowerCase();",
@@ -156,7 +154,7 @@ const normalize = node({
       subject: 'Weekly Digest #42',
       body_text: 'Content preview...',
       body_html: null,
-      labels_literal: '{"INBOX","CATEGORY_PROMOTIONS"}',
+      labels_literal: '{"INBOX","subscription"}',
       received_at: '2026-04-18T09:00:00Z'
     }
   ]
