@@ -48,7 +48,7 @@
       "parameters": {
         "mode": "runOnceForEachItem",
         "language": "javaScript",
-        "jsCode": "const msg = $json;\n\nconst pickHeader = (name) => {\n  if (msg.payload && Array.isArray(msg.payload.headers)) {\n    const h = msg.payload.headers.find(x => x.name && x.name.toLowerCase() === name);\n    return h ? h.value : '';\n  }\n  return msg[name] || msg[name.charAt(0).toUpperCase() + name.slice(1)] || '';\n};\n\nconst messageId = msg.id || msg.messageId || (msg.message && msg.message.id) || null;\nconst threadId  = msg.threadId || (msg.message && msg.message.threadId) || null;\nconst subject   = (pickHeader('subject') || '').trim() || '(no subject)';\nconst from      = pickHeader('from') || '';\nconst dateHdr   = pickHeader('date') || '';\n\nif (!messageId) {\n  return { json: { _error: 'missing message id', _keys: Object.keys(msg) } };\n}\n\nlet senderEmail = '', senderName = null;\nconst fromMatch = from.match(/^([^<]*)<([^>]+)>/);\nif (fromMatch) {\n  senderName  = fromMatch[1].replace(/[\"']/g, '').trim() || null;\n  senderEmail = fromMatch[2].trim().toLowerCase();\n} else {\n  senderEmail = from.trim().toLowerCase();\n}\n\nlet bodyText = null, bodyHtml = null;\nif (msg.text || msg.html) {\n  bodyText = (msg.text || msg.snippet || '').substring(0, 20000) || null;\n  bodyHtml = (msg.html || '').substring(0, 200000) || null;\n} else if (msg.payload) {\n  function walkParts(part) {\n    if (!part) return;\n    const mime = (part.mimeType || '').toLowerCase();\n    if (mime === 'text/plain' && !bodyText && part.body && part.body.data) {\n      bodyText = Buffer.from(part.body.data, 'base64').toString('utf-8').substring(0, 20000);\n    }\n    if (mime === 'text/html' && !bodyHtml && part.body && part.body.data) {\n      bodyHtml = Buffer.from(part.body.data, 'base64').toString('utf-8').substring(0, 200000);\n    }\n    if (Array.isArray(part.parts)) part.parts.forEach(walkParts);\n  }\n  walkParts(msg.payload);\n}\nif (!bodyText) bodyText = (msg.snippet || '').substring(0, 20000) || null;\n\nlet receivedAt = null;\nif (dateHdr) {\n  const parsed = new Date(dateHdr);\n  if (!isNaN(parsed.getTime())) receivedAt = parsed.toISOString();\n} else if (msg.internalDate) {\n  receivedAt = new Date(parseInt(msg.internalDate)).toISOString();\n}\n\nconst labelIds = Array.isArray(msg.labelIds) ? msg.labelIds : [];\nconst labelsLiteral = '{' + labelIds.map(l => '\"' + String(l).replace(/\"/g, '') + '\"').join(',') + '}';\n\nreturn {\n  json: {\n    message_id:     messageId,\n    thread_id:      threadId,\n    sender_email:   senderEmail || null,\n    sender_name:    senderName,\n    subject:        subject,\n    body_text:      bodyText,\n    body_html:      bodyHtml,\n    labels_literal: labelsLiteral,\n    received_at:    receivedAt\n  }\n};"
+        "jsCode": "const msg = $json;\n\nconst pickHeader = (name) => {\n  if (msg.payload && Array.isArray(msg.payload.headers)) {\n    const h = msg.payload.headers.find(x => x.name && x.name.toLowerCase() === name);\n    return h ? h.value : '';\n  }\n  return msg[name] || msg[name.charAt(0).toUpperCase() + name.slice(1)] || '';\n};\n\nconst messageId = msg.id || msg.messageId || (msg.message && msg.message.id) || null;\nconst threadId  = msg.threadId || (msg.message && msg.message.threadId) || null;\nconst subject   = (pickHeader('subject') || '').trim() || '(no subject)';\nconst from      = pickHeader('from') || '';\nconst dateHdr   = pickHeader('date') || '';\n\nif (!messageId) {\n  return { json: { _error: 'missing message id', _keys: Object.keys(msg) } };\n}\n\nlet senderEmail = '', senderName = null;\nconst fromMatch = from.match(/^([^<]*)<([^>]+)>/);\nif (fromMatch) {\n  senderName  = fromMatch[1].replace(/[\"']/g, '').trim() || null;\n  senderEmail = fromMatch[2].trim().toLowerCase();\n} else {\n  senderEmail = from.trim().toLowerCase();\n}\n\nlet bodyText = null, bodyHtml = null;\nif (msg.text || msg.html) {\n  bodyText = (msg.text || '') || null;\n  bodyHtml = (msg.html || '') || null;\n} else if (msg.payload) {\n  function walkParts(part) {\n    if (!part) return;\n    const mime = (part.mimeType || '').toLowerCase();\n    if (mime === 'text/plain' && !bodyText && part.body && part.body.data) {\n      bodyText = Buffer.from(part.body.data, 'base64').toString('utf-8');\n    }\n    if (mime === 'text/html' && !bodyHtml && part.body && part.body.data) {\n      bodyHtml = Buffer.from(part.body.data, 'base64').toString('utf-8');\n    }\n    if (Array.isArray(part.parts)) part.parts.forEach(walkParts);\n  }\n  walkParts(msg.payload);\n}\n\n// Fall back to stripping HTML tags when only HTML is available.\nif (!bodyText && bodyHtml) {\n  bodyText = bodyHtml\n    .replace(/<style[\\s\\S]*?<\\/style>/gi, ' ')\n    .replace(/<script[\\s\\S]*?<\\/script>/gi, ' ')\n    .replace(/<[^>]+>/g, ' ')\n    .replace(/&nbsp;/g, ' ')\n    .replace(/&amp;/g, '&')\n    .replace(/&lt;/g, '<')\n    .replace(/&gt;/g, '>')\n    .replace(/\\s+/g, ' ')\n    .trim();\n}\nif (!bodyText) bodyText = msg.snippet || '';\n\n// Cap what we ship to Claude — Haiku 4.5 has a generous window but we don't\n// need the full MIME source to summarize a newsletter. 40k chars ≈ 10k tokens.\nconst bodyForPrompt = (bodyText || '').substring(0, 40000);\n\nlet receivedAt = null;\nif (dateHdr) {\n  const parsed = new Date(dateHdr);\n  if (!isNaN(parsed.getTime())) receivedAt = parsed.toISOString();\n} else if (msg.internalDate) {\n  receivedAt = new Date(parseInt(msg.internalDate)).toISOString();\n}\n\nconst labelIds = Array.isArray(msg.labelIds) ? msg.labelIds : [];\nconst labelsLiteral = '{' + labelIds.map(l => '\"' + String(l).replace(/\"/g, '') + '\"').join(',') + '}';\n\nconst userContent = [\n  'Subject: ' + subject,\n  'From: ' + (senderName ? senderName + ' <' + (senderEmail || '') + '>' : (senderEmail || '')),\n  '',\n  bodyForPrompt\n].join('\\n');\n\nreturn {\n  json: {\n    message_id:     messageId,\n    thread_id:      threadId,\n    sender_email:   senderEmail || null,\n    sender_name:    senderName,\n    subject:        subject,\n    labels_literal: labelsLiteral,\n    received_at:    receivedAt,\n    user_content:   userContent\n  }\n};"
       },
       "id": "33333333-3333-3333-3333-333333333333",
       "name": "Normalize Email",
@@ -58,17 +58,64 @@
     },
     {
       "parameters": {
-        "operation": "executeQuery",
-        "query": "INSERT INTO newsletter_items (message_id, thread_id, sender_email, sender_name, subject, body_text, body_html, labels, received_at) VALUES ($1, $2, $3, $4, $5, $6, $7, $8::text[], $9::timestamptz) ON CONFLICT (message_id) DO NOTHING",
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "anthropic-version", "value": "2023-06-01" }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "json",
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ model: \"claude-haiku-4-5\", max_tokens: 1024, system: [{ type: \"text\", text: \"You summarize subscription newsletter emails. Strip out marketing copy, sponsor mentions, ads, social-media footers, unsubscribe links, and boilerplate. Keep only substantive content. Respond in the same language as the input email. Output valid JSON with this exact shape and nothing else: {\\\"summary\\\": \\\"<1-2 sentence core message>\\\", \\\"themes\\\": [\\\"<short theme>\\\", ...], \\\"key_facts\\\": [\\\"<concrete fact with numbers/names/dates>\\\", ...]}. Use 3-6 themes and 3-8 key_facts. If the email has no substance (pure promo/ad), return {\\\"summary\\\": \\\"(promotional content only)\\\", \\\"themes\\\": [], \\\"key_facts\\\": []}.\", cache_control: { type: \"ephemeral\" } }], messages: [{ role: \"user\", content: $json.user_content }] }) }}",
         "options": {
-          "queryReplacement": "={{ [$json.message_id, $json.thread_id, $json.sender_email, $json.sender_name, $json.subject, $json.body_text, $json.body_html, $json.labels_literal, $json.received_at] }}"
+          "batching": { "batch": { "batchSize": 1, "batchInterval": 500 } },
+          "response": { "response": { "responseFormat": "json" } },
+          "timeout": 60000
         }
       },
       "id": "44444444-4444-4444-4444-444444444444",
+      "name": "Call Claude Haiku",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [960, 300],
+      "onError": "continueRegularOutput",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "",
+          "name": "Anthropic API Key"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "language": "javaScript",
+        "jsCode": "const response = $json;\nconst src = $('Normalize Email').item.json;\nif (!src || !src.message_id) return { json: { skip: true } };\n\nlet raw = '';\nif (response && Array.isArray(response.content) && response.content.length > 0) {\n  raw = response.content[0].text || '';\n}\nraw = raw.trim();\n\n// Strip ```json ... ``` fences if the model wraps its JSON.\nif (raw.startsWith('```')) {\n  raw = raw.replace(/^```(?:json)?\\s*/i, '').replace(/```\\s*$/i, '').trim();\n}\n\nlet parsed = null;\ntry { parsed = JSON.parse(raw); } catch (e) { parsed = null; }\n\nlet summaryMarkdown;\nif (parsed && typeof parsed === 'object') {\n  const lines = [];\n  if (parsed.summary) lines.push(String(parsed.summary).trim());\n  if (Array.isArray(parsed.themes) && parsed.themes.length) {\n    lines.push('', '## Themes');\n    parsed.themes.forEach(t => lines.push('- ' + String(t).trim()));\n  }\n  if (Array.isArray(parsed.key_facts) && parsed.key_facts.length) {\n    lines.push('', '## Key Facts');\n    parsed.key_facts.forEach(f => lines.push('- ' + String(f).trim()));\n  }\n  summaryMarkdown = lines.join('\\n').trim() || null;\n} else {\n  // Fallback: keep whatever text came back so we don't lose the enrichment call.\n  summaryMarkdown = raw || null;\n}\n\nreturn {\n  json: {\n    message_id:     src.message_id,\n    thread_id:      src.thread_id,\n    sender_email:   src.sender_email,\n    sender_name:    src.sender_name,\n    subject:        src.subject,\n    summary:        summaryMarkdown,\n    labels_literal: src.labels_literal,\n    received_at:    src.received_at\n  }\n};"
+      },
+      "id": "55555555-5555-5555-5555-555555555555",
+      "name": "Parse Claude Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1200, 300]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO newsletter_items (message_id, thread_id, sender_email, sender_name, subject, summary, labels, received_at) VALUES ($1, $2, $3, $4, $5, $6, $7::text[], $8::timestamptz) ON CONFLICT (message_id) DO UPDATE SET summary = COALESCE(EXCLUDED.summary, newsletter_items.summary)",
+        "options": {
+          "queryReplacement": "={{ [$json.message_id, $json.thread_id, $json.sender_email, $json.sender_name, $json.subject, $json.summary, $json.labels_literal, $json.received_at] }}"
+        }
+      },
+      "id": "66666666-6666-6666-6666-666666666666",
       "name": "Save Subscription Item",
       "type": "n8n-nodes-base.postgres",
       "typeVersion": 2.6,
-      "position": [960, 300],
+      "position": [1440, 300],
       "credentials": {
         "postgres": {
           "id": "",
@@ -80,13 +127,13 @@
       "parameters": {
         "resource": "message",
         "operation": "delete",
-        "messageId": "={{ $('Normalize Email').item.json.message_id }}"
+        "messageId": "={{ $('Parse Claude Response').item.json.message_id }}"
       },
-      "id": "55555555-5555-5555-5555-555555555555",
+      "id": "77777777-7777-7777-7777-777777777777",
       "name": "Move to Trash",
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
-      "position": [1200, 300],
+      "position": [1680, 300],
       "onError": "continueRegularOutput",
       "credentials": {
         "gmailOAuth2": {
@@ -120,6 +167,28 @@
       ]
     },
     "Normalize Email": {
+      "main": [
+        [
+          {
+            "node": "Call Claude Haiku",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call Claude Haiku": {
+      "main": [
+        [
+          {
+            "node": "Parse Claude Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Claude Response": {
       "main": [
         [
           {
