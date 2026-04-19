@@ -28,9 +28,10 @@
           "includeSpamTrash": false
         },
         "options": {
-          "downloadAttachments": false
+          "downloadAttachments": false,
+          "format": "full"
         },
-        "simple": true
+        "simple": false
       },
       "id": "22222222-2222-2222-2222-222222222222",
       "name": "Fetch Subscription Emails",
