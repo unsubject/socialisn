@@ -7,15 +7,17 @@
 #   N8N_API_KEY   Settings > n8n API > personal API key
 #
 # Options:
-#   --dry-run          Print what would change, don't PUT/POST
-#   --file <path>      Deploy a single file instead of the whole directory
-#   --no-backup        Skip writing remote JSON to /tmp/n8n-backup-*.json
+#   --dry-run             Print what would change, don't PUT/POST
+#   --file <path>         Deploy a single file instead of the whole directory
+#   --no-backup           Skip writing remote JSON to /tmp/n8n-backup-*.json
+#   --no-preserve-active  Do not carry forward remote workflow active state
 #
 # Workflow:
 #   1. GET the current workflow list.
 #   2. For each local JSON, back up the remote copy (if any) to /tmp.
-#   3. Strip n8n-rejected keys (id, active, tags, versionId, meta, pinData, triggerCount, createdAt, updatedAt, shared).
-#   4. PUT if matched by name, POST if new.
+#   3. Strip n8n-rejected keys (id, tags, versionId, meta, pinData, triggerCount, createdAt, updatedAt, shared).
+#   4. Preserve remote active state on PUT by default.
+#   5. PUT if matched by name, POST if new.
 
 set -euo pipefail
 
@@ -24,13 +26,15 @@ set -euo pipefail
 
 dry_run=0
 backup=1
+preserve_active=1
 only_file=""
 while [[ $# -gt 0 ]]; do
   case "$1" in
     --dry-run) dry_run=1; shift ;;
     --no-backup) backup=0; shift ;;
+    --no-preserve-active) preserve_active=0; shift ;;
     --file) only_file="$2"; shift 2 ;;
-    -h|--help) sed -n '2,20p' "$0"; exit 0 ;;
+    -h|--help) sed -n '2,24p' "$0"; exit 0 ;;
     *) echo "unknown arg: $1" >&2; exit 2 ;;
   esac
 done
@@ -65,15 +69,28 @@ for f in "${files[@]}"; do
   payload=$(jq "$strip_keys" "$f")
 
   if [[ -n "$id" && "$id" != "null" ]]; then
+    remote_full=""
+    if [[ $backup -eq 1 || $preserve_active -eq 1 ]]; then
+      remote_full=$(curl -fsS "${auth[@]}" "$base/api/v1/workflows/$id")
+    fi
+
     if [[ $backup -eq 1 ]]; then
       bak="/tmp/n8n-backup-${name// /_}-${id}-${ts}.json"
-      curl -fsS "${auth[@]}" "$base/api/v1/workflows/$id" > "$bak"
+      printf '%s\n' "$remote_full" > "$bak"
       echo "   backed up remote  -> $bak"
     fi
+
+    if [[ $preserve_active -eq 1 ]]; then
+      active=$(jq -r '.active // false' <<<"$remote_full")
+      payload=$(jq --argjson active "$active" '. + {active: $active}' <<<"$payload")
+      echo "   preserve active   -> $active"
+    fi
+
     if [[ $dry_run -eq 1 ]]; then
       echo "   DRY-RUN would PUT  -> $base/api/v1/workflows/$id"
       continue
     fi
+
     code=$(curl -sS -o /tmp/n8n-resp.json -w "%{http_code}" \
       -X PUT "${auth[@]}" -H "Content-Type: application/json" \
       --data "$payload" "$base/api/v1/workflows/$id")
@@ -83,6 +100,7 @@ for f in "${files[@]}"; do
       echo "   DRY-RUN would POST -> $base/api/v1/workflows"
       continue
     fi
+
     code=$(curl -sS -o /tmp/n8n-resp.json -w "%{http_code}" \
       -X POST "${auth[@]}" -H "Content-Type: application/json" \
       --data "$payload" "$base/api/v1/workflows")
@@ -97,4 +115,4 @@ for f in "${files[@]}"; do
   echo "   OK   $action ($code)"
 done
 
-echo ">> Done. Activate each workflow and bind credentials in the n8n UI on first deploy."
+echo ">> Done. Workflows are deployed; ensure credentials are bound in n8n if this is first deploy."
