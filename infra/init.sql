@@ -60,10 +60,12 @@ CREATE TABLE IF NOT EXISTS newsletter_items (
     subject       TEXT NOT NULL,
     body_text     TEXT,
     body_html     TEXT,
+    summary       TEXT,
     labels        TEXT[] DEFAULT '{}',
     received_at   TIMESTAMPTZ,
     fetched_at    TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
+ALTER TABLE newsletter_items ADD COLUMN IF NOT EXISTS summary TEXT;
 
 CREATE TABLE IF NOT EXISTS item_enrichment (
     item_type    TEXT NOT NULL,  -- 'youtube', 'news', 'podcast', 'newsletter'
