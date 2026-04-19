@@ -1,137 +1,119 @@
-# Handoff — socialisn migration to n8n
+# Handoff — socialisn
 
-_Last updated: 2026-04-18. Pick up from here at session start._
+_Last updated: 2026-04-19_
 
-## TL;DR
+## FIRST THING NEXT SESSION MUST DO
 
-Migrating the socialisn pipeline from git-committed JSON + GitHub Actions to
-n8n (self-hosted) + Postgres (Railway). Fetchers + enrichment are done; the
-two user-facing deliverables (email briefing + dashboard) still need work.
-Also planning to absorb two sibling repos into the same pipeline.
+**Connect to the user's n8n instance via MCP. Do not start editing n8n workflows until this is done. Do not ask the user to copy-paste JSON into the n8n UI — that's what the MCP is for.**
 
-Working branch: `claude/run-briefing-script-7xbIt` (all changes push here).
+The user has n8n's native **Instance-level MCP** enabled at:
 
-## Current state
+- n8n URL: `https://n8n.srv1565522.hstgr.cloud`
+- MCP settings page: `Settings → MCP` (screenshot confirms "Enabled")
+- Connection URL + API key: click **Connection details** on that page
 
-### ✅ Done and tested (verified producing rows in Postgres)
+Add it to Claude Code's MCP config (`~/.claude/settings.json` or the project `.mcp.json`) so the `mcp__n8n__*` tools load at session start. Ask the user for the connection URL + API key — do **not** hard-code; keep the key in an env var. Expected tool surface in previous sessions: `list_workflows`, `get_workflow`, `update_workflow`, `create_workflow_from_code`, `validate_workflow`, `execute_workflow`, etc.
 
-| Workflow | File | n8n ID | Schedule (UTC) | Writes to |
-|---|---|---|---|---|
-| Fetch YouTube | `n8n/workflows/fetch-youtube.ts` | `x5s2rk7HWNQjX5N1` | `0 4,10,16,22` | `youtube_items` |
-| Fetch News RSS | `n8n/workflows/fetch-news-rss.ts` | _look up in n8n UI_ | `0 */6` | `news_items` |
-| Fetch Perplexity | `n8n/workflows/fetch-perplexity.ts` | _look up in n8n UI_ | `25 0,6,12,18` | `news_items` (type=perplexity) |
-| Fetch Podcasts | `n8n/workflows/fetch-podcasts.ts` | _look up in n8n UI_ | `0 1,7,13,19` | `podcast_items` |
-| Process Haiku | `n8n/workflows/process-haiku.ts` | _look up in n8n UI_ | `45 4,10,16,22` | `item_enrichment` |
+Once connected, reconcile state: **git is the source of truth**. If a workflow exists in n8n but not in git, export it with `get_workflow` and commit. If it exists in git but not in n8n, upsert it via `create_workflow_from_code` / `update_workflow`.
 
-### 🗑 Deprecated (do not resurrect without IP-blocking fix)
+## Today's delivery (2026-04-19)
 
-- **YouTube transcript retrieval** — YouTube returns 429 / `google.com/sorry`
-  for Railway datacenter IPs. Both `youtube-transcript-api` and `yt-dlp` fail.
-  Cookie-based auth would work but adds operational burden. Decision: ship
-  without transcripts; title + description is enough signal.
-  - Archived n8n workflow: `VuYc4FsgAxoDNMu7`
-  - Removed `/youtube-transcript` + `/debug/transcript` from py-helpers
-  - Removed `youtube-transcript-api` and `yt-dlp` deps
-  - `youtube_items.transcript_*` columns remain (NULL) — drop later if desired
+### Subscription-email pipeline — code merged to `main`, NOT deployed
 
-### 🔧 Outstanding
+Three PRs merged:
+- **#30** — Initial `fetch-gmail-subscriptions.json`: hourly schedule → Gmail `label:Subscription` → normalize → Postgres → trash
+- **#31** — Inserted Claude Haiku 4.5 enrichment between normalize and save; strips ads/fluff/footers, returns `{summary, themes, key_facts}` JSON, rendered to markdown and stored in new `newsletter_items.summary` column
+- **#32** — Added `.github/workflows/deploy_n8n.yml` to auto-deploy n8n workflows on push to `main`. **This turned out to be the wrong architecture** (see next section).
 
-1. **`generate-briefing`** — scaffolded at `n8n/workflows/generate-briefing.ts`
-   (schedule `30 23 * * *`, writes to `briefings`, sends via Gmail). Needs
-   fine-tuning: prompt quality, email HTML layout, slot logic (early/evening),
-   recipient list. Reference the existing Python in
-   `scripts/generate_briefing.py` — prompt structure at L149-199, markdown→HTML
-   at L267-321, Chinese typography (PingFang HK, Microsoft JhengHei, #d4a017
-   accent).
+### What's actually running in n8n right now (per user screenshots)
 
-2. **`publish-dashboard`** — not yet built. Needs to render HTML + RSS from
-   Postgres and push to `docs/*` via the GitHub API (so GitHub Pages stays
-   the dashboard host). Reference Python: `scripts/generate_dashboard.py`,
-   `scripts/generate_rss.py`, `scripts/generate_youtube_rss.py`,
-   `scripts/generate_podcast_rss.py`, `scripts/generate_topics_rss.py`.
+- MCP-exposed workflows on the instance: Generate Daily Briefing, Fetch News (RSS), Fetch Podcasts, Process Items with Haiku, Fetch Perplexity Search, Fetch YouTube Videos.
+- **`Fetch Gmail Subscriptions` (today's new workflow) is NOT yet in n8n.** It exists only as JSON at `n8n/workflows/fetch-gmail-subscriptions.json` on `main`.
+- The canvas also shows an older workflow `Fetch Newsletter Emails1` (note the `1` suffix — a duplicate import of `fetch-gmail-newsletters.json`) with a manually added `Delete a message` node that is **erroring** (red frame, ✕ icon). Likely cause: the Gmail OAuth2 credential is missing the `https://www.googleapis.com/auth/gmail.modify` scope required for `messages.trash`, or the `messageId` expression doesn't resolve at that point in the flow. Next session should diagnose via MCP (`execute_workflow` with a test payload, inspect the error).
 
-3. **Integration with sibling repos** (new in this session):
-   - `unsubject/frontierwatch` — description: "Frontier Devs in Energy,
-     Information Technology, BioTech." Python project, ~36 commits. Full
-     purpose still unknown to me (README fetch returned 404) — **ask the user
-     at session start** what it ingests and produces, or clone and read.
-   - `unsubject/newsletter-digest` — processes Gmail messages with
-     "Subscription" label via Claude Haiku, extracts news items (filtering
-     ads), emits RSS 2.0 on GitHub Pages, runs daily 07:00 UTC via GHA.
-   - **Plan**: migrate each into an n8n workflow + Postgres table (probably
-     re-using `news_items` for newsletter-digest output, TBD for frontierwatch
-     depending on its data shape), then archive the GitHub repos.
+### Known broken path — abandon the GitHub Actions deploy
 
-## Architecture (for context)
+PR #32's `.github/workflows/deploy_n8n.yml` fails with:
 
 ```
-Railway:
-  ├─ n8n (self-hosted)           — orchestration, API calls, Anthropic/Gmail
-  ├─ Postgres                    — n8n DB + app DB in one instance
-  └─ py-helpers (FastAPI)        — Python-only ops: /scrape-article,
-                                   /parse-google-trends
-                                   URL: https://socialisn-production.up.railway.app
+curl: (28) Failed to connect to n8n.srv1565522.hstgr.cloud port 443 after 133318 ms
+```
 
-GitHub (kept):
-  └─ unsubject/socialisn         — configs, docs/ (GitHub Pages), this repo
+GitHub-hosted runners are blocked at layer 4 by Hostinger's edge (server itself responds `403` from other networks — it's reachable, just not from GitHub runners). Attempted fixes considered and rejected: whitelist GitHub's `/meta` IP ranges (brittle), self-hosted runner (ops overhead), SSH-based deploy (OK but still reinvents what n8n MCP already does for free).
+
+**Next session: delete `.github/workflows/deploy_n8n.yml`.** With n8n MCP wired in, Claude deploys workflows directly via MCP — no CI pipeline needed for n8n.
+
+## Outstanding work next session should pick up
+
+1. **Wire up n8n MCP** (see top of file).
+2. **Deploy `fetch-gmail-subscriptions.json`** via MCP `create_workflow_from_code` (or `update_workflow` if user imported manually). Validate with `validate_workflow` first.
+3. **Apply the DB migration** — `ALTER TABLE newsletter_items ADD COLUMN IF NOT EXISTS summary TEXT;` — either via n8n's Postgres credential inside a throwaway workflow, or a one-off psql. Already in `infra/init.sql` for fresh DBs.
+4. **Bind credentials** on the newly imported workflow (one-time, via UI — credentials don't live in git):
+   - `Gmail OAuth2` — must have `gmail.modify` scope so the trash step works
+   - `Postgres`
+   - `Anthropic API Key` (HTTP Header Auth, header `x-api-key`)
+5. **Diagnose the `Delete a message` error** on the older `Fetch Newsletter Emails1` canvas. Either fix it or delete that workflow after confirming `fetch-gmail-subscriptions` subsumes it.
+6. **Delete `.github/workflows/deploy_n8n.yml`** — abandoned approach.
+7. **Activate** `Fetch Gmail Subscriptions` (`active: true`) once verified.
+
+## Architecture
+
+```
+Hostinger VPS (n8n.srv1565522.hstgr.cloud):
+  ├─ n8n (self-hosted) — MCP-enabled, API-enabled
+  └─ Postgres           — n8n DB + app DB in one instance
+
+GitHub (unsubject/socialisn):
+  └─ Source of truth for:
+     - n8n/workflows/*.json
+     - infra/init.sql
+     - config/*.yaml
+     - scripts/*.py (legacy, being migrated to n8n)
+
+Claude Code session:
+  ├─ GitHub MCP (scoped to unsubject/socialisn)
+  └─ n8n MCP (MUST BE CONFIGURED — see top)
 ```
 
 ## Database schema (app tables)
 
 Defined in `infra/init.sql`. Key tables:
 
-- `sources(id, type, name, language, tags[], config JSONB, enabled)` — runtime config for all fetchers. Seeded by `infra/seed_sources.sql`.
+- `sources` — runtime config for fetchers (seeded by `infra/seed_sources.sql`)
 - `youtube_items`, `news_items`, `podcast_items` — raw fetched items
-- `item_enrichment(item_type, item_id, summary_zh, keywords_zh[], processed_at)` — joined 1:1 to raw items
-- `briefings(date, slot, markdown, html, email_sent_at, ...)` — UNIQUE(date, slot)
+- `newsletter_items` — raw subscription emails; as of today has a `summary TEXT` column holding the Haiku-generated markdown summary
+- `item_enrichment(item_type, item_id, summary_zh, keywords_zh[], processed_at)` — 1:1 enrichment for youtube/news/podcast (newsletter currently uses the inline `newsletter_items.summary` column instead; revisit if consolidation is desired)
+- `briefings(date, slot, markdown, html, email_sent_at, ...)`
 
-## n8n credentials in use
+## n8n credentials in use (per previous sessions)
 
-- `Postgres` — DB connection
-- `Anthropic API Key` — Haiku + Sonnet (via HTTP node)
-- `Gmail OAuth2` — email send (for generate-briefing)
-- `YouTube API Key` — `httpQueryAuth` with Name=`key`, Value=API key
-- `Perplexity API` — Bearer token
+- `Postgres`
+- `Anthropic API Key` (HTTP Header Auth, `x-api-key`)
+- `Gmail OAuth2` — verify `gmail.modify` scope before activating trash-based workflows
+- `YouTube API Key` (`httpQueryAuth`, Name=`key`)
+- `Perplexity API` (Bearer)
 
-## n8n SDK gotchas learned this session
+## n8n SDK gotchas (from 2026-04-18 session — still valid)
 
-- `output: [{...}]` on nodes is **sample data for the editor only**, not
-  runtime pinned data. Don't rely on it in downstream nodes.
-- `runOnceForEachItem` Code nodes must return a single `{json: {...}}`;
-  `runOnceForAllItems` returns arrays with `$input.all()` and
-  `$("NodeName").all()`, using `pairedItem: { item: k }` for lineage.
-- `executeWorkflow` node's `workflowId` needs resource locator format:
-  `{ __rl: true, value: 'ID', mode: 'id' }` (plain string fails).
-- `ON CONFLICT DO UPDATE` is preferred over `DO NOTHING` when downstream
-  filters use `fetched_at >= NOW() - INTERVAL 'X hours'` — `DO NOTHING`
-  strands items outside the window.
+- `output: [{...}]` in `@n8n/workflow-sdk` node definitions is **sample data for the editor only**, not runtime pinned data.
+- `runOnceForEachItem` Code nodes return a single `{json: {...}}`; `runOnceForAllItems` uses `$input.all()` / `$("NodeName").all()` with `pairedItem: { item: k }` for lineage.
+- `executeWorkflow` node's `workflowId` needs resource locator format: `{ __rl: true, value: 'ID', mode: 'id' }`.
+- Prefer `ON CONFLICT DO UPDATE` over `DO NOTHING` when downstream filters use `fetched_at >= NOW() - INTERVAL 'X hours'` — `DO NOTHING` strands items outside the window.
 - Always call `validate_workflow` before `update_workflow` / `create_workflow_from_code`.
-
-## Py-helpers deployment notes
-
-- Railway auto-deploys from the current branch (not `main`). Dockerfile uses
-  shell-form `CMD uvicorn app:app --host 0.0.0.0 --port ${PORT:-8787}` so
-  Railway's `$PORT` gets expanded.
-- Container currently ships only `/health`, `/scrape-article`,
-  `/parse-google-trends`. Smaller image now that yt-dlp/youtube-transcript-api
-  are gone.
 
 ## Open questions for the user
 
-1. `frontierwatch` — what does it actually ingest and emit? Which Postgres
-   table should its output land in? Any scheduling constraint?
-2. For `newsletter-digest` migration — use existing `news_items` with a new
-   `source_type='newsletter'`, or a new `newsletter_items` table?
-3. Briefing email recipients — is it still just one address, or has the list
-   grown? (Check `RECIPIENT_EMAIL` env from old GHA and confirm.)
-4. Cutover timing for deprecating the old GHA workflow (`.github/workflows/fetch_youtube.yml`) — keep running in parallel for N days after generate-briefing is solid, or cut sooner?
+1. Confirm `Gmail OAuth2` credential scope — does it include `https://www.googleapis.com/auth/gmail.modify`? If not, re-authorize; trash steps will 403 without it.
+2. Is the older `Fetch Newsletter Emails1` workflow still needed, or should it be deleted in favor of `Fetch Gmail Subscriptions`?
+3. Frontierwatch and newsletter-digest sibling repos still pending migration (carried over from yesterday's handoff).
 
-## Quick start for next session
+## Working branch
 
-```bash
-git checkout claude/run-briefing-script-7xbIt
-git pull origin claude/run-briefing-script-7xbIt
-```
+Today's branch (merged, can be deleted): `claude/n8n-gmail-subscription-workflow-AFmoj`.
+Next session: use whatever branch the user specifies at startup, or create a fresh `claude/<topic>-<hash>` per task.
 
-Then: read this file, then `n8n/workflows/generate-briefing.ts` and
-`scripts/generate_briefing.py`, and start on the briefing fine-tune.
+## Don't do this again
+
+- Don't write a GitHub Actions workflow to deploy to a private n8n instance behind a network firewall. Use the n8n MCP instead.
+- Don't ask the user to copy-paste JSON through the n8n UI. Use `create_workflow_from_code` / `update_workflow` via MCP.
+- Don't assume capabilities from prior sessions carry over. MCP servers are per-session config. Check what tools are loaded at session start before planning the work.
