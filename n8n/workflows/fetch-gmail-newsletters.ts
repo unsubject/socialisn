@@ -1,15 +1,15 @@
 import { workflow, node, trigger, newCredential, expr } from '@n8n/workflow-sdk';
 
-// Runs every 3 hours and fetches all emails tagged with the 'subscription' Gmail label.
+// Runs every hour and fetches all emails tagged with the 'subscription' Gmail label.
 // Deduplication is handled by ON CONFLICT (message_id) DO NOTHING in Postgres.
 
 const schedule = trigger({
   type: 'n8n-nodes-base.scheduleTrigger',
   version: 1.3,
   config: {
-    name: 'Every 3 hours',
+    name: 'Every hour',
     parameters: {
-      rule: { interval: [{ field: 'cronExpression', expression: '0 */3 * * *' }] }
+      rule: { interval: [{ field: 'cronExpression', expression: '0 * * * *' }] }
     },
     position: [240, 300]
   },
@@ -28,9 +28,9 @@ const fetchEmails = node({
       limit: 100,
       filters: {
         // label:subscription targets the manually applied Gmail label.
-        // newer_than:3d gives a 50% overlap window on the 3-hour schedule
+        // newer_than:2h gives a 2x overlap window on the hourly schedule
         // so no email is missed even if a run is delayed or skipped.
-        q: 'label:subscription newer_than:3d',
+        q: 'label:subscription newer_than:2h',
         includeSpamTrash: false
       },
       options: {
