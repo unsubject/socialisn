@@ -52,8 +52,21 @@ CREATE TABLE IF NOT EXISTS podcast_items (
     fetched_at     TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
+CREATE TABLE IF NOT EXISTS newsletter_items (
+    message_id    TEXT PRIMARY KEY,
+    thread_id     TEXT,
+    sender_email  TEXT NOT NULL,
+    sender_name   TEXT,
+    subject       TEXT NOT NULL,
+    body_text     TEXT,
+    body_html     TEXT,
+    labels        TEXT[] DEFAULT '{}',
+    received_at   TIMESTAMPTZ,
+    fetched_at    TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
 CREATE TABLE IF NOT EXISTS item_enrichment (
-    item_type    TEXT NOT NULL,  -- 'youtube', 'news', 'podcast'
+    item_type    TEXT NOT NULL,  -- 'youtube', 'news', 'podcast', 'newsletter'
     item_id      TEXT NOT NULL,
     summary_zh   TEXT,
     keywords_zh  TEXT[] DEFAULT '{}',
@@ -81,5 +94,8 @@ CREATE INDEX IF NOT EXISTS idx_news_fetched ON news_items (fetched_at);
 CREATE INDEX IF NOT EXISTS idx_news_published ON news_items (published_at);
 CREATE INDEX IF NOT EXISTS idx_podcast_fetched ON podcast_items (fetched_at);
 CREATE INDEX IF NOT EXISTS idx_podcast_published ON podcast_items (published_at);
+CREATE INDEX IF NOT EXISTS idx_newsletter_fetched ON newsletter_items (fetched_at);
+CREATE INDEX IF NOT EXISTS idx_newsletter_received ON newsletter_items (received_at);
+CREATE INDEX IF NOT EXISTS idx_newsletter_sender ON newsletter_items (sender_email);
 CREATE INDEX IF NOT EXISTS idx_enrichment_type ON item_enrichment (item_type);
 CREATE INDEX IF NOT EXISTS idx_briefings_date ON briefings (date);
