@@ -133,12 +133,92 @@
       "name": "Move to Trash",
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
-      "position": [1680, 300],
+      "position": [1680, 200],
       "onError": "continueRegularOutput",
       "credentials": {
         "gmailOAuth2": {
           "id": "",
           "name": "Gmail OAuth2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "language": "javaScript",
+        "jsCode": "const src = $json;\nif (!src || !src.message_id || !src.subject) return { json: { skip: true } };\n\nconst title = String(src.subject).trim();\nif (!title) return { json: { skip: true } };\n\nfunction cleanText(text) {\n  if (!text) return '';\n  text = text.replace(/https?:\\/\\/\\S+/g, '');\n  text = text.replace(/#\\S+/g, '');\n  const pats = [/unsubscribe.*/gi, /view (this|it) in your browser.*/gi, /click here.*/gi, /manage preferences.*/gi, /you'?re receiving this.*/gi];\n  for (let i = 0; i < pats.length; i++) text = text.replace(pats[i], '');\n  text = text.replace(/\\n{3,}/g, '\\n\\n');\n  return text.split('\\n').filter(l => l.trim().length > 2).join('\\n').trim();\n}\n\nlet content = cleanText(src.summary || '');\nif (content.length > 1200) content = content.substring(0, 1200) + '...';\n\nconst prompt = '你是一位香港時事分析助手。請根據以下電子報資料，用繁體中文完成兩項任務：\\n\\n1. 撮要：用1至2句話概括內容的核心，風格簡潔如新聞標題。可參考標題及內容摘要。\\n2. 關鍵詞：只根據「標題」提取5至8個最重要的繁體中文關鍵詞（人名、地名、事件、議題等），不要從其他參考資料中提取。\\n\\n請以下列JSON格式回覆，不要加任何其他文字：\\n{\\n  \"summary_zh\": \"...\",\\n  \"keywords_zh\": [\"...\", \"...\", \"...\"]\\n}\\n\\n標題：' + title + '\\n\\n其他參考資料（只用於撮要，不用於關鍵詞）：\\n' + content;\n\nreturn {\n  json: {\n    item_type: 'newsletter',\n    item_id:   src.message_id,\n    prompt:    prompt\n  }\n};"
+      },
+      "id": "88888888-8888-8888-8888-888888888888",
+      "name": "Build Haiku Zh Prompt",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1680, 460]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "anthropic-version", "value": "2023-06-01" }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "json",
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ model: \"claude-haiku-4-5\", max_tokens: 256, messages: [{ role: \"user\", content: $json.prompt }] }) }}",
+        "options": {
+          "batching": { "batch": { "batchSize": 1, "batchInterval": 500 } },
+          "response": { "response": { "responseFormat": "json" } },
+          "timeout": 30000
+        }
+      },
+      "id": "99999999-9999-9999-9999-999999999999",
+      "name": "Call Claude Haiku Zh",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [1920, 460],
+      "onError": "continueRegularOutput",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "",
+          "name": "Anthropic API Key"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "language": "javaScript",
+        "jsCode": "const response = $json;\nconst src = $('Build Haiku Zh Prompt').item.json;\nif (!src || src.skip) return { json: { skip: true } };\n\nlet content = '';\nif (response && Array.isArray(response.content) && response.content.length > 0) {\n  content = response.content[0].text || '';\n}\ncontent = content.trim();\nif (!content) return { json: { skip: true, item_type: src.item_type, item_id: src.item_id } };\n\nif (content.indexOf('```') === 0) {\n  const lines = content.split('\\n');\n  const filtered = [];\n  for (let i = 0; i < lines.length; i++) {\n    if (lines[i].indexOf('```') !== 0) filtered.push(lines[i]);\n  }\n  content = filtered.join('\\n').trim();\n}\n\nlet result;\ntry { result = JSON.parse(content); }\ncatch (e) { return { json: { skip: true, item_type: src.item_type, item_id: src.item_id, error: 'JSON parse failed' } }; }\n\nconst summaryZh  = result.summary_zh || null;\nconst keywordsZh = Array.isArray(result.keywords_zh) ? result.keywords_zh : (result.keywords_zh ? [result.keywords_zh] : []);\nconst keywordsLiteral = '{' + keywordsZh.map(k => '\"' + String(k).replace(/\"/g, '') + '\"').join(',') + '}';\n\nreturn {\n  json: {\n    item_type:        src.item_type,\n    item_id:          src.item_id,\n    summary_zh:       summaryZh,\n    keywords_literal: keywordsLiteral\n  }\n};"
+      },
+      "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "name": "Parse Haiku Zh Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [2160, 460]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO item_enrichment (item_type, item_id, summary_zh, keywords_zh, processed_at) VALUES ($1, $2, $3, $4::text[], NOW()) ON CONFLICT (item_type, item_id) DO UPDATE SET summary_zh = EXCLUDED.summary_zh, keywords_zh = EXCLUDED.keywords_zh, processed_at = NOW()",
+        "options": {
+          "queryReplacement": "={{ [$json.item_type, $json.item_id, $json.summary_zh, $json.keywords_literal] }}"
+        }
+      },
+      "id": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+      "name": "Save Enrichment",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [2400, 460],
+      "onError": "continueRegularOutput",
+      "credentials": {
+        "postgres": {
+          "id": "",
+          "name": "Postgres"
         }
       }
     }
@@ -204,6 +284,44 @@
         [
           {
             "node": "Move to Trash",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Build Haiku Zh Prompt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Haiku Zh Prompt": {
+      "main": [
+        [
+          {
+            "node": "Call Claude Haiku Zh",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call Claude Haiku Zh": {
+      "main": [
+        [
+          {
+            "node": "Parse Haiku Zh Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Haiku Zh Response": {
+      "main": [
+        [
+          {
+            "node": "Save Enrichment",
             "type": "main",
             "index": 0
           }
