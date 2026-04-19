@@ -1,137 +1,161 @@
 # Handoff — socialisn migration to n8n
 
-_Last updated: 2026-04-18. Pick up from here at session start._
+_Last updated: 2026-04-19._
 
 ## TL;DR
 
-Migrating the socialisn pipeline from git-committed JSON + GitHub Actions to
-n8n (self-hosted) + Postgres (Railway). Fetchers + enrichment are done; the
-two user-facing deliverables (email briefing + dashboard) still need work.
-Also planning to absorb two sibling repos into the same pipeline.
+Migrating socialisn from GitHub Actions to n8n (self-hosted on Railway) +
+Postgres. Fetchers + enrichment are done; briefing email + dashboard still
+need work. Also absorbing `unsubject/frontierwatch` and
+`unsubject/newsletter-digest` into this pipeline.
 
-Working branch: `claude/run-briefing-script-7xbIt` (all changes push here).
+Working branch: `claude/run-briefing-script-7xbIt`
 
-## Current state
+---
 
-### ✅ Done and tested (verified producing rows in Postgres)
+## ⚠ CRITICAL: How to work with n8n workflows
 
-| Workflow | File | n8n ID | Schedule (UTC) | Writes to |
-|---|---|---|---|---|
-| Fetch YouTube | `n8n/workflows/fetch-youtube.ts` | `x5s2rk7HWNQjX5N1` | `0 4,10,16,22` | `youtube_items` |
-| Fetch News RSS | `n8n/workflows/fetch-news-rss.ts` | _look up in n8n UI_ | `0 */6` | `news_items` |
-| Fetch Perplexity | `n8n/workflows/fetch-perplexity.ts` | _look up in n8n UI_ | `25 0,6,12,18` | `news_items` (type=perplexity) |
-| Fetch Podcasts | `n8n/workflows/fetch-podcasts.ts` | _look up in n8n UI_ | `0 1,7,13,19` | `podcast_items` |
-| Process Haiku | `n8n/workflows/process-haiku.ts` | _look up in n8n UI_ | `45 4,10,16,22` | `item_enrichment` |
+### n8n MCP tools — use them directly
 
-### 🗑 Deprecated (do not resurrect without IP-blocking fix)
+You have MCP tools connected to the live n8n instance. **Use them for all
+workflow reads and writes.** Never ask the user to copy-paste workflow JSON
+or act as a transport layer.
 
-- **YouTube transcript retrieval** — YouTube returns 429 / `google.com/sorry`
-  for Railway datacenter IPs. Both `youtube-transcript-api` and `yt-dlp` fail.
-  Cookie-based auth would work but adds operational burden. Decision: ship
-  without transcripts; title + description is enough signal.
-  - Archived n8n workflow: `VuYc4FsgAxoDNMu7`
-  - Removed `/youtube-transcript` + `/debug/transcript` from py-helpers
-  - Removed `youtube-transcript-api` and `yt-dlp` deps
-  - `youtube_items.transcript_*` columns remain (NULL) — drop later if desired
+The MCP tool prefix is: `mcp__acc1563a-8fd7-48fa-b108-0ec47c0361bf__`
 
-### 🔧 Outstanding
+Key tools (use `ToolSearch` with `select:<name>` to load schemas before calling):
 
-1. **`generate-briefing`** — scaffolded at `n8n/workflows/generate-briefing.ts`
-   (schedule `30 23 * * *`, writes to `briefings`, sends via Gmail). Needs
-   fine-tuning: prompt quality, email HTML layout, slot logic (early/evening),
-   recipient list. Reference the existing Python in
-   `scripts/generate_briefing.py` — prompt structure at L149-199, markdown→HTML
-   at L267-321, Chinese typography (PingFang HK, Microsoft JhengHei, #d4a017
-   accent).
+| Action | Tool |
+|---|---|
+| List workflows | `search_workflows` |
+| Read a workflow | `get_workflow_details` |
+| Validate code before updating | `validate_workflow` |
+| Update an existing workflow | `update_workflow` |
+| Create a new workflow | `create_workflow_from_code` |
+| Run a workflow | `execute_workflow` |
+| Check execution result | `get_execution` |
+| Archive a workflow | `archive_workflow` |
+| Look up node parameters | `search_nodes` → `get_node_types` |
+| Get SDK syntax help | `get_sdk_reference` |
 
-2. **`publish-dashboard`** — not yet built. Needs to render HTML + RSS from
-   Postgres and push to `docs/*` via the GitHub API (so GitHub Pages stays
-   the dashboard host). Reference Python: `scripts/generate_dashboard.py`,
-   `scripts/generate_rss.py`, `scripts/generate_youtube_rss.py`,
-   `scripts/generate_podcast_rss.py`, `scripts/generate_topics_rss.py`.
+**Workflow sequence**: `search_nodes` → `get_node_types` → write code →
+`validate_workflow` → `update_workflow` / `create_workflow_from_code`.
 
-3. **Integration with sibling repos** (new in this session):
-   - `unsubject/frontierwatch` — description: "Frontier Devs in Energy,
-     Information Technology, BioTech." Python project, ~36 commits. Full
-     purpose still unknown to me (README fetch returned 404) — **ask the user
-     at session start** what it ingests and produces, or clone and read.
-   - `unsubject/newsletter-digest` — processes Gmail messages with
-     "Subscription" label via Claude Haiku, extracts news items (filtering
-     ads), emits RSS 2.0 on GitHub Pages, runs daily 07:00 UTC via GHA.
-   - **Plan**: migrate each into an n8n workflow + Postgres table (probably
-     re-using `news_items` for newsletter-digest output, TBD for frontierwatch
-     depending on its data shape), then archive the GitHub repos.
+### n8n is the source of truth, NOT git
 
-## Architecture (for context)
+The user edits workflows directly in the n8n UI. The `.ts` files under
+`n8n/workflows/` are **historical snapshots only** — they may be stale.
+
+Rules:
+- **To read current workflow state**: call `get_workflow_details` with the
+  workflow ID. Do NOT read the `.ts` file and assume it's current.
+- **To update a workflow**: call `update_workflow` directly. Do NOT
+  push a `.ts` file and expect it to sync.
+- **Only use git** for: py-helpers code, infra config (`init.sql`,
+  `seed_sources.sql`, `Dockerfile`), and reference Python scripts.
+- **If you need to save a workflow snapshot to git** for reference, do so
+  AFTER reading the live state from n8n, not the other way around.
+
+---
+
+## Live n8n workflows
+
+| Workflow | n8n ID | Active | Status |
+|---|---|---|---|
+| Fetch YouTube Videos | `x5s2rk7HWNQjX5N1` | ✅ | Done, tested |
+| Fetch News (RSS) | `W2QHzmBjyUFs0xsd` | ✅ | Done, tested |
+| Fetch Perplexity Search | `rkiWYmYBoVyi8Ih2` | ✅ | Done, tested |
+| Fetch Podcasts | `Ykpcl95qtvzMv70b` | ✅ | Done, tested |
+| Process Items with Haiku | `OG4iOnuMwxoJDbvK` | ✅ | Done, tested |
+| Fetch Gmail Newsletters | `7ZlMNObjAMc26zoR` | ✅ | Done, tested |
+| Generate Daily Briefing | `F0g69WDiNUX0OXNW` | ❌ | **Outstanding — needs fine-tuning** |
+| Enrich YouTube Transcripts | `VuYc4FsgAxoDNMu7` | archived | Deprecated (YouTube IP-blocks Railway) |
+
+Scratch workflows (ignore): `Kbar9Ajevy87MXqI`, `tOPMeTpBU30KnNRD`
+
+---
+
+## Outstanding work
+
+### 1. Fine-tune `generate-briefing` (`F0g69WDiNUX0OXNW`)
+
+Currently scaffolded but inactive. Needs:
+- Prompt quality improvement (reference `scripts/generate_briefing.py` L149-199)
+- Email HTML layout (Chinese typography: PingFang HK, Microsoft JhengHei, #d4a017 accent — see L267-321)
+- Slot logic (morning 早報 / evening 晚報)
+- Recipient config
+- **Read the live workflow first** via `get_workflow_details("F0g69WDiNUX0OXNW")` — user may have edited it since last session.
+
+### 2. Build `publish-dashboard`
+
+Not yet created. Renders HTML + RSS from Postgres, pushes to `docs/*` via
+GitHub API (GitHub Pages is the dashboard host). Reference Python:
+`scripts/generate_dashboard.py`, `scripts/generate_rss.py`,
+`scripts/generate_youtube_rss.py`, `scripts/generate_podcast_rss.py`,
+`scripts/generate_topics_rss.py`.
+
+### 3. Integrate sibling repos
+
+- **`unsubject/frontierwatch`** — "Frontier Devs in Energy, IT, BioTech."
+  Purpose still unknown — ask the user or clone the repo to read.
+- **`unsubject/newsletter-digest`** — processes Gmail "Subscription" label
+  via Claude Haiku → RSS. A `Fetch Gmail Newsletters` workflow
+  (`7ZlMNObjAMc26zoR`) already exists and is active — this may already be
+  partially migrated. Check its current state before building anything new.
+- After migration, deprecate both repos from GitHub.
+
+---
+
+## Architecture
 
 ```
 Railway:
-  ├─ n8n (self-hosted)           — orchestration, API calls, Anthropic/Gmail
+  ├─ n8n (self-hosted)           — orchestration, all API calls, Anthropic/Gmail
   ├─ Postgres                    — n8n DB + app DB in one instance
-  └─ py-helpers (FastAPI)        — Python-only ops: /scrape-article,
-                                   /parse-google-trends
+  └─ py-helpers (FastAPI)        — /scrape-article, /parse-google-trends
                                    URL: https://socialisn-production.up.railway.app
 
 GitHub (kept):
   └─ unsubject/socialisn         — configs, docs/ (GitHub Pages), this repo
 ```
 
-## Database schema (app tables)
+## Database schema
 
 Defined in `infra/init.sql`. Key tables:
 
-- `sources(id, type, name, language, tags[], config JSONB, enabled)` — runtime config for all fetchers. Seeded by `infra/seed_sources.sql`.
+- `sources(id, type, name, language, tags[], config JSONB, enabled)`
 - `youtube_items`, `news_items`, `podcast_items` — raw fetched items
-- `item_enrichment(item_type, item_id, summary_zh, keywords_zh[], processed_at)` — joined 1:1 to raw items
+- `item_enrichment(item_type, item_id, summary_zh, keywords_zh[], processed_at)`
 - `briefings(date, slot, markdown, html, email_sent_at, ...)` — UNIQUE(date, slot)
 
-## n8n credentials in use
+## n8n credentials
 
 - `Postgres` — DB connection
 - `Anthropic API Key` — Haiku + Sonnet (via HTTP node)
-- `Gmail OAuth2` — email send (for generate-briefing)
-- `YouTube API Key` — `httpQueryAuth` with Name=`key`, Value=API key
+- `Anthropic` — LangChain node credential
+- `Gmail OAuth2` — email send
+- `YouTube API Key` — `httpQueryAuth` with Name=`key`
 - `Perplexity API` — Bearer token
 
-## n8n SDK gotchas learned this session
+## n8n SDK gotchas
 
-- `output: [{...}]` on nodes is **sample data for the editor only**, not
-  runtime pinned data. Don't rely on it in downstream nodes.
-- `runOnceForEachItem` Code nodes must return a single `{json: {...}}`;
-  `runOnceForAllItems` returns arrays with `$input.all()` and
-  `$("NodeName").all()`, using `pairedItem: { item: k }` for lineage.
-- `executeWorkflow` node's `workflowId` needs resource locator format:
-  `{ __rl: true, value: 'ID', mode: 'id' }` (plain string fails).
-- `ON CONFLICT DO UPDATE` is preferred over `DO NOTHING` when downstream
-  filters use `fetched_at >= NOW() - INTERVAL 'X hours'` — `DO NOTHING`
-  strands items outside the window.
-- Always call `validate_workflow` before `update_workflow` / `create_workflow_from_code`.
+- `output: [{...}]` on nodes is **editor sample data only**, not runtime pins.
+- `runOnceForEachItem` returns single `{json: {...}}`; `runOnceForAllItems`
+  returns arrays via `$input.all()` / `$("NodeName").all()` with `pairedItem`.
+- `executeWorkflow` node needs `workflowId: { __rl: true, value: 'ID', mode: 'id' }`.
+- `ON CONFLICT DO UPDATE` preferred over `DO NOTHING` when downstream queries
+  filter by `fetched_at`.
+- Always `validate_workflow` before `update_workflow` / `create_workflow_from_code`.
 
-## Py-helpers deployment notes
+## Deprecated: YouTube transcripts
 
-- Railway auto-deploys from the current branch (not `main`). Dockerfile uses
-  shell-form `CMD uvicorn app:app --host 0.0.0.0 --port ${PORT:-8787}` so
-  Railway's `$PORT` gets expanded.
-- Container currently ships only `/health`, `/scrape-article`,
-  `/parse-google-trends`. Smaller image now that yt-dlp/youtube-transcript-api
-  are gone.
+YouTube returns 429 for Railway IPs. Both `youtube-transcript-api` and
+`yt-dlp` fail. Archived workflow: `VuYc4FsgAxoDNMu7`. The `transcript_*`
+columns in `youtube_items` remain but stay NULL. Do not resurrect without
+an IP-blocking fix (cookies or residential proxy).
 
-## Open questions for the user
+## Py-helpers
 
-1. `frontierwatch` — what does it actually ingest and emit? Which Postgres
-   table should its output land in? Any scheduling constraint?
-2. For `newsletter-digest` migration — use existing `news_items` with a new
-   `source_type='newsletter'`, or a new `newsletter_items` table?
-3. Briefing email recipients — is it still just one address, or has the list
-   grown? (Check `RECIPIENT_EMAIL` env from old GHA and confirm.)
-4. Cutover timing for deprecating the old GHA workflow (`.github/workflows/fetch_youtube.yml`) — keep running in parallel for N days after generate-briefing is solid, or cut sooner?
-
-## Quick start for next session
-
-```bash
-git checkout claude/run-briefing-script-7xbIt
-git pull origin claude/run-briefing-script-7xbIt
-```
-
-Then: read this file, then `n8n/workflows/generate-briefing.ts` and
-`scripts/generate_briefing.py`, and start on the briefing fine-tune.
+- Railway auto-deploys from `claude/run-briefing-script-7xbIt`
+- Endpoints: `/health`, `/scrape-article`, `/parse-google-trends`
+- Changes to `infra/py-helpers/` DO go through git (commit + push triggers deploy)
