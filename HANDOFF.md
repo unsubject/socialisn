@@ -1,6 +1,6 @@
 # Handoff — socialisn
 
-_Last updated: 2026-04-20 (phase 2.1 primitives landed — `search_discourse` + `get_cross_source_momentum` in `apps/socialisn-studio/`; scaffold shipped earlier today; phase 2 spec at `docs/phase-2-spec.md`; briefing v2 shipped; hkcitizensmedia.com live on Railway; frontierwatch2 spun off 2026-04-19)_
+_Last updated: 2026-04-20 (phase 2.1 candidate engine landed — `list_daily_candidates` + `studio_candidate_scores` auto-migration in `apps/socialisn-studio/`; scaffold + primitives shipped earlier today; phase 2 spec at `docs/phase-2-spec.md`; briefing v2 shipped; hkcitizensmedia.com live on Railway; frontierwatch2 spun off 2026-04-19)_
 
 ## Current state
 
@@ -14,7 +14,7 @@ _Last updated: 2026-04-20 (phase 2.1 primitives landed — `search_discourse` + 
 
 **Briefings site** — `apps/briefings-web/` Hono + pg service on Railway, renders `briefings.html` directly from Postgres. Routes: `/`, `/b/:date/:slot`, `/archive`, `/feed.xml`, `/healthz`. Public URL: **https://hkcitizensmedia.com** (custom domain live 2026-04-20, fronted by Cloudflare, Railway-issued Let's Encrypt cert). This is the canonical feed surface going forward.
 
-**Studio service** — `apps/socialisn-studio/` Hono + `@modelcontextprotocol/sdk` service. Bearer-authed Streamable HTTP MCP endpoint at `/mcp`; `/healthz` plain text. Tools live: `search_discourse` (ILIKE RAG across newsletter/news/YouTube/podcast + item_enrichment) and `get_cross_source_momentum` (distinct_sources × distinct_mentions × velocity × (1−saturation)). Deploy runbook: `docs/studio-deploy.md`. Target public URL: `https://studio.socialisn.com`. Source: `apps/socialisn-studio/src/`.
+**Studio service** — `apps/socialisn-studio/` Hono + `@modelcontextprotocol/sdk` service. Bearer-authed Streamable HTTP MCP endpoint at `/mcp`; `/healthz` plain text. Tools live: `search_discourse` (ILIKE RAG across newsletter/news/YouTube/podcast + item_enrichment), `get_cross_source_momentum` (distinct_sources × distinct_mentions × velocity × (1−saturation)), `list_daily_candidates` (subjects from `keywords_zh`, track-weighted audience-fit, freshness window, guaranteed track-distinct top pick). Writes into new table `studio_candidate_scores` each invocation — auto-created on boot via `src/migrations.js`, no manual SQL needed. Deploy runbook: `docs/studio-deploy.md`. Target public URL: `https://studio.socialisn.com`. Source: `apps/socialisn-studio/src/`.
 
 **Other fetch workflows** — verified active 2026-04-19:
 
@@ -22,7 +22,7 @@ _Last updated: 2026-04-20 (phase 2.1 primitives landed — `search_discourse` + 
 - Fetch Podcasts `Ykpcl95qtvzMv70b`
 - Fetch Perplexity Search `rkiWYmYBoVyi8Ih2` (writes into `news_items` with `source_type='perplexity'`; there is no separate `perplexity_searches` table — the phase 2 spec's reference to one is resolved by this source_type filter)
 - Fetch YouTube Videos `x5s2rk7HWNQjX5N1`
-- Process Items with Haiku `OG4iOnuMwxoJDbvK`
+- Process Items with Haiku `OG4iOnuMwxoJDbvK` — source of `item_enrichment.keywords_zh`, which `list_daily_candidates` depends on; if enrichment stalls, the candidate engine goes blind.
 
 Before editing any of them, run `get_workflow_details` and diff against `n8n/workflows/*.ts`. Git is source of truth. **After every `update_workflow`, also call `publish_workflow`** — otherwise the fix stays on the draft and the active cron keeps running the old version (see gotcha below).
 
@@ -50,7 +50,7 @@ Summary:
 - **Phase 2.1 (pre-production)**: MCP server `socialisn-studio` on Railway at `studio.socialisn.com`, exposing tools for subject shortlisting, Google Tasks "Subjects" parking-lot triage, thesis-brief with evidence + counter-evidence, and 30-min Traditional Chinese script generation. Two **distinct** daily tracks (YouTube broad-reach / members podcast deep-dive) — no subject overlap.
 - **Phase 2.2 (post-production)**: adds tools for Whisper SRT cleanup, GEM extraction, title suggestion, YouTube Chapters, teaser. Shipped after 2.1.
 - **Interface**: remote MCP — user connects from Claude / Gemini / ChatGPT / Perplexity. No new UI in this repo.
-- **New tables**: `studio_events`, `studio_candidate_scores`, `whisper_glossary`. All other socialisn tables are read-only from the studio.
+- **New tables**: `studio_events`, `studio_candidate_scores` (live — auto-migrated), `whisper_glossary`. All other socialisn tables are read-only from the studio.
 - **Cross-project**: every session writes a human-readable journal entry into `unsubject/2nd-brain` via its `src/capture.ts` ingestion contract (`channel: "socialisn-studio"`), so production behavior becomes semantically searchable alongside other journal entries.
 
 ## n8n MCP is wired
@@ -98,8 +98,9 @@ For any Railway service fronted by Cloudflare at a custom domain:
 
 ## Outstanding work
 
-- **Deploy the studio.** Follow `docs/studio-deploy.md` to stand up the Railway service + Cloudflare DNS + cert for `studio.socialisn.com`. After deploy, smoke-test both primitives end-to-end from Claude desktop: run `search_discourse` for a topic you know is in the last 72h, then `get_cross_source_momentum` on the same topic and sanity-check the score.
-- **Phase 2.1 step 3 — candidate engine.** Compose the primitives + audience-fit weights + track-distinction rule into `list_daily_candidates` (youtube / podcast). Spec: `docs/phase-2-spec.md` §"Build order (Phase 2.1)" step 3. Likely needs the new `studio_candidate_scores` table created first.
+- **Deploy the studio.** Follow `docs/studio-deploy.md` to stand up the Railway service + Cloudflare DNS + cert for `studio.socialisn.com`. After deploy, smoke-test all three tools from Claude desktop: `search_discourse` for a known topic, `get_cross_source_momentum` for the same, `list_daily_candidates({track: "youtube"})` and `list_daily_candidates({track: "podcast"})` — confirm track-distinction holds (#1 differs) and `studio_candidate_scores` is writing.
+- **Phase 2.1 step 4 — Google Tasks "Subjects" integration.** `check_parking_lot` tool (reads the list, classifies each entry as `ripe now` / `ripe soon` / `cold` / `stale`) + mark-done write on session close. Also populates `list_daily_candidates`'s `parking_lot_match` field. Spec: `docs/phase-2-spec.md` §"MCP tools" + §"Google Tasks scope". Will need a Google OAuth credential with the `tasks` scope — decide whether to extend the existing `Gmail account` credential or register a fresh one.
+- **Phase 2.1 step 5 — `build_thesis_brief`.** Sonnet 4.5 prompt; orchestrates the DB + Perplexity for supporting evidence + counter-evidence (facts, not rhetoric); returns sharpened thesis + "this angle collapses if…" risk line.
 
 ## Don't do this again
 
@@ -114,3 +115,4 @@ For any Railway service fronted by Cloudflare at a custom domain:
 - Don't revive the `docs/` Pages site or `newsletter-digest` — both deprecated 2026-04-20.
 - Don't set Cloudflare SSL/TLS mode to "Flexible" on any Railway-backed domain — guaranteed redirect loop.
 - Don't write to existing socialisn ingest tables from `socialisn-studio` (phase 2). Studio is read-only for everything except its own new tables and the Google Tasks "Subjects" mark-done action.
+- **Don't squash-merge a stacked PR without re-based a fresh branch off merged main.** Squashing #43 orphaned #44's scaffold commits; `update_pull_request_branch` couldn't auto-merge and the PR went `dirty`. Recovered by branching a v2 off merged main and repushing. For future stacks, plan for this: either merge both in one PR, or be ready to re-land the stacked branch from a fresh cut after the parent merges.
