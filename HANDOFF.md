@@ -1,6 +1,6 @@
 # Handoff — socialisn
 
-_Last updated: 2026-04-20 (phase 2.1 candidate engine landed — `list_daily_candidates` + `studio_candidate_scores` auto-migration in `apps/socialisn-studio/`; scaffold + primitives shipped earlier today; phase 2 spec at `docs/phase-2-spec.md`; briefing v2 shipped; hkcitizensmedia.com live on Railway; frontierwatch2 spun off 2026-04-19)_
+_Last updated: 2026-04-20 (phase 2.1 thesis-brief landed — `build_thesis_brief` in `apps/socialisn-studio/` wired to Anthropic + Perplexity APIs; candidate engine + primitives + scaffold shipped earlier today; phase 2 spec at `docs/phase-2-spec.md`; briefing v2 shipped; hkcitizensmedia.com live on Railway; frontierwatch2 spun off 2026-04-19)_
 
 ## Current state
 
@@ -14,7 +14,16 @@ _Last updated: 2026-04-20 (phase 2.1 candidate engine landed — `list_daily_can
 
 **Briefings site** — `apps/briefings-web/` Hono + pg service on Railway, renders `briefings.html` directly from Postgres. Routes: `/`, `/b/:date/:slot`, `/archive`, `/feed.xml`, `/healthz`. Public URL: **https://hkcitizensmedia.com** (custom domain live 2026-04-20, fronted by Cloudflare, Railway-issued Let's Encrypt cert). This is the canonical feed surface going forward.
 
-**Studio service** — `apps/socialisn-studio/` Hono + `@modelcontextprotocol/sdk` service. Bearer-authed Streamable HTTP MCP endpoint at `/mcp`; `/healthz` plain text. Tools live: `search_discourse` (ILIKE RAG across newsletter/news/YouTube/podcast + item_enrichment), `get_cross_source_momentum` (distinct_sources × distinct_mentions × velocity × (1−saturation)), `list_daily_candidates` (subjects from `keywords_zh`, track-weighted audience-fit, freshness window, guaranteed track-distinct top pick). Writes into new table `studio_candidate_scores` each invocation — auto-created on boot via `src/migrations.js`, no manual SQL needed. Deploy runbook: `docs/studio-deploy.md`. Target public URL: `https://studio.socialisn.com`. Source: `apps/socialisn-studio/src/`.
+**Studio service** — `apps/socialisn-studio/` Hono + `@modelcontextprotocol/sdk` service. Deployed at `https://studio.socialisn.com` (bearer-authed Streamable HTTP MCP at `/mcp`; `/healthz` plain text). Tools live:
+
+- `search_discourse` — ILIKE RAG across newsletter/news/YouTube/podcast + item_enrichment.
+- `get_cross_source_momentum` — distinct_sources × distinct_mentions × velocity × (1−saturation).
+- `list_daily_candidates` — subjects from `keywords_zh`, track-weighted audience-fit, freshness window, guaranteed track-distinct top pick. Writes `studio_candidate_scores` each invocation (auto-created on boot via `src/migrations.js`).
+- `build_thesis_brief` — Sonnet-driven thesis sharpener; synthesizes corpus + Perplexity web research; enforces "counter-evidence = facts, never rhetoric" discipline; returns sharpened thesis + 3-5 supporting + 2-4 counter + 1 "collapses if" line, all Traditional Chinese. Requires `ANTHROPIC_API_KEY`; `PERPLEXITY_API_KEY` optional (corpus-only mode if absent); `STUDIO_SONNET_MODEL` optional (default `claude-sonnet-4-5`).
+
+Deploy runbook: `docs/studio-deploy.md`. Source: `apps/socialisn-studio/src/`.
+
+**Client wiring** — Claude Desktop on Mac connects via `mcp-remote` stdio proxy with `--header Authorization: Bearer …`. Direct `"type": "http"` in `claude_desktop_config.json` fails silently; runbook + memory reflect this.
 
 **Other fetch workflows** — verified active 2026-04-19:
 
@@ -98,9 +107,9 @@ For any Railway service fronted by Cloudflare at a custom domain:
 
 ## Outstanding work
 
-- **Deploy the studio.** Follow `docs/studio-deploy.md` to stand up the Railway service + Cloudflare DNS + cert for `studio.socialisn.com`. After deploy, smoke-test all three tools from Claude desktop: `search_discourse` for a known topic, `get_cross_source_momentum` for the same, `list_daily_candidates({track: "youtube"})` and `list_daily_candidates({track: "podcast"})` — confirm track-distinction holds (#1 differs) and `studio_candidate_scores` is writing.
+- **Set new env vars on studio.** After merging the thesis-brief PR, add `ANTHROPIC_API_KEY` (required) and `PERPLEXITY_API_KEY` (optional) in Railway → studio service Variables. Redeploy. Smoke-test with `build_thesis_brief({subject: "美聯儲利率", user_direction: "若美聯儲下次依然加息，香港輸入型通脹會被長期釋放到 2027。"})`.
 - **Phase 2.1 step 4 — Google Tasks "Subjects" integration.** `check_parking_lot` tool (reads the list, classifies each entry as `ripe now` / `ripe soon` / `cold` / `stale`) + mark-done write on session close. Also populates `list_daily_candidates`'s `parking_lot_match` field. Spec: `docs/phase-2-spec.md` §"MCP tools" + §"Google Tasks scope". Will need a Google OAuth credential with the `tasks` scope — decide whether to extend the existing `Gmail account` credential or register a fresh one.
-- **Phase 2.1 step 5 — `build_thesis_brief`.** Sonnet 4.5 prompt; orchestrates the DB + Perplexity for supporting evidence + counter-evidence (facts, not rhetoric); returns sharpened thesis + "this angle collapses if…" risk line.
+- **Phase 2.1 step 6 — `generate_script`.** 30-min Traditional Chinese full-prose script with track-specific CTA. Reuses the same Anthropic env var; same Sonnet model config. Prompt structure in spec §"generate_script".
 
 ## Don't do this again
 
@@ -115,4 +124,5 @@ For any Railway service fronted by Cloudflare at a custom domain:
 - Don't revive the `docs/` Pages site or `newsletter-digest` — both deprecated 2026-04-20.
 - Don't set Cloudflare SSL/TLS mode to "Flexible" on any Railway-backed domain — guaranteed redirect loop.
 - Don't write to existing socialisn ingest tables from `socialisn-studio` (phase 2). Studio is read-only for everything except its own new tables and the Google Tasks "Subjects" mark-done action.
-- **Don't squash-merge a stacked PR without re-based a fresh branch off merged main.** Squashing #43 orphaned #44's scaffold commits; `update_pull_request_branch` couldn't auto-merge and the PR went `dirty`. Recovered by branching a v2 off merged main and repushing. For future stacks, plan for this: either merge both in one PR, or be ready to re-land the stacked branch from a fresh cut after the parent merges.
+- Don't squash-merge a stacked PR without re-basing a fresh branch off merged main. Squashing #43 orphaned #44's scaffold commits; `update_pull_request_branch` couldn't auto-merge and the PR went `dirty`. Recovered by branching a v2 off merged main and repushing. For future stacks, plan for this: either merge both in one PR, or be ready to re-land the stacked branch from a fresh cut after the parent merges.
+- Don't use Claude Desktop's `"type": "http"` config entry for a bearer-authed remote MCP on Mac; it silently fails to register. Use the `mcp-remote` stdio proxy pattern — `docs/studio-deploy.md` shows the working config.

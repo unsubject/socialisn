@@ -6,6 +6,7 @@ import { StreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/
 import { registerSearchDiscourse } from './tools/search-discourse.js';
 import { registerMomentum } from './tools/momentum.js';
 import { registerListDailyCandidates } from './tools/list-daily-candidates.js';
+import { registerBuildThesisBrief } from './tools/build-thesis-brief.js';
 import { runMigrations } from './migrations.js';
 
 const PORT = Number(process.env.PORT || 3000);
@@ -21,11 +22,12 @@ app.get('/healthz', (c) => c.text('ok'));
 function buildMcpServer() {
   const server = new McpServer({
     name: 'socialisn-studio',
-    version: '0.3.0'
+    version: '0.4.0'
   });
   registerSearchDiscourse(server);
   registerMomentum(server);
   registerListDailyCandidates(server);
+  registerBuildThesisBrief(server);
   return server;
 }
 
@@ -38,8 +40,6 @@ async function handleMcp(req, res) {
 
   try {
     const server = buildMcpServer();
-    // Stateless: fresh server + transport per request. Flip to sessionful
-    // (sessionIdGenerator set) if a tool needs to stream progress back.
     const transport = new StreamableHTTPServerTransport({
       sessionIdGenerator: undefined
     });
