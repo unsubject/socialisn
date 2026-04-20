@@ -1,6 +1,6 @@
 # Handoff — socialisn
 
-_Last updated: 2026-04-20 (phase 2.1 scaffold landed — `apps/socialisn-studio/` + `docs/studio-deploy.md` runbook; phase 2 spec at `docs/phase-2-spec.md`; briefing v2 shipped; hkcitizensmedia.com live on Railway; frontierwatch2 spun off 2026-04-19)_
+_Last updated: 2026-04-20 (phase 2.1 primitives landed — `search_discourse` + `get_cross_source_momentum` in `apps/socialisn-studio/`; scaffold shipped earlier today; phase 2 spec at `docs/phase-2-spec.md`; briefing v2 shipped; hkcitizensmedia.com live on Railway; frontierwatch2 spun off 2026-04-19)_
 
 ## Current state
 
@@ -14,13 +14,13 @@ _Last updated: 2026-04-20 (phase 2.1 scaffold landed — `apps/socialisn-studio/
 
 **Briefings site** — `apps/briefings-web/` Hono + pg service on Railway, renders `briefings.html` directly from Postgres. Routes: `/`, `/b/:date/:slot`, `/archive`, `/feed.xml`, `/healthz`. Public URL: **https://hkcitizensmedia.com** (custom domain live 2026-04-20, fronted by Cloudflare, Railway-issued Let's Encrypt cert). This is the canonical feed surface going forward.
 
-**Studio service (scaffold)** — `apps/socialisn-studio/` Hono + `@modelcontextprotocol/sdk` service. Bearer-authed Streamable HTTP MCP endpoint at `/mcp`; `/healthz` plain text. No tools registered yet — step 2 lands primitives. Deploy runbook: `docs/studio-deploy.md`. Target public URL: `https://studio.socialisn.com`.
+**Studio service** — `apps/socialisn-studio/` Hono + `@modelcontextprotocol/sdk` service. Bearer-authed Streamable HTTP MCP endpoint at `/mcp`; `/healthz` plain text. Tools live: `search_discourse` (ILIKE RAG across newsletter/news/YouTube/podcast + item_enrichment) and `get_cross_source_momentum` (distinct_sources × distinct_mentions × velocity × (1−saturation)). Deploy runbook: `docs/studio-deploy.md`. Target public URL: `https://studio.socialisn.com`. Source: `apps/socialisn-studio/src/`.
 
 **Other fetch workflows** — verified active 2026-04-19:
 
 - Fetch News (RSS) `W2QHzmBjyUFs0xsd`
 - Fetch Podcasts `Ykpcl95qtvzMv70b`
-- Fetch Perplexity Search `rkiWYmYBoVyi8Ih2`
+- Fetch Perplexity Search `rkiWYmYBoVyi8Ih2` (writes into `news_items` with `source_type='perplexity'`; there is no separate `perplexity_searches` table — the phase 2 spec's reference to one is resolved by this source_type filter)
 - Fetch YouTube Videos `x5s2rk7HWNQjX5N1`
 - Process Items with Haiku `OG4iOnuMwxoJDbvK`
 
@@ -98,8 +98,8 @@ For any Railway service fronted by Cloudflare at a custom domain:
 
 ## Outstanding work
 
-- **Deploy the studio scaffold.** Follow `docs/studio-deploy.md` to stand up the Railway service + Cloudflare DNS + cert for `studio.socialisn.com`. Verify `GET /healthz` returns `ok` and an MCP `initialize` handshake succeeds (tools list empty) before moving on.
-- **Phase 2.1 step 2 — primitives.** Once the scaffold is live, layer `search_discourse` and `get_cross_source_momentum` into `apps/socialisn-studio/src/`. Spec: `docs/phase-2-spec.md` §"Build order (Phase 2.1)".
+- **Deploy the studio.** Follow `docs/studio-deploy.md` to stand up the Railway service + Cloudflare DNS + cert for `studio.socialisn.com`. After deploy, smoke-test both primitives end-to-end from Claude desktop: run `search_discourse` for a topic you know is in the last 72h, then `get_cross_source_momentum` on the same topic and sanity-check the score.
+- **Phase 2.1 step 3 — candidate engine.** Compose the primitives + audience-fit weights + track-distinction rule into `list_daily_candidates` (youtube / podcast). Spec: `docs/phase-2-spec.md` §"Build order (Phase 2.1)" step 3. Likely needs the new `studio_candidate_scores` table created first.
 
 ## Don't do this again
 
