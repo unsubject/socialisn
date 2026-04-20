@@ -25,13 +25,23 @@ if (ADMIN_PASSWORD && !BASE_URL) {
 
 const app = new Hono();
 
+app.use('*', async (c, next) => {
+  const start = Date.now();
+  const method = c.req.method;
+  const path = new URL(c.req.url).pathname;
+  await next();
+  const ms = Date.now() - start;
+  const status = c.res.status;
+  console.log(`[http] ${method} ${path} ${status} ${ms}ms`);
+});
+
 app.get('/healthz', (c) => c.text('ok'));
 attachOauthRoutes(app);
 
 function buildMcpServer() {
   const server = new McpServer({
     name: 'socialisn-studio',
-    version: '0.5.0'
+    version: '0.5.1'
   });
   registerSearchDiscourse(server);
   registerMomentum(server);
@@ -61,13 +71,17 @@ async function authorizeMcpRequest(req) {
 }
 
 async function handleMcp(req, res) {
+  const start = Date.now();
+  const method = req.method;
   const auth = await authorizeMcpRequest(req);
   if (!auth) {
+    const ms = Date.now() - start;
     res.writeHead(401, {
       'content-type': 'application/json',
       'www-authenticate': wwwAuthenticateChallenge()
     });
     res.end(JSON.stringify({ error: 'unauthorized' }));
+    console.log(`[mcp] ${method} /mcp 401 unauth ${ms}ms`);
     return;
   }
 
@@ -79,11 +93,13 @@ async function handleMcp(req, res) {
     res.on('close', () => {
       transport.close();
       server.close();
+      const ms = Date.now() - start;
+      console.log(`[mcp] ${method} /mcp ${res.statusCode} ${auth.mode} ${ms}ms`);
     });
     await server.connect(transport);
     await transport.handleRequest(req, res);
   } catch (err) {
-    console.error('MCP error:', err);
+    console.error('[mcp] error:', err);
     if (!res.headersSent) {
       res.writeHead(500, { 'content-type': 'application/json' });
       res.end(JSON.stringify({ error: 'internal' }));
