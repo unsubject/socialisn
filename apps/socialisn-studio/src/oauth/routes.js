@@ -15,6 +15,10 @@ function issuer() {
   return process.env.STUDIO_BASE_URL.replace(/\/$/, '');
 }
 
+function shortId(id) {
+  return id ? String(id).slice(0, 8) : '(none)';
+}
+
 export function attachOauthRoutes(app) {
   if (!oauthEnabled()) return;
 
@@ -48,18 +52,21 @@ export function attachOauthRoutes(app) {
     try {
       body = await c.req.json();
     } catch {
+      console.log('[oauth] register: invalid JSON');
       return c.json({ error: 'invalid_client_metadata', error_description: 'body must be JSON' }, 400);
     }
     const redirect_uris = Array.isArray(body.redirect_uris)
       ? body.redirect_uris.filter((s) => typeof s === 'string' && s.length > 0)
       : [];
     if (redirect_uris.length === 0) {
+      console.log('[oauth] register: missing redirect_uris');
       return c.json({ error: 'invalid_client_metadata', error_description: 'redirect_uris required' }, 400);
     }
     const client = await registerClient({
       client_name: typeof body.client_name === 'string' ? body.client_name : null,
       redirect_uris
     });
+    console.log(`[oauth] register: client=${shortId(client.client_id)} redirects=${redirect_uris.length} name=${JSON.stringify(client.client_name)}`);
     return c.json({
       client_id: client.client_id,
       client_id_issued_at: Math.floor(Date.now() / 1000),
@@ -75,19 +82,27 @@ export function attachOauthRoutes(app) {
     const q = c.req.query();
     const { response_type, client_id, redirect_uri, code_challenge, code_challenge_method } = q;
     if (response_type !== 'code') {
+      console.log(`[oauth] authorize GET: unsupported response_type=${response_type}`);
       return c.text('unsupported_response_type: only "code" is supported', 400);
     }
     if (!code_challenge || code_challenge_method !== 'S256') {
+      console.log(`[oauth] authorize GET: missing/invalid PKCE method=${code_challenge_method}`);
       return c.text('invalid_request: PKCE with S256 required', 400);
     }
     if (!client_id || !redirect_uri) {
+      console.log('[oauth] authorize GET: missing client_id or redirect_uri');
       return c.text('invalid_request: client_id and redirect_uri required', 400);
     }
     const client = await getClient(client_id);
-    if (!client) return c.text('invalid_request: unknown client_id', 400);
+    if (!client) {
+      console.log(`[oauth] authorize GET: unknown client=${shortId(client_id)}`);
+      return c.text('invalid_request: unknown client_id', 400);
+    }
     if (!client.redirect_uris.includes(redirect_uri)) {
+      console.log(`[oauth] authorize GET: redirect_uri mismatch client=${shortId(client_id)} got=${redirect_uri}`);
       return c.text('invalid_request: redirect_uri not registered', 400);
     }
+    console.log(`[oauth] authorize GET: show login client=${shortId(client_id)} redirect=${redirect_uri}`);
     return c.html(renderLoginPage({
       client_id,
       client_name: client.client_name,
@@ -113,12 +128,17 @@ export function attachOauthRoutes(app) {
     const password = String(form.get('password') || '');
 
     const client = await getClient(client_id);
-    if (!client) return c.text('invalid_request: unknown client_id', 400);
+    if (!client) {
+      console.log(`[oauth] authorize POST: unknown client=${shortId(client_id)}`);
+      return c.text('invalid_request: unknown client_id', 400);
+    }
     if (!client.redirect_uris.includes(redirect_uri)) {
+      console.log(`[oauth] authorize POST: redirect_uri mismatch client=${shortId(client_id)}`);
       return c.text('invalid_request: redirect_uri not registered', 400);
     }
 
     if (password !== process.env.STUDIO_ADMIN_PASSWORD) {
+      console.log(`[oauth] authorize POST: wrong password client=${shortId(client_id)}`);
       return c.html(renderLoginPage({
         client_id,
         client_name: client.client_name,
@@ -138,6 +158,7 @@ export function attachOauthRoutes(app) {
     const url = new URL(redirect_uri);
     url.searchParams.set('code', code);
     if (state) url.searchParams.set('state', state);
+    console.log(`[oauth] authorize POST: issued code client=${shortId(client_id)} redirect=${redirect_uri} state=${state ? 'yes' : 'no'}`);
     return c.redirect(url.toString(), 302);
   });
 
@@ -150,14 +171,21 @@ export function attachOauthRoutes(app) {
       const code_verifier = String(form.get('code_verifier') || '');
       const client_id = String(form.get('client_id') || '');
       if (!code || !code_verifier || !client_id) {
+        console.log(`[oauth] token POST: invalid_request code=${code ? 'y' : 'n'} verifier=${code_verifier ? 'y' : 'n'} client=${client_id ? 'y' : 'n'}`);
         return c.json({ error: 'invalid_request' }, 400);
       }
       const row = await consumeAuthCode(code);
-      if (!row || row.client_id !== client_id) {
+      if (!row) {
+        console.log(`[oauth] token POST: code not found/expired client=${shortId(client_id)}`);
+        return c.json({ error: 'invalid_grant' }, 400);
+      }
+      if (row.client_id !== client_id) {
+        console.log(`[oauth] token POST: client_id mismatch code-client=${shortId(row.client_id)} request-client=${shortId(client_id)}`);
         return c.json({ error: 'invalid_grant' }, 400);
       }
       const hashed = hashCodeVerifier(code_verifier);
       if (hashed !== row.code_challenge) {
+        console.log(`[oauth] token POST: code_verifier mismatch client=${shortId(client_id)}`);
         return c.json({ error: 'invalid_grant', error_description: 'code_verifier mismatch' }, 400);
       }
       const access = await issueToken({
@@ -174,6 +202,7 @@ export function attachOauthRoutes(app) {
         resource: row.resource,
         ttlSeconds: REFRESH_TTL_SECONDS
       });
+      console.log(`[oauth] token POST: issued access+refresh client=${shortId(client_id)} scope=${row.scope || '-'}`);
       return c.json({
         access_token: access.token,
         token_type: 'Bearer',
@@ -185,9 +214,15 @@ export function attachOauthRoutes(app) {
 
     if (grant_type === 'refresh_token') {
       const refresh_token = String(form.get('refresh_token') || '');
-      if (!refresh_token) return c.json({ error: 'invalid_request' }, 400);
+      if (!refresh_token) {
+        console.log('[oauth] token POST: refresh missing');
+        return c.json({ error: 'invalid_request' }, 400);
+      }
       const row = await consumeRefreshToken(refresh_token);
-      if (!row) return c.json({ error: 'invalid_grant' }, 400);
+      if (!row) {
+        console.log('[oauth] token POST: refresh token not found/expired');
+        return c.json({ error: 'invalid_grant' }, 400);
+      }
       const access = await issueToken({
         token_type: 'access',
         client_id: row.client_id,
@@ -202,6 +237,7 @@ export function attachOauthRoutes(app) {
         resource: row.resource,
         ttlSeconds: REFRESH_TTL_SECONDS
       });
+      console.log(`[oauth] token POST: rotated refresh client=${shortId(row.client_id)}`);
       return c.json({
         access_token: access.token,
         token_type: 'Bearer',
@@ -211,6 +247,7 @@ export function attachOauthRoutes(app) {
       });
     }
 
+    console.log(`[oauth] token POST: unsupported_grant_type=${grant_type}`);
     return c.json({ error: 'unsupported_grant_type' }, 400);
   });
 }
