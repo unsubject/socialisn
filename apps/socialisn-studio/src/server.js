@@ -3,6 +3,8 @@ import { Hono } from 'hono';
 import { getRequestListener } from '@hono/node-server';
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/streamableHttp.js';
+import { registerSearchDiscourse } from './tools/search-discourse.js';
+import { registerMomentum } from './tools/momentum.js';
 
 const PORT = Number(process.env.PORT || 3000);
 const BEARER_TOKEN = process.env.STUDIO_BEARER_TOKEN;
@@ -17,10 +19,10 @@ app.get('/healthz', (c) => c.text('ok'));
 function buildMcpServer() {
   const server = new McpServer({
     name: 'socialisn-studio',
-    version: '0.1.0'
+    version: '0.2.0'
   });
-  // Tools land here in phase 2.1 step 2+.
-  // See docs/phase-2-spec.md §"Phase 2.1 — MCP tools".
+  registerSearchDiscourse(server);
+  registerMomentum(server);
   return server;
 }
 
