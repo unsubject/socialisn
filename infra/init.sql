@@ -79,7 +79,9 @@ CREATE TABLE IF NOT EXISTS item_enrichment (
 CREATE TABLE IF NOT EXISTS briefings (
     id            SERIAL PRIMARY KEY,
     date          DATE NOT NULL,
-    slot          TEXT NOT NULL,  -- 'morning' or 'evening'
+    slot          TEXT NOT NULL
+                  CONSTRAINT briefings_slot_check
+                  CHECK (slot IN ('morning', 'midday', 'evening')),
     markdown      TEXT NOT NULL,
     html          TEXT,
     prompt_tokens INTEGER,
