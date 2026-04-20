@@ -8,10 +8,13 @@ Follow this exact sequence — it replays the `hkcitizensmedia.com` fix from 202
 - Create a new Railway service pointed at this repo, root directory `apps/socialisn-studio/`.
 - Environment variables:
   - `DATABASE_URL` — existing Railway Postgres (same instance used by socialisn + frontierwatch2). **Required.**
-  - `STUDIO_BEARER_TOKEN` — fresh random token. MCP clients send this as `Authorization: Bearer <token>`. **Required.**
-  - `ANTHROPIC_API_KEY` — same key used by the n8n briefing pipeline. **Required** for `build_thesis_brief` (and any later LLM-driven tool). Other tools work without it.
-  - `PERPLEXITY_API_KEY` — optional. When set, `build_thesis_brief` augments corpus evidence with fresh-web research via the `sonar` model. Without it, the tool runs on corpus-only evidence.
-  - `STUDIO_SONNET_MODEL` — optional; overrides the default Sonnet model (`claude-sonnet-4-5`, matching what the n8n pipeline runs). Useful for trying newer models (e.g. `claude-sonnet-4-6`) without a code change.
+  - `STUDIO_ADMIN_PASSWORD` — password you'll type into the OAuth login page. **Required** for the native Claude Desktop connector flow.
+  - `STUDIO_BASE_URL` — public URL, e.g. `https://studio.socialisn.com`. **Required** whenever `STUDIO_ADMIN_PASSWORD` is set. Used in OAuth metadata (issuer, authorization_endpoint, …).
+  - `STUDIO_BEARER_TOKEN` — optional legacy bearer for `curl` and scripted access. Keep it during migration; remove once all clients are on OAuth.
+  - `ANTHROPIC_API_KEY` — same key used by the n8n briefing pipeline. **Required** for `build_thesis_brief`. Other tools work without it.
+  - `PERPLEXITY_API_KEY` — optional. When set, `build_thesis_brief` augments corpus evidence with fresh-web research.
+  - `STUDIO_SONNET_MODEL` — optional; defaults to `claude-sonnet-4-5`. Set to `claude-sonnet-4-6` to try the newer model without a code change.
+- At least one of `STUDIO_BEARER_TOKEN` or `STUDIO_ADMIN_PASSWORD` must be set; the service refuses to start otherwise.
 - Expose the service publicly; Railway assigns a `*.up.railway.app` URL.
 - Verify: `curl https://<railway-url>/healthz` → `ok`.
 
@@ -30,10 +33,26 @@ Follow this exact sequence — it replays the `hkcitizensmedia.com` fix from 202
   - Never use "Flexible" — it causes an infinite 301 loop (Railway redirects HTTP→HTTPS, Cloudflare caches the redirect back at the browser). See `HANDOFF.md` § "Railway + Cloudflare gotcha".
 - Switch the `studio` DNS record to **Proxied (orange cloud)**.
 - Verify: `curl -I https://studio.socialisn.com/healthz` → `HTTP/2 200` with `server: cloudflare`.
+- Verify OAuth metadata is reachable: `curl https://studio.socialisn.com/.well-known/oauth-authorization-server` returns JSON with `issuer`, `authorization_endpoint`, etc.
 
-## 4. MCP client wiring
+## 4. Connect Claude Desktop (native connector flow)
 
-Claude Desktop's direct-HTTP remote MCP flow fails silently for bearer-authed servers. Use the `mcp-remote` stdio proxy pattern in `~/Library/Application Support/Claude/claude_desktop_config.json`:
+This is the canonical path — a per-conversation toggleable connector, no entries in `claude_desktop_config.json`.
+
+1. **Claude Desktop → Settings → Connectors → Add custom connector.**
+2. Fill in:
+   - **Name:** anything, e.g. `Socialisn Studio`
+   - **Remote MCP server URL:** `https://studio.socialisn.com/mcp`
+3. Click Add / Connect. Claude Desktop auto-discovers `/.well-known/oauth-authorization-server`, performs Dynamic Client Registration at `/register`, then opens your default browser to `/authorize`.
+4. Browser shows a minimal password-protected login page ("Authorize Claude Desktop to access socialisn-studio"). Type `STUDIO_ADMIN_PASSWORD`, submit.
+5. Browser redirects back to Claude Desktop's callback URL; tab closes itself or shows a success message.
+6. In any chat, open the tools picker and toggle `Socialisn Studio` on/off per conversation. The four tools appear only when enabled in that chat.
+
+Access tokens are 1-hour; refresh tokens 30 days. Claude Desktop handles refresh silently. If the refresh token expires, Claude Desktop re-prompts for the password.
+
+### Fallback: `mcp-remote` stdio proxy (legacy bearer)
+
+If the OAuth flow doesn't work for a specific client and you need a quick path to tools, you can fall back to the bearer-based `mcp-remote` shim in `~/Library/Application Support/Claude/claude_desktop_config.json`:
 
 ```json
 {
@@ -52,13 +71,15 @@ Claude Desktop's direct-HTTP remote MCP flow fails silently for bearer-authed se
 }
 ```
 
-Fully quit Claude Desktop (⌘Q) and reopen. First launch is slow (≈10–20 seconds) while `npx -y` fetches `mcp-remote`. In a new chat, type `/` — `socialisn-studio` should list its tools. Log file for debugging: `~/Library/Logs/Claude/mcp-server-socialisn-studio.log`.
+This makes the tools globally present in every Claude Desktop chat — acceptable as an escape hatch, but the Settings UI flow above is the preferred path.
 
 ## Troubleshooting
 
 - `curl -I https://studio.socialisn.com/healthz` returns `HTTP/2 301` pointing back at the same URL → Cloudflare SSL/TLS is set to Flexible. Change to Full (strict).
 - Railway cert issuance stuck → Cloudflare proxy is ON during HTTP-01 challenge. Toggle proxy OFF, delete and re-add the domain in Railway.
-- `401 unauthorized` on `/mcp` → client is missing the `Authorization: Bearer …` header or the token doesn't match the service env var.
-- `build_thesis_brief` returns `ANTHROPIC_API_KEY is required` → add the env var in Railway Variables, redeploy. (Other tools don't need it.)
+- Claude Desktop "Add custom connector" browser tab flashes and errors → `STUDIO_ADMIN_PASSWORD` or `STUDIO_BASE_URL` isn't set, so `/.well-known/oauth-authorization-server` returns 404. Set both env vars and redeploy.
+- Login page says "Wrong password" → it really does mean wrong password. Check Railway Variables.
+- `/mcp` returns 401 with `WWW-Authenticate: Bearer resource_metadata="…"` → the token expired or was never issued. From Claude Desktop, remove the connector and re-add. From `curl`, re-use the `STUDIO_BEARER_TOKEN`.
+- `build_thesis_brief` returns `ANTHROPIC_API_KEY is required` → add the env var in Railway Variables, redeploy.
 - `build_thesis_brief` returns `Perplexity 4xx…` in `perplexity_error` → key is invalid or rate-limited. The tool still returns a corpus-only brief when Perplexity fails.
-- Sonnet call times out (>90s) → shorten `corpus_limit` in the call (default 12) or check Anthropic API status.
+- Sonnet call times out (>90s) → shorten `corpus_limit` in the call or check Anthropic API status.
