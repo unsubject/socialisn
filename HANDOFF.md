@@ -1,6 +1,6 @@
 # Handoff — socialisn
 
-_Last updated: 2026-04-20 (phase 2 spec drafted — `docs/phase-2-spec.md`; briefing v2 shipped; Pages site fully removed; hkcitizensmedia.com live on Railway; newsletter-digest deprecated; frontierwatch2 spun off 2026-04-19; Fetch YouTube republished after stale draft left deprecated sub-workflow call in active version)_
+_Last updated: 2026-04-20 (phase 2.1 scaffold landed — `apps/socialisn-studio/` + `docs/studio-deploy.md` runbook; phase 2 spec at `docs/phase-2-spec.md`; briefing v2 shipped; hkcitizensmedia.com live on Railway; frontierwatch2 spun off 2026-04-19)_
 
 ## Current state
 
@@ -13,6 +13,8 @@ _Last updated: 2026-04-20 (phase 2 spec drafted — `docs/phase-2-spec.md`; brie
 - **Retired**: `Generate Daily Briefing` (`F0g69WDiNUX0OXNW`) archived. The separate `Generate Briefing · Midday` (`HBizcBtDaZZ3Lxxq`) and `Generate Briefing · Evening` (`lD00GXBo0c9OTuD5`) were also archived after consolidation.
 
 **Briefings site** — `apps/briefings-web/` Hono + pg service on Railway, renders `briefings.html` directly from Postgres. Routes: `/`, `/b/:date/:slot`, `/archive`, `/feed.xml`, `/healthz`. Public URL: **https://hkcitizensmedia.com** (custom domain live 2026-04-20, fronted by Cloudflare, Railway-issued Let's Encrypt cert). This is the canonical feed surface going forward.
+
+**Studio service (scaffold)** — `apps/socialisn-studio/` Hono + `@modelcontextprotocol/sdk` service. Bearer-authed Streamable HTTP MCP endpoint at `/mcp`; `/healthz` plain text. No tools registered yet — step 2 lands primitives. Deploy runbook: `docs/studio-deploy.md`. Target public URL: `https://studio.socialisn.com`.
 
 **Other fetch workflows** — verified active 2026-04-19:
 
@@ -86,17 +88,18 @@ For any Railway service fronted by Cloudflare at a custom domain:
 - **Cloudflare SSL/TLS mode must be "Full (strict)"**, not "Flexible". Flexible sends HTTP to Railway; Railway responds with a 301 to HTTPS; CF serves that 301 back; browser retries HTTPS; infinite loop. Symptom: `curl -I https://<domain>/healthz` returns `HTTP/2 301` with `location` header pointing at the *same* URL, plus `server: cloudflare`.
 - **Turn CF proxy OFF (grey cloud) during initial cert issuance.** Railway issues Let's Encrypt certs via HTTP-01; the orange-cloud proxy intercepts the challenge and the cert never issues. Once the cert is active on the Railway side, you can flip the proxy back on (and SSL mode must be Full strict by then).
 
-`hkcitizensmedia.com` was fixed using exactly this sequence on 2026-04-20. Re-apply this runbook for `studio.socialisn.com` when phase 2.1 deploys.
+`hkcitizensmedia.com` was fixed using exactly this sequence on 2026-04-20. `docs/studio-deploy.md` encodes the same runbook for `studio.socialisn.com`.
 
 ## Deprecated / removed (2026-04-20)
 
 - **`newsletter-digest` sibling repo** — evaluation cancelled; out of scope. Newsletter data already flows into `newsletter_items` via the Gmail workflow and into every v2 briefing via the read-only join. No separate digest pipeline needed.
-- **`docs/` Pages site — fully removed.** All deprecated static assets (`feed.xml`, `podcast-feed.xml`, `topics-feed.xml`, `youtube-feed.xml`, `index.html`, `briefings/*.html`) are gone. The Railway `apps/briefings-web/` service is the only feed/briefing surface. `docs/` now holds only markdown design/review notes (`briefing-v2-design.md`, `codebase-review-2026-04-19.md`, `phase-2-spec.md`).
+- **`docs/` Pages site — fully removed.** All deprecated static assets (`feed.xml`, `podcast-feed.xml`, `topics-feed.xml`, `youtube-feed.xml`, `index.html`, `briefings/*.html`) are gone. The Railway `apps/briefings-web/` service is the only feed/briefing surface. `docs/` now holds only markdown design/review notes (`briefing-v2-design.md`, `codebase-review-2026-04-19.md`, `phase-2-spec.md`, `studio-deploy.md`).
 - **Transcript enrichment sub-workflow** — archived workflow `VuYc4FsgAxoDNMu7` is gone; transcript enrichment is not part of the pipeline. Per-item Traditional Chinese summary + keyword enrichment is now handled centrally by `Process Items with Haiku` (`OG4iOnuMwxoJDbvK`) polling every source table. Do not re-add a `Trigger Transcript Enrichment` node at the tail of any fetch workflow.
 
 ## Outstanding work
 
-- Begin **Phase 2.1** implementation per `docs/phase-2-spec.md`. Build order in the spec §"Build order (Phase 2.1)". Start with MCP scaffolding at `apps/socialisn-studio/` + Cloudflare DNS + cert runbook for `studio.socialisn.com`.
+- **Deploy the studio scaffold.** Follow `docs/studio-deploy.md` to stand up the Railway service + Cloudflare DNS + cert for `studio.socialisn.com`. Verify `GET /healthz` returns `ok` and an MCP `initialize` handshake succeeds (tools list empty) before moving on.
+- **Phase 2.1 step 2 — primitives.** Once the scaffold is live, layer `search_discourse` and `get_cross_source_momentum` into `apps/socialisn-studio/src/`. Spec: `docs/phase-2-spec.md` §"Build order (Phase 2.1)".
 
 ## Don't do this again
 
