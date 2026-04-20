@@ -1,6 +1,6 @@
 # Handoff — socialisn
 
-_Last updated: 2026-04-20 (briefing v2 shipped; Pages RSS + newsletter-digest deprecated; frontierwatch2 spun off 2026-04-19)_
+_Last updated: 2026-04-20 (briefing v2 shipped; Pages site fully removed; newsletter-digest deprecated; frontierwatch2 spun off 2026-04-19)_
 
 ## Current state
 
@@ -66,14 +66,14 @@ All FrontierWatch work happens in that repo's HANDOFF.md. The briefing v2 pipeli
 - `scheduleTrigger` supports `timezone` for DST-aware cron (used throughout briefing v2: `America/New_York`).
 - SDK `fan_in` pattern: multiple triggers feeding into a shared downstream node works by declaring the chain once then using `.add(secondTrigger).to(sharedNode)` — the second call adds an incoming edge without redefining the downstream.
 
-## Deprecated (2026-04-20)
+## Deprecated / removed (2026-04-20)
 
 - **`newsletter-digest` sibling repo** — evaluation cancelled; out of scope. Newsletter data already flows into `newsletter_items` via the Gmail workflow and into every v2 briefing via the read-only join. No separate digest pipeline needed.
-- **`docs/` static Pages RSS feeds** — `feed.xml`, `podcast-feed.xml`, `topics-feed.xml`, `youtube-feed.xml` were stale snapshots never refreshed by any workflow. Deleted. The Railway `apps/briefings-web/` service at `/feed.xml` is the only feed surface going forward. `docs/index.html` remains but its links to the deleted feeds are now dead — treat as an orphan until someone decides whether to keep the Pages dashboard at all.
+- **`docs/` Pages site — fully removed.** All deprecated static assets (`feed.xml`, `podcast-feed.xml`, `topics-feed.xml`, `youtube-feed.xml`, `index.html`, `briefings/*.html`) are gone. The Railway `apps/briefings-web/` service is the only feed/briefing surface. `docs/` now holds only markdown design/review notes (`briefing-v2-design.md`, `codebase-review-2026-04-19.md`).
 
 ## Outstanding work
 
-None. Briefing v2 is shipped; all prior carryovers deprecated.
+- **`hkcitizensmedia.com` custom domain → Railway briefings-web.** Currently not connecting. Fix is in-flight this session: add the custom domain in the Railway service's Networking panel, point DNS (apex + www) at the CNAME target Railway returns, wait for cert issuance. Pending: confirm DNS provider and current records before completing.
 
 ## Don't do this again
 
@@ -84,4 +84,4 @@ None. Briefing v2 is shipped; all prior carryovers deprecated.
 - Don't touch the `frontier_*` tables from this repo (reads are fine; writes are not). They belong to `unsubject/frontierwatch2`.
 - Don't put a Telegram Trigger on more than one workflow bound to the same bot — only one will survive.
 - Don't send briefings by email. The Railway site + DB replace that path by design.
-- Don't revive the `docs/` Pages RSS feeds or `newsletter-digest` — both deprecated 2026-04-20.
+- Don't revive the `docs/` Pages site or `newsletter-digest` — both deprecated 2026-04-20.
