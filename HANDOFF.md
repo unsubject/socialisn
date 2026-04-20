@@ -1,6 +1,6 @@
 # Handoff — socialisn
 
-_Last updated: 2026-04-20 (phase 2 spec drafted — `docs/phase-2-spec.md`; briefing v2 shipped; Pages site fully removed; hkcitizensmedia.com live on Railway; newsletter-digest deprecated; frontierwatch2 spun off 2026-04-19)_
+_Last updated: 2026-04-20 (phase 2 spec drafted — `docs/phase-2-spec.md`; briefing v2 shipped; Pages site fully removed; hkcitizensmedia.com live on Railway; newsletter-digest deprecated; frontierwatch2 spun off 2026-04-19; Fetch YouTube republished after stale draft left deprecated sub-workflow call in active version)_
 
 ## Current state
 
@@ -22,7 +22,7 @@ _Last updated: 2026-04-20 (phase 2 spec drafted — `docs/phase-2-spec.md`; brie
 - Fetch YouTube Videos `x5s2rk7HWNQjX5N1`
 - Process Items with Haiku `OG4iOnuMwxoJDbvK`
 
-Before editing any of them, run `get_workflow_details` and diff against `n8n/workflows/*.ts`. Git is source of truth.
+Before editing any of them, run `get_workflow_details` and diff against `n8n/workflows/*.ts`. Git is source of truth. **After every `update_workflow`, also call `publish_workflow`** — otherwise the fix stays on the draft and the active cron keeps running the old version (see gotcha below).
 
 ## Briefing v2 — design vs. as-built
 
@@ -66,6 +66,7 @@ Summary:
 
 ## n8n gotchas (stable invariants)
 
+- **`update_workflow` saves a draft; you must `publish_workflow` to activate it.** The cron keeps running the previous active version until you publish. Silent failure mode: fixes appear merged in repo + n8n UI draft, but production behavior is unchanged. Symptom: `get_workflow_details` returns `versionId !== activeVersionId`, and `activeVersion.nodes` differs from top-level `nodes`. Seen 2026-04-20 on Fetch YouTube Videos — deprecated `Trigger Transcript Enrichment` sub-workflow call (targeting long-archived `VuYc4FsgAxoDNMu7`) stayed in the active version for days because the cleanup was only saved to draft.
 - **HTTP Request credentials aren't auto-assigned by MCP.** `newCredential('Name')` in SDK doesn't resolve for HTTP nodes. After `create_workflow_from_code` with HTTP nodes, bind each one in the n8n UI once. Bindings persist across future `update_workflow` calls. Symptom when unbound: `NodeOperationError: Credentials not found` on first manual execute.
 - **Telegram bot = one webhook.** A bot can only point setWebhook at one URL. If two workflows each have a Telegram Trigger, whichever was saved last wins — the other silently stops receiving. Use a single workflow to own the bot and route internally (see briefing v2 as-built).
 - `update_workflow` auto-assigns Postgres, Gmail, and telegramApi credentials when it recognizes the type. Existing HTTP auth bindings are preserved across updates.
@@ -91,6 +92,7 @@ For any Railway service fronted by Cloudflare at a custom domain:
 
 - **`newsletter-digest` sibling repo** — evaluation cancelled; out of scope. Newsletter data already flows into `newsletter_items` via the Gmail workflow and into every v2 briefing via the read-only join. No separate digest pipeline needed.
 - **`docs/` Pages site — fully removed.** All deprecated static assets (`feed.xml`, `podcast-feed.xml`, `topics-feed.xml`, `youtube-feed.xml`, `index.html`, `briefings/*.html`) are gone. The Railway `apps/briefings-web/` service is the only feed/briefing surface. `docs/` now holds only markdown design/review notes (`briefing-v2-design.md`, `codebase-review-2026-04-19.md`, `phase-2-spec.md`).
+- **Transcript enrichment sub-workflow** — archived workflow `VuYc4FsgAxoDNMu7` is gone; transcript enrichment is not part of the pipeline. Per-item Traditional Chinese summary + keyword enrichment is now handled centrally by `Process Items with Haiku` (`OG4iOnuMwxoJDbvK`) polling every source table. Do not re-add a `Trigger Transcript Enrichment` node at the tail of any fetch workflow.
 
 ## Outstanding work
 
@@ -100,6 +102,7 @@ For any Railway service fronted by Cloudflare at a custom domain:
 
 - Don't write a GitHub Actions workflow to deploy to this n8n instance — Hostinger blocks GitHub runners at L4. Use n8n MCP from Claude Code or the local `scripts/deploy_n8n_workflows.sh` fallback.
 - Don't ask the user to copy-paste JSON through the n8n UI. Use `update_workflow` with SDK code, or `create_workflow_from_code`.
+- Don't call `update_workflow` without following it with `publish_workflow`. The draft/active split is silent — without publishing, the cron keeps running the previous active version and your fix is invisible in production.
 - Don't call `.trim()` (or other post-fix methods) on template-literal-defined code strings in SDK files — the validator will reject.
 - Don't assume capabilities carry over. MCP servers register per-session; verify at session start.
 - Don't touch the `frontier_*` tables from this repo (reads are fine; writes are not). They belong to `unsubject/frontierwatch2`.
