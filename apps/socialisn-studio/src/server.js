@@ -5,6 +5,8 @@ import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/streamableHttp.js';
 import { registerSearchDiscourse } from './tools/search-discourse.js';
 import { registerMomentum } from './tools/momentum.js';
+import { registerListDailyCandidates } from './tools/list-daily-candidates.js';
+import { runMigrations } from './migrations.js';
 
 const PORT = Number(process.env.PORT || 3000);
 const BEARER_TOKEN = process.env.STUDIO_BEARER_TOKEN;
@@ -19,10 +21,11 @@ app.get('/healthz', (c) => c.text('ok'));
 function buildMcpServer() {
   const server = new McpServer({
     name: 'socialisn-studio',
-    version: '0.2.0'
+    version: '0.3.0'
   });
   registerSearchDiscourse(server);
   registerMomentum(server);
+  registerListDailyCandidates(server);
   return server;
 }
 
@@ -65,6 +68,14 @@ const httpServer = createServer((req, res) => {
   honoListener(req, res);
 });
 
-httpServer.listen(PORT, () => {
-  console.log(`socialisn-studio listening on :${PORT}`);
+async function main() {
+  await runMigrations();
+  httpServer.listen(PORT, () => {
+    console.log(`socialisn-studio listening on :${PORT}`);
+  });
+}
+
+main().catch((err) => {
+  console.error('startup failed:', err);
+  process.exit(1);
 });
