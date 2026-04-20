@@ -1,6 +1,6 @@
 # Handoff — socialisn
 
-_Last updated: 2026-04-20 (briefing v2 shipped; Pages site fully removed; hkcitizensmedia.com live on Railway; newsletter-digest deprecated; frontierwatch2 spun off 2026-04-19)_
+_Last updated: 2026-04-20 (phase 2 spec drafted — `docs/phase-2-spec.md`; briefing v2 shipped; Pages site fully removed; hkcitizensmedia.com live on Railway; newsletter-digest deprecated; frontierwatch2 spun off 2026-04-19)_
 
 ## Current state
 
@@ -39,6 +39,18 @@ Sibling private repo [`unsubject/frontierwatch2`](https://github.com/unsubject/f
 
 All FrontierWatch work happens in that repo's HANDOFF.md. The briefing v2 pipeline reads `frontier_briefings` read-only; don't write to `frontier_*` from socialisn.
 
+## Phase 2 — in planning (2026-04-20)
+
+Full spec: **`docs/phase-2-spec.md`** — read before starting any phase 2 implementation.
+
+Summary:
+
+- **Phase 2.1 (pre-production)**: MCP server `socialisn-studio` on Railway at `studio.socialisn.com`, exposing tools for subject shortlisting, Google Tasks "Subjects" parking-lot triage, thesis-brief with evidence + counter-evidence, and 30-min Traditional Chinese script generation. Two **distinct** daily tracks (YouTube broad-reach / members podcast deep-dive) — no subject overlap.
+- **Phase 2.2 (post-production)**: adds tools for Whisper SRT cleanup, GEM extraction, title suggestion, YouTube Chapters, teaser. Shipped after 2.1.
+- **Interface**: remote MCP — user connects from Claude / Gemini / ChatGPT / Perplexity. No new UI in this repo.
+- **New tables**: `studio_events`, `studio_candidate_scores`, `whisper_glossary`. All other socialisn tables are read-only from the studio.
+- **Cross-project**: every session writes a human-readable journal entry into `unsubject/2nd-brain` via its `src/capture.ts` ingestion contract (`channel: "socialisn-studio"`), so production behavior becomes semantically searchable alongside other journal entries.
+
 ## n8n MCP is wired
 
 `.mcp.json` + `N8N_MCP_URL` / `N8N_MCP_TOKEN` configured. At session start verify by calling `ToolSearch` with query `mcp__n8n`. If no tools load, env vars aren't injected — start a fresh session after adding them in Claude Code web settings.
@@ -73,16 +85,16 @@ For any Railway service fronted by Cloudflare at a custom domain:
 - **Cloudflare SSL/TLS mode must be "Full (strict)"**, not "Flexible". Flexible sends HTTP to Railway; Railway responds with a 301 to HTTPS; CF serves that 301 back; browser retries HTTPS; infinite loop. Symptom: `curl -I https://<domain>/healthz` returns `HTTP/2 301` with `location` header pointing at the *same* URL, plus `server: cloudflare`.
 - **Turn CF proxy OFF (grey cloud) during initial cert issuance.** Railway issues Let's Encrypt certs via HTTP-01; the orange-cloud proxy intercepts the challenge and the cert never issues. Once the cert is active on the Railway side, you can flip the proxy back on (and SSL mode must be Full strict by then).
 
-`hkcitizensmedia.com` was fixed using exactly this sequence on 2026-04-20.
+`hkcitizensmedia.com` was fixed using exactly this sequence on 2026-04-20. Re-apply this runbook for `studio.socialisn.com` when phase 2.1 deploys.
 
 ## Deprecated / removed (2026-04-20)
 
 - **`newsletter-digest` sibling repo** — evaluation cancelled; out of scope. Newsletter data already flows into `newsletter_items` via the Gmail workflow and into every v2 briefing via the read-only join. No separate digest pipeline needed.
-- **`docs/` Pages site — fully removed.** All deprecated static assets (`feed.xml`, `podcast-feed.xml`, `topics-feed.xml`, `youtube-feed.xml`, `index.html`, `briefings/*.html`) are gone. The Railway `apps/briefings-web/` service is the only feed/briefing surface. `docs/` now holds only markdown design/review notes (`briefing-v2-design.md`, `codebase-review-2026-04-19.md`).
+- **`docs/` Pages site — fully removed.** All deprecated static assets (`feed.xml`, `podcast-feed.xml`, `topics-feed.xml`, `youtube-feed.xml`, `index.html`, `briefings/*.html`) are gone. The Railway `apps/briefings-web/` service is the only feed/briefing surface. `docs/` now holds only markdown design/review notes (`briefing-v2-design.md`, `codebase-review-2026-04-19.md`, `phase-2-spec.md`).
 
 ## Outstanding work
 
-None.
+- Begin **Phase 2.1** implementation per `docs/phase-2-spec.md`. Build order in the spec §"Build order (Phase 2.1)". Start with MCP scaffolding at `apps/socialisn-studio/` + Cloudflare DNS + cert runbook for `studio.socialisn.com`.
 
 ## Don't do this again
 
@@ -95,3 +107,4 @@ None.
 - Don't send briefings by email. The Railway site + DB replace that path by design.
 - Don't revive the `docs/` Pages site or `newsletter-digest` — both deprecated 2026-04-20.
 - Don't set Cloudflare SSL/TLS mode to "Flexible" on any Railway-backed domain — guaranteed redirect loop.
+- Don't write to existing socialisn ingest tables from `socialisn-studio` (phase 2). Studio is read-only for everything except its own new tables and the Google Tasks "Subjects" mark-done action.
