@@ -1,6 +1,6 @@
 # Handoff — socialisn
 
-_Last updated: 2026-04-20 (briefing v2 shipped; Pages site fully removed; newsletter-digest deprecated; frontierwatch2 spun off 2026-04-19)_
+_Last updated: 2026-04-20 (briefing v2 shipped; Pages site fully removed; hkcitizensmedia.com live on Railway; newsletter-digest deprecated; frontierwatch2 spun off 2026-04-19)_
 
 ## Current state
 
@@ -12,7 +12,7 @@ _Last updated: 2026-04-20 (briefing v2 shipped; Pages site fully removed; newsle
 - **Generate Briefing · Update** (`GIncZJ8eJnXz1SzU`) — `active: true`. Consolidated midday+evening in one workflow with three triggers: 14:00 ET cron → `slot='midday'`, 20:00 ET cron → `slot='evening'`, Telegram message `Update` → slot picked by ET time-of-day (before 17:00 → midday, else evening). Scheduled paths skip-if-exists; Telegram path always regenerates and replies to chat. Source of truth: `n8n/workflows/generate-briefing-update.ts`.
 - **Retired**: `Generate Daily Briefing` (`F0g69WDiNUX0OXNW`) archived. The separate `Generate Briefing · Midday` (`HBizcBtDaZZ3Lxxq`) and `Generate Briefing · Evening` (`lD00GXBo0c9OTuD5`) were also archived after consolidation.
 
-**Briefings site** — `apps/briefings-web/` Hono + pg service on Railway, renders `briefings.html` directly from Postgres. Routes: `/`, `/b/:date/:slot`, `/archive`, `/feed.xml`, `/healthz`. Healthcheck confirmed up. This is the canonical feed surface going forward.
+**Briefings site** — `apps/briefings-web/` Hono + pg service on Railway, renders `briefings.html` directly from Postgres. Routes: `/`, `/b/:date/:slot`, `/archive`, `/feed.xml`, `/healthz`. Public URL: **https://hkcitizensmedia.com** (custom domain live 2026-04-20, fronted by Cloudflare, Railway-issued Let's Encrypt cert). This is the canonical feed surface going forward.
 
 **Other fetch workflows** — verified active 2026-04-19:
 
@@ -66,6 +66,15 @@ All FrontierWatch work happens in that repo's HANDOFF.md. The briefing v2 pipeli
 - `scheduleTrigger` supports `timezone` for DST-aware cron (used throughout briefing v2: `America/New_York`).
 - SDK `fan_in` pattern: multiple triggers feeding into a shared downstream node works by declaring the chain once then using `.add(secondTrigger).to(sharedNode)` — the second call adds an incoming edge without redefining the downstream.
 
+## Railway + Cloudflare gotcha
+
+For any Railway service fronted by Cloudflare at a custom domain:
+
+- **Cloudflare SSL/TLS mode must be "Full (strict)"**, not "Flexible". Flexible sends HTTP to Railway; Railway responds with a 301 to HTTPS; CF serves that 301 back; browser retries HTTPS; infinite loop. Symptom: `curl -I https://<domain>/healthz` returns `HTTP/2 301` with `location` header pointing at the *same* URL, plus `server: cloudflare`.
+- **Turn CF proxy OFF (grey cloud) during initial cert issuance.** Railway issues Let's Encrypt certs via HTTP-01; the orange-cloud proxy intercepts the challenge and the cert never issues. Once the cert is active on the Railway side, you can flip the proxy back on (and SSL mode must be Full strict by then).
+
+`hkcitizensmedia.com` was fixed using exactly this sequence on 2026-04-20.
+
 ## Deprecated / removed (2026-04-20)
 
 - **`newsletter-digest` sibling repo** — evaluation cancelled; out of scope. Newsletter data already flows into `newsletter_items` via the Gmail workflow and into every v2 briefing via the read-only join. No separate digest pipeline needed.
@@ -73,7 +82,7 @@ All FrontierWatch work happens in that repo's HANDOFF.md. The briefing v2 pipeli
 
 ## Outstanding work
 
-- **`hkcitizensmedia.com` custom domain → Railway briefings-web.** Currently not connecting. Fix is in-flight this session: add the custom domain in the Railway service's Networking panel, point DNS (apex + www) at the CNAME target Railway returns, wait for cert issuance. Pending: confirm DNS provider and current records before completing.
+None.
 
 ## Don't do this again
 
@@ -85,3 +94,4 @@ All FrontierWatch work happens in that repo's HANDOFF.md. The briefing v2 pipeli
 - Don't put a Telegram Trigger on more than one workflow bound to the same bot — only one will survive.
 - Don't send briefings by email. The Railway site + DB replace that path by design.
 - Don't revive the `docs/` Pages site or `newsletter-digest` — both deprecated 2026-04-20.
+- Don't set Cloudflare SSL/TLS mode to "Flexible" on any Railway-backed domain — guaranteed redirect loop.
