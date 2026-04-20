@@ -11,7 +11,7 @@ socialisn monitors Hong Kong public discourse via scheduled fetchers (YouTube, R
 - **Hostinger VPS** (`n8n.srv1565522.hstgr.cloud`): n8n (self-hosted, MCP-enabled) + Postgres (n8n DB and app DB in one instance).
 - **GitHub (`unsubject/socialisn`)**: source of truth for `n8n/workflows/*.json`, `infra/init.sql`, `config/*.yaml`, legacy `scripts/*.py`.
 - **Claude Code session**: GitHub MCP (scoped to this repo) + n8n MCP (configured via `.mcp.json` + `N8N_MCP_URL`/`N8N_MCP_TOKEN` env vars).
-- **GitHub Pages** (`docs/`): static dashboard + RSS feeds (`feed.xml`, `youtube-feed.xml`, `podcast-feed.xml`, `topics-feed.xml`).
+- **Railway — `apps/briefings-web/`**: Hono + pg service that renders briefings directly from Postgres. Canonical feed/web surface at `/`, `/b/:date/:slot`, `/archive`, `/feed.xml`, `/healthz`.
 
 GitHub Actions cannot reach the n8n host (blocked at Hostinger edge from GH runners) — do not add Actions that push to n8n. Use n8n MCP from Claude Code, or the local `scripts/deploy_n8n_workflows.sh` fallback.
 
