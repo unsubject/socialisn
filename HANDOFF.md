@@ -1,6 +1,6 @@
 # Handoff — socialisn
 
-_Last updated: 2026-04-20 (phase 2.1 thesis-brief landed — `build_thesis_brief` in `apps/socialisn-studio/` wired to Anthropic + Perplexity APIs; candidate engine + primitives + scaffold shipped earlier today; phase 2 spec at `docs/phase-2-spec.md`; briefing v2 shipped; hkcitizensmedia.com live on Railway; frontierwatch2 spun off 2026-04-19)_
+_Last updated: 2026-04-20 (phase 2.1: OAuth 2.1 + DCR on studio — native Claude Desktop connector flow; four tools live (`search_discourse`, `get_cross_source_momentum`, `list_daily_candidates`, `build_thesis_brief`); phase 2 spec at `docs/phase-2-spec.md`; briefing v2 shipped; hkcitizensmedia.com live on Railway; frontierwatch2 spun off 2026-04-19)_
 
 ## Current state
 
@@ -14,16 +14,12 @@ _Last updated: 2026-04-20 (phase 2.1 thesis-brief landed — `build_thesis_brief
 
 **Briefings site** — `apps/briefings-web/` Hono + pg service on Railway, renders `briefings.html` directly from Postgres. Routes: `/`, `/b/:date/:slot`, `/archive`, `/feed.xml`, `/healthz`. Public URL: **https://hkcitizensmedia.com** (custom domain live 2026-04-20, fronted by Cloudflare, Railway-issued Let's Encrypt cert). This is the canonical feed surface going forward.
 
-**Studio service** — `apps/socialisn-studio/` Hono + `@modelcontextprotocol/sdk` service. Deployed at `https://studio.socialisn.com` (bearer-authed Streamable HTTP MCP at `/mcp`; `/healthz` plain text). Tools live:
+**Studio service** — `apps/socialisn-studio/` Hono + `@modelcontextprotocol/sdk` service at `https://studio.socialisn.com`. Auth modes:
 
-- `search_discourse` — ILIKE RAG across newsletter/news/YouTube/podcast + item_enrichment.
-- `get_cross_source_momentum` — distinct_sources × distinct_mentions × velocity × (1−saturation).
-- `list_daily_candidates` — subjects from `keywords_zh`, track-weighted audience-fit, freshness window, guaranteed track-distinct top pick. Writes `studio_candidate_scores` each invocation (auto-created on boot via `src/migrations.js`).
-- `build_thesis_brief` — Sonnet-driven thesis sharpener; synthesizes corpus + Perplexity web research; enforces "counter-evidence = facts, never rhetoric" discipline; returns sharpened thesis + 3-5 supporting + 2-4 counter + 1 "collapses if" line, all Traditional Chinese. Requires `ANTHROPIC_API_KEY`; `PERPLEXITY_API_KEY` optional (corpus-only mode if absent); `STUDIO_SONNET_MODEL` optional (default `claude-sonnet-4-5`).
+- **OAuth 2.1 + Dynamic Client Registration** (primary). Claude Desktop Settings → Connectors adds the URL, auto-registers, redirects to a minimal password-gated login page (`STUDIO_ADMIN_PASSWORD`), issues 1h access + 30d refresh tokens. Tables: `studio_oauth_clients` / `studio_oauth_codes` / `studio_oauth_tokens` (auto-migrated).
+- **Legacy bearer** (escape hatch). `STUDIO_BEARER_TOKEN` still accepted on `/mcp` so `curl` and `mcp-remote` shims keep working. Remove the env var when fully migrated.
 
-Deploy runbook: `docs/studio-deploy.md`. Source: `apps/socialisn-studio/src/`.
-
-**Client wiring** — Claude Desktop on Mac connects via `mcp-remote` stdio proxy with `--header Authorization: Bearer …`. Direct `"type": "http"` in `claude_desktop_config.json` fails silently; runbook + memory reflect this.
+Tools live: `search_discourse`, `get_cross_source_momentum`, `list_daily_candidates`, `build_thesis_brief` — see previous revisions of this handoff for detail. Deploy runbook: `docs/studio-deploy.md`. Source: `apps/socialisn-studio/src/`.
 
 **Other fetch workflows** — verified active 2026-04-19:
 
@@ -33,7 +29,7 @@ Deploy runbook: `docs/studio-deploy.md`. Source: `apps/socialisn-studio/src/`.
 - Fetch YouTube Videos `x5s2rk7HWNQjX5N1`
 - Process Items with Haiku `OG4iOnuMwxoJDbvK` — source of `item_enrichment.keywords_zh`, which `list_daily_candidates` depends on; if enrichment stalls, the candidate engine goes blind.
 
-Before editing any of them, run `get_workflow_details` and diff against `n8n/workflows/*.ts`. Git is source of truth. **After every `update_workflow`, also call `publish_workflow`** — otherwise the fix stays on the draft and the active cron keeps running the old version (see gotcha below).
+Before editing any of them, run `get_workflow_details` and diff against `n8n/workflows/*.ts`. Git is source of truth. **After every `update_workflow`, also call `publish_workflow`** — otherwise the fix stays on the draft and the active cron keeps running the old version.
 
 ## Briefing v2 — design vs. as-built
 
@@ -59,7 +55,7 @@ Summary:
 - **Phase 2.1 (pre-production)**: MCP server `socialisn-studio` on Railway at `studio.socialisn.com`, exposing tools for subject shortlisting, Google Tasks "Subjects" parking-lot triage, thesis-brief with evidence + counter-evidence, and 30-min Traditional Chinese script generation. Two **distinct** daily tracks (YouTube broad-reach / members podcast deep-dive) — no subject overlap.
 - **Phase 2.2 (post-production)**: adds tools for Whisper SRT cleanup, GEM extraction, title suggestion, YouTube Chapters, teaser. Shipped after 2.1.
 - **Interface**: remote MCP — user connects from Claude / Gemini / ChatGPT / Perplexity. No new UI in this repo.
-- **New tables**: `studio_events`, `studio_candidate_scores` (live — auto-migrated), `whisper_glossary`. All other socialisn tables are read-only from the studio.
+- **New tables**: `studio_events`, `studio_candidate_scores` (live), `studio_oauth_clients/codes/tokens` (live), `whisper_glossary`. All other socialisn tables are read-only from the studio.
 - **Cross-project**: every session writes a human-readable journal entry into `unsubject/2nd-brain` via its `src/capture.ts` ingestion contract (`channel: "socialisn-studio"`), so production behavior becomes semantically searchable alongside other journal entries.
 
 ## n8n MCP is wired
@@ -77,8 +73,8 @@ Summary:
 
 ## n8n gotchas (stable invariants)
 
-- **`update_workflow` saves a draft; you must `publish_workflow` to activate it.** The cron keeps running the previous active version until you publish. Silent failure mode: fixes appear merged in repo + n8n UI draft, but production behavior is unchanged. Symptom: `get_workflow_details` returns `versionId !== activeVersionId`, and `activeVersion.nodes` differs from top-level `nodes`. Seen 2026-04-20 on Fetch YouTube Videos — deprecated `Trigger Transcript Enrichment` sub-workflow call (targeting long-archived `VuYc4FsgAxoDNMu7`) stayed in the active version for days because the cleanup was only saved to draft.
-- **HTTP Request credentials aren't auto-assigned by MCP.** `newCredential('Name')` in SDK doesn't resolve for HTTP nodes. After `create_workflow_from_code` with HTTP nodes, bind each one in the n8n UI once. Bindings persist across future `update_workflow` calls. Symptom when unbound: `NodeOperationError: Credentials not found` on first manual execute.
+- **`update_workflow` saves a draft; you must `publish_workflow` to activate it.** The cron keeps running the previous active version until you publish. Silent failure mode: fixes appear merged in repo + n8n UI draft, but production behavior is unchanged. Symptom: `get_workflow_details` returns `versionId !== activeVersionId`, and `activeVersion.nodes` differs from top-level `nodes`.
+- **HTTP Request credentials aren't auto-assigned by MCP.** `newCredential('Name')` in SDK doesn't resolve for HTTP nodes. After `create_workflow_from_code` with HTTP nodes, bind each one in the n8n UI once. Bindings persist across future `update_workflow` calls.
 - **Telegram bot = one webhook.** A bot can only point setWebhook at one URL. If two workflows each have a Telegram Trigger, whichever was saved last wins — the other silently stops receiving. Use a single workflow to own the bot and route internally (see briefing v2 as-built).
 - `update_workflow` auto-assigns Postgres, Gmail, and telegramApi credentials when it recognizes the type. Existing HTTP auth bindings are preserved across updates.
 - `output: [{...}]` in `@n8n/workflow-sdk` node definitions is editor sample data, not runtime pinned data.
@@ -94,22 +90,22 @@ Summary:
 
 For any Railway service fronted by Cloudflare at a custom domain:
 
-- **Cloudflare SSL/TLS mode must be "Full (strict)"**, not "Flexible". Flexible sends HTTP to Railway; Railway responds with a 301 to HTTPS; CF serves that 301 back; browser retries HTTPS; infinite loop. Symptom: `curl -I https://<domain>/healthz` returns `HTTP/2 301` with `location` header pointing at the *same* URL, plus `server: cloudflare`.
-- **Turn CF proxy OFF (grey cloud) during initial cert issuance.** Railway issues Let's Encrypt certs via HTTP-01; the orange-cloud proxy intercepts the challenge and the cert never issues. Once the cert is active on the Railway side, you can flip the proxy back on (and SSL mode must be Full strict by then).
+- **Cloudflare SSL/TLS mode must be "Full (strict)"**, not "Flexible". Flexible sends HTTP to Railway; Railway responds with a 301 to HTTPS; CF serves that 301 back; browser retries HTTPS; infinite loop.
+- **Turn CF proxy OFF (grey cloud) during initial cert issuance.** Railway issues Let's Encrypt certs via HTTP-01; the orange-cloud proxy intercepts the challenge and the cert never issues.
 
-`hkcitizensmedia.com` was fixed using exactly this sequence on 2026-04-20. `docs/studio-deploy.md` encodes the same runbook for `studio.socialisn.com`.
+`hkcitizensmedia.com` and `studio.socialisn.com` were both fixed using exactly this sequence. `docs/studio-deploy.md` encodes the runbook.
 
 ## Deprecated / removed (2026-04-20)
 
 - **`newsletter-digest` sibling repo** — evaluation cancelled; out of scope. Newsletter data already flows into `newsletter_items` via the Gmail workflow and into every v2 briefing via the read-only join. No separate digest pipeline needed.
-- **`docs/` Pages site — fully removed.** All deprecated static assets (`feed.xml`, `podcast-feed.xml`, `topics-feed.xml`, `youtube-feed.xml`, `index.html`, `briefings/*.html`) are gone. The Railway `apps/briefings-web/` service is the only feed/briefing surface. `docs/` now holds only markdown design/review notes (`briefing-v2-design.md`, `codebase-review-2026-04-19.md`, `phase-2-spec.md`, `studio-deploy.md`).
+- **`docs/` Pages site — fully removed.** All deprecated static assets gone. The Railway `apps/briefings-web/` service is the only feed/briefing surface. `docs/` now holds only markdown design/review notes (`briefing-v2-design.md`, `codebase-review-2026-04-19.md`, `phase-2-spec.md`, `studio-deploy.md`).
 - **Transcript enrichment sub-workflow** — archived workflow `VuYc4FsgAxoDNMu7` is gone; transcript enrichment is not part of the pipeline. Per-item Traditional Chinese summary + keyword enrichment is now handled centrally by `Process Items with Haiku` (`OG4iOnuMwxoJDbvK`) polling every source table. Do not re-add a `Trigger Transcript Enrichment` node at the tail of any fetch workflow.
 
 ## Outstanding work
 
-- **Set new env vars on studio.** After merging the thesis-brief PR, add `ANTHROPIC_API_KEY` (required) and `PERPLEXITY_API_KEY` (optional) in Railway → studio service Variables. Redeploy. Smoke-test with `build_thesis_brief({subject: "美聯儲利率", user_direction: "若美聯儲下次依然加息，香港輸入型通脹會被長期釋放到 2027。"})`.
-- **Phase 2.1 step 4 — Google Tasks "Subjects" integration.** `check_parking_lot` tool (reads the list, classifies each entry as `ripe now` / `ripe soon` / `cold` / `stale`) + mark-done write on session close. Also populates `list_daily_candidates`'s `parking_lot_match` field. Spec: `docs/phase-2-spec.md` §"MCP tools" + §"Google Tasks scope". Will need a Google OAuth credential with the `tasks` scope — decide whether to extend the existing `Gmail account` credential or register a fresh one.
-- **Phase 2.1 step 6 — `generate_script`.** 30-min Traditional Chinese full-prose script with track-specific CTA. Reuses the same Anthropic env var; same Sonnet model config. Prompt structure in spec §"generate_script".
+- **Set OAuth env vars on studio.** Add `STUDIO_ADMIN_PASSWORD` + `STUDIO_BASE_URL=https://studio.socialisn.com` in Railway Variables. Redeploy. Then remove the `mcpServers` block from `claude_desktop_config.json`, restart Claude Desktop, add the connector via Settings → Connectors, authorize once. Once confirmed working, consider removing `STUDIO_BEARER_TOKEN` to retire the legacy path entirely.
+- **Phase 2.1 step 4 — Google Tasks "Subjects" integration.** `check_parking_lot` tool + mark-done write on session close. Also populates `list_daily_candidates`'s `parking_lot_match` field. Spec: `docs/phase-2-spec.md` §"MCP tools" + §"Google Tasks scope". Will need a Google OAuth credential with the `tasks` scope — decide whether to extend the existing `Gmail account` credential or register a fresh one. *Different OAuth from the studio's own OAuth server — here the studio is an OAuth **client** against Google.*
+- **Phase 2.1 step 6 — `generate_script`.** 30-min Traditional Chinese full-prose script with track-specific CTA. Reuses the same Anthropic env var; same Sonnet model config.
 
 ## Don't do this again
 
@@ -124,5 +120,5 @@ For any Railway service fronted by Cloudflare at a custom domain:
 - Don't revive the `docs/` Pages site or `newsletter-digest` — both deprecated 2026-04-20.
 - Don't set Cloudflare SSL/TLS mode to "Flexible" on any Railway-backed domain — guaranteed redirect loop.
 - Don't write to existing socialisn ingest tables from `socialisn-studio` (phase 2). Studio is read-only for everything except its own new tables and the Google Tasks "Subjects" mark-done action.
-- Don't squash-merge a stacked PR without re-basing a fresh branch off merged main. Squashing #43 orphaned #44's scaffold commits; `update_pull_request_branch` couldn't auto-merge and the PR went `dirty`. Recovered by branching a v2 off merged main and repushing. For future stacks, plan for this: either merge both in one PR, or be ready to re-land the stacked branch from a fresh cut after the parent merges.
-- Don't use Claude Desktop's `"type": "http"` config entry for a bearer-authed remote MCP on Mac; it silently fails to register. Use the `mcp-remote` stdio proxy pattern — `docs/studio-deploy.md` shows the working config.
+- Don't squash-merge a stacked PR without re-basing a fresh branch off merged main. Squashing #43 orphaned #44's scaffold commits; `update_pull_request_branch` couldn't auto-merge. Recovered by branching a v2 off merged main and repushing. For future stacks: either merge both in one PR, or be ready to re-land the stacked branch from a fresh cut after the parent merges.
+- Don't use Claude Desktop's `"type": "http"` config entry for a bearer-authed remote MCP on Mac; it silently fails to register. Use OAuth via Settings → Connectors for the proper flow, or `mcp-remote` stdio proxy as a temporary escape hatch. See `docs/studio-deploy.md`.

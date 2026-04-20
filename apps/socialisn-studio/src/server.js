@@ -8,21 +8,30 @@ import { registerMomentum } from './tools/momentum.js';
 import { registerListDailyCandidates } from './tools/list-daily-candidates.js';
 import { registerBuildThesisBrief } from './tools/build-thesis-brief.js';
 import { runMigrations } from './migrations.js';
+import { attachOauthRoutes, oauthEnabled } from './oauth/routes.js';
+import { validateAccessToken } from './oauth/db.js';
 
 const PORT = Number(process.env.PORT || 3000);
-const BEARER_TOKEN = process.env.STUDIO_BEARER_TOKEN;
-if (!BEARER_TOKEN) {
-  throw new Error('STUDIO_BEARER_TOKEN is required');
+const BEARER_TOKEN = process.env.STUDIO_BEARER_TOKEN || null;
+const ADMIN_PASSWORD = process.env.STUDIO_ADMIN_PASSWORD || null;
+const BASE_URL = process.env.STUDIO_BASE_URL || null;
+
+if (!BEARER_TOKEN && !ADMIN_PASSWORD) {
+  throw new Error('At least one of STUDIO_BEARER_TOKEN or STUDIO_ADMIN_PASSWORD must be set');
+}
+if (ADMIN_PASSWORD && !BASE_URL) {
+  throw new Error('STUDIO_BASE_URL is required when STUDIO_ADMIN_PASSWORD is set');
 }
 
 const app = new Hono();
 
 app.get('/healthz', (c) => c.text('ok'));
+attachOauthRoutes(app);
 
 function buildMcpServer() {
   const server = new McpServer({
     name: 'socialisn-studio',
-    version: '0.4.0'
+    version: '0.5.0'
   });
   registerSearchDiscourse(server);
   registerMomentum(server);
@@ -31,9 +40,33 @@ function buildMcpServer() {
   return server;
 }
 
+function wwwAuthenticateChallenge() {
+  if (!oauthEnabled()) return 'Bearer';
+  return `Bearer resource_metadata="${BASE_URL.replace(/\/$/, '')}/.well-known/oauth-protected-resource"`;
+}
+
+async function authorizeMcpRequest(req) {
+  const raw = req.headers.authorization;
+  if (!raw || !/^bearer /i.test(raw)) return null;
+  const token = raw.slice(raw.indexOf(' ') + 1).trim();
+  if (!token) return null;
+  if (BEARER_TOKEN && token === BEARER_TOKEN) {
+    return { mode: 'legacy' };
+  }
+  if (oauthEnabled()) {
+    const row = await validateAccessToken(token);
+    if (row) return { mode: 'oauth', client_id: row.client_id };
+  }
+  return null;
+}
+
 async function handleMcp(req, res) {
-  if (req.headers.authorization !== `Bearer ${BEARER_TOKEN}`) {
-    res.writeHead(401, { 'content-type': 'application/json' });
+  const auth = await authorizeMcpRequest(req);
+  if (!auth) {
+    res.writeHead(401, {
+      'content-type': 'application/json',
+      'www-authenticate': wwwAuthenticateChallenge()
+    });
     res.end(JSON.stringify({ error: 'unauthorized' }));
     return;
   }
@@ -71,7 +104,11 @@ const httpServer = createServer((req, res) => {
 async function main() {
   await runMigrations();
   httpServer.listen(PORT, () => {
-    console.log(`socialisn-studio listening on :${PORT}`);
+    console.log(
+      `socialisn-studio listening on :${PORT} ` +
+      `(oauth ${oauthEnabled() ? 'enabled' : 'disabled'}, ` +
+      `legacy bearer ${BEARER_TOKEN ? 'enabled' : 'disabled'})`
+    );
   });
 }
 
