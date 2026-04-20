@@ -1,6 +1,6 @@
 # Handoff — socialisn
 
-_Last updated: 2026-04-20 (briefing v2 shipped; frontierwatch2 spun off 2026-04-19)_
+_Last updated: 2026-04-20 (briefing v2 shipped; Pages RSS + newsletter-digest deprecated; frontierwatch2 spun off 2026-04-19)_
 
 ## Current state
 
@@ -12,7 +12,7 @@ _Last updated: 2026-04-20 (briefing v2 shipped; frontierwatch2 spun off 2026-04-
 - **Generate Briefing · Update** (`GIncZJ8eJnXz1SzU`) — `active: true`. Consolidated midday+evening in one workflow with three triggers: 14:00 ET cron → `slot='midday'`, 20:00 ET cron → `slot='evening'`, Telegram message `Update` → slot picked by ET time-of-day (before 17:00 → midday, else evening). Scheduled paths skip-if-exists; Telegram path always regenerates and replies to chat. Source of truth: `n8n/workflows/generate-briefing-update.ts`.
 - **Retired**: `Generate Daily Briefing` (`F0g69WDiNUX0OXNW`) archived. The separate `Generate Briefing · Midday` (`HBizcBtDaZZ3Lxxq`) and `Generate Briefing · Evening` (`lD00GXBo0c9OTuD5`) were also archived after consolidation.
 
-**Briefings site** — `apps/briefings-web/` Hono + pg service on Railway, renders `briefings.html` directly from Postgres. Routes: `/`, `/b/:date/:slot`, `/archive`, `/feed.xml`, `/healthz`. Healthcheck confirmed up.
+**Briefings site** — `apps/briefings-web/` Hono + pg service on Railway, renders `briefings.html` directly from Postgres. Routes: `/`, `/b/:date/:slot`, `/archive`, `/feed.xml`, `/healthz`. Healthcheck confirmed up. This is the canonical feed surface going forward.
 
 **Other fetch workflows** — verified active 2026-04-19:
 
@@ -66,10 +66,14 @@ All FrontierWatch work happens in that repo's HANDOFF.md. The briefing v2 pipeli
 - `scheduleTrigger` supports `timezone` for DST-aware cron (used throughout briefing v2: `America/New_York`).
 - SDK `fan_in` pattern: multiple triggers feeding into a shared downstream node works by declaring the chain once then using `.add(secondTrigger).to(sharedNode)` — the second call adds an incoming edge without redefining the downstream.
 
+## Deprecated (2026-04-20)
+
+- **`newsletter-digest` sibling repo** — evaluation cancelled; out of scope. Newsletter data already flows into `newsletter_items` via the Gmail workflow and into every v2 briefing via the read-only join. No separate digest pipeline needed.
+- **`docs/` static Pages RSS feeds** — `feed.xml`, `podcast-feed.xml`, `topics-feed.xml`, `youtube-feed.xml` were stale snapshots never refreshed by any workflow. Deleted. The Railway `apps/briefings-web/` service at `/feed.xml` is the only feed surface going forward. `docs/index.html` remains but its links to the deleted feeds are now dead — treat as an orphan until someone decides whether to keep the Pages dashboard at all.
+
 ## Outstanding work
 
-1. `newsletter-digest` sibling repo still pending evaluation (carried over from earlier handoffs).
-2. Dashboard (`docs/`) static Pages site — news/youtube/podcast/topics RSS feeds are still stale (no workflow writes to them). Briefing feeds moved to the Railway site under v2; these four remain a gap.
+None. Briefing v2 is shipped; all prior carryovers deprecated.
 
 ## Don't do this again
 
@@ -80,3 +84,4 @@ All FrontierWatch work happens in that repo's HANDOFF.md. The briefing v2 pipeli
 - Don't touch the `frontier_*` tables from this repo (reads are fine; writes are not). They belong to `unsubject/frontierwatch2`.
 - Don't put a Telegram Trigger on more than one workflow bound to the same bot — only one will survive.
 - Don't send briefings by email. The Railway site + DB replace that path by design.
+- Don't revive the `docs/` Pages RSS feeds or `newsletter-digest` — both deprecated 2026-04-20.
