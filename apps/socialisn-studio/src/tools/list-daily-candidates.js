@@ -1,6 +1,16 @@
 import { z } from 'zod';
 import { randomUUID } from 'node:crypto';
 import { pool } from '../db.js';
+import {
+  classifyAudienceFit,
+  saturationPenalty,
+  DEAD_HOURS
+} from '../lib/scoring.js';
+import {
+  googleTasksConfigured,
+  findTasksListId,
+  listTasks
+} from '../google/tasks.js';
 
 const InputSchema = {
   track: z
@@ -102,42 +112,10 @@ VALUES
   ($1, NOW(), $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
 `;
 
-// Heuristic audience-fit classifier. Imperfect on purpose — LLM classification is
-// a later refinement. Priority: hong-kong > macro-econ > history > mixed. A topic
-// that touches both HK and macro is tagged hong-kong because local-market specificity
-// dominates the frame for this audience.
-const HK_RX = /(香港|港股|港元|港府|香江|立法會|特首|金管局|HK\b|Hong\s*Kong)/i;
-const MACRO_RX = /(通脹|通胀|聯儲局|美聯儲|利率|央行|GDP|CPI|通貨膨脧|inflation|fed\b|interest\s*rate|monetary|yield|recession|美股|納指|道琼|日圓|人民幣|equity|bond|股市|外匯|經濟|財政|匯率|滞脧)/i;
-const HISTORY_RX = /(歷史|history|史上|戰後|戰前|殖民|民國|晚清|明清|唐宋|史記|抗戰|冷戰|舊時)/i;
-
-function classifyAudienceFit(subject, samples) {
-  const haystack = [subject, ...(samples || [])].filter(Boolean).join(' ');
-  if (HK_RX.test(haystack)) return 'hong-kong';
-  if (MACRO_RX.test(haystack)) return 'macro-econ';
-  if (HISTORY_RX.test(haystack)) return 'history';
-  return 'mixed';
-}
-
-// Track weights encode the audience-fit ranking from the spec (macro-econ > HK > history)
-// crossed with track flavor (YouTube = broad-reach, podcast = deep-dive).
 const TRACK_WEIGHTS = {
   youtube: { 'macro-econ': 1.0, 'hong-kong': 1.0, mixed: 0.6, history: 0.4 },
   podcast: { history: 1.0, 'macro-econ': 0.85, 'hong-kong': 0.7, mixed: 0.5 }
 };
-
-// Hours-after-first-seen at which a subject is considered dead per spec's
-// freshness windows (HK 12h go / 48h dead; global 2d–1w).
-const DEAD_HOURS = {
-  'hong-kong': 48,
-  'macro-econ': 168,
-  history: 168,
-  mixed: 96
-};
-
-function saturationPenalty(mentions) {
-  if (mentions <= 0) return 0;
-  return Math.min(1, Math.log1p(mentions) / Math.log(20));
-}
 
 function oneLineSummary(samples) {
   const first = (samples || []).find((s) => typeof s === 'string' && s.trim().length > 0);
@@ -146,7 +124,36 @@ function oneLineSummary(samples) {
   return clean.length > 120 ? clean.slice(0, 117) + '…' : clean;
 }
 
-function buildCandidate(row, windowDays) {
+async function fetchParkingLotEntries() {
+  if (!googleTasksConfigured()) return null;
+  try {
+    const listName = process.env.STUDIO_GOOGLE_TASKS_LIST_NAME || 'Subjects';
+    const listId =
+      process.env.STUDIO_GOOGLE_TASKS_LIST_ID || (await findTasksListId(listName));
+    if (!listId) return null;
+    const tasks = await listTasks(listId);
+    return tasks
+      .map((t) => ({ id: t.id, title: (t.title || '').trim() }))
+      .filter((t) => t.title);
+  } catch (err) {
+    console.error('[list_daily_candidates] parking lot fetch failed:', err.message);
+    return null;
+  }
+}
+
+function fuzzyMatchParkingLot(subject, entries) {
+  if (!entries || entries.length === 0) return false;
+  const subj = subject.trim();
+  if (!subj) return false;
+  const exact = entries.find((e) => e.title === subj);
+  if (exact) return { task_id: exact.id, task_title: exact.title, match: 'exact' };
+  const substr = entries.find((e) => e.title.includes(subj) || subj.includes(e.title));
+  if (substr)
+    return { task_id: substr.id, task_title: substr.title, match: 'substring' };
+  return false;
+}
+
+function buildCandidate(row, windowDays, parkingLot) {
   const mentions = row.distinct_mentions;
   const sources = row.distinct_sources;
   const velocity = mentions / windowDays;
@@ -173,7 +180,7 @@ function buildCandidate(row, windowDays) {
     first_seen_at: firstSeenAt.toISOString(),
     hours_remaining: Number(hoursRemaining.toFixed(1)),
     dead: hoursRemaining <= 0,
-    parking_lot_match: false // TODO: wire to Google Tasks "Subjects" in step 4.
+    parking_lot_match: fuzzyMatchParkingLot(row.subject, parkingLot)
   };
 }
 
@@ -231,13 +238,14 @@ export function registerListDailyCandidates(server) {
     {
       title: 'List daily candidate subjects',
       description:
-        'Shortlists ranked subjects for the requested track. "youtube" = broad-reach common concerns, "podcast" = deep-dive unique angle. Subjects are harvested from item_enrichment.keywords_zh across newsletter/news/YouTube/podcast in the window. Ranking = distinct_sources × distinct_mentions × velocity_per_day × (1 − saturation_penalty) × track-weighted audience-fit. Emits coverage_density (0–100), hours_remaining in the freshness window (HK dead at 48h; macro/history at 168h), and a plain-English track_rationale. The #1 youtube pick is guaranteed different from the #1 podcast pick. parking_lot_match is stubbed false pending Google Tasks wiring.',
+        'Shortlists ranked subjects for the requested track. "youtube" = broad-reach common concerns, "podcast" = deep-dive unique angle. Subjects are harvested from item_enrichment.keywords_zh across newsletter/news/YouTube/podcast in the window. Ranking = distinct_sources × distinct_mentions × velocity_per_day × (1 − saturation_penalty) × track-weighted audience-fit. Emits coverage_density (0–100), hours_remaining in the freshness window (HK dead at 48h; macro/history at 168h), and a plain-English track_rationale. The #1 youtube pick is guaranteed different from the #1 podcast pick. parking_lot_match is {task_id, task_title, match} when the subject fuzzy-matches a Google Tasks "Subjects" entry; false otherwise (or when Google isn\'t configured).',
       inputSchema: InputSchema
     },
     async ({ track, limit, window_hours, min_mentions }) => {
       const windowDays = window_hours / 24;
+      const parkingLot = await fetchParkingLotEntries();
       const { rows } = await pool.query(CANDIDATES_SQL, [window_hours, min_mentions]);
-      const candidates = rows.map((r) => buildCandidate(r, windowDays));
+      const candidates = rows.map((r) => buildCandidate(r, windowDays, parkingLot));
 
       let ytList = rankForTrack(candidates, 'youtube');
       let pdList = rankForTrack(candidates, 'podcast');
@@ -270,6 +278,7 @@ export function registerListDailyCandidates(server) {
         window_hours,
         min_mentions,
         eligible_subjects: candidates.filter((c) => !c.dead).length,
+        parking_lot_available: parkingLot !== null,
         returned: selected.length,
         candidates: selected.map((c, i) => ({
           rank: i + 1,

@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { pool } from '../db.js';
+import { escapeLikeLiteral } from '../lib/scoring.js';
 
 const ALL_SOURCES = ['newsletter', 'news', 'youtube', 'podcast'];
 
@@ -122,10 +123,6 @@ SELECT source_type, id, title, source_name, url, fetched_at, published_at,
  ORDER BY fetched_at DESC
  LIMIT $4
 `;
-
-function escapeLikeLiteral(s) {
-  return s.replace(/[\\%_]/g, '\\$&');
-}
 
 function toIso(v) {
   return v instanceof Date ? v.toISOString() : v;

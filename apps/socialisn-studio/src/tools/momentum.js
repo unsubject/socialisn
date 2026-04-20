@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { pool } from '../db.js';
+import { saturationPenalty, escapeLikeLiteral } from '../lib/scoring.js';
 
 const InputSchema = {
   topic: z
@@ -68,17 +69,6 @@ SELECT
   COUNT(DISTINCT (source_type, source_name))::int AS distinct_sources
 FROM hits
 `;
-
-function escapeLikeLiteral(s) {
-  return s.replace(/[\\%_]/g, '\\$&');
-}
-
-// Log-shaped penalty that reaches 1.0 near ~20 mentions.
-// Encodes the spec's "everyone is talking about it lowers the score" rule.
-function saturationPenalty(mentions) {
-  if (mentions <= 0) return 0;
-  return Math.min(1, Math.log1p(mentions) / Math.log(20));
-}
 
 export function registerMomentum(server) {
   server.registerTool(
