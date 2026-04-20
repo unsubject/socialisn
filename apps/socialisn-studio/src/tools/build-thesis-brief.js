@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { pool } from '../db.js';
+import { escapeLikeLiteral } from '../lib/scoring.js';
 
 const DEFAULT_SONNET_MODEL = 'claude-sonnet-4-5';
 const SONNET_TIMEOUT_MS = 90_000;
@@ -97,10 +98,6 @@ SELECT source_type, id, title, source_name, url, fetched_at, published_at,
  ORDER BY fetched_at DESC
  LIMIT $3
 `;
-
-function escapeLikeLiteral(s) {
-  return s.replace(/[\\%_]/g, '\\$&');
-}
 
 async function fetchWithTimeout(url, options, timeoutMs) {
   const controller = new AbortController();
