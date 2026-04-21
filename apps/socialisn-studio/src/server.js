@@ -8,6 +8,7 @@ import { registerMomentum } from './tools/momentum.js';
 import { registerListDailyCandidates } from './tools/list-daily-candidates.js';
 import { registerBuildThesisBrief } from './tools/build-thesis-brief.js';
 import { registerCheckParkingLot } from './tools/check-parking-lot.js';
+import { registerGenerateScript } from './tools/generate-script.js';
 import { runMigrations } from './migrations.js';
 import { attachOauthRoutes, oauthEnabled } from './oauth/routes.js';
 import { validateAccessToken } from './oauth/db.js';
@@ -42,13 +43,14 @@ attachOauthRoutes(app);
 function buildMcpServer() {
   const server = new McpServer({
     name: 'socialisn-studio',
-    version: '0.6.0'
+    version: '0.7.0'
   });
   registerSearchDiscourse(server);
   registerMomentum(server);
   registerListDailyCandidates(server);
   registerBuildThesisBrief(server);
   registerCheckParkingLot(server);
+  registerGenerateScript(server);
   return server;
 }
 
