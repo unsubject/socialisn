@@ -21,6 +21,7 @@ const news = Array.isArray(row.news_items)       ? row.news_items       : [];
 const pods = Array.isArray(row.podcast_items)    ? row.podcast_items    : [];
 const nls  = Array.isArray(row.newsletter_items) ? row.newsletter_items : [];
 const fbs  = Array.isArray(row.frontier_briefings) ? row.frontier_briefings : [];
+const sig  = Array.isArray(row.gdelt_signal)       ? row.gdelt_signal       : [];
 
 const dateStr = row.briefing_date;
 const total = yt.length + news.length + pods.length + nls.length;
@@ -66,6 +67,27 @@ function fmtNl(i) {
     + '關鍵詞：' + kw;
 }
 
+function fmtSignalRow(s) {
+  const tone = (s.tone !== null && s.tone !== undefined) ? Number(s.tone).toFixed(2) : '—';
+  const tone7d = (s.tone_7d_avg !== null && s.tone_7d_avg !== undefined) ? Number(s.tone_7d_avg).toFixed(2) : '—';
+  const articles = (s.articles !== null && s.articles !== undefined) ? s.articles : '—';
+  const avg7 = Number(s.articles_7d_avg) || 0;
+  const ratio = (avg7 > 0) ? (s.articles / avg7).toFixed(2) + 'x' : '—';
+  const countries = Array.isArray(s.top_source_countries)
+    ? s.top_source_countries.slice(0,3).map(function(c){ return c.name || ''; }).filter(Boolean).join(', ')
+    : '—';
+  return '| ' + s.lane + ' | ' + articles + ' (' + ratio + ') | ' + tone + ' | ' + tone7d + ' | ' + (countries || '—') + ' |';
+}
+
+let signalBlock = '';
+if (sig.length > 0) {
+  signalBlock = '## 全球訊號（GDELT，今日快照；7日平均為基準）\\n\\n'
+    + '| 軌道 | 今日文章（量比） | 今日語氣 | 7日平均語氣 | 主要來源國 |\\n'
+    + '|---|---:|---:|---:|---|\\n'
+    + sig.map(fmtSignalRow).join('\\n') + '\\n\\n'
+    + '（語氣範圍 -10 至 +10。量比 >1 代表文章量高於7日均值；語氣低於7日均值代表負面情緒升溫。僅供參考，由你決定是否在簡報中引用。）';
+}
+
 const summarySection = slot === 'midday'
   ? '## 變化追蹤\\n用 2至3 句話點出自早報以來資訊環境的主要變化。'
   : '## 今日總結\\n用 3至4 句話總結今日整體的資訊環境變化、主要主題、以及值得關注的越境信號。';
@@ -76,7 +98,8 @@ const prompt = '你是利世民的個人情報助理。以下是自' + deltaRef 
   + '新增項目：共 ' + total + ' 項（YouTube ' + yt.length + ' ／ 新聞 ' + news.length
   + ' ／ Podcast ' + pods.length + ' ／ Newsletter ' + nls.length + '）\\n'
   + (fbs.length > 0 ? '另附新增的 FrontierWatch 前沿板塊 ' + fbs.length + ' 個（將於結尾原文附上，你毋須處理）\\n' : '')
-  + '\\n---\\n\\n請按以下格式撰寫，使用Markdown：\\n\\n'
+  + (signalBlock ? '\\n---\\n\\n' + signalBlock + '\\n\\n' : '\\n')
+  + '---\\n\\n請按以下格式撰寫，使用Markdown：\\n\\n'
   + '# ' + dateStr + ' ' + slotLabel + '（更新）\\n\\n'
   + '## 新增重點\\n列出自' + deltaRef + '以來最重要的 3 至 7 個新增故事。每條包括：\\n- 標題\\n- 1至2句分析\\n- 來源及連結\\n\\n'
   + summarySection + '\\n\\n'
@@ -201,7 +224,34 @@ const deltaSQL = `SELECT
       FROM frontier_briefings fb
      WHERE fb.generated_at > $5::timestamptz
      ORDER BY fb.slug, fb.generated_at DESC
-  ) sub), '[]'::json) AS frontier_briefings`;
+  ) sub), '[]'::json) AS frontier_briefings,
+  COALESCE((
+    SELECT json_agg(
+      json_build_object(
+        'lane', t.lane,
+        'articles', t.articles,
+        'tone', t.avg_tone,
+        'articles_7d_avg', (
+          SELECT ROUND(AVG(g.articles)::numeric, 0)::int
+            FROM gdelt_signal g
+           WHERE g.lane = t.lane
+             AND g.day < t.day
+             AND g.day >= t.day - INTERVAL '7 days'
+        ),
+        'tone_7d_avg', (
+          SELECT ROUND(AVG(g.avg_tone)::numeric, 2)
+            FROM gdelt_signal g
+           WHERE g.lane = t.lane
+             AND g.day < t.day
+             AND g.day >= t.day - INTERVAL '7 days'
+        ),
+        'top_source_countries', t.top_source_countries,
+        'top_langs', t.top_langs
+      ) ORDER BY t.lane
+    )
+    FROM gdelt_signal t
+    WHERE t.day = $1::date
+  ), '[]'::json) AS gdelt_signal`;
 
 const middayCron = trigger({
   type: 'n8n-nodes-base.scheduleTrigger',
@@ -346,7 +396,7 @@ const fetchDelta = node({
     credentials: { postgres: newCredential('Railway') },
     position: [1200, 400]
   },
-  output: [{ briefing_date: '', slot: 'midday', source: 'scheduled', chat_id: null, youtube_items: [], news_items: [], podcast_items: [], newsletter_items: [], frontier_briefings: [] }]
+  output: [{ briefing_date: '', slot: 'midday', source: 'scheduled', chat_id: null, youtube_items: [], news_items: [], podcast_items: [], newsletter_items: [], frontier_briefings: [], gdelt_signal: [] }]
 });
 
 const buildPrompt = node({
