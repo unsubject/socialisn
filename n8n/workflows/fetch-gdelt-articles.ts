@@ -4,7 +4,7 @@ import { workflow, node, trigger, newCredential, expr } from '@n8n/workflow-sdk'
 // the sources table. Each lane writes into news_items with source_type='gdelt'
 // and source_subtype=<lane slug> so briefings and the signal workflow can
 // filter by lane. GDELT is unauthenticated — no credential binding needed
-// for the HTTP node. Rate is 3 requests per hour for the current 3-lane
+// for the HTTP node. Rate is 4 requests per hour for the current 4-lane
 // config, well inside GDELT's "be reasonable" budget (~1 rps sustained).
 
 const schedule = trigger({
@@ -30,7 +30,7 @@ const fetchLanes = node({
       operation: 'executeQuery',
       query: "SELECT id, name, language, tags, config FROM sources WHERE type = 'gdelt' AND enabled = TRUE ORDER BY name"
     },
-    credentials: { postgres: newCredential('Postgres') },
+    credentials: { postgres: newCredential('Railway') },
     position: [480, 300]
   },
   output: [
@@ -180,7 +180,7 @@ const saveItem = node({
         queryReplacement: expr('={{ [$json.article_id, $json.source_name, $json.source_type, $json.source_subtype, $json.url, $json.headline, $json.excerpt, $json.language, $json.tags_literal, $json.published_at] }}')
       }
     },
-    credentials: { postgres: newCredential('Postgres') },
+    credentials: { postgres: newCredential('Railway') },
     onError: 'continueRegularOutput',
     position: [1200, 300]
   },

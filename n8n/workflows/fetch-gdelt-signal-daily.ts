@@ -4,7 +4,7 @@ import { workflow, node, trigger, newCredential, expr } from '@n8n/workflow-sdk'
 // sources table, queries the DOC 2.0 Timeline API three ways (tone,
 // source-country, language) over the trailing 24h, then merges into
 // one row per (day, lane) in gdelt_signal. Feeds the briefing prompt's
-// "Signals" preamble (wired in a separate PR).
+// "Signals" preamble.
 //
 // Fires at 07:30 America/New_York so data is fresh when the morning
 // briefing runs at 08:00. Volume: 4 lanes × 3 HTTP calls = 12 requests
@@ -38,7 +38,7 @@ const fetchLanes = node({
       operation: 'executeQuery',
       query: "SELECT id, name, language, tags, config FROM sources WHERE type = 'gdelt' AND enabled = TRUE ORDER BY name"
     },
-    credentials: { postgres: newCredential('Postgres') },
+    credentials: { postgres: newCredential('Railway') },
     position: [480, 300]
   },
   output: [
@@ -184,7 +184,7 @@ const upsert = node({
         queryReplacement: expr('={{ [$json.day, $json.lane, $json.articles, $json.avg_tone, $json.top_source_countries, $json.top_langs, $json.top_themes] }}')
       }
     },
-    credentials: { postgres: newCredential('Postgres') },
+    credentials: { postgres: newCredential('Railway') },
     onError: 'continueRegularOutput',
     position: [1680, 300]
   },
