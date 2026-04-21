@@ -6,6 +6,7 @@ const news = Array.isArray(row.news_items)       ? row.news_items       : [];
 const pods = Array.isArray(row.podcast_items)    ? row.podcast_items    : [];
 const nls  = Array.isArray(row.newsletter_items) ? row.newsletter_items : [];
 const fbs  = Array.isArray(row.frontier_briefings) ? row.frontier_briefings : [];
+const sig  = Array.isArray(row.gdelt_signal)       ? row.gdelt_signal       : [];
 
 const dateStr = row.briefing_date;
 const total = yt.length + news.length + pods.length + nls.length;
@@ -55,6 +56,27 @@ function fmtNl(i) {
     + '關鍵詞：' + kw;
 }
 
+function fmtSignalRow(s) {
+  const tone = (s.tone !== null && s.tone !== undefined) ? Number(s.tone).toFixed(2) : '—';
+  const tone7d = (s.tone_7d_avg !== null && s.tone_7d_avg !== undefined) ? Number(s.tone_7d_avg).toFixed(2) : '—';
+  const articles = (s.articles !== null && s.articles !== undefined) ? s.articles : '—';
+  const avg7 = Number(s.articles_7d_avg) || 0;
+  const ratio = (avg7 > 0) ? (s.articles / avg7).toFixed(2) + 'x' : '—';
+  const countries = Array.isArray(s.top_source_countries)
+    ? s.top_source_countries.slice(0,3).map(function(c){ return c.name || ''; }).filter(Boolean).join(', ')
+    : '—';
+  return '| ' + s.lane + ' | ' + articles + ' (' + ratio + ') | ' + tone + ' | ' + tone7d + ' | ' + (countries || '—') + ' |';
+}
+
+let signalBlock = '';
+if (sig.length > 0) {
+  signalBlock = '## 全球訊號（GDELT，過去24小時；7日平均為基準）\\n\\n'
+    + '| 軌道 | 今日文章（量比） | 今日語氣 | 7日平均語氣 | 主要來源國 |\\n'
+    + '|---|---:|---:|---:|---|\\n'
+    + sig.map(fmtSignalRow).join('\\n') + '\\n\\n'
+    + '（語氣範圍 -10 至 +10。量比 >1 代表文章量高於7日均值；語氣低於7日均值代表負面情緒升溫。僅供參考，由你決定是否在簡報中引用。）';
+}
+
 const ytBlock   = yt.length   > 0 ? yt.map(fmtYt).join('\\n\\n')     : '（過去24小時無YouTube資料）';
 const newsBlock = news.length > 0 ? news.map(fmtNews).join('\\n\\n') : '（過去24小時無新聞資料）';
 const podBlock  = pods.length > 0 ? pods.map(fmtPod).join('\\n\\n')  : '（過去24小時無Podcast資料）';
@@ -65,7 +87,7 @@ const topVideo = yt.length > 0
   : 'N/A';
 
 let prompt;
-if (total === 0 && fbs.length === 0) {
+if (total === 0 && fbs.length === 0 && sig.length === 0) {
   prompt = '你是利世民的個人情報助理。今日（' + dateStr + '，美東時間）暫時無收集到任何資料。'
     + '請用繁體中文撰寫一份簡短的早報，說明今日暫無新資料，並提醒稍後繼續關注。使用Markdown格式。'
     + '標題使用「# ' + dateStr + ' 早報」。';
@@ -75,6 +97,7 @@ if (total === 0 && fbs.length === 0) {
     + '資料來源數量：共 ' + total + ' 項（YouTube ' + yt.length + ' ／ 新聞 ' + news.length
     + ' ／ Podcast ' + pods.length + ' ／ Newsletter ' + nls.length + '）\\n'
     + '另附 FrontierWatch 前沿板塊 ' + fbs.length + ' 個（將於簡報結尾原文附上，你毋須處理）\\n\\n'
+    + (signalBlock ? '---\\n\\n' + signalBlock + '\\n\\n' : '')
     + '---\\n\\n請按以下格式撰寫，使用Markdown：\\n\\n'
     + '# ' + dateStr + ' 早報\\n\\n'
     + '## 頭條故事\\n列出今日最重要的 10 個故事。每條頭條包括：\\n- 一句話標題\\n- 2至3句分析\\n- 來源及連結\\n\\n'
@@ -167,7 +190,34 @@ const fetchSourcesSQL = `SELECT
       FROM frontier_briefings fb
      WHERE fb.generated_at >= NOW() - INTERVAL '24 hours'
      ORDER BY fb.slug, fb.generated_at DESC
-  ) sub), '[]'::json) AS frontier_briefings`;
+  ) sub), '[]'::json) AS frontier_briefings,
+  COALESCE((
+    SELECT json_agg(
+      json_build_object(
+        'lane', t.lane,
+        'articles', t.articles,
+        'tone', t.avg_tone,
+        'articles_7d_avg', (
+          SELECT ROUND(AVG(g.articles)::numeric, 0)::int
+            FROM gdelt_signal g
+           WHERE g.lane = t.lane
+             AND g.day < t.day
+             AND g.day >= t.day - INTERVAL '7 days'
+        ),
+        'tone_7d_avg', (
+          SELECT ROUND(AVG(g.avg_tone)::numeric, 2)
+            FROM gdelt_signal g
+           WHERE g.lane = t.lane
+             AND g.day < t.day
+             AND g.day >= t.day - INTERVAL '7 days'
+        ),
+        'top_source_countries', t.top_source_countries,
+        'top_langs', t.top_langs
+      ) ORDER BY t.lane
+    )
+    FROM gdelt_signal t
+    WHERE t.day = (NOW() AT TIME ZONE 'America/New_York')::date
+  ), '[]'::json) AS gdelt_signal`;
 
 const morningCron = trigger({
   type: 'n8n-nodes-base.scheduleTrigger',
@@ -195,7 +245,7 @@ const fetchSources = node({
     credentials: { postgres: newCredential('Railway') },
     position: [480, 300]
   },
-  output: [{ briefing_date: '2026-04-19', youtube_items: [], news_items: [], podcast_items: [], newsletter_items: [], frontier_briefings: [] }]
+  output: [{ briefing_date: '2026-04-19', youtube_items: [], news_items: [], podcast_items: [], newsletter_items: [], frontier_briefings: [], gdelt_signal: [] }]
 });
 
 const buildPrompt = node({
