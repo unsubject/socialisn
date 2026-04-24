@@ -1,10 +1,10 @@
 # Handoff — socialisn
 
-_Last updated: 2026-04-20-pm (phase 2.1: 5 studio tools live incl. `check_parking_lot`; briefing v2 shipped; hkcitizensmedia.com live; frontierwatch2 spun off + glossary / GDELT signal shipped; **GDELT phase A merged, deploying to production**)_
+_Last updated: 2026-04-24 (phase 2.1: 5 studio tools live incl. `check_parking_lot`; briefing v2 shipped; hkcitizensmedia.com live; frontierwatch2 spun off + glossary / GDELT signal shipped; GDELT phase A deployed; **Haiku enrichment migrated to OpenAI gpt-5.4-nano — deploy in progress**)_
 
 ## Current state
 
-**Fetch Gmail Subscriptions** — `active: true`, hourly cron `0 * * * *`. Workflow ID `7ZlMNObjAMc26zoR`. Pipeline: Gmail fetch (`label:Subscription`) → normalize → Claude Haiku summary → Postgres upsert into `newsletter_items` → trash email → Zh enrichment → upsert into `item_enrichment`. Source of truth: `n8n/workflows/fetch-gmail-subscriptions.ts`.
+**Fetch Gmail Subscriptions** — `active: true`, hourly cron `0 * * * *`. Workflow ID `7ZlMNObjAMc26zoR`. Pipeline: Gmail fetch (`label:Subscription`) → normalize → OpenAI Nano summary → Postgres upsert into `newsletter_items` → trash email → Zh enrichment (Nano) → upsert into `item_enrichment`. Source of truth: `n8n/workflows/fetch-gmail-subscriptions.ts`.
 
 **Briefing v2 — shipped 2026-04-20:**
 
@@ -35,7 +35,7 @@ Shared classification helpers live in `src/lib/scoring.js`. Google Tasks client 
 - Fetch Podcasts `Ykpcl95qtvzMv70b`
 - Fetch Perplexity Search `rkiWYmYBoVyi8Ih2` (writes into `news_items` with `source_type='perplexity'`)
 - Fetch YouTube Videos `x5s2rk7HWNQjX5N1`
-- Process Items with Haiku `OG4iOnuMwxoJDbvK` — source of `item_enrichment.keywords_zh`, which both `list_daily_candidates` and `check_parking_lot` depend on.
+- Process Items with Nano `OG4iOnuMwxoJDbvK` (file: `process-haiku.ts` — filename retained, workflow renamed) — source of `item_enrichment.keywords_zh`, which both `list_daily_candidates` and `check_parking_lot` depend on.
 - **New (GDELT phase A, deploying now):** `Fetch GDELT Articles` (hourly `:15`) and `Fetch GDELT Signal Daily` (07:30 ET). See §GDELT integration.
 
 ## FrontierWatch2 spin-off (2026-04-19)
@@ -43,6 +43,38 @@ Shared classification helpers live in `src/lib/scoring.js`. Google Tasks client 
 [`unsubject/frontierwatch2`](https://github.com/unsubject/frontierwatch2) replaced `unsubject/frontierwatch`. Shares this repo's Railway Postgres. Owns `frontier_*` tables. Briefing v2 reads `frontier_briefings` read-only; don't write to `frontier_*` from socialisn.
 
 **Update 2026-04-20-pm:** frontierwatch2 PRs #1 + #2 add a per-sector glossary (Haiku extractor) + `frontier_signal` GDELT signal layer. New tables `frontier_glossary` and `frontier_signal` + `glossary_processed_at` column on `frontier_briefings`. Still read-only for socialisn. See frontierwatch2/HANDOFF.md.
+
+## Haiku → OpenAI Nano migration (2026-04-24)
+
+Two n8n workflows rewritten to call OpenAI `chat/completions` with `model: "gpt-5.4-nano"` instead of Anthropic Haiku:
+
+- `fetch-gmail-subscriptions.ts` (`7ZlMNObjAMc26zoR`) — both HTTP calls (English summary + Zh enrichment).
+- `process-haiku.ts` (`OG4iOnuMwxoJDbvK`) — single enrichment call. Filename unchanged to preserve workflow mapping; display name now "Process Items with Nano".
+
+### Call-shape changes
+
+- URL: `api.anthropic.com/v1/messages` → `api.openai.com/v1/chat/completions`.
+- Body: `{ model, max_tokens, system, messages }` (Anthropic shape) → `{ model, max_completion_tokens, messages }` (OpenAI shape, system folded in as a role-`system` message). Dropped `cache_control: ephemeral` — OpenAI caches automatically for long prefixes.
+- Header: dropped `anthropic-version`. OpenAI just needs `Authorization: Bearer` via the `OpenAI API Key` credential.
+- Response parse: `response.content[0].text` → `response.choices[0].message.content`.
+
+Briefing workflows (Sonnet) and studio tools (Sonnet) are untouched — the swap is Haiku-only.
+
+### Deploy runbook
+
+1. Merge PR to `main`.
+2. `mcp__n8n__update_workflow` with both workflow IDs using the new code.
+3. Bind `OpenAI API Key` credential to each HTTP Request node manually in n8n UI (SDK doesn't auto-bind HTTP creds — standing invariant).
+4. `mcp__n8n__publish_workflow` both.
+5. Verify on next cron tick:
+   - `SELECT message_id, summary IS NOT NULL AS ok FROM newsletter_items WHERE received_at >= NOW() - INTERVAL '2 hours' ORDER BY received_at DESC LIMIT 10;`
+   - `SELECT item_type, COUNT(*) FROM item_enrichment WHERE processed_at >= NOW() - INTERVAL '6 hours' GROUP BY 1;`
+
+### Open questions
+
+- `max_completion_tokens` is the GPT-5-family parameter (reasoning models rejected `max_tokens`). If Nano doesn't gate on reasoning tokens, 256 / 1024 budgets may need bumping after first run.
+- Output is raw text; both Code parse nodes still strip leading ``` ```json ``` fences before `JSON.parse`, so behaviour matches Haiku's occasional fenced output.
+- Studio does not yet consume OpenAI (Sonnet stays on Claude). If that changes, add `OPENAI_API_KEY` to Railway service env.
 
 ## GDELT integration — phase A (2026-04-20-pm)
 
@@ -125,7 +157,8 @@ Interface: remote MCP. New tables: `studio_events`, `studio_candidate_scores` (l
 
 - Postgres: **`Railway`** (not `Postgres`)
 - Gmail OAuth2: **`Gmail account`** (n8n)
-- `Anthropic API Key` (httpHeaderAuth, `x-api-key`) — socialisn + frontierwatch2 n8n workflows. Same key → studio `ANTHROPIC_API_KEY`.
+- `Anthropic API Key` (httpHeaderAuth, `x-api-key`) — briefing workflows (Sonnet) + frontierwatch2. Same key → studio `ANTHROPIC_API_KEY`.
+- `OpenAI API Key` (httpHeaderAuth, `Authorization: Bearer <key>`) — Nano enrichment workflows (Gmail + Process Items). n8n-only for now; add `OPENAI_API_KEY` to Railway if studio tools ever migrate.
 - `Perplexity API` (httpBearerAuth) — n8n → studio `PERPLEXITY_API_KEY`.
 - `YouTube API Key` (httpQueryAuth, Name=`key`) — socialisn only.
 - `Telegram account` (telegramApi) — Update workflow.
@@ -143,6 +176,7 @@ Interface: remote MCP. New tables: `studio_events`, `studio_candidate_scores` (l
 - Prefer `ON CONFLICT DO UPDATE` over `DO NOTHING` with `fetched_at` filters. **Exception:** GDELT uses `DO NOTHING` on `news_items (article_id)` — first-writer wins on `source_subtype`.
 - Gmail node with `simple: false` returns `msg.from` as shape, not string.
 - `scheduleTrigger` supports `timezone`.
+- **OpenAI chat/completions uses `max_completion_tokens` (not `max_tokens`) for the GPT-5 family.** Dropping the old key silently caps output at default. Response shape is `choices[0].message.content`.
 
 ## Railway + Cloudflare gotcha
 
@@ -159,6 +193,7 @@ Runbook in `docs/studio-deploy.md`.
 
 ## Outstanding work
 
+- **Haiku → OpenAI Nano deploy** (2026-04-24). PR on branch `haiku-to-gpt-5-nano`. After merge: `update_workflow` + `publish_workflow` on `7ZlMNObjAMc26zoR` and `OG4iOnuMwxoJDbvK`; bind `OpenAI API Key` cred to all three HTTP Request nodes in n8n UI; watch first cron run for 401s / empty `summary` columns / `max_completion_tokens` caps.
 - **GDELT phase A deploy in progress.** Migration 0003 + 2 new workflows + 2 briefing prompt edits merged to main. Deploy steps per §GDELT deploy runbook. Direct-to-main bypass used because PR #50 hit a `dirty` state after parallel studio PRs landed on main; code content verified identical to PR #50's final state.
 - **Tune GDELT query strings** after 1–2 weeks. Edit in-place via `UPDATE sources SET config = ...`.
 - **Wire up Google Tasks.** Follow `docs/google-tasks-setup.md`: create OAuth client, run `scripts/google-auth.mjs`, set `STUDIO_GOOGLE_*` env vars on Railway. Smoke-test `check_parking_lot`.
@@ -183,3 +218,4 @@ Runbook in `docs/studio-deploy.md`.
 - Don't use Claude Desktop's `"type": "http"` config entry for a bearer-authed remote MCP on Mac; silent fail.
 - Don't assume the `Gmail account` n8n credential is reachable from studio — separate OAuth clients.
 - **Don't fill the GDELT hostcountry lane with raw keywords** ("cost of living", "inflation"). GDELT themes + `sourcecountry:` scoping beat keyword soup.
+- **Don't send `max_tokens` to OpenAI GPT-5-family models.** Use `max_completion_tokens`. And don't leave `cache_control: ephemeral` in the body when porting from Anthropic — OpenAI rejects unknown fields on some models.

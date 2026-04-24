@@ -32,7 +32,7 @@ const buildPrompt = node({
   type: 'n8n-nodes-base.code',
   version: 2,
   config: {
-    name: 'Build Haiku Prompt',
+    name: 'Build Nano Prompt',
     parameters: {
       mode: 'runOnceForEachItem',
       language: 'javaScript',
@@ -43,48 +43,42 @@ const buildPrompt = node({
   output: [{ item_type: 'youtube', item_id: 'abc123', prompt: '你是一位香港時事分析助手...' }]
 });
 
-const callHaiku = node({
+const callNano = node({
   type: 'n8n-nodes-base.httpRequest',
   version: 4.4,
   config: {
-    name: 'Call Claude Haiku',
+    name: 'Call OpenAI Nano',
     parameters: {
       method: 'POST',
-      url: 'https://api.anthropic.com/v1/messages',
+      url: 'https://api.openai.com/v1/chat/completions',
       authentication: 'genericCredentialType',
       genericAuthType: 'httpHeaderAuth',
-      sendHeaders: true,
-      headerParameters: {
-        parameters: [
-          { name: 'anthropic-version', value: '2023-06-01' }
-        ]
-      },
       sendBody: true,
       contentType: 'json',
       specifyBody: 'json',
-      jsonBody: expr('={{ JSON.stringify({ model: "claude-haiku-4-5", max_tokens: 256, messages: [{ role: "user", content: $json.prompt }] }) }}'),
+      jsonBody: expr('={{ JSON.stringify({ model: "gpt-5.4-nano", max_completion_tokens: 256, messages: [{ role: "user", content: $json.prompt }] }) }}'),
       options: {
         batching: { batch: { batchSize: 1, batchInterval: 500 } },
         response: { response: { responseFormat: 'json' } },
         timeout: 30000
       }
     },
-    credentials: { httpHeaderAuth: newCredential('Anthropic API Key') },
+    credentials: { httpHeaderAuth: newCredential('OpenAI API Key') },
     onError: 'continueRegularOutput',
     position: [960, 300]
   },
-  output: [{ id: 'msg_123', content: [{ type: 'text', text: '{"summary_zh": "香港金融市場今日表現強勁", "keywords_zh": ["香港", "金融市場", "恒指"]}' }], model: 'claude-haiku-4-5', usage: { input_tokens: 100, output_tokens: 50 } }]
+  output: [{ id: 'chatcmpl-123', choices: [{ message: { role: 'assistant', content: '{"summary_zh": "香港金融市場今日表現強勁", "keywords_zh": ["香港", "金融市場", "恒指"]}' } }], model: 'gpt-5.4-nano', usage: { prompt_tokens: 100, completion_tokens: 50 } }]
 });
 
 const parseResponse = node({
   type: 'n8n-nodes-base.code',
   version: 2,
   config: {
-    name: 'Parse Haiku Response',
+    name: 'Parse Nano Response',
     parameters: {
       mode: 'runOnceForEachItem',
       language: 'javaScript',
-      jsCode: "var response = $json;\nvar src = $(\"Build Haiku Prompt\").item.json;\nif (!src || src.skip) return { json: { skip: true } };\nvar content = '';\nif (response.content && response.content.length > 0) {\n  content = response.content[0].text || '';\n}\ncontent = content.trim();\nif (!content) return { json: { skip: true, item_type: src.item_type, item_id: src.item_id } };\nif (content.indexOf('```') === 0) {\n  var lines = content.split('\\n');\n  var filtered = [];\n  for (var i = 0; i < lines.length; i++) {\n    if (lines[i].indexOf('```') !== 0) filtered.push(lines[i]);\n  }\n  content = filtered.join('\\n').trim();\n}\nvar result;\ntry {\n  result = JSON.parse(content);\n} catch (e) {\n  return { json: { skip: true, item_type: src.item_type, item_id: src.item_id, error: 'JSON parse failed' } };\n}\nvar summaryZh = result.summary_zh || null;\nvar keywordsZh = Array.isArray(result.keywords_zh) ? result.keywords_zh : (result.keywords_zh ? [result.keywords_zh] : []);\nvar keywordsLiteral = '{' + keywordsZh.map(function(k) { return '\"' + String(k).replace(/\"/g, '') + '\"'; }).join(',') + '}';\nreturn { json: { item_type: src.item_type, item_id: src.item_id, summary_zh: summaryZh, keywords_literal: keywordsLiteral } };"
+      jsCode: "var response = $json;\nvar src = $(\"Build Nano Prompt\").item.json;\nif (!src || src.skip) return { json: { skip: true } };\nvar content = '';\nif (response.choices && response.choices.length > 0 && response.choices[0].message) {\n  content = response.choices[0].message.content || '';\n}\ncontent = content.trim();\nif (!content) return { json: { skip: true, item_type: src.item_type, item_id: src.item_id } };\nif (content.indexOf('```') === 0) {\n  var lines = content.split('\\n');\n  var filtered = [];\n  for (var i = 0; i < lines.length; i++) {\n    if (lines[i].indexOf('```') !== 0) filtered.push(lines[i]);\n  }\n  content = filtered.join('\\n').trim();\n}\nvar result;\ntry {\n  result = JSON.parse(content);\n} catch (e) {\n  return { json: { skip: true, item_type: src.item_type, item_id: src.item_id, error: 'JSON parse failed' } };\n}\nvar summaryZh = result.summary_zh || null;\nvar keywordsZh = Array.isArray(result.keywords_zh) ? result.keywords_zh : (result.keywords_zh ? [result.keywords_zh] : []);\nvar keywordsLiteral = '{' + keywordsZh.map(function(k) { return '\"' + String(k).replace(/\"/g, '') + '\"'; }).join(',') + '}';\nreturn { json: { item_type: src.item_type, item_id: src.item_id, summary_zh: summaryZh, keywords_literal: keywordsLiteral } };"
     },
     position: [1200, 300]
   },
@@ -110,10 +104,10 @@ const saveEnrichment = node({
   output: [{}]
 });
 
-export default workflow('process-haiku', 'Process Items with Haiku')
+export default workflow('process-haiku', 'Process Items with Nano')
   .add(schedule)
   .to(fetchUnenriched)
   .to(buildPrompt)
-  .to(callHaiku)
+  .to(callNano)
   .to(parseResponse)
   .to(saveEnrichment);
