@@ -112,13 +112,13 @@ return {
   }
 };`;
 
-const parseClaudeResponseCode = `const response = $json;
+const parseNanoResponseCode = `const response = $json;
 const src = $('Normalize Email').item.json;
 if (!src || !src.message_id) return { json: { skip: true } };
 
 let raw = '';
-if (response && Array.isArray(response.content) && response.content.length > 0) {
-  raw = response.content[0].text || '';
+if (response && Array.isArray(response.choices) && response.choices.length > 0 && response.choices[0].message) {
+  raw = response.choices[0].message.content || '';
 }
 raw = raw.trim();
 
@@ -159,7 +159,7 @@ return {
   }
 };`;
 
-const buildHaikuZhCode = `const src = $json;
+const buildNanoZhCode = `const src = $json;
 if (!src || !src.message_id || !src.subject) return { json: { skip: true } };
 
 const title = String(src.subject).trim();
@@ -188,13 +188,13 @@ return {
   }
 };`;
 
-const parseHaikuZhCode = `const response = $json;
-const src = $('Build Haiku Zh Prompt').item.json;
+const parseNanoZhCode = `const response = $json;
+const src = $('Build Nano Zh Prompt').item.json;
 if (!src || src.skip) return { json: { skip: true } };
 
 let content = '';
-if (response && Array.isArray(response.content) && response.content.length > 0) {
-  content = response.content[0].text || '';
+if (response && Array.isArray(response.choices) && response.choices.length > 0 && response.choices[0].message) {
+  content = response.choices[0].message.content || '';
 }
 content = content.trim();
 if (!content) return { json: { skip: true, item_type: src.item_type, item_id: src.item_id } };
@@ -277,46 +277,42 @@ const normalizeEmail = node({
   output: [{ message_id: '', subject: '', user_content: '' }]
 });
 
-const callClaudeHaiku = node({
+const callOpenAINano = node({
   type: 'n8n-nodes-base.httpRequest',
   version: 4.4,
   config: {
-    name: 'Call Claude Haiku',
+    name: 'Call OpenAI Nano',
     parameters: {
       method: 'POST',
-      url: 'https://api.anthropic.com/v1/messages',
+      url: 'https://api.openai.com/v1/chat/completions',
       authentication: 'genericCredentialType',
       genericAuthType: 'httpHeaderAuth',
-      sendHeaders: true,
-      headerParameters: {
-        parameters: [{ name: 'anthropic-version', value: '2023-06-01' }]
-      },
       sendBody: true,
       contentType: 'json',
       specifyBody: 'json',
-      jsonBody: '={{ JSON.stringify({ model: "claude-haiku-4-5", max_tokens: 1024, system: [{ type: "text", text: "You summarize subscription newsletter emails. Strip out marketing copy, sponsor mentions, ads, social-media footers, unsubscribe links, and boilerplate. Keep only substantive content. Respond in the same language as the input email. Output valid JSON with this exact shape and nothing else: {\\"summary\\": \\"<1-2 sentence core message>\\", \\"themes\\": [\\"<short theme>\\", ...], \\"key_facts\\": [\\"<concrete fact with numbers/names/dates>\\", ...]}. Use 3-6 themes and 3-8 key_facts. If the email has no substance (pure promo/ad), return {\\"summary\\": \\"(promotional content only)\\", \\"themes\\": [], \\"key_facts\\": []}.", cache_control: { type: "ephemeral" } }], messages: [{ role: "user", content: $json.user_content }] }) }}',
+      jsonBody: '={{ JSON.stringify({ model: "gpt-5.4-nano", max_completion_tokens: 1024, messages: [{ role: "system", content: "You summarize subscription newsletter emails. Strip out marketing copy, sponsor mentions, ads, social-media footers, unsubscribe links, and boilerplate. Keep only substantive content. Respond in the same language as the input email. Output valid JSON with this exact shape and nothing else: {\\"summary\\": \\"<1-2 sentence core message>\\", \\"themes\\": [\\"<short theme>\\", ...], \\"key_facts\\": [\\"<concrete fact with numbers/names/dates>\\", ...]}. Use 3-6 themes and 3-8 key_facts. If the email has no substance (pure promo/ad), return {\\"summary\\": \\"(promotional content only)\\", \\"themes\\": [], \\"key_facts\\": []}." }, { role: "user", content: $json.user_content }] }) }}',
       options: {
         batching: { batch: { batchSize: 1, batchInterval: 500 } },
         response: { response: { responseFormat: 'json' } },
         timeout: 60000
       }
     },
-    credentials: { httpHeaderAuth: newCredential('Anthropic API Key') },
+    credentials: { httpHeaderAuth: newCredential('OpenAI API Key') },
     onError: 'continueRegularOutput',
     position: [960, 300]
   },
-  output: [{ content: [{ text: '' }] }]
+  output: [{ choices: [{ message: { content: '' } }] }]
 });
 
-const parseClaudeResponse = node({
+const parseNanoResponse = node({
   type: 'n8n-nodes-base.code',
   version: 2,
   config: {
-    name: 'Parse Claude Response',
+    name: 'Parse Nano Response',
     parameters: {
       mode: 'runOnceForEachItem',
       language: 'javaScript',
-      jsCode: parseClaudeResponseCode
+      jsCode: parseNanoResponseCode
     },
     position: [1200, 300]
   },
@@ -349,7 +345,7 @@ const moveToTrash = node({
     parameters: {
       resource: 'message',
       operation: 'delete',
-      messageId: "={{ $('Parse Claude Response').item.json.message_id }}"
+      messageId: "={{ $('Parse Nano Response').item.json.message_id }}"
     },
     credentials: { gmailOAuth2: newCredential('Gmail OAuth2') },
     onError: 'continueRegularOutput',
@@ -358,61 +354,57 @@ const moveToTrash = node({
   output: [{}]
 });
 
-const buildHaikuZhPrompt = node({
+const buildNanoZhPrompt = node({
   type: 'n8n-nodes-base.code',
   version: 2,
   config: {
-    name: 'Build Haiku Zh Prompt',
+    name: 'Build Nano Zh Prompt',
     parameters: {
       mode: 'runOnceForEachItem',
       language: 'javaScript',
-      jsCode: buildHaikuZhCode
+      jsCode: buildNanoZhCode
     },
     position: [1680, 460]
   },
   output: [{ item_type: 'newsletter', item_id: '', prompt: '' }]
 });
 
-const callClaudeHaikuZh = node({
+const callOpenAINanoZh = node({
   type: 'n8n-nodes-base.httpRequest',
   version: 4.4,
   config: {
-    name: 'Call Claude Haiku Zh',
+    name: 'Call OpenAI Nano Zh',
     parameters: {
       method: 'POST',
-      url: 'https://api.anthropic.com/v1/messages',
+      url: 'https://api.openai.com/v1/chat/completions',
       authentication: 'genericCredentialType',
       genericAuthType: 'httpHeaderAuth',
-      sendHeaders: true,
-      headerParameters: {
-        parameters: [{ name: 'anthropic-version', value: '2023-06-01' }]
-      },
       sendBody: true,
       contentType: 'json',
       specifyBody: 'json',
-      jsonBody: '={{ JSON.stringify({ model: "claude-haiku-4-5", max_tokens: 256, messages: [{ role: "user", content: $json.prompt }] }) }}',
+      jsonBody: '={{ JSON.stringify({ model: "gpt-5.4-nano", max_completion_tokens: 256, messages: [{ role: "user", content: $json.prompt }] }) }}',
       options: {
         batching: { batch: { batchSize: 1, batchInterval: 500 } },
         response: { response: { responseFormat: 'json' } },
         timeout: 30000
       }
     },
-    credentials: { httpHeaderAuth: newCredential('Anthropic API Key') },
+    credentials: { httpHeaderAuth: newCredential('OpenAI API Key') },
     onError: 'continueRegularOutput',
     position: [1920, 460]
   },
-  output: [{ content: [{ text: '' }] }]
+  output: [{ choices: [{ message: { content: '' } }] }]
 });
 
-const parseHaikuZhResponse = node({
+const parseNanoZhResponse = node({
   type: 'n8n-nodes-base.code',
   version: 2,
   config: {
-    name: 'Parse Haiku Zh Response',
+    name: 'Parse Nano Zh Response',
     parameters: {
       mode: 'runOnceForEachItem',
       language: 'javaScript',
-      jsCode: parseHaikuZhCode
+      jsCode: parseNanoZhCode
     },
     position: [2160, 460]
   },
@@ -442,12 +434,12 @@ export default workflow('fetch-gmail-subscriptions', 'Fetch Gmail Subscriptions'
   .add(everyHour)
   .to(fetchSubscriptionEmails)
   .to(normalizeEmail)
-  .to(callClaudeHaiku)
-  .to(parseClaudeResponse)
+  .to(callOpenAINano)
+  .to(parseNanoResponse)
   .to(saveSubscriptionItem)
   .to(moveToTrash)
   .add(saveSubscriptionItem)
-  .to(buildHaikuZhPrompt)
-  .to(callClaudeHaikuZh)
-  .to(parseHaikuZhResponse)
+  .to(buildNanoZhPrompt)
+  .to(callOpenAINanoZh)
+  .to(parseNanoZhResponse)
   .to(saveEnrichment);
