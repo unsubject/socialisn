@@ -22,7 +22,7 @@ const fetchSources = node({
       operation: 'executeQuery',
       query: "SELECT id, name, language, tags, config FROM sources WHERE type = 'rss' AND enabled = TRUE ORDER BY name"
     },
-    credentials: { postgres: newCredential('Postgres') },
+    credentials: { postgres: newCredential('Railway') },
     position: [480, 300]
   },
   output: [
@@ -36,7 +36,7 @@ const readRss = node({
   config: {
     name: 'Read RSS Feed',
     parameters: {
-      url: expr('{{ $json.config.url }}'),
+      url: expr('={{ $json.config.url }}'),
       options: { ignoreSSL: false }
     },
     onError: 'continueRegularOutput',
@@ -47,6 +47,51 @@ const readRss = node({
   ]
 });
 
+const normalizeCode = `const item = $json;
+const src = $('Fetch RSS Sources').item.json;
+
+const url = (item.link || item.guid || '').trim();
+if (!url) { return { json: {} }; }
+
+function fnv1a64(str) {
+  let h = 0xcbf29ce484222325n;
+  const prime = 0x100000001b3n;
+  const mask = 0xffffffffffffffffn;
+  for (let i = 0; i < str.length; i++) {
+    h ^= BigInt(str.charCodeAt(i));
+    h = (h * prime) & mask;
+  }
+  return h.toString(16).padStart(16, '0');
+}
+const article_id = fnv1a64(url);
+const headline = (item.title || '').trim();
+if (!headline) { return { json: {} }; }
+
+let excerpt = item.contentSnippet || item.summary || item.content || '';
+if (typeof excerpt === 'object') excerpt = '';
+excerpt = String(excerpt).replace(/<[^>]+>/g, '').trim().substring(0, 500);
+
+const published_at = item.isoDate || item.pubDate || null;
+
+const tagsArr = Array.isArray(src.tags) ? src.tags : [];
+const tagsLiteral = '{' + tagsArr.map(function(t) {
+  return '"' + String(t) + '"';
+}).join(',') + '}';
+
+return {
+  json: {
+    article_id: article_id,
+    source_name: src.name,
+    source_type: 'rss',
+    url: url,
+    headline: headline,
+    excerpt: excerpt || null,
+    language: src.language,
+    tags_literal: tagsLiteral,
+    published_at: published_at
+  }
+};`;
+
 const normalize = node({
   type: 'n8n-nodes-base.code',
   version: 2,
@@ -55,52 +100,7 @@ const normalize = node({
     parameters: {
       mode: 'runOnceForEachItem',
       language: 'javaScript',
-      jsCode: [
-        "const item = $json;",
-        "const src = $('Fetch RSS Sources').item.json;",
-        "",
-        "const url = (item.link || item.guid || '').trim();",
-        "if (!url) { return { json: {} }; }",
-        "",
-        "function fnv1a64(str) {",
-        "  let h = 0xcbf29ce484222325n;",
-        "  const prime = 0x100000001b3n;",
-        "  const mask = 0xffffffffffffffffn;",
-        "  for (let i = 0; i < str.length; i++) {",
-        "    h ^= BigInt(str.charCodeAt(i));",
-        "    h = (h * prime) & mask;",
-        "  }",
-        "  return h.toString(16).padStart(16, '0');",
-        "}",
-        "const article_id = fnv1a64(url);",
-        "const headline = (item.title || '').trim();",
-        "if (!headline) { return { json: {} }; }",
-        "",
-        "let excerpt = item.contentSnippet || item.summary || item.content || '';",
-        "if (typeof excerpt === 'object') excerpt = '';",
-        "excerpt = String(excerpt).replace(/<[^>]+>/g, '').trim().substring(0, 500);",
-        "",
-        "const published_at = item.isoDate || item.pubDate || null;",
-        "",
-        "const tagsArr = Array.isArray(src.tags) ? src.tags : [];",
-        "const tagsLiteral = '{' + tagsArr.map(function(t) {",
-        "  return '\"' + String(t) + '\"';",
-        "}).join(',') + '}';",
-        "",
-        "return {",
-        "  json: {",
-        "    article_id: article_id,",
-        "    source_name: src.name,",
-        "    source_type: 'rss',",
-        "    url: url,",
-        "    headline: headline,",
-        "    excerpt: excerpt || null,",
-        "    language: src.language,",
-        "    tags_literal: tagsLiteral,",
-        "    published_at: published_at",
-        "  }",
-        "};"
-      ].join('\n'),
+      jsCode: normalizeCode
     },
     position: [960, 300]
   },
@@ -116,10 +116,11 @@ const saveItem = node({
       operation: 'executeQuery',
       query: "INSERT INTO news_items (article_id, source_name, source_type, url, headline, excerpt, language, tags, published_at) VALUES ($1, $2, $3, $4, $5, $6, $7, $8::text[], $9::timestamptz) ON CONFLICT (article_id) DO NOTHING",
       options: {
-        queryReplacement: expr('{{ [$json.article_id, $json.source_name, $json.source_type, $json.url, $json.headline, $json.excerpt, $json.language, $json.tags_literal, $json.published_at] }}')
+        queryBatching: 'independently',
+        queryReplacement: expr('={{ [$json.article_id, $json.source_name, $json.source_type, $json.url, $json.headline, $json.excerpt, $json.language, $json.tags_literal, $json.published_at] }}')
       }
     },
-    credentials: { postgres: newCredential('Postgres') },
+    credentials: { postgres: newCredential('Railway') },
     onError: 'continueRegularOutput',
     position: [1200, 300]
   },
