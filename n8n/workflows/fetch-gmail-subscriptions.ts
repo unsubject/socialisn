@@ -114,7 +114,7 @@ return {
 
 const parseNanoResponseCode = `const response = $json;
 const src = $('Normalize Email').item.json;
-if (!src || !src.message_id) return { json: { skip: true } };
+if (!src || !src.message_id) return null;
 
 let raw = '';
 if (response && Array.isArray(response.choices) && response.choices.length > 0 && response.choices[0].message) {
@@ -160,10 +160,10 @@ return {
 };`;
 
 const buildNanoZhCode = `const src = $json;
-if (!src || !src.message_id || !src.subject) return { json: { skip: true } };
+if (!src || !src.message_id || !src.subject) return null;
 
 const title = String(src.subject).trim();
-if (!title) return { json: { skip: true } };
+if (!title) return null;
 
 function cleanText(text) {
   if (!text) return '';
@@ -190,14 +190,14 @@ return {
 
 const parseNanoZhCode = `const response = $json;
 const src = $('Build Nano Zh Prompt').item.json;
-if (!src || src.skip) return { json: { skip: true } };
+if (!src) return null;
 
 let content = '';
 if (response && Array.isArray(response.choices) && response.choices.length > 0 && response.choices[0].message) {
   content = response.choices[0].message.content || '';
 }
 content = content.trim();
-if (!content) return { json: { skip: true, item_type: src.item_type, item_id: src.item_id } };
+if (!content) return null;
 
 if (content.indexOf('\\u0060\\u0060\\u0060') === 0) {
   const lines = content.split('\\n');
@@ -210,10 +210,11 @@ if (content.indexOf('\\u0060\\u0060\\u0060') === 0) {
 
 let result;
 try { result = JSON.parse(content); }
-catch (e) { return { json: { skip: true, item_type: src.item_type, item_id: src.item_id, error: 'JSON parse failed' } }; }
+catch (e) { return null; }
 
 const summaryZh  = result.summary_zh || null;
 const keywordsZh = Array.isArray(result.keywords_zh) ? result.keywords_zh : (result.keywords_zh ? [result.keywords_zh] : []);
+if (!summaryZh && keywordsZh.length === 0) return null;
 const keywordsLiteral = '{' + keywordsZh.map(k => '"' + String(k).replace(/"/g, '') + '"').join(',') + '}';
 
 return {
@@ -328,6 +329,7 @@ const saveSubscriptionItem = node({
       operation: 'executeQuery',
       query: 'INSERT INTO newsletter_items (message_id, thread_id, sender_email, sender_name, subject, summary, labels, received_at) VALUES ($1, $2, $3, $4, $5, $6, $7::text[], $8::timestamptz) ON CONFLICT (message_id) DO UPDATE SET summary = COALESCE(EXCLUDED.summary, newsletter_items.summary)',
       options: {
+        queryBatching: 'independently',
         queryReplacement: '={{ [$json.message_id, $json.thread_id, $json.sender_email, $json.sender_name, $json.subject, $json.summary, $json.labels_literal, $json.received_at] }}'
       }
     },
@@ -420,6 +422,7 @@ const saveEnrichment = node({
       operation: 'executeQuery',
       query: 'INSERT INTO item_enrichment (item_type, item_id, summary_zh, keywords_zh, processed_at) VALUES ($1, $2, $3, $4::text[], NOW()) ON CONFLICT (item_type, item_id) DO UPDATE SET summary_zh = EXCLUDED.summary_zh, keywords_zh = EXCLUDED.keywords_zh, processed_at = NOW()',
       options: {
+        queryBatching: 'independently',
         queryReplacement: '={{ [$json.item_type, $json.item_id, $json.summary_zh, $json.keywords_literal] }}'
       }
     },
